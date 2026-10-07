@@ -6,23 +6,21 @@
 
 | 항목 | 상태 |
 |---|---|
-| 생성 스크립트 `tools/generate_tts.py` | ✅ 구현 완료 (Supertonic-3) — `--dry-run` 으로 대상 370개 확인 |
-| 검사 `tools/validate_content.py --audio` | ✅ 콘텐츠 폴더 기준으로 mp3 존재 여부 검사 |
-| mp3 파일 | ❌ **미생성 (0 / 370)** |
-| 저장 위치 | Pages 레포 `didrnrgus.github.io/project_speaking_english/audio/{en,ko}/` (아직 폴더 없음) |
+| 생성 스크립트 `tools/generate_tts.py` | ✅ 구현 완료 (Supertonic-3) |
+| 검사 `tools/validate_content.py --audio` | ✅ 콘텐츠 폴더 기준으로 mp3 존재 여부 검사 — 오류 0개 |
+| mp3 파일 | ✅ **370 / 370 생성, Pages `main` 배포** (약 12MB, 영어 약 700초 + 한국어 약 740초) |
+| 저장 위치 | Pages 레포 `didrnrgus.github.io/project_speaking_english/audio/{en,ko}/` + `audio/tts_manifest.json` |
+| 청취 확인 | 샘플(S2-01, D3-01 t1/t2 영·한) 들어 보고 채택. 영어가 약간 빠르게 느껴짐 → 생성 속도는 1.0 유지, 앱 전역 속도 설정으로 해결 (PLAN 6-4) |
 
-### 막힌 이유
+자동 점검: 파일별 음량 고름(평균 -30 ~ -25 dB, 클리핑 없음), 문장 길이 대비 재생 시간 이상치 없음 (한 단어짜리 2개만 앞뒤 여백 때문에 느리게 측정됨).
+음성 인식으로 내용을 대조하는 검사는 하지 않았다 — 새 문장을 만들면 몇 개 직접 들어 볼 것.
 
-Claude Code 클라우드 세션의 네트워크 정책이 `huggingface.co` 접속을 막고 있다(403).
-Supertonic-3 모델 파일(~400MB)은 Hugging Face 에만 있어서 세션 안에서는 모델을 받을 수 없다.
-(같은 세션에서 PyPI, GitHub 릴리스 다운로드는 가능 — `supertonic` 패키지 설치까지는 됨)
+### 생성 환경 메모
 
-### 해결 방법 (둘 중 하나)
-
-- **A. 클라우드 세션에서 생성** — 환경 설정 → Network access 를 Custom 으로 바꾸고 Allowed domains 에
-  `huggingface.co`, `*.hf.co` (실제 모델 파일 다운로드 주소) 추가. 기본 패키지 매니저 목록은 유지.
+- Claude Code 클라우드 세션에서 만들려면 환경 Network access 에 `huggingface.co`, `*.hf.co` 가 허용돼 있어야 한다 (모델 다운로드).
   안내: https://code.claude.com/docs/en/cloud-environments#network-access
-- **B. 내 PC에서 생성** — 아래 '생성 절차' 그대로 실행 (Python 3.10+, ffmpeg 필요)
+- 내 PC에서는 아래 '생성 절차' 그대로 실행 (Python 3.10+, ffmpeg 필요). 4코어 CPU 기준 370개 약 8분
+- 비용: 0원. 모델 파일만 받아 로컬에서 실행 (Hugging Face API·크레딧·계정 사용 안 함)
 
 ## 생성 절차
 
@@ -57,6 +55,17 @@ cd $P/.. && git add project_speaking_english/audio && git commit -m "project_spe
 | Edge TTS / Google 번역 TTS | 비공식 엔드포인트, 앱 배포용 약관 불명확 (세션에서도 차단됨) |
 | Google Cloud / Azure TTS | 품질 좋지만 계정·결제 등록 필요, 생성 음성 재배포 약관 확인 필요 |
 
+#### Supertonic-3 라이선스 (BigScience OpenRAIL-M, 원문 확인함)
+
+- 상업적 이용 가능, 로열티 없음. 6조: 생성한 출력물(음성)에 대해 라이선스 제공자는 권리를 주장하지 않음
+- 부록 A 사용 제한(불법, 미성년자 착취, 딥페이크·사칭, 차별, 의료 조언 등) — 영어 학습 앱과는 무관
+- **부록 A (e)항: 생성 콘텐츠를 배포할 때 기계가 만든 것임을 명확히 고지해야 함**
+  → 앱 설정 '정보'에 "음성은 AI(TTS)로 생성되었습니다", 스토어 설명에도 같은 문구 (PLAN 7장, 10장 1번)
+- 모델 파일 자체는 앱에 넣지 않으므로 모델 재배포 조건은 해당 없음
+
+> 조건 없는 라이선스가 필요해지면 대안: 영어 Kokoro-82M (Apache-2.0) + 한국어 Qwen3-TTS CustomVoice 의 Sohee (Apache-2.0) 또는 MeloTTS-Korean (MIT).
+> 단 Qwen3-TTS 는 원어민 목소리가 한국어 여성·영어 남성뿐이라 대화 A/B 구성이 제한적이다.
+
 > 출시 전에 Supertonic-3 모델 라이선스(OpenRAIL-M) 전문을 한 번 더 확인할 것.
 
 ### 생성 설정 (`tools/generate_tts.py` 상단 상수)
@@ -64,20 +73,20 @@ cd $P/.. && git add project_speaking_english/audio && git commit -m "project_spe
 | 항목 | 값 | 이유 |
 |---|---|---|
 | 목소리 | 말하기 트랙 `F1`, 대화 A=`F1` / B=`M1` | PLAN 5-2: 말하기는 1개 목소리, 대화는 화자별로 다르게. 영어·한국어 같은 목소리 |
-| 속도 | 1.0 | 느리게 듣기는 플레이어 재생 속도(0.7x / 0.85x)로 처리 |
+| 속도 | 1.0 | 빠르게/느리게는 앱 설정 팝업의 전역 재생 속도(x1.5 / x1.25 / x1.0 / x0.75 / x0.5)로 처리 (PLAN 6-4) |
 | 품질 단계 | `total_steps=8` | Supertonic 기본값 |
-| 포맷 | mp3 64kbps 모노 | 음성 전용이라 충분. 370개 합계 약 10MB 예상 (영어 약 8,900자 + 한국어 약 4,300자 기준 추정) |
+| 포맷 | mp3 64kbps 모노 | 음성 전용이라 충분. 370개 합계 약 12MB |
 
 ### 저장 위치: Pages 레포, Git LFS 사용 안 함
 
 - 예문 JSON 과 같은 곳(`project_speaking_english/`)에 둔다. JSON 의 `audio` 경로가 이 폴더 기준 상대 경로라 URL 이 바로 맞는다
   → `https://didrnrgus.github.io/project_speaking_english/audio/en/S1-01.mp3`
 - **LFS 를 쓰면 안 된다.** GitHub Pages 는 LFS 파일 대신 포인터 텍스트를 내보내므로 앱이 mp3 를 받을 수 없다.
-  전체 약 10MB 라 일반 커밋으로 충분하다 (Pages 사이트 한도 1GB).
+  전체 약 12MB 라 일반 커밋으로 충분하다 (Pages 사이트 한도 1GB).
 - 앱 레포에는 mp3 를 두지 않는다 (기존 빈 `audio/` 폴더 삭제). 앱은 원격 mp3 를 받아 캐시해 두고 재생한다.
 
 ## 남은 일
 
-1. 위 해결 방법 A/B 중 하나로 mp3 370개 생성 → Pages 레포 커밋·배포
-2. 생성 후 몇 개 들어 보고 목소리(F1/M1)·속도가 학습용으로 괜찮은지 확인 — 바꾸려면 상수 수정 후 `--force`
-3. 앱(M1~M2): mp3 다운로드·캐시 구현, 첫 실행이 오프라인일 때 처리 방식 결정 (PLAN 10장 5번)
+1. 앱(M1~M2): mp3 다운로드·캐시 구현, 첫 실행이 오프라인일 때 처리 방식 결정 (PLAN 10장 5번)
+2. 앱(M3): 설정 팝업의 전역 재생 속도 드롭다운 (PLAN 6-4)
+3. 출시 전: 설정 '정보'와 스토어 설명에 AI 음성 고지 문구 넣기

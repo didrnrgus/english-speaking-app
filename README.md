@@ -77,7 +77,7 @@ https://didrnrgus.github.io/project_speaking_english/audio/en/S1-01.mp3 # JSON a
 `tools/generate_tts.py` — Supertone의 Supertonic-3로 영어·한국어를 로컬에서 생성 (무료, 코드 MIT / 모델 OpenRAIL-M: 상업적 이용 가능, 사용 제한 조항 준수).
 목소리: 말하기 트랙 F1, 대화 A=F1 / B=M1. 첫 실행 때 Hugging Face에서 모델(~400MB)을 받는다.
 
-> **현재 mp3 미생성 (0/370).** 클라우드 세션에서 Hugging Face 가 막혀 있음 → 해결 방법과 절차는 [docs/AUDIO.md](docs/AUDIO.md)
+> mp3 370개 생성·배포 완료 (속도 1.0, 앱에서 전역 속도 조절). 라이선스상 **AI 생성 음성 고지 필요** → [docs/AUDIO.md](docs/AUDIO.md)
 
 ```bash
 pip install supertonic soundfile   # + ffmpeg
@@ -97,9 +97,9 @@ python tools/generate_tts.py --content <폴더> --dry-run     # 생성할 오디
 
 | 단계 | 내용 | 상태 |
 |---|---|---|
-| M0 콘텐츠 | 예문 50개, JSON 스키마, TTS 스크립트 | 예문·스키마·검증·원격 배치 완료 / TTS 스크립트(Supertonic-3) 완료 / mp3 미생성 ([AUDIO.md](docs/AUDIO.md)) |
+| M0 콘텐츠 | 예문 50개, JSON 스키마, TTS 스크립트 | ✅ 완료 — 예문·스키마·검증·원격 배치, mp3 370개 (Supertonic-3) |
 | M1 프로토타입 | Unity 프로젝트 생성, 스테이지 목록 → 예문 리스트 → 단일 재생 | |
 | M2 핵심 | Android 플러그인 연동 → 연속 재생 + 화면 꺼짐 재생 + 알림 컨트롤 | |
-| M3 학습 기능 | 재생 패턴, 반복, 속도, 수면 타이머, 진행률 | |
+| M3 학습 기능 | 재생 패턴, 반복, 전역 재생 속도(설정 팝업 드롭다운 x1.5~x0.5), 수면 타이머, 진행률 | |
 | M4 출시 준비 | 기기별 백그라운드 테스트, 스토어 자료 | |
 | M5 확장 | 예문 추가, 롤플레이, 발음 체크 | |
