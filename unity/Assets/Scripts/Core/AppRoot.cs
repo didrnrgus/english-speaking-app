@@ -13,10 +13,13 @@ namespace EnglishApp
     /// 계층:
     ///   Canvas
     ///   ├─ Background            (화면 전체)
-    ///   ├─ SafeArea              (Screen.safeArea 안쪽 — 모든 UI 는 여기 안에)
-    ///   │   ├─ Screens           (메인 / 레벨 / 유닛)
-    ///   │   └─ MiniPlayer        (다른 화면에서 전체 듣기 중일 때)
-    ///   └─ Overlay               (설정 팝업: 어둡게 덮는 배경은 전체, 패널은 SafeArea 안쪽)
+    ///   ├─ SafeArea              (Screen.safeArea 안쪽, Android 내비게이션 바 위 — 모든 UI 는 여기 안에)
+    ///   │   ├─ AdSlot            (맨 아래 배너 광고 전용 띠 — BannerAdSlot)
+    ///   │   └─ Content           (광고 띠 위쪽)
+    ///   │       ├─ Screens       (메인 / 레벨 / 유닛)
+    ///   │       └─ MiniPlayer    (다른 화면에서 전체 듣기 중일 때)
+    ///   ├─ Overlay               (설정 팝업: 어둡게 덮는 배경은 전체, 패널은 SafeArea 안쪽. 열려 있는 동안 배너는 숨김)
+    ///   └─ ToastLayer            (SafeArea 안쪽, 광고 띠 위)
     /// </summary>
     public class AppRoot : MonoBehaviour
     {
@@ -27,12 +30,15 @@ namespace EnglishApp
         public AudioCache Cache { get; private set; }
         public AudioPlayer Player { get; private set; }
         public Navigator Nav { get; private set; }
+        public BannerAdSlot Ads { get; private set; }
 
         private CanvasScaler scaler;
         private RectTransform overlayLayer;
         private Toast toast;
         private SettingsPopup settingsPopup;
         private float saveTimer;
+
+        private const string SettingsAdBlocker = "settings";
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void Boot()
@@ -102,6 +108,7 @@ namespace EnglishApp
                 return;
             }
             settingsPopup = SettingsPopup.Open(overlayLayer, tab);
+            Ads.Block(SettingsAdBlocker);
         }
 
         public bool IsSettingsOpen => settingsPopup != null;
@@ -160,14 +167,19 @@ namespace EnglishApp
 
             var safe = UIKit.Rect("SafeArea", root).Fill();
             safe.gameObject.AddComponent<SafeAreaFitter>();
-            var screens = UIKit.Rect("Screens", safe).Fill();
-            MiniPlayerBar.Create(safe);
+            Ads = BannerAdSlot.Create(safe);
+            var content = UIKit.Rect("Content", safe).Fill();
+            Ads.AddInsetTarget(content);
+            var screens = UIKit.Rect("Screens", content).Fill();
+            MiniPlayerBar.Create(content);
 
             overlayLayer = UIKit.Rect("Overlay", root).Fill();
 
             var toastLayer = UIKit.Rect("ToastLayer", root).Fill();
             toastLayer.gameObject.AddComponent<SafeAreaFitter>();
-            toast = Toast.Create(toastLayer);
+            var toastArea = UIKit.Rect("ToastArea", toastLayer).Fill();
+            Ads.AddInsetTarget(toastArea);
+            toast = Toast.Create(toastArea);
             return screens;
         }
 
@@ -236,6 +248,7 @@ namespace EnglishApp
         internal void OnSettingsClosed(SettingsPopup popup)
         {
             if (settingsPopup == popup) settingsPopup = null;
+            if (settingsPopup == null) Ads.Unblock(SettingsAdBlocker);
             Settings.SaveIfDirty();
         }
 
