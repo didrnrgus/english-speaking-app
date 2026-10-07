@@ -92,7 +92,7 @@ https://didrnrgus.github.io/project_speaking_english/audio/en/S1/S1-U01-01.mp3  
 `tools/generate_tts.py` — Supertone의 Supertonic-3로 영어·한국어를 로컬에서 생성 (무료, 코드 MIT / 모델 OpenRAIL-M: 상업적 이용 가능, 사용 제한 조항 준수).
 목소리: 말하기 트랙 F1, 대화 A=F1 / B=M1. 첫 실행 때 Hugging Face에서 모델(~400MB)을 받는다.
 
-> mp3 3,700개(예문 500개) 생성·배포 완료 (속도 1.0, 앱에서 전역 속도 조절). 라이선스상 **AI 생성 음성 고지 필요** → [docs/AUDIO.md](docs/AUDIO.md)
+> mp3 3,700개(예문 500개) 생성·배포 완료 (속도 1.0, 빠르기는 앱 설정 슬라이더 x0.5~x2.0 로 조절). 라이선스상 **AI 생성 음성 고지 필요** → [docs/AUDIO.md](docs/AUDIO.md)
 
 ```bash
 pip install supertonic soundfile   # + ffmpeg
