@@ -31,8 +31,9 @@ MANIFEST = "audio/tts_manifest.json"
 
 
 def targets(content):
-    for path in sorted(content.glob("*/*.json")):
-        data = json.loads(path.read_text(encoding="utf-8"))
+    index = json.loads((content / "index.json").read_text(encoding="utf-8"))
+    for entry in index["stages"]:
+        data = json.loads((content / entry["file"]).read_text(encoding="utf-8"))
         for item in data["items"]:
             for seg in item.get("turns", [item]):
                 for lang in ("en", "ko"):

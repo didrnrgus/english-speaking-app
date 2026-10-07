@@ -62,7 +62,8 @@ def check_index(content, files, errors):
 
 def validate(content):
     errors, ids, audio_paths = [], set(), []
-    files = sorted(content.glob("*/*.json"))
+    # audio/ 아래 tts_manifest.json 등은 스테이지 파일이 아님
+    files = sorted(f for f in content.glob("*/*.json") if f.parent.name != "audio")
     if not files:
         errors.append(f"{content} 아래 JSON 파일이 없음")
     check_index(content, files, errors)
