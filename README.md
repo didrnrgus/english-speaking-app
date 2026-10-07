@@ -74,7 +74,7 @@ https://didrnrgus.github.io/project_speaking_english/audio/en/S1/S1-U01-01.mp3  
 앱 동작(M1에서 구현): 실행 시 `index.json` → 유닛 파일을 받아 검사 → 통과하면 캐시에 저장, 실패하거나 오프라인이면 캐시 → 번들(`StreamingAssets/content`) 순으로 사용. mp3는 **들을 유닛만** 같은 주소 기준으로 받아 캐시해 두고 재생한다 (GitHub Pages 트래픽 한도 때문에 전체 일괄 다운로드는 하지 않음).
 
 > mp3는 **Git LFS를 쓰지 않는다.** GitHub Pages는 LFS 파일 대신 포인터 텍스트를 내보내므로 앱이 받을 수 없다.
-> 64kbps 모노 3,700개 전체가 (생성 후 기록) 라 일반 커밋으로 충분하다 (Pages 사이트 한도 1GB).
+> 64kbps 모노 3,700개 전체가 약 111MB 라 일반 커밋으로 충분하다 (Pages 사이트 한도 1GB).
 
 ### TTS (Supertonic-3)
 

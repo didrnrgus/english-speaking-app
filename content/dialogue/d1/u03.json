@@ -31,12 +31,12 @@
     },
     {
       "id": "D1-U03-02",
-      "topic": "이름 철자",
+      "topic": "성과 이름",
       "turns": [
         {
           "speaker": "A",
-          "en": "How do you spell that?",
-          "ko": "철자가 어떻게 돼요?",
+          "en": "Is Kim your last name?",
+          "ko": "김이 성이에요?",
           "audio": {
             "en": "audio/en/D1/D1-U03-02_t1.mp3",
             "ko": "audio/ko/D1/D1-U03-02_t1.mp3"
@@ -44,8 +44,8 @@
         },
         {
           "speaker": "B",
-          "en": "M-I-N-A.",
-          "ko": "M-I-N-A요.",
+          "en": "Yes, and Mina is my first name.",
+          "ko": "네, 그리고 미나가 이름이에요.",
           "audio": {
             "en": "audio/en/D1/D1-U03-02_t2.mp3",
             "ko": "audio/ko/D1/D1-U03-02_t2.mp3"
