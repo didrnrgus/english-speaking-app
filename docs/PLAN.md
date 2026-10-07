@@ -128,12 +128,14 @@
 
 배포 후에도 예문을 고칠 수 있도록 예문 JSON 원본은 GitHub Pages 레포에 둔다.
 
-- 원본: `didrnrgus/didrnrgus.github.io` 레포의 `project_speaking_english/` (구조는 이 레포의 `content/` 와 동일)
-- URL: `https://didrnrgus.github.io/project_speaking_english/index.json`, `.../speaking/s1.json` 등
-- 앱 로드 순서: 원격 `index.json` → 각 스테이지 파일 다운로드 → 검사 통과 시 캐시에 저장 → 실패/오프라인이면 **캐시 → 번들** 순으로 사용
-- 번들: 이 레포의 `content/` 를 `StreamingAssets/content/` 로 복사 (첫 실행·오프라인용). 빌드 전에 원격 원본과 맞춘다
+- 원본: `didrnrgus/didrnrgus.github.io` 레포의 `project_speaking_english/` (JSON 구조는 이 레포의 `content/` 와 동일, mp3는 `audio/` — 원격에만 둔다)
+- URL: `https://didrnrgus.github.io/project_speaking_english/index.json`, `.../speaking/s1.json`, `.../audio/en/S1-01.mp3` 등
+- `audio` 경로는 콘텐츠 폴더 기준 상대 경로 → 앱은 `index.json` 과 같은 기준 URL로 mp3를 받는다
+- 앱 로드 순서: 원격 `index.json` → 각 스테이지 파일 다운로드 → 검사 통과 시 캐시에 저장 → 실패/오프라인이면 **캐시 → 번들** 순으로 사용. mp3도 받아서 캐시해 두고 재생
+- 번들: 이 레포의 `content/` (JSON만)를 `StreamingAssets/content/` 로 복사 (첫 실행·오프라인용). 빌드 전에 원격 원본과 맞춘다
 - 배포 반영: Pages CDN 캐시로 최대 10분 정도 지연
-- ⚠️ 오디오가 번들이면 원격에서 문장을 바꿔도 소리는 옛 문장 그대로다 → 문장 수정을 원격으로 하려면 오디오도 같은 폴더(`audio/...`, 콘텐츠 폴더 기준 상대 경로)에 올리고 앱이 받아 쓰게 해야 한다 (10장 5번과 함께 결정)
+- mp3는 Git LFS 없이 일반 커밋 (Pages는 LFS 파일을 서빙하지 않음). 64kbps 모노 기준 전체 수 MB
+- 문장을 고치면 `generate_tts.py` 가 `audio/tts_manifest.json` 과 비교해 바뀐 mp3만 다시 만든다
 - 화자 A/B는 **서로 다른 목소리**로 합성 (예: A=여성, B=남성)
 
 ## 5. 오디오(TTS) 설계
@@ -151,15 +153,15 @@
 
 ### 5-2. 음성 생성 파이프라인 (오프라인 배치)
 
-1. `content/*.json` 읽기
-2. 각 `en` / `ko` 텍스트를 TTS 엔진으로 합성 → mp3 저장
-   - 영어: en-US (A=여성 / B=남성), 말하기 트랙은 중립 1개 목소리
-   - 한국어: ko-KR
-   - 초급 스테이지는 속도를 약간 느리게(0.85x) 별도 생성하거나, 재생 속도는 플레이어에서 조절
-3. 파일명 규칙대로 저장 후 JSON의 `audio` 경로와 일치하는지 검증
-4. Unity `Assets/StreamingAssets/`에 포함 (빌드 시 APK `assets/` 로 들어감 → 플러그인의 ExoPlayer가 `asset:///audio/...` 로 바로 재생)
+엔진: **Supertonic-3** (Supertone, 로컬 ONNX 실행, 무료). 영어·한국어를 한 모델로 생성. 코드 MIT / 모델 OpenRAIL-M (상업적 이용 가능, 사용 제한 조항 준수)
 
-> ⚠️ TTS 서비스(Google Cloud TTS, Azure Neural TTS 등)는 **생성 음성의 앱 내 재배포 허용 범위가 서비스마다 다르므로** 선택 전에 약관 확인 필요.
+1. Pages 레포 `project_speaking_english/` 의 JSON 읽기 (`tools/generate_tts.py --content <폴더>`)
+2. 각 `en` / `ko` 텍스트 합성 → wav → mp3(64kbps 모노) 저장
+   - 목소리: 말하기 트랙 F1, 대화 A=F1(여성) / B=M1(남성). 영어·한국어 같은 목소리
+   - 속도 1.0 고정, 느리게 듣기는 플레이어 재생 속도로 조절
+3. `audio/tts_manifest.json` 에 (문장, 목소리, 설정) 기록 → 문장이 바뀐 파일만 재생성
+4. `validate_content.py --content <폴더> --audio` 로 경로·파일 검증 후 Pages 레포에 커밋 (LFS 사용 안 함)
+5. 앱은 원격 mp3를 받아 캐시 → 플러그인의 ExoPlayer가 캐시 파일(또는 URL)로 재생
 
 ## 6. 연속 재생 & 화면 꺼짐 재생 (핵심 기능)
 
@@ -233,8 +235,8 @@ Android 네이티브 플러그인 (Assets/Plugins/Android)
 | 오디오 | Android 네이티브 플러그인 (Java/Kotlin) + AndroidX **Media3** (ExoPlayer + MediaSessionService) |
 | Unity ↔ 네이티브 | `AndroidJavaObject` / `AndroidJavaProxy` |
 | 로컬 저장 | PlayerPrefs 또는 JSON 파일 (설정/진행률) |
-| 콘텐츠 | 원격 `didrnrgus.github.io/project_speaking_english/` (원본) + 번들 `Assets/StreamingAssets/content/**` (폴백) + `Assets/StreamingAssets/audio/**` |
-| 콘텐츠 빌드 도구 | 별도 스크립트(Python/Node) — JSON 검증 + TTS 생성 + 경로 검증 |
+| 콘텐츠 | 원격 `didrnrgus.github.io/project_speaking_english/` (JSON + mp3 원본) + 번들 `Assets/StreamingAssets/content/**` (JSON 폴백) |
+| 콘텐츠 빌드 도구 | Python — JSON 검증 + TTS 생성(Supertonic-3) + 경로 검증 |
 | 최소 SDK | Android 8.0 (API 26) 이상 권장 (확정 필요) |
 
 ## 9. 로드맵
@@ -250,11 +252,11 @@ Android 네이티브 플러그인 (Assets/Plugins/Android)
 
 ## 10. 리스크 / 오픈 이슈
 
-1. **TTS 음성 재배포 약관** — 서비스 선택 시 반드시 확인
+1. **TTS 음성 라이선스** — Supertonic-3 모델은 OpenRAIL-M (상업 이용 가능, 사용 제한 조항 준수). 출시 전 라이선스 전문 재확인
 2. **제조사별 백그라운드 제한** — 일부 기기에서 서비스 종료 가능 → 실기기 테스트, 안내 화면
 3. **1분 말하기/대화 문장 품질** — 원어민 감수 여부 결정 (AI 초안 → 검수 권장)
 4. **수익 모델 미정** — 무료 / 광고 / 유료 스테이지 해제 (초안 단계에서는 미결정)
-5. **앱 용량 / 오디오 원격화** — 예문 JSON은 원격(GitHub Pages)으로 옮김(4-4). 오디오도 원격으로 받을지(문장 원격 수정 시 필요) 결정 필요
+5. **원격 콘텐츠** — 예문 JSON·mp3 모두 GitHub Pages(4-4). 첫 실행이 오프라인이면 음성이 없음 → 필요하면 기본 스테이지 mp3만 번들 검토
 6. **Unity ↔ 네이티브 플러그인 연동** — 플러그인은 Unity 에디터에서 동작하지 않으므로 화면 꺼짐 재생은 실기기에서만 테스트 가능. 에디터용 대체 재생(`AudioSource`)을 같은 인터페이스 뒤에 둔다
 
 ## 11. 다음 단계 — GitHub 레포 개발 시 제안 구조
@@ -265,15 +267,14 @@ repo/
 │   └─ Assets/
 │       ├─ Scripts/          # C# (UI, 콘텐츠 로드, 플레이어 인터페이스)
 │       ├─ Plugins/Android/  # 네이티브 오디오 플러그인 (Media3 서비스)
-│       └─ StreamingAssets/  # content/*.json, audio/** 복사본
+│       └─ StreamingAssets/  # content/ 복사본 (JSON)
 ├─ content/                   # 번들 복사본 (원본은 Pages 레포 project_speaking_english/)
 │   ├─ index.json
 │   ├─ speaking/s1.json ... s5.json
 │   └─ dialogue/d1.json ... d5.json
 ├─ tools/
 │   ├─ validate_content.py   # 스키마/필드 누락/id 중복 검사
-│   └─ generate_tts.py       # JSON → mp3 생성 + 경로 검증
-├─ audio/                    # 생성된 mp3 (unity/Assets/StreamingAssets 로 복사)
+│   └─ generate_tts.py       # JSON → mp3 생성 (Supertonic-3) → Pages 레포 audio/
 └─ docs/PLAN.md              # 이 문서
 ```
 

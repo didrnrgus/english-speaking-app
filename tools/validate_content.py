@@ -2,7 +2,7 @@
 
 사용법:
     python tools/validate_content.py              # 콘텐츠 구조 검사
-    python tools/validate_content.py --audio      # + audio/ 아래 mp3 존재 여부까지 검사
+    python tools/validate_content.py --audio      # + <콘텐츠 폴더>/audio/ 아래 mp3 존재 여부까지 검사
     python tools/validate_content.py --content ../didrnrgus.github.io/project_speaking_english
                                                   # 원격(GitHub Pages) 콘텐츠 폴더 검사
 """
@@ -114,7 +114,7 @@ def main():
         content = Path(args[args.index("--content") + 1]).resolve()
     errors, ids, audio_paths = validate(content)
     if "--audio" in sys.argv:
-        errors += [f"오디오 파일 없음: {p}" for p in audio_paths if not (ROOT / p).is_file()]
+        errors += [f"오디오 파일 없음: {p}" for p in audio_paths if not (content / p).is_file()]
     for e in errors:
         print("ERROR", e)
     print(f"예문 {len(ids)}개, 오디오 경로 {len(audio_paths)}개 검사, 오류 {len(errors)}개")
