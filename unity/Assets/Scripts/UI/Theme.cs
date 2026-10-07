@@ -26,6 +26,7 @@ namespace EnglishApp.UI
         public static readonly Color Track = Hex("#EDE5DA");
         public static readonly Color Danger = Hex("#F2545B");
         public static readonly Color Dim = new Color(0.12f, 0.1f, 0.16f, 0.55f);
+        public static readonly Color AdSlotBg = Hex("#F5EBDC"); // 하단 배너 광고 띠 (앱 버튼과 구분되는 차분한 색)
         public static readonly Color Shadow = new Color(0.35f, 0.25f, 0.1f, 0.12f);
 
         public const float TopBarHeight = 150f;

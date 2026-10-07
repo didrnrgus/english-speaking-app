@@ -1,0 +1,22 @@
+{
+    "name": "EnglishApp.Ads",
+    "rootNamespace": "EnglishApp.Ads",
+    "references": [
+        "Unity.LevelPlay"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.services.levelplay",
+            "expression": "9.0.0",
+            "define": "LEVELPLAY_INSTALLED"
+        }
+    ],
+    "noEngineReferences": false
+}

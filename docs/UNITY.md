@@ -1,7 +1,7 @@
 # Unity 앱 구현 기록
 
 > 2026-10-07 · Unity 6000.3.17f1 · Android 전용 · UGUI + TextMeshPro
-> 기획: [PLAN.md](PLAN.md) · 작업 기록: [WORKLOG.md](WORKLOG.md)
+> 기획: [PLAN.md](PLAN.md) · 작업 기록: [WORKLOG.md](WORKLOG.md) · 배너 광고: [ADS.md](ADS.md)
 
 ## 1. 처음 열기
 
@@ -34,10 +34,13 @@
 ├─ 개별 듣기: 음량, 빠르기 슬라이더 + 마지막 문장 다시 듣기
 └─ 전체 듣기: 듣기 시퀀스 (끌어서 순서 변경, + 영어 / + 한국어, 노드마다 음량·빠르기·텀), 반복, 기본값
 미니 플레이어: 전체 듣기 중 다른 화면으로 나가면 아래에 표시 (누르면 그 유닛으로)
+배너 광고: 모든 화면 맨 아래 전용 띠 (화면은 그 위까지만) → ADS.md
 ```
 
 - **세로 모드만** — Player Settings + 실행 시 `Screen.orientation = Portrait`
-- **Safe Area** — 모든 UI 는 `SafeAreaFitter` 안쪽 (배경색과 팝업의 어두운 덮개만 화면 전체)
+- **Safe Area** — 모든 UI 는 `SafeAreaFitter` 안쪽 (배경색과 팝업의 어두운 덮개만 화면 전체).
+  Android 는 내비게이션 바(3버튼·제스처 바) 자리도 피한다 — 바가 숨겨진 전체 화면이어도 (`DeviceScreen`)
+- **배너 광고** — Safe Area 맨 아래 전용 띠(`BannerAdSlot`), 화면·미니 플레이어·토스트는 그 위. 설정 팝업이 열리면 배너 숨김 → [ADS.md](ADS.md)
 - **폰트** — 잘난체 고딕 TTF, TMP 동적 아틀라스, 외곽선 0.15. 실행 시에는 템플릿 머티리얼 값을 복사한 런타임 폰트 에셋을
   새로 만들어 쓴다 → 한글 글리프가 템플릿 에셋 파일에 쌓이지 않는다. 외곽선 색·두께는 템플릿 머티리얼에서 바꾸면 된다
 - **기준 해상도** 1080 x 1920. 폰처럼 길쭉하면 가로 기준, 태블릿처럼 덜 길쭉하면 세로 기준으로 맞춤
@@ -100,12 +103,13 @@ C# AudioPlayer ──(JNI: play / pause / resume / stop / seekStep / setRepeat /
 
 ```
 unity/Assets/
-├─ Scripts/Core/      AppRoot(시작점·캔버스·뒤로가기), ContentService, AudioCache, AppSettings, ContentModels
+├─ Scripts/Core/      AppRoot(시작점·캔버스·뒤로가기), ContentService, AudioCache, AppSettings, ContentModels, DeviceScreen
+├─ Scripts/Ads/       (어셈블리 EnglishApp.Ads) AdConfig, LevelPlayBanner — 배너 광고 SDK 래퍼
 ├─ Scripts/Audio/     AudioPlayer(재생 제어), AndroidAudioBackend, EditorAudioBackend, PlaybackModels
 ├─ Scripts/UI/        Theme, Fonts, Sprites(런타임 SDF 아이콘·둥근 사각형), UIKit, Navigator, BaseScreen
 │   ├─ Screens/       MainScreen, LevelScreen, UnitScreen, SettingsPopup
 │   └─ Widgets/       PagerView, DirectionalScrollRect, LabeledSlider, SequenceListView, SequenceNodeRow,
-│                     SequenceDragHandle, MiniPlayerBar, SafeAreaFitter, Toast, PressScale, FillViewportHeight
+│                     SequenceDragHandle, MiniPlayerBar, SafeAreaFitter, Toast, PressScale, FillViewportHeight, BannerAdSlot
 ├─ Editor/            ProjectSetup, ContentSync, AndroidGradlePostProcess
 ├─ Plugins/Android/EnglishAudio.androidlib/   AudioBridge, PlaybackService, SequenceEngine (Java)
 └─ Resources/Fonts/   JalnanGothicTTF.ttf (+ 셋업이 만드는 JalnanGothic SDF.asset)
@@ -124,6 +128,7 @@ unity/Assets/
 
 - [ ] 처음 열기 → 자동 셋업 로그, 폰트(잘난체 + 외곽선) 표시
 - [ ] 메인 2열, 노치/펀치홀·하단 제스처 바에 UI 가 가리지 않음, 가로로 돌려도 세로 유지
+- [ ] 배너 광고: 3버튼·제스처 내비게이션 모두 배너가 바 위 전용 띠 안에, 앱 버튼과 겹치지 않음 ([ADS.md](ADS.md) 7장)
 - [ ] 유닛 화면 좌우 넘김, 대화 페이지 세로 스크롤 중 좌우 넘김
 - [ ] 개별 듣기: 설정의 음량·빠르기를 재생 중에 바꾸면 바로 반영
 - [ ] 전체 듣기: 시퀀스 순서대로, 노드별 음량·빠르기·텀이 재생 중 바로 반영, 드래그 순서 변경

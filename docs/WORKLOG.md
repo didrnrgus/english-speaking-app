@@ -109,6 +109,7 @@ P=../didrnrgus.github.io/project_speaking_english
 | M3 | 수면 타이머, 진행률·오늘의 유닛, 텍스트 크기 |
 | M4 | 최근 앱 목록에서 지워도 재생 유지(서비스 별도 프로세스), 배터리 최적화 안내, 제조사별 테스트 |
 | 출시 전 | AI 음성 고지 문구, Supertonic-3 라이선스 전문 재확인, 예문 원어민 감수 권장 |
+| 광고 | LevelPlay 계정·App Key·배너 Ad Unit ID 를 `AdConfig.cs` 에 넣기, Test devices 등록, app-ads.txt, Play 광고·데이터 보안 신고 ([ADS.md](ADS.md) 2·3·6장) |
 
 ## 8. 앱 구현 (M1 ~ M3 일부)
 
@@ -129,6 +130,22 @@ P=../didrnrgus.github.io/project_speaking_english
 
 검증: Unity 에디터가 없는 환경이라 C# 은 Unity 참조 DLL + ugui/TMP 스텁으로 mono 컴파일 검사, Java 는 Media3 1.4.1 소스 + Android 14
 프레임워크로 javac 검사 (둘 다 오류 0). **실제 에디터·기기 실행은 아직** — 처음 열 때 나오는 오류부터 고친다.
+
+## 8-1. 배너 광고 (Unity LevelPlay)
+
+요청: Android 세로 하단 배너, Safe Area·내비게이션 버튼을 피해서, 모든 화면, 수익이 잘 나오게 하되 어뷰징은 절대 없게.
+질문 후 확정: 대상 13세 이상(일반 광고), 키는 아직 없음(자리만), 유닛 화면 포함 모든 화면, 광고 제거 결제는 나중에.
+
+| 결정 | 내용 / 이유 |
+|---|---|
+| SDK | Ads Mediation(`com.unity.services.levelplay`) 9.5.1. Unity Ads 는 그 안의 네트워크 — 나중에 비딩 네트워크를 붙여 단가를 올리기 쉬움 |
+| 배치 | Safe Area 맨 아래 **전용 띠**에 적응형 배너, 화면은 그 위로 줄임. 네이티브 배너를 띠 좌표(dp)에 맞춰 놓아 앱 UI 와 겹침 0 |
+| 내비게이션 바 | Unity 기본 전체 화면은 바를 숨기지만 밀어 올리면 나타남 → 숨겨져 있어도 바 높이만큼 항상 비움 (JNI `getInsetsIgnoringVisibility`) |
+| 배너 개수 | 앱 전체에 1개를 계속 띄움 (화면마다 새로 만들지 않음) |
+| 어뷰징 방지 | 자리 미리 확보(레이아웃 밀림 X), 12dp 간격, 팝업 중 숨김+새로고침 정지, 강제 재요청 없음, 클릭 보호(30분 3회 → 24시간 중지) |
+| 컴파일 안전 | 광고 코드는 별도 asmdef + version define → 패키지가 없어도 프로젝트가 컴파일, 키가 없으면 광고 자리도 안 만듦 |
+
+검증: Unity 2021.3 참조 DLL + TMP·LevelPlay 스텁으로 Roslyn 컴파일 (기기+SDK / SDK 없음 / 에디터, 오류·경고 0). 실제 패키지·기기 확인은 아직.
 
 ## 9. 커밋 이력
 

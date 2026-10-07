@@ -11,7 +11,7 @@
 
 처음 보는 분은 → **[프로젝트 소개서 docs/OVERVIEW.md](docs/OVERVIEW.md)**
 
-기획서 전문: [docs/PLAN.md](docs/PLAN.md) · 앱 구현: [docs/UNITY.md](docs/UNITY.md) · 작업 기록: [docs/WORKLOG.md](docs/WORKLOG.md) · 음성 생성 기록: [docs/AUDIO.md](docs/AUDIO.md)
+기획서 전문: [docs/PLAN.md](docs/PLAN.md) · 앱 구현: [docs/UNITY.md](docs/UNITY.md) · 배너 광고: [docs/ADS.md](docs/ADS.md) · 작업 기록: [docs/WORKLOG.md](docs/WORKLOG.md) · 음성 생성 기록: [docs/AUDIO.md](docs/AUDIO.md)
 
 ## 구조
 
@@ -33,6 +33,7 @@ docs/OVERVIEW.md          # 프로젝트 소개서 — 처음 보는 사람용 �
 docs/PLAN.md              # 기획서 v0.4
 docs/CURRICULUM.md        # 유닛 목록 (100유닛)
 docs/UNITY.md             # 앱 구현 — 화면, 듣기 시퀀스, 화면 꺼짐 재생 구조, 테스트 체크리스트
+docs/ADS.md               # 배너 광고 (Unity LevelPlay) — 키 넣는 법, 배치·수익 설계, 무효 트래픽 방지, 출시 전 체크
 docs/WORKLOG.md           # 작업 기록 — 진행 순서·결정 이유·운영 방법·한도·남은 일
 docs/AUDIO.md             # 음성(mp3) 생성 기록 — 현황, 엔진 선택 이유, 생성 절차
 ```
