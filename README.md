@@ -9,6 +9,8 @@
 - 플레이리스트식 **연속 재생**, **화면 꺼짐 재생**
   - Unity는 화면이 꺼지면 오디오가 멈추므로, 재생은 **Android 네이티브 플러그인**(Media3 `MediaSessionService` + ExoPlayer)이 담당하고 Unity(C#)는 UI와 재생 지시만 맡는다
 
+처음 보는 분은 → **[프로젝트 소개서 docs/OVERVIEW.md](docs/OVERVIEW.md)**
+
 기획서 전문: [docs/PLAN.md](docs/PLAN.md) · 앱 구현: [docs/UNITY.md](docs/UNITY.md) · 작업 기록: [docs/WORKLOG.md](docs/WORKLOG.md) · 음성 생성 기록: [docs/AUDIO.md](docs/AUDIO.md)
 
 ## 구조
@@ -27,6 +29,7 @@ content/                  # 번들용 예문 (원격 원본의 복사본, 오프
 tools/
   validate_content.py     # 스키마/필드 누락/id 중복/오디오 경로 검사
   generate_tts.py         # JSON → mp3 생성 (Supertonic-3), Pages 레포 폴더에 바로 저장
+docs/OVERVIEW.md          # 프로젝트 소개서 — 처음 보는 사람용 요약 (기획·화면·기술·현황)
 docs/PLAN.md              # 기획서 v0.4
 docs/CURRICULUM.md        # 유닛 목록 (100유닛)
 docs/UNITY.md             # 앱 구현 — 화면, 듣기 시퀀스, 화면 꺼짐 재생 구조, 테스트 체크리스트
