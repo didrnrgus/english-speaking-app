@@ -1,0 +1,56 @@
+{
+  "_comment": "예문 콘텐츠 목록. 앱은 이 파일을 먼저 받고 stages[].file 을 이 파일 기준 상대 경로로 받는다. 예문을 고치면 해당 스테이지 파일의 version 을 1 올린다. 검사에 실패한 파일은 버리고 이전(캐시/번들) 내용을 유지한다.",
+  "version": 1,
+  "stages": [
+    {
+      "stage": "S1",
+      "track": "speaking",
+      "file": "speaking/s1.json"
+    },
+    {
+      "stage": "S2",
+      "track": "speaking",
+      "file": "speaking/s2.json"
+    },
+    {
+      "stage": "S3",
+      "track": "speaking",
+      "file": "speaking/s3.json"
+    },
+    {
+      "stage": "S4",
+      "track": "speaking",
+      "file": "speaking/s4.json"
+    },
+    {
+      "stage": "S5",
+      "track": "speaking",
+      "file": "speaking/s5.json"
+    },
+    {
+      "stage": "D1",
+      "track": "dialogue",
+      "file": "dialogue/d1.json"
+    },
+    {
+      "stage": "D2",
+      "track": "dialogue",
+      "file": "dialogue/d2.json"
+    },
+    {
+      "stage": "D3",
+      "track": "dialogue",
+      "file": "dialogue/d3.json"
+    },
+    {
+      "stage": "D4",
+      "track": "dialogue",
+      "file": "dialogue/d4.json"
+    },
+    {
+      "stage": "D5",
+      "track": "dialogue",
+      "file": "dialogue/d5.json"
+    }
+  ]
+}

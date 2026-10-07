@@ -69,6 +69,7 @@
 ```json
 {
   "stage": "S2",
+  "version": 1,
   "track": "speaking",
   "title": "초급 말하기",
   "items": [
@@ -90,6 +91,7 @@
 ```json
 {
   "stage": "D3",
+  "version": 1,
   "track": "dialogue",
   "title": "중급 대화하기",
   "items": [
@@ -119,6 +121,19 @@
 
 - 오디오 파일명은 `id` 기준 (`S2-01.mp3`, 대화는 `D3-01_t1.mp3`)
 - 콘텐츠는 **JSON 파일로 분리**(앱 코드와 독립) → 이후 GitHub 레포에서 파싱/검증/빌드 가능
+- 스테이지마다 파일 1개, 파일마다 `version`(1 이상 정수) — 내용을 고치면 1 올린다
+- `index.json` 이 스테이지 목록(`stage`, `track`, `file`)을 가진다. 앱은 이 목록에 있는 파일만 받는다
+
+### 4-4. 원격 콘텐츠 (GitHub Pages)
+
+배포 후에도 예문을 고칠 수 있도록 예문 JSON 원본은 GitHub Pages 레포에 둔다.
+
+- 원본: `didrnrgus/didrnrgus.github.io` 레포의 `project_speaking_english/` (구조는 이 레포의 `content/` 와 동일)
+- URL: `https://didrnrgus.github.io/project_speaking_english/index.json`, `.../speaking/s1.json` 등
+- 앱 로드 순서: 원격 `index.json` → 각 스테이지 파일 다운로드 → 검사 통과 시 캐시에 저장 → 실패/오프라인이면 **캐시 → 번들** 순으로 사용
+- 번들: 이 레포의 `content/` 를 `StreamingAssets/content/` 로 복사 (첫 실행·오프라인용). 빌드 전에 원격 원본과 맞춘다
+- 배포 반영: Pages CDN 캐시로 최대 10분 정도 지연
+- ⚠️ 오디오가 번들이면 원격에서 문장을 바꿔도 소리는 옛 문장 그대로다 → 문장 수정을 원격으로 하려면 오디오도 같은 폴더(`audio/...`, 콘텐츠 폴더 기준 상대 경로)에 올리고 앱이 받아 쓰게 해야 한다 (10장 5번과 함께 결정)
 - 화자 A/B는 **서로 다른 목소리**로 합성 (예: A=여성, B=남성)
 
 ## 5. 오디오(TTS) 설계
@@ -218,7 +233,7 @@ Android 네이티브 플러그인 (Assets/Plugins/Android)
 | 오디오 | Android 네이티브 플러그인 (Java/Kotlin) + AndroidX **Media3** (ExoPlayer + MediaSessionService) |
 | Unity ↔ 네이티브 | `AndroidJavaObject` / `AndroidJavaProxy` |
 | 로컬 저장 | PlayerPrefs 또는 JSON 파일 (설정/진행률) |
-| 콘텐츠 | `Assets/StreamingAssets/content/*.json` + `Assets/StreamingAssets/audio/**` |
+| 콘텐츠 | 원격 `didrnrgus.github.io/project_speaking_english/` (원본) + 번들 `Assets/StreamingAssets/content/**` (폴백) + `Assets/StreamingAssets/audio/**` |
 | 콘텐츠 빌드 도구 | 별도 스크립트(Python/Node) — JSON 검증 + TTS 생성 + 경로 검증 |
 | 최소 SDK | Android 8.0 (API 26) 이상 권장 (확정 필요) |
 
@@ -239,7 +254,7 @@ Android 네이티브 플러그인 (Assets/Plugins/Android)
 2. **제조사별 백그라운드 제한** — 일부 기기에서 서비스 종료 가능 → 실기기 테스트, 안내 화면
 3. **1분 말하기/대화 문장 품질** — 원어민 감수 여부 결정 (AI 초안 → 검수 권장)
 4. **수익 모델 미정** — 무료 / 광고 / 유료 스테이지 해제 (초안 단계에서는 미결정)
-5. **앱 용량** — 현재 규모는 작지만, 예문이 수백 개로 늘면 원격 다운로드 방식 검토
+5. **앱 용량 / 오디오 원격화** — 예문 JSON은 원격(GitHub Pages)으로 옮김(4-4). 오디오도 원격으로 받을지(문장 원격 수정 시 필요) 결정 필요
 6. **Unity ↔ 네이티브 플러그인 연동** — 플러그인은 Unity 에디터에서 동작하지 않으므로 화면 꺼짐 재생은 실기기에서만 테스트 가능. 에디터용 대체 재생(`AudioSource`)을 같은 인터페이스 뒤에 둔다
 
 ## 11. 다음 단계 — GitHub 레포 개발 시 제안 구조
@@ -251,7 +266,8 @@ repo/
 │       ├─ Scripts/          # C# (UI, 콘텐츠 로드, 플레이어 인터페이스)
 │       ├─ Plugins/Android/  # 네이티브 오디오 플러그인 (Media3 서비스)
 │       └─ StreamingAssets/  # content/*.json, audio/** 복사본
-├─ content/
+├─ content/                   # 번들 복사본 (원본은 Pages 레포 project_speaking_english/)
+│   ├─ index.json
 │   ├─ speaking/s1.json ... s5.json
 │   └─ dialogue/d1.json ... d5.json
 ├─ tools/
