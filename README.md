@@ -9,15 +9,17 @@
 - 플레이리스트식 **연속 재생**, **화면 꺼짐 재생**
   - Unity는 화면이 꺼지면 오디오가 멈추므로, 재생은 **Android 네이티브 플러그인**(Media3 `MediaSessionService` + ExoPlayer)이 담당하고 Unity(C#)는 UI와 재생 지시만 맡는다
 
-기획서 전문: [docs/PLAN.md](docs/PLAN.md) · 작업 기록: [docs/WORKLOG.md](docs/WORKLOG.md) · 음성 생성 기록: [docs/AUDIO.md](docs/AUDIO.md)
+기획서 전문: [docs/PLAN.md](docs/PLAN.md) · 앱 구현: [docs/UNITY.md](docs/UNITY.md) · 작업 기록: [docs/WORKLOG.md](docs/WORKLOG.md) · 음성 생성 기록: [docs/AUDIO.md](docs/AUDIO.md)
 
 ## 구조
 
 ```
-unity/                    # Unity 프로젝트 (아래 '시작하기' 참고) — M1부터
-  Assets/Scripts/          #   C# (UI, 콘텐츠 로드, 플레이어)
-  Assets/Plugins/Android/  #   네이티브 오디오 플러그인 (Media3 서비스)
-  Assets/StreamingAssets/  #   content/ 복사본
+unity/                    # Unity 프로젝트 (아래 '시작하기', 구현 설명은 docs/UNITY.md)
+  Assets/Scripts/          #   C# — Core(콘텐츠·캐시·설정), Audio(재생 제어), UI(화면·위젯, 코드로 생성)
+  Assets/Editor/           #   자동 셋업, 번들 예문 복사, Gradle 보정
+  Assets/Plugins/Android/  #   네이티브 오디오 플러그인 EnglishAudio.androidlib (Media3 서비스, Java)
+  Assets/Resources/Fonts/  #   잘난체 고딕 TTF (TMP 동적 아틀라스, 외곽선 0.15)
+  Assets/StreamingAssets/  #   content/ 복사본 (빌드 때 자동 복사, git 제외)
 content/                  # 번들용 예문 (원격 원본의 복사본, 오프라인 첫 실행용)
   index.json                          # 레벨·유닛 목록 (앱이 가장 먼저 읽음)
   speaking/s1/u01.json ... s5/u10.json  # 말하기 S1~S5 × 유닛 U01~U10
@@ -25,8 +27,9 @@ content/                  # 번들용 예문 (원격 원본의 복사본, 오프
 tools/
   validate_content.py     # 스키마/필드 누락/id 중복/오디오 경로 검사
   generate_tts.py         # JSON → mp3 생성 (Supertonic-3), Pages 레포 폴더에 바로 저장
-docs/PLAN.md              # 기획서 v0.3
+docs/PLAN.md              # 기획서 v0.4
 docs/CURRICULUM.md        # 유닛 목록 (100유닛)
+docs/UNITY.md             # 앱 구현 — 화면, 듣기 시퀀스, 화면 꺼짐 재생 구조, 테스트 체크리스트
 docs/WORKLOG.md           # 작업 기록 — 진행 순서·결정 이유·운영 방법·한도·남은 일
 docs/AUDIO.md             # 음성(mp3) 생성 기록 — 현황, 엔진 선택 이유, 생성 절차
 ```
@@ -43,12 +46,15 @@ docs/AUDIO.md             # 음성(mp3) 생성 기록 — 현황, 엔진 선택 
 | S4 중상급 | 2~3 문장 | D4 중상급 | 8턴 |
 | S5 1분 말하기 | 90~110 단어 | D5 1분 대화 | 12턴 |
 
-## 시작하기 (Unity 프로젝트 만들기)
+## 시작하기 (Unity 프로젝트 열기)
 
-1. Unity Hub → New project → **Unity 6000.3.17f1**, 템플릿 선택
-2. Location은 이 레포 폴더, Project name은 **`unity`** → `english-speaking-app/unity/` 에 생성
-3. File → Build Profiles → **Android** 로 전환
-4. 커밋 / 푸시 (`unity/Library`, `Temp` 등은 `.gitignore` 로 제외됨)
+1. Unity Hub → **Add → Add project from disk** → 이 레포의 `unity/` 폴더 (에디터 **6000.3.17f1**, Android Build Support 포함)
+2. 처음 열면 자동 셋업이 실행된다 — TMP 리소스, 폰트 에셋, 번들 예문 복사, 세로 고정·패키지명 등 Player Settings, `Main` 씬
+   (다시 하려면 `Tools > English App > Run Project Setup`)
+3. 셋업이 만든 `ProjectSettings/`, `.meta`, 폰트 에셋, 씬을 커밋 / 푸시 (`unity/Library`, `Temp` 등은 `.gitignore` 로 제외됨)
+4. File → Build Profiles → **Android** 로 전환 → Play(에디터 확인) / Build(기기 확인)
+
+자세한 내용은 [docs/UNITY.md](docs/UNITY.md).
 
 ## 예문 수정 (원격 콘텐츠)
 
@@ -72,7 +78,7 @@ https://didrnrgus.github.io/project_speaking_english/audio/en/S1/S1-U01-01.mp3  
 3. Pages 레포 `main` 에 푸시 → GitHub Pages 배포 (CDN 캐시 때문에 반영까지 최대 10분 정도)
 4. 다음 앱 빌드 전에 번들 JSON도 맞춘다: `cp $P/index.json content/ && cp -r $P/speaking $P/dialogue content/`
 
-앱 동작(M1에서 구현): 실행 시 `index.json` → 유닛 파일을 받아 검사 → 통과하면 캐시에 저장, 실패하거나 오프라인이면 캐시 → 번들(`StreamingAssets/content`) 순으로 사용. mp3는 **들을 유닛만** 같은 주소 기준으로 받아 캐시해 두고 재생한다 (GitHub Pages 트래픽 한도 때문에 전체 일괄 다운로드는 하지 않음).
+앱 동작([docs/UNITY.md](docs/UNITY.md) 5장): 실행 시 `index.json` → 유닛 파일을 받아 검사 → 통과하면 캐시에 저장, 실패하거나 오프라인이면 캐시 → 번들(`StreamingAssets/content`) 순으로 사용. mp3는 **들을 유닛만** 같은 주소 기준으로 받아 캐시해 두고 재생한다 (GitHub Pages 트래픽 한도 때문에 전체 일괄 다운로드는 하지 않음).
 
 > mp3는 **Git LFS를 쓰지 않는다.** GitHub Pages는 LFS 파일 대신 포인터 텍스트를 내보내므로 앱이 받을 수 없다.
 > 64kbps 모노 3,700개 전체가 약 111MB 라 일반 커밋으로 충분하다 (Pages 사이트 한도 1GB).
@@ -103,8 +109,8 @@ python tools/generate_tts.py --content <폴더> --dry-run     # 생성할 오디
 | 단계 | 내용 | 상태 |
 |---|---|---|
 | M0 콘텐츠 | 레벨·유닛 구조, 예문 500개, JSON 스키마, TTS | ✅ 완료 — 100유닛·예문 500개, mp3 3,700개 (Supertonic-3), 원격 배치 |
-| M1 프로토타입 | Unity 프로젝트 생성, 레벨 목록 → 유닛 목록 → 예문 리스트 → 단일 재생 | |
-| M2 핵심 | Android 플러그인 연동 → 연속 재생 + 화면 꺼짐 재생 + 알림 컨트롤 | |
-| M3 학습 기능 | 재생 패턴, 반복, 전역 재생 속도(설정 팝업 드롭다운 x1.5~x0.5), 수면 타이머, 진행률 | |
+| M1 프로토타입 | Unity 프로젝트 생성, 레벨 목록 → 유닛 목록 → 예문 리스트 → 단일 재생 | 🟡 코드 완료, 에디터·기기 확인 전 — 메인 2열, 레벨→유닛→예문 페이지, 개별 듣기, 원격 JSON·mp3 캐시 |
+| M2 핵심 | Android 플러그인 연동 → 연속 재생 + 화면 꺼짐 재생 + 알림 컨트롤 | 🟡 코드 완료, 기기 확인 전 — Media3 서비스, 전체 듣기, 잠금화면 컨트롤 |
+| M3 학습 기능 | 듣기 시퀀스(노드별 음량·빠르기·텀, 드래그 순서), 개별 듣기 음량·빠르기, 반복, 수면 타이머, 진행률 | 🟡 시퀀스·반복·슬라이더 완료 / 수면 타이머·진행률 남음 |
 | M4 출시 준비 | 기기별 백그라운드 테스트, 스토어 자료 | |
 | M5 확장 | 유닛 추가, 롤플레이, 발음 체크 | |

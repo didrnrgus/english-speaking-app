@@ -32,3 +32,7 @@ local.properties
 # OS
 .DS_Store
 Thumbs.db
+
+# Unity: 빌드 때 레포 content/ 에서 복사되는 번들 예문 (원본은 content/)
+unity/Assets/StreamingAssets/
+unity/Assets/StreamingAssets.meta
