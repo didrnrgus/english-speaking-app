@@ -8,7 +8,7 @@
 - 플레이리스트식 **연속 재생**, **화면 꺼짐 재생**
   - Unity는 화면이 꺼지면 오디오가 멈추므로, 재생은 **Android 네이티브 플러그인**(Media3 `MediaSessionService` + ExoPlayer)이 담당하고 Unity(C#)는 UI와 재생 지시만 맡는다
 
-기획서 전문: [docs/PLAN.md](docs/PLAN.md)
+기획서 전문: [docs/PLAN.md](docs/PLAN.md) · 음성 생성 기록: [docs/AUDIO.md](docs/AUDIO.md)
 
 ## 구조
 
@@ -25,6 +25,7 @@ tools/
   validate_content.py     # 스키마/필드 누락/id 중복/오디오 경로 검사
   generate_tts.py         # JSON → mp3 생성 (Supertonic-3), Pages 레포 폴더에 바로 저장
 docs/PLAN.md              # 기획서 v0.2
+docs/AUDIO.md             # 음성(mp3) 생성 기록 — 현황, 엔진 선택 이유, 생성 절차
 ```
 
 ## 스테이지
@@ -69,12 +70,14 @@ https://didrnrgus.github.io/project_speaking_english/audio/en/S1-01.mp3 # JSON a
 앱 동작(M1에서 구현): 실행 시 `index.json` → 각 스테이지 파일을 받아 검사 → 통과하면 캐시에 저장, 실패하거나 오프라인이면 캐시 → 번들(`StreamingAssets/content`) 순으로 사용. mp3도 같은 주소 기준으로 받아 캐시해 두고 재생한다.
 
 > mp3는 **Git LFS를 쓰지 않는다.** GitHub Pages는 LFS 파일 대신 포인터 텍스트를 내보내므로 앱이 받을 수 없다.
-> 64kbps 모노로 370개 전체가 수 MB 수준이라 일반 커밋으로 충분하다.
+> 64kbps 모노로 370개 전체가 약 10MB(추정)라 일반 커밋으로 충분하다.
 
 ### TTS (Supertonic-3)
 
 `tools/generate_tts.py` — Supertone의 Supertonic-3로 영어·한국어를 로컬에서 생성 (무료, 코드 MIT / 모델 OpenRAIL-M: 상업적 이용 가능, 사용 제한 조항 준수).
 목소리: 말하기 트랙 F1, 대화 A=F1 / B=M1. 첫 실행 때 Hugging Face에서 모델(~400MB)을 받는다.
+
+> **현재 mp3 미생성 (0/370).** 클라우드 세션에서 Hugging Face 가 막혀 있음 → 해결 방법과 절차는 [docs/AUDIO.md](docs/AUDIO.md)
 
 ```bash
 pip install supertonic soundfile   # + ffmpeg
@@ -94,7 +97,7 @@ python tools/generate_tts.py --content <폴더> --dry-run     # 생성할 오디
 
 | 단계 | 내용 | 상태 |
 |---|---|---|
-| M0 콘텐츠 | 예문 50개, JSON 스키마, TTS 스크립트 | 예문·스키마·검증·원격 배치 완료 / TTS 엔진 Supertonic-3 결정 |
+| M0 콘텐츠 | 예문 50개, JSON 스키마, TTS 스크립트 | 예문·스키마·검증·원격 배치 완료 / TTS 스크립트(Supertonic-3) 완료 / mp3 미생성 ([AUDIO.md](docs/AUDIO.md)) |
 | M1 프로토타입 | Unity 프로젝트 생성, 스테이지 목록 → 예문 리스트 → 단일 재생 | |
 | M2 핵심 | Android 플러그인 연동 → 연속 재생 + 화면 꺼짐 재생 + 알림 컨트롤 | |
 | M3 학습 기능 | 재생 패턴, 반복, 속도, 수면 타이머, 진행률 | |
