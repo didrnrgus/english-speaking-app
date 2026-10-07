@@ -3,14 +3,27 @@ __pycache__/
 *.pyc
 .venv/
 
+# Unity (unity/ 프로젝트)
+unity/[Ll]ibrary/
+unity/[Tt]emp/
+unity/[Oo]bj/
+unity/[Ll]ogs/
+unity/[Uu]ser[Ss]ettings/
+unity/[Bb]uild/
+unity/[Bb]uilds/
+unity/[Mm]emoryCaptures/
+unity/[Rr]ecordings/
+unity/.vs/
+unity/.vscode/
+unity/*.csproj
+unity/*.sln
+unity/*.slnx
+
 # Android / Gradle
 .gradle/
-build/
 local.properties
 *.iml
 .idea/
-captures/
-.cxx/
 *.apk
 *.aab
 *.keystore

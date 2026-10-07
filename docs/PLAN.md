@@ -1,6 +1,8 @@
 # 영어 스피킹 학습 앱 — 초안 기획서 (v0.1)
 
-> 작성일: 2026-10-07 · 플랫폼: **Android 전용** · 상태: 초안 (다음 단계: GitHub 레포 파서로 개발 고도화)
+> 작성일: 2026-10-07 · 플랫폼: **Android 전용** · 엔진: **Unity** (+ Android 네이티브 오디오 플러그인) · 상태: 초안 (다음 단계: GitHub 레포 파서로 개발 고도화)
+>
+> v0.2 변경: 개발 엔진을 네이티브(Kotlin/Compose) → **Unity** 로 변경. 화면 꺼짐 재생은 Android 네이티브 플러그인이 담당 (6장, 8장, 11장).
 
 ---
 
@@ -140,7 +142,7 @@
    - 한국어: ko-KR
    - 초급 스테이지는 속도를 약간 느리게(0.85x) 별도 생성하거나, 재생 속도는 플레이어에서 조절
 3. 파일명 규칙대로 저장 후 JSON의 `audio` 경로와 일치하는지 검증
-4. 앱 `assets/` 또는 `res/raw/`에 포함
+4. Unity `Assets/StreamingAssets/`에 포함 (빌드 시 APK `assets/` 로 들어감 → 플러그인의 ExoPlayer가 `asset:///audio/...` 로 바로 재생)
 
 > ⚠️ TTS 서비스(Google Cloud TTS, Azure Neural TTS 등)는 **생성 음성의 앱 내 재배포 허용 범위가 서비스마다 다르므로** 선택 전에 약관 확인 필요.
 
@@ -149,13 +151,25 @@
 ### 6-1. 구조
 
 ```
-UI (Compose)  ←→  MediaController  ←→  MediaSessionService (Foreground Service)
-                                              └─ ExoPlayer (플레이리스트)
-                                                    ├─ 영어 mp3
-                                                    ├─ 무음 구간 (SilenceMediaSource)
-                                                    └─ 한국어 mp3
+Unity (C#, UI)
+   │  AndroidJavaObject 호출: setPlaylist / play / pause / next / setSpeed ...
+   ▼
+Android 네이티브 플러그인 (Assets/Plugins/Android)
+   MediaController  ←→  MediaSessionService (Foreground Service)
+                              └─ ExoPlayer (플레이리스트)
+                                    ├─ 영어 mp3
+                                    ├─ 무음 구간 (SilenceMediaSource)
+                                    └─ 한국어 mp3
 ```
 
+> ⚠️ **왜 플러그인이 필요한가:** Unity 앱은 화면이 꺼지거나 앱이 백그라운드로 가면 플레이어 루프가 멈추고 `AudioSource` 재생도 멈춘다.
+> 그래서 **재생은 전부 네이티브 서비스가 담당**하고, Unity는 화면·학습 UI와 "무엇을 재생할지" 지시만 맡는다.
+
+- **Unity ↔ 플러그인 역할 분담**
+  - Unity: 콘텐츠 JSON 로드, 화면(UI), 설정/진행률 저장, 플레이리스트 구성 후 플러그인에 전달
+  - 플러그인: 실제 재생, 포그라운드 서비스, 알림/잠금화면 컨트롤, 오디오 포커스
+  - 플러그인 → Unity 알림(현재 예문 변경 등)은 `UnitySendMessage` 또는 `AndroidJavaProxy` 콜백 사용
+  - 화면이 꺼진 동안 Unity는 멈춰 있으므로 콜백을 놓칠 수 있다 → **앱 복귀(`OnApplicationPause(false)`) 시 플러그인에서 현재 상태(예문 인덱스, 재생 여부)를 조회해 UI 동기화**
 - **Media3 `MediaSessionService`** + ExoPlayer 사용 → 포그라운드 서비스, 알림 컨트롤, 잠금화면 컨트롤, 블루투스/이어폰 버튼을 표준으로 지원
 - 선택한 스테이지의 예문을 `MediaItem` 목록(플레이리스트)으로 구성해 **서비스에서 재생** (Activity가 꺼져도 유지)
 - "따라 말하기" 간격은 **무음 `MediaItem`(SilenceMediaSource 등)을 사이에 삽입** → 타이머/Handler에 의존하지 않아 Doze 환경에서도 안정적
@@ -200,10 +214,11 @@ UI (Compose)  ←→  MediaController  ←→  MediaSessionService (Foreground S
 
 | 영역 | 선택 |
 |---|---|
-| 언어 / UI | Kotlin, Jetpack Compose |
-| 오디오 | AndroidX **Media3** (ExoPlayer + MediaSessionService) |
-| 로컬 저장 | DataStore (설정/진행률), 필요 시 Room |
-| 콘텐츠 | `assets/content/*.json` + `assets/audio/**` |
+| 엔진 / UI | **Unity** (C#, uGUI) — 기존 프로젝트와 같은 Unity 6000.3.17f1 기준 |
+| 오디오 | Android 네이티브 플러그인 (Java/Kotlin) + AndroidX **Media3** (ExoPlayer + MediaSessionService) |
+| Unity ↔ 네이티브 | `AndroidJavaObject` / `AndroidJavaProxy` |
+| 로컬 저장 | PlayerPrefs 또는 JSON 파일 (설정/진행률) |
+| 콘텐츠 | `Assets/StreamingAssets/content/*.json` + `Assets/StreamingAssets/audio/**` |
 | 콘텐츠 빌드 도구 | 별도 스크립트(Python/Node) — JSON 검증 + TTS 생성 + 경로 검증 |
 | 최소 SDK | Android 8.0 (API 26) 이상 권장 (확정 필요) |
 
@@ -212,8 +227,8 @@ UI (Compose)  ←→  MediaController  ←→  MediaSessionService (Foreground S
 | 단계 | 내용 |
 |---|---|
 | **M0 — 콘텐츠** | 예문 50개 확정(부록 A), JSON 스키마 확정, TTS 생성 스크립트 |
-| **M1 — 프로토타입** | 스테이지 목록 → 예문 리스트 → 단일 예문 재생 |
-| **M2 — 핵심** | Media3 서비스 기반 연속 재생 + 화면 꺼짐 재생 + 알림 컨트롤 |
+| **M1 — 프로토타입** | Unity 프로젝트 생성, 스테이지 목록 → 예문 리스트 → 단일 예문 재생 (에디터에서는 `AudioSource` 로 확인) |
+| **M2 — 핵심** | Android 플러그인(Media3 서비스) 연동 → 연속 재생 + 화면 꺼짐 재생 + 알림 컨트롤 |
 | **M3 — 학습 기능** | 재생 패턴(쉐도잉 등), 반복, 속도, 수면 타이머, 진행률 |
 | **M4 — 출시 준비** | 기기별 백그라운드 테스트, 아이콘/스토어 자료, 비공개 테스트 |
 | **M5 — 확장** | 예문 추가, 롤플레이 모드, 음성 인식 발음 체크(후순위) |
@@ -225,19 +240,24 @@ UI (Compose)  ←→  MediaController  ←→  MediaSessionService (Foreground S
 3. **1분 말하기/대화 문장 품질** — 원어민 감수 여부 결정 (AI 초안 → 검수 권장)
 4. **수익 모델 미정** — 무료 / 광고 / 유료 스테이지 해제 (초안 단계에서는 미결정)
 5. **앱 용량** — 현재 규모는 작지만, 예문이 수백 개로 늘면 원격 다운로드 방식 검토
+6. **Unity ↔ 네이티브 플러그인 연동** — 플러그인은 Unity 에디터에서 동작하지 않으므로 화면 꺼짐 재생은 실기기에서만 테스트 가능. 에디터용 대체 재생(`AudioSource`)을 같은 인터페이스 뒤에 둔다
 
 ## 11. 다음 단계 — GitHub 레포 개발 시 제안 구조
 
 ```
 repo/
-├─ app/                      # Android 앱 (Kotlin / Compose / Media3)
+├─ unity/                    # Unity 프로젝트 (Unity Hub로 생성)
+│   └─ Assets/
+│       ├─ Scripts/          # C# (UI, 콘텐츠 로드, 플레이어 인터페이스)
+│       ├─ Plugins/Android/  # 네이티브 오디오 플러그인 (Media3 서비스)
+│       └─ StreamingAssets/  # content/*.json, audio/** 복사본
 ├─ content/
 │   ├─ speaking/s1.json ... s5.json
 │   └─ dialogue/d1.json ... d5.json
 ├─ tools/
 │   ├─ validate_content.py   # 스키마/필드 누락/id 중복 검사
 │   └─ generate_tts.py       # JSON → mp3 생성 + 경로 검증
-├─ audio/                    # 생성된 mp3 (앱 assets로 복사)
+├─ audio/                    # 생성된 mp3 (unity/Assets/StreamingAssets 로 복사)
 └─ docs/PLAN.md              # 이 문서
 ```
 
