@@ -1,0 +1,37 @@
+// 영어 말하기 앱 — 화면 꺼짐 재생용 네이티브 오디오 플러그인 (Media3 MediaSessionService + ExoPlayer)
+// Unity 가 이 폴더(.androidlib)를 Gradle 서브 프로젝트로 넣는다.
+// compileSdk 는 빌드 시 Assets/Editor/AndroidGradlePostProcess.cs 가 unityLibrary 값으로 맞춘다 (아래 표시 줄).
+apply plugin: 'com.android.library'
+
+android {
+    namespace 'com.didrnrgus.englishspeaking.audio'
+    compileSdk 34 // @esa-compileSdk
+
+    defaultConfig {
+        minSdk 23
+        consumerProguardFiles 'proguard-rules.pro'
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src/main/java']
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+}
+
+dependencies {
+    implementation 'androidx.media3:media3-exoplayer:1.4.1'
+    implementation 'androidx.media3:media3-session:1.4.1'
+    implementation 'androidx.annotation:annotation-experimental:1.4.1'
+}
