@@ -1,0 +1,137 @@
+# 작업 기록 (2026-10-07)
+
+> 기획서 v0.1 이후 콘텐츠·음성·원격 배포까지 진행한 내용과 결정 이유를 한곳에 정리한다.
+> 세부 사양은 각 문서에: 기획 [PLAN.md](PLAN.md) · 유닛 목록 [CURRICULUM.md](CURRICULUM.md) · 음성 [AUDIO.md](AUDIO.md)
+
+## 1. 현재 상태 한눈에
+
+| 항목 | 상태 |
+|---|---|
+| 콘텐츠 | ✅ 레벨 10개 × 유닛 10개 × 예문 5개 = **100유닛, 예문 500개** (하루 1유닛 ≈ 3개월) |
+| 음성 | ✅ **mp3 3,700개** (Supertonic-3, 영어 약 107분 + 한국어 약 115분, 약 111MB) |
+| 원격 배포 | ✅ GitHub Pages `https://didrnrgus.github.io/project_speaking_english/` — 3,801개 파일 전수 확인 |
+| 도구 | ✅ `validate_content.py`(구조·오디오 검사), `generate_tts.py`(바뀐 문장만 mp3 재생성) |
+| 앱 (Unity) | ⬜ 아직 없음 — M1 에서 프로젝트 생성부터 |
+| 결정 필요 | S5/D5 '1분' 레벨 실제 길이 약 34초 → 분량 늘리기 / 이름 바꾸기 (7장) |
+
+## 2. 진행 순서와 결정 이유
+
+| # | 한 일 | 이유 / 결정 |
+|---|---|---|
+| 1 | 예문 JSON 을 Pages 레포 `project_speaking_english/` 로 옮김 | **배포 후에도 앱 업데이트 없이 예문을 고치기 위해.** 스테이지마다 파일 1개 + 목록 `index.json` + 파일별 `version` |
+| 2 | TTS 엔진 선택: **Supertonic-3** | 무료, 영어·한국어를 한 모델로, 로컬 실행. 샘플 청취 후 목소리·속도(1.0) 확정 |
+| 3 | 라이선스 확인 (OpenRAIL-M 원문) | 상업 이용 가능·로열티 없음·출력물 권리 주장 없음. **단 AI 생성 음성 고지 의무** → 앱 설정 '정보'와 스토어 설명에 표기. 조건 없는 대안(Kokoro + Qwen3-TTS/MeloTTS)은 [AUDIO.md](AUDIO.md)에 기록 |
+| 4 | mp3 도 Pages 레포에 둠, **Git LFS 안 씀** | JSON 과 같은 곳에 있어야 문장 수정 시 음성도 같이 바뀜. Pages 는 LFS 파일을 서빙하지 않음(포인터 텍스트가 나감) |
+| 5 | 비용 | 0원. Hugging Face 는 모델 다운로드에만 사용(API·크레딧 미사용). 클라우드 세션 네트워크에 `huggingface.co`, `*.hf.co`, `didrnrgus.github.io` 허용 |
+| 6 | 재생 속도 | 생성은 1.0 한 벌만. 앱 **설정 팝업의 전역 드롭다운** x1.5 / x1.25 / x1.0 / x0.75 / x0.5 (PLAN 6-4) |
+| 7 | 분량 확장: 50개 → **500개** | 50개(약 24분)는 하루이틀이면 끝남. "하루 1유닛" 기준으로 레벨당 주제별 유닛 10개. 기존 50개는 각 레벨 U01 로 이동 |
+| 8 | 예문 450개 작성 + mp3 3,330개 추가 생성 | 레벨별 기준(단어 수·문장 수·턴 수) 자동 검사 통과. 기존 mp3 370개는 경로만 옮겨 재사용 |
+| 9 | 검증 | 구조 검사 오류 0, 음량 고름·클리핑 0, 사이트 3,801개 파일이 로컬과 크기까지 일치. 철자 읽기("M-I-N-A") 대화 1개는 TTS 위험으로 교체 |
+
+## 3. 현재 구조
+
+### 두 레포의 역할
+
+| 레포 | 역할 |
+|---|---|
+| `didrnrgus/english-speaking-app` (이 레포) | 앱(예정), 번들용 예문 JSON `content/`, 도구 `tools/`, 문서 `docs/` |
+| `didrnrgus/didrnrgus.github.io` | **원격 콘텐츠 원본** `project_speaking_english/` — JSON + mp3, GitHub Pages 로 배포 |
+
+### 파일 구조 (Pages 레포 `project_speaking_english/`, 이 레포 `content/` 는 JSON 만 같은 구조)
+
+```
+index.json                          레벨·유닛 목록 (앱이 가장 먼저 읽음)
+speaking/s1/u01.json … s5/u10.json  말하기 유닛 파일
+dialogue/d1/u01.json … d5/u10.json  대화 유닛 파일
+audio/en/S1/S1-U01-01.mp3           음성 (언어 / 레벨 / 예문 id)
+audio/ko/D3/D3-U01-01_t1.mp3        대화는 턴 번호까지
+audio/tts_manifest.json             파일별 문장·목소리·설정 기록 (바뀐 문장만 재생성용)
+```
+
+- id: 유닛 `S2-U03`, 예문 `S2-U03-01`. JSON 의 `audio` 경로는 콘텐츠 폴더 기준 상대 경로
+- 목소리: 말하기 F1, 대화 A=F1(여) / B=M1(남), 영어·한국어 같은 목소리, 64kbps 모노
+
+### 앱이 콘텐츠를 쓰는 방식 (M1~M2 에서 구현)
+
+1. 원격 `index.json` → 유닛 파일 다운로드 → 검사 통과 시 캐시, 실패·오프라인이면 캐시 → 번들(`StreamingAssets/content`)
+2. mp3 는 **들을 유닛만** 받아 캐시 (전체 일괄 다운로드 금지 — 6장 트래픽)
+3. mp3 기준 URL 은 설정값으로 둔다 → 나중에 다른 저장소로 옮겨도 앱은 주소만 바꾸면 됨
+
+## 4. 운영 방법
+
+```bash
+# 두 레포를 나란히 클론 (english-speaking-app/, didrnrgus.github.io/)
+cd english-speaking-app
+pip install supertonic soundfile        # + ffmpeg
+P=../didrnrgus.github.io/project_speaking_english
+```
+
+| 하고 싶은 일 | 방법 |
+|---|---|
+| 예문 고치기 | `$P/<트랙>/<레벨>/uNN.json` 수정 → 그 파일 `version` +1 → `python tools/generate_tts.py --content $P` (바뀐 문장만 생성) |
+| 유닛 추가 | 유닛 파일 추가 + `index.json` 의 `units` 에 등록 (목록에 없으면 앱이 받지 않음) → mp3 생성 |
+| 검사 | `python tools/validate_content.py --content $P --audio` → 오류 0개 확인 |
+| 배포 | Pages 레포 `main` 에 커밋·푸시 → 1~2분 뒤 반영 (CDN 캐시로 최대 10분) |
+| 번들 맞추기 (앱 빌드 전) | `cp $P/index.json content/ && cp -r $P/speaking $P/dialogue content/` |
+
+- 생성 시간: 4코어 CPU 기준 약 1.3초/파일 (3,330개 약 70분). 50개마다 manifest 저장 → 끊겨도 이어서 생성
+- 클라우드 세션에서 생성하려면 환경 Network access 에 `huggingface.co`, `*.hf.co` 허용 필요
+
+## 5. 결정 사항 요약
+
+| 주제 | 결정 |
+|---|---|
+| 콘텐츠 구조 | 레벨(10) → 유닛(주제, 레벨당 10) → 예문(유닛당 5) |
+| 콘텐츠 위치 | GitHub Pages 레포가 원본, 앱 레포 `content/` 는 번들 복사본(JSON 만) |
+| TTS | Supertonic-3, 속도 1.0, F1/M1 |
+| 음성 저장 | Pages 레포 일반 커밋 (LFS 미사용) |
+| 재생 속도 | 앱 설정 팝업 전역 드롭다운 x1.5 ~ x0.5 |
+| 라이선스 의무 | AI 생성 음성 고지 (앱 설정 '정보' + 스토어 설명) |
+
+## 6. GitHub 한도와 비용
+
+| 항목 | 한도 | 현재 | 판단 |
+|---|---|---|---|
+| Pages 사이트 크기 | 1GB | 약 112MB | ✅ |
+| 레포 크기 | 1GB 이하 권장 | 약 115MB | ✅ |
+| 파일 하나 | 50MB 경고 / 100MB 차단 | mp3 하나 수백 KB 이하 | ✅ |
+| Pages 월 트래픽 | 약 100GB (소프트 한도) | 사용자 수에 비례 | ⚠️ 유닛당 평균 약 1.1MB, 하루 1유닛이면 사용자당 월 약 33MB → 월 활성 약 3,000명까지 여유 (캐시 전제, 대략치) |
+
+- **유료 결제는 필요 없고, 결제해도 Pages 한도는 늘지 않는다.** 소프트 한도라 넘으면 GitHub 이 연락하는 방식
+- 사용자가 크게 늘면 mp3 만 다운로드 비용 없는 저장소(예: Cloudflare R2)로 옮기고 앱의 기준 URL 만 바꾼다
+
+## 7. 남은 일
+
+| 우선 | 내용 |
+|---|---|
+| 결정 | **S5/D5 '1분' 길이** — 실제 영어 재생 약 30~40초(중앙값 34초). 예문 100개를 약 150~170단어로 늘리기 / '30초 말하기·대화'로 이름 바꾸기 중 선택 |
+| M1 | Unity 프로젝트 생성(`unity/`, README '시작하기'), 레벨 → 유닛 → 예문 화면, 원격 JSON 로드·캐시·번들 폴백 |
+| M2 | Android 네이티브 플러그인(Media3) — 연속 재생, 화면 꺼짐 재생, 들을 유닛 mp3 다운로드·캐시 |
+| M3 | 설정 팝업(전역 재생 속도 드롭다운 등), 재생 패턴, 진행률·오늘의 유닛 |
+| 출시 전 | AI 음성 고지 문구, Supertonic-3 라이선스 전문 재확인, 예문 원어민 감수 권장 |
+
+## 8. 커밋 이력
+
+### 이 레포 (`english-speaking-app`, `main`)
+
+| 커밋 | 내용 |
+|---|---|
+| `9930210` | 초기 구조: 기획서 v0.1, 예문 50개 콘텐츠 JSON, 검증/TTS 도구 |
+| `c98a668` | 개발 엔진을 Unity로 변경 |
+| `b43b275` | 예문 JSON 원격화 준비: index.json, version, Pages 레포 문서화 |
+| `9a5a4c5` | TTS를 Supertonic-3로 구현, mp3는 Pages 레포에 두도록 변경 |
+| `e386617` | 음성 생성 기록 `docs/AUDIO.md` |
+| `2f88c50` | manifest 를 스테이지 파일로 읽던 버그 수정 |
+| `0eb9251` | 전역 재생 속도 설정 사양, mp3 생성 완료 반영 |
+| `7af192c` | 레벨 → 유닛 구조로 확장: 100유닛, 예문 500개 |
+| `ec1b69f` | README·AUDIO 유닛 구조 반영 |
+| `61e16f3` | mp3 3,700개 생성 반영, D1-U03-02 교체 |
+
+### Pages 레포 (`didrnrgus.github.io`, `main`)
+
+| 커밋 | 내용 |
+|---|---|
+| `b60f70b` | `project_speaking_english` 예문 JSON 추가 |
+| `4d3f477` | 예문 mp3 370개 추가 (Supertonic-3) |
+| `a276c02` | 레벨 → 유닛 구조로 전환 (기존 mp3 370개 U01 경로로 이동) |
+| `a0a7e04` … `f2b8a26` | 레벨별 유닛 U02~U10 mp3 추가 (S1~S5 각 90개, D1 180 · D2 360 · D3 540 · D4 720 · D5 1,080개) |
