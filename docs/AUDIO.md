@@ -8,18 +8,20 @@
 |---|---|
 | 생성 스크립트 `tools/generate_tts.py` | ✅ 구현 완료 (Supertonic-3) |
 | 검사 `tools/validate_content.py --audio` | ✅ 콘텐츠 폴더 기준으로 mp3 존재 여부 검사 — 오류 0개 |
-| mp3 파일 | ✅ **370 / 370 생성, Pages `main` 배포** (약 12MB, 영어 약 700초 + 한국어 약 740초) |
-| 저장 위치 | Pages 레포 `didrnrgus.github.io/project_speaking_english/audio/{en,ko}/` + `audio/tts_manifest.json` |
-| 청취 확인 | 샘플(S2-01, D3-01 t1/t2 영·한) 들어 보고 채택. 영어가 약간 빠르게 느껴짐 → 생성 속도는 1.0 유지, 앱 전역 속도 설정으로 해결 (PLAN 6-4) |
+| mp3 파일 | ✅ **3,700 / 3,700 생성, Pages `main` 배포** — 예문 500개(100유닛), (생성 후 기록), (생성 후 기록) |
+| 저장 위치 | Pages 레포 `didrnrgus.github.io/project_speaking_english/audio/{en,ko}/<레벨>/` + `audio/tts_manifest.json` |
+| 청취 확인 | 샘플(S2-U01-01, D3-U01-01 t1/t2 영·한) 들어 보고 채택. 영어가 약간 빠르게 느껴짐 → 생성 속도는 1.0 유지, 앱 전역 속도 설정으로 해결 (PLAN 6-4) |
+| 이력 | 1차 370개(예문 50개) → 유닛 구조로 확장하며 기존 370개는 U01 경로로 옮기고(재생성 없음) 3,330개 추가 생성 |
 
-자동 점검: 파일별 음량 고름(평균 -30 ~ -25 dB, 클리핑 없음), 문장 길이 대비 재생 시간 이상치 없음 (한 단어짜리 2개만 앞뒤 여백 때문에 느리게 측정됨).
+자동 점검: (생성 후 기록)
 음성 인식으로 내용을 대조하는 검사는 하지 않았다 — 새 문장을 만들면 몇 개 직접 들어 볼 것.
 
 ### 생성 환경 메모
 
 - Claude Code 클라우드 세션에서 만들려면 환경 Network access 에 `huggingface.co`, `*.hf.co` 가 허용돼 있어야 한다 (모델 다운로드).
   안내: https://code.claude.com/docs/en/cloud-environments#network-access
-- 내 PC에서는 아래 '생성 절차' 그대로 실행 (Python 3.10+, ffmpeg 필요). 4코어 CPU 기준 370개 약 8분
+- 내 PC에서는 아래 '생성 절차' 그대로 실행 (Python 3.10+, ffmpeg 필요). 4코어 CPU 기준 (생성 후 기록)
+- 생성기는 50개마다 `tts_manifest.json` 을 저장하므로 중간에 끊겨도 다시 실행하면 남은 것만 만든다
 - 비용: 0원. 모델 파일만 받아 로컬에서 실행 (Hugging Face API·크레딧·계정 사용 안 함)
 
 ## 생성 절차
@@ -30,14 +32,14 @@ cd english-speaking-app
 pip install supertonic soundfile          # ffmpeg 는 별도 설치
 P=../didrnrgus.github.io/project_speaking_english
 
-python tools/generate_tts.py --content $P --dry-run   # 대상 목록 (처음엔 370개)
+python tools/generate_tts.py --content $P --dry-run   # 대상 목록 (새로 만들거나 문장이 바뀐 것만)
 python tools/generate_tts.py --content $P             # 생성 (첫 실행 때 모델 다운로드)
 python tools/validate_content.py --content $P --audio # 오류 0개 확인
 
 cd $P/.. && git add project_speaking_english/audio && git commit -m "project_speaking_english: 예문 mp3 추가" && git push
 ```
 
-- 결과: `audio/en/S1-01.mp3` … `audio/ko/D5-05_t12.mp3` (370개) + `audio/tts_manifest.json`
+- 결과: `audio/en/S1/S1-U01-01.mp3` … `audio/ko/D5/D5-U10-05_t12.mp3` (3,700개) + `audio/tts_manifest.json`
 - 문장을 고친 뒤 다시 실행하면 `tts_manifest.json` 과 비교해 **바뀐 문장의 mp3만** 다시 만든다. 전부 다시 만들려면 `--force`
 
 ## 결정 사항
@@ -75,14 +77,15 @@ cd $P/.. && git add project_speaking_english/audio && git commit -m "project_spe
 | 목소리 | 말하기 트랙 `F1`, 대화 A=`F1` / B=`M1` | PLAN 5-2: 말하기는 1개 목소리, 대화는 화자별로 다르게. 영어·한국어 같은 목소리 |
 | 속도 | 1.0 | 빠르게/느리게는 앱 설정 팝업의 전역 재생 속도(x1.5 / x1.25 / x1.0 / x0.75 / x0.5)로 처리 (PLAN 6-4) |
 | 품질 단계 | `total_steps=8` | Supertonic 기본값 |
-| 포맷 | mp3 64kbps 모노 | 음성 전용이라 충분. 370개 합계 약 12MB |
+| 포맷 | mp3 64kbps 모노 | 음성 전용이라 충분. 3,700개 합계 (생성 후 기록) |
 
 ### 저장 위치: Pages 레포, Git LFS 사용 안 함
 
 - 예문 JSON 과 같은 곳(`project_speaking_english/`)에 둔다. JSON 의 `audio` 경로가 이 폴더 기준 상대 경로라 URL 이 바로 맞는다
-  → `https://didrnrgus.github.io/project_speaking_english/audio/en/S1-01.mp3`
+  → `https://didrnrgus.github.io/project_speaking_english/audio/en/S1/S1-U01-01.mp3`
 - **LFS 를 쓰면 안 된다.** GitHub Pages 는 LFS 파일 대신 포인터 텍스트를 내보내므로 앱이 mp3 를 받을 수 없다.
-  전체 약 12MB 라 일반 커밋으로 충분하다 (Pages 사이트 한도 1GB).
+  전체 (생성 후 기록) 라 일반 커밋으로 충분하다 (Pages 사이트 한도 1GB).
+- 앱은 **들을 유닛 mp3만** 받아 캐시한다 — GitHub Pages 월 트래픽 권장 한도(약 100GB) 때문 (PLAN 10장 5번)
 - 앱 레포에는 mp3 를 두지 않는다 (기존 빈 `audio/` 폴더 삭제). 앱은 원격 mp3 를 받아 캐시해 두고 재생한다.
 
 ## 남은 일
