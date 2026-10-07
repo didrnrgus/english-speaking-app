@@ -3,21 +3,53 @@ __pycache__/
 *.pyc
 .venv/
 
-# Unity (unity/ 프로젝트)
-unity/[Ll]ibrary/
-unity/[Tt]emp/
-unity/[Oo]bj/
-unity/[Ll]ogs/
-unity/[Uu]ser[Ss]ettings/
-unity/[Bb]uild/
-unity/[Bb]uilds/
-unity/[Mm]emoryCaptures/
-unity/[Rr]ecordings/
-unity/.vs/
-unity/.vscode/
-unity/*.csproj
-unity/*.sln
-unity/*.slnx
+# ── Unity (Project_SE/ 프로젝트) ─────────────────────────────
+# 에디터가 다시 만드는 캐시·임시 파일
+/Project_SE/[Ll]ibrary/
+/Project_SE/[Tt]emp/
+/Project_SE/[Oo]bj/
+/Project_SE/[Ll]ogs/
+/Project_SE/[Uu]ser[Ss]ettings/
+/Project_SE/[Bb]uild/
+/Project_SE/[Bb]uilds/
+/Project_SE/[Mm]emoryCaptures/
+/Project_SE/[Rr]ecordings/
+/Project_SE/ExportedObj/
+/Project_SE/.utmp/
+/Project_SE/.consulo/
+
+# IDE 가 만드는 솔루션·프로젝트 파일 (Unity 가 매번 다시 생성)
+/Project_SE/.vs/
+/Project_SE/.vscode/
+/Project_SE/.idea/
+/Project_SE/*.csproj
+/Project_SE/*.unityproj
+/Project_SE/*.sln
+/Project_SE/*.slnx
+/Project_SE/*.suo
+/Project_SE/*.tmp
+/Project_SE/*.user
+/Project_SE/*.userprefs
+/Project_SE/*.booproj
+/Project_SE/*.svd
+/Project_SE/*.opendb
+/Project_SE/*.VC.db
+/Project_SE/*.pidb
+/Project_SE/sysinfo.txt
+/Project_SE/mono_crash.*
+
+# 에셋스토어 툴, Rider 플러그인, Addressables 빌드 산출물
+/Project_SE/[Aa]ssets/AssetStoreTools*
+/Project_SE/[Aa]ssets/Plugins/Editor/JetBrains*
+/Project_SE/[Aa]ssets/[Ss]treamingAssets/aa/
+/Project_SE/[Aa]ssets/[Ss]treamingAssets/aa.meta
+
+# Crashlytics 빌드 설정
+/Project_SE/[Aa]ssets/Plugins/Android/crashlytics-build.properties
+
+# 빌드 때 레포 content/ 에서 복사되는 번들 예문 (원본은 content/, Editor/ContentSync.cs 참고)
+/Project_SE/[Aa]ssets/[Ss]treamingAssets/
+/Project_SE/[Aa]ssets/[Ss]treamingAssets.meta
 
 # Android / Gradle
 .gradle/
@@ -28,11 +60,9 @@ local.properties
 *.aab
 *.keystore
 *.jks
+*.symbols.zip
 
 # OS
 .DS_Store
 Thumbs.db
-
-# Unity: 빌드 때 레포 content/ 에서 복사되는 번들 예문 (원본은 content/)
-unity/Assets/StreamingAssets/
-unity/Assets/StreamingAssets.meta
+desktop.ini
