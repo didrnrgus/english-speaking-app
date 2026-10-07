@@ -1,0 +1,54 @@
+{
+  "unit": "S3-U02",
+  "version": 1,
+  "level": "S3",
+  "track": "speaking",
+  "title": "직장과 학교",
+  "items": [
+    {
+      "id": "S3-U02-01",
+      "en": "I have a team meeting every Monday morning at nine.",
+      "ko": "저는 매주 월요일 아침 아홉 시에 팀 회의가 있어요.",
+      "audio": {
+        "en": "audio/en/S3/S3-U02-01.mp3",
+        "ko": "audio/ko/S3/S3-U02-01.mp3"
+      }
+    },
+    {
+      "id": "S3-U02-02",
+      "en": "My office is on the fifth floor of that building.",
+      "ko": "제 사무실은 저 건물 5층에 있어요.",
+      "audio": {
+        "en": "audio/en/S3/S3-U02-02.mp3",
+        "ko": "audio/ko/S3/S3-U02-02.mp3"
+      }
+    },
+    {
+      "id": "S3-U02-03",
+      "en": "I usually take a short break after lunch.",
+      "ko": "저는 보통 점심 먹고 잠깐 쉬어요.",
+      "audio": {
+        "en": "audio/en/S3/S3-U02-03.mp3",
+        "ko": "audio/ko/S3/S3-U02-03.mp3"
+      }
+    },
+    {
+      "id": "S3-U02-04",
+      "en": "I have an important exam at the end of this month.",
+      "ko": "이번 달 말에 중요한 시험이 있어요.",
+      "audio": {
+        "en": "audio/en/S3/S3-U02-04.mp3",
+        "ko": "audio/ko/S3/S3-U02-04.mp3"
+      }
+    },
+    {
+      "id": "S3-U02-05",
+      "en": "My teacher gave us a lot of homework today.",
+      "ko": "오늘 선생님이 숙제를 많이 내주셨어요.",
+      "audio": {
+        "en": "audio/en/S3/S3-U02-05.mp3",
+        "ko": "audio/ko/S3/S3-U02-05.mp3"
+      }
+    }
+  ]
+}

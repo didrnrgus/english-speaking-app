@@ -1,0 +1,54 @@
+{
+  "unit": "S1-U02",
+  "version": 1,
+  "level": "S1",
+  "track": "speaking",
+  "title": "대답하기",
+  "items": [
+    {
+      "id": "S1-U02-01",
+      "en": "Yes, please.",
+      "ko": "네, 주세요.",
+      "audio": {
+        "en": "audio/en/S1/S1-U02-01.mp3",
+        "ko": "audio/ko/S1/S1-U02-01.mp3"
+      }
+    },
+    {
+      "id": "S1-U02-02",
+      "en": "No, thanks.",
+      "ko": "아니요, 괜찮아요.",
+      "audio": {
+        "en": "audio/en/S1/S1-U02-02.mp3",
+        "ko": "audio/ko/S1/S1-U02-02.mp3"
+      }
+    },
+    {
+      "id": "S1-U02-03",
+      "en": "Of course.",
+      "ko": "물론이죠.",
+      "audio": {
+        "en": "audio/en/S1/S1-U02-03.mp3",
+        "ko": "audio/ko/S1/S1-U02-03.mp3"
+      }
+    },
+    {
+      "id": "S1-U02-04",
+      "en": "I don't know.",
+      "ko": "모르겠어요.",
+      "audio": {
+        "en": "audio/en/S1/S1-U02-04.mp3",
+        "ko": "audio/ko/S1/S1-U02-04.mp3"
+      }
+    },
+    {
+      "id": "S1-U02-05",
+      "en": "Maybe.",
+      "ko": "아마도요.",
+      "audio": {
+        "en": "audio/en/S1/S1-U02-05.mp3",
+        "ko": "audio/ko/S1/S1-U02-05.mp3"
+      }
+    }
+  ]
+}

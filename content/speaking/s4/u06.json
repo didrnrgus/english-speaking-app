@@ -1,0 +1,54 @@
+{
+  "unit": "S4-U06",
+  "version": 1,
+  "level": "S4",
+  "track": "speaking",
+  "title": "계획과 목표",
+  "items": [
+    {
+      "id": "S4-U06-01",
+      "en": "I'm planning to learn how to swim this summer. I already signed up for a class.",
+      "ko": "이번 여름에 수영을 배울 계획이에요. 벌써 수업도 신청했어요.",
+      "audio": {
+        "en": "audio/en/S4/S4-U06-01.mp3",
+        "ko": "audio/ko/S4/S4-U06-01.mp3"
+      }
+    },
+    {
+      "id": "S4-U06-02",
+      "en": "My goal is to save money for a trip to Europe. I want to go there next year.",
+      "ko": "제 목표는 유럽 여행 갈 돈을 모으는 거예요. 내년에 가고 싶어요.",
+      "audio": {
+        "en": "audio/en/S4/S4-U06-02.mp3",
+        "ko": "audio/ko/S4/S4-U06-02.mp3"
+      }
+    },
+    {
+      "id": "S4-U06-03",
+      "en": "I want to read one book every month. This month, I'm reading a novel about friendship.",
+      "ko": "매달 책을 한 권씩 읽고 싶어요. 이번 달에는 우정에 관한 소설을 읽고 있어요.",
+      "audio": {
+        "en": "audio/en/S4/S4-U06-03.mp3",
+        "ko": "audio/ko/S4/S4-U06-03.mp3"
+      }
+    },
+    {
+      "id": "S4-U06-04",
+      "en": "Next month, I'm going to start a new job. I'm a little nervous, but I'm also excited.",
+      "ko": "다음 달에 새 직장에서 일을 시작해요. 조금 긴장되지만 설레기도 해요.",
+      "audio": {
+        "en": "audio/en/S4/S4-U06-04.mp3",
+        "ko": "audio/ko/S4/S4-U06-04.mp3"
+      }
+    },
+    {
+      "id": "S4-U06-05",
+      "en": "I decided to wake up an hour earlier. I want to use that time to exercise.",
+      "ko": "한 시간 일찍 일어나기로 했어요. 그 시간을 운동하는 데 쓰고 싶어요.",
+      "audio": {
+        "en": "audio/en/S4/S4-U06-05.mp3",
+        "ko": "audio/ko/S4/S4-U06-05.mp3"
+      }
+    }
+  ]
+}

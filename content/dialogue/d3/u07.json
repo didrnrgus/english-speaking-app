@@ -1,0 +1,309 @@
+{
+  "unit": "D3-U07",
+  "version": 1,
+  "level": "D3",
+  "track": "dialogue",
+  "title": "여행 안내소",
+  "items": [
+    {
+      "id": "D3-U07-01",
+      "topic": "지도 받기",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Hello. Can I have a city map, please?",
+          "ko": "안녕하세요. 시내 지도 하나 받을 수 있을까요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U07-01_t1.mp3",
+            "ko": "audio/ko/D3/D3-U07-01_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Sure, here you are. It's free.",
+          "ko": "그럼요, 여기 있어요. 무료예요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U07-01_t2.mp3",
+            "ko": "audio/ko/D3/D3-U07-01_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "What are the must-see places?",
+          "ko": "꼭 가 봐야 할 곳이 어디예요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U07-01_t3.mp3",
+            "ko": "audio/ko/D3/D3-U07-01_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "The old castle and the night market.",
+          "ko": "옛 성이랑 야시장이요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U07-01_t4.mp3",
+            "ko": "audio/ko/D3/D3-U07-01_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Can I walk to the castle from here?",
+          "ko": "여기서 성까지 걸어갈 수 있어요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U07-01_t5.mp3",
+            "ko": "audio/ko/D3/D3-U07-01_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, it takes about twenty minutes.",
+          "ko": "네, 20분 정도 걸려요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U07-01_t6.mp3",
+            "ko": "audio/ko/D3/D3-U07-01_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U07-02",
+      "topic": "투어 예약",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Do you have any city tours?",
+          "ko": "시티 투어 있어요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U07-02_t1.mp3",
+            "ko": "audio/ko/D3/D3-U07-02_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, there's a bus tour every hour.",
+          "ko": "네, 매시간 버스 투어가 있어요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U07-02_t2.mp3",
+            "ko": "audio/ko/D3/D3-U07-02_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "How long is the tour?",
+          "ko": "투어는 얼마나 걸려요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U07-02_t3.mp3",
+            "ko": "audio/ko/D3/D3-U07-02_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "About two hours.",
+          "ko": "두 시간 정도요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U07-02_t4.mp3",
+            "ko": "audio/ko/D3/D3-U07-02_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Great. Two tickets for the next one, please.",
+          "ko": "좋아요. 다음 투어로 두 장 주세요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U07-02_t5.mp3",
+            "ko": "audio/ko/D3/D3-U07-02_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Sure. It leaves at three from the front door.",
+          "ko": "네. 3시에 정문 앞에서 출발해요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U07-02_t6.mp3",
+            "ko": "audio/ko/D3/D3-U07-02_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U07-03",
+      "topic": "맛집 추천",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Can you recommend a good local restaurant?",
+          "ko": "괜찮은 현지 식당 추천해 주실 수 있어요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U07-03_t1.mp3",
+            "ko": "audio/ko/D3/D3-U07-03_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Do you like seafood?",
+          "ko": "해산물 좋아하세요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U07-03_t2.mp3",
+            "ko": "audio/ko/D3/D3-U07-03_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Yes, I love it.",
+          "ko": "네, 정말 좋아해요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U07-03_t3.mp3",
+            "ko": "audio/ko/D3/D3-U07-03_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Then try Blue Harbor. It's near the port.",
+          "ko": "그럼 블루 하버에 가 보세요. 항구 근처예요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U07-03_t4.mp3",
+            "ko": "audio/ko/D3/D3-U07-03_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Do I need a reservation?",
+          "ko": "예약해야 해요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U07-03_t5.mp3",
+            "ko": "audio/ko/D3/D3-U07-03_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "It's a good idea on weekends.",
+          "ko": "주말에는 하는 게 좋아요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U07-03_t6.mp3",
+            "ko": "audio/ko/D3/D3-U07-03_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U07-04",
+      "topic": "교통 카드",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "How can I get around the city?",
+          "ko": "시내에서 어떻게 다니면 돼요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U07-04_t1.mp3",
+            "ko": "audio/ko/D3/D3-U07-04_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I recommend buying a travel card.",
+          "ko": "교통 카드 사시는 걸 추천해요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U07-04_t2.mp3",
+            "ko": "audio/ko/D3/D3-U07-04_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Where can I buy one?",
+          "ko": "어디서 살 수 있어요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U07-04_t3.mp3",
+            "ko": "audio/ko/D3/D3-U07-04_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Right here. It's ten dollars for three days.",
+          "ko": "바로 여기서요. 3일에 10달러예요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U07-04_t4.mp3",
+            "ko": "audio/ko/D3/D3-U07-04_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Can I use it on the subway too?",
+          "ko": "지하철에서도 쓸 수 있어요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U07-04_t5.mp3",
+            "ko": "audio/ko/D3/D3-U07-04_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, on buses and the subway.",
+          "ko": "네, 버스랑 지하철 다 돼요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U07-04_t6.mp3",
+            "ko": "audio/ko/D3/D3-U07-04_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U07-05",
+      "topic": "축제 정보",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Is anything special happening this weekend?",
+          "ko": "이번 주말에 특별한 행사 있어요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U07-05_t1.mp3",
+            "ko": "audio/ko/D3/D3-U07-05_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, there's a flower festival in the park.",
+          "ko": "네, 공원에서 꽃 축제가 있어요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U07-05_t2.mp3",
+            "ko": "audio/ko/D3/D3-U07-05_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "That sounds lovely. Is it free?",
+          "ko": "멋지네요. 무료예요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U07-05_t3.mp3",
+            "ko": "audio/ko/D3/D3-U07-05_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, and there's a concert on Saturday night.",
+          "ko": "네, 그리고 토요일 밤에는 콘서트도 있어요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U07-05_t4.mp3",
+            "ko": "audio/ko/D3/D3-U07-05_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "What time does it start?",
+          "ko": "몇 시에 시작해요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U07-05_t5.mp3",
+            "ko": "audio/ko/D3/D3-U07-05_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "At seven. Go early to get a good spot.",
+          "ko": "7시요. 좋은 자리 잡으려면 일찍 가세요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U07-05_t6.mp3",
+            "ko": "audio/ko/D3/D3-U07-05_t6.mp3"
+          }
+        }
+      ]
+    }
+  ]
+}

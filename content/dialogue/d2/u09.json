@@ -1,0 +1,219 @@
+{
+  "unit": "D2-U09",
+  "version": 1,
+  "level": "D2",
+  "track": "dialogue",
+  "title": "몸이 안 좋을 때",
+  "items": [
+    {
+      "id": "D2-U09-01",
+      "topic": "아파 보일 때",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Are you okay? You look pale.",
+          "ko": "괜찮아요? 얼굴이 창백해요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U09-01_t1.mp3",
+            "ko": "audio/ko/D2/D2-U09-01_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I don't feel well.",
+          "ko": "몸이 좀 안 좋아요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U09-01_t2.mp3",
+            "ko": "audio/ko/D2/D2-U09-01_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Maybe you should go home.",
+          "ko": "집에 가는 게 좋겠어요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U09-01_t3.mp3",
+            "ko": "audio/ko/D2/D2-U09-01_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yeah, I think so.",
+          "ko": "네, 그래야겠어요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U09-01_t4.mp3",
+            "ko": "audio/ko/D2/D2-U09-01_t4.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D2-U09-02",
+      "topic": "감기",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "I think I have a cold.",
+          "ko": "감기에 걸린 것 같아요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U09-02_t1.mp3",
+            "ko": "audio/ko/D2/D2-U09-02_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Do you have a fever?",
+          "ko": "열 있어요?",
+          "audio": {
+            "en": "audio/en/D2/D2-U09-02_t2.mp3",
+            "ko": "audio/ko/D2/D2-U09-02_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "A little.",
+          "ko": "조금요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U09-02_t3.mp3",
+            "ko": "audio/ko/D2/D2-U09-02_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Drink lots of water and rest.",
+          "ko": "물 많이 마시고 쉬어요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U09-02_t4.mp3",
+            "ko": "audio/ko/D2/D2-U09-02_t4.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D2-U09-03",
+      "topic": "약국",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Do you have something for a headache?",
+          "ko": "두통약 있어요?",
+          "audio": {
+            "en": "audio/en/D2/D2-U09-03_t1.mp3",
+            "ko": "audio/ko/D2/D2-U09-03_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, take this twice a day.",
+          "ko": "네, 이걸 하루에 두 번 드세요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U09-03_t2.mp3",
+            "ko": "audio/ko/D2/D2-U09-03_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Before or after meals?",
+          "ko": "식전이요, 식후요?",
+          "audio": {
+            "en": "audio/en/D2/D2-U09-03_t3.mp3",
+            "ko": "audio/ko/D2/D2-U09-03_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "After meals.",
+          "ko": "식후에요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U09-03_t4.mp3",
+            "ko": "audio/ko/D2/D2-U09-03_t4.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D2-U09-04",
+      "topic": "결근 연락",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "I can't come to work today.",
+          "ko": "오늘 출근을 못 할 것 같아요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U09-04_t1.mp3",
+            "ko": "audio/ko/D2/D2-U09-04_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Oh no. Are you sick?",
+          "ko": "저런. 아파요?",
+          "audio": {
+            "en": "audio/en/D2/D2-U09-04_t2.mp3",
+            "ko": "audio/ko/D2/D2-U09-04_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Yes, I have a stomachache.",
+          "ko": "네, 배가 아파요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U09-04_t3.mp3",
+            "ko": "audio/ko/D2/D2-U09-04_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Take care. Feel better soon.",
+          "ko": "몸조리 잘해요. 빨리 나아요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U09-04_t4.mp3",
+            "ko": "audio/ko/D2/D2-U09-04_t4.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D2-U09-05",
+      "topic": "회복",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Are you feeling better?",
+          "ko": "좀 나아졌어요?",
+          "audio": {
+            "en": "audio/en/D2/D2-U09-05_t1.mp3",
+            "ko": "audio/ko/D2/D2-U09-05_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, much better, thanks.",
+          "ko": "네, 훨씬 나아졌어요, 고마워요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U09-05_t2.mp3",
+            "ko": "audio/ko/D2/D2-U09-05_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Good to hear.",
+          "ko": "다행이네요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U09-05_t3.mp3",
+            "ko": "audio/ko/D2/D2-U09-05_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Thanks for worrying about me.",
+          "ko": "걱정해 줘서 고마워요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U09-05_t4.mp3",
+            "ko": "audio/ko/D2/D2-U09-05_t4.mp3"
+          }
+        }
+      ]
+    }
+  ]
+}

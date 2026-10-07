@@ -1,0 +1,579 @@
+{
+  "unit": "D5-U02",
+  "version": 1,
+  "level": "D5",
+  "track": "dialogue",
+  "title": "진로 고민 상담",
+  "items": [
+    {
+      "id": "D5-U02-01",
+      "topic": "이직 고민",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "You look worried. Is everything okay?",
+          "ko": "걱정 있어 보이네요. 괜찮아요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-01_t1.mp3",
+            "ko": "audio/ko/D5/D5-U02-01_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I'm thinking about changing jobs.",
+          "ko": "이직을 고민하고 있어요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-01_t2.mp3",
+            "ko": "audio/ko/D5/D5-U02-01_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Really? Don't you like your job?",
+          "ko": "정말요? 지금 일이 마음에 안 들어요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-01_t3.mp3",
+            "ko": "audio/ko/D5/D5-U02-01_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "It's okay, but I don't feel like I'm growing.",
+          "ko": "괜찮긴 한데 성장하는 느낌이 안 들어요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-01_t4.mp3",
+            "ko": "audio/ko/D5/D5-U02-01_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "What kind of job do you want to do?",
+          "ko": "어떤 일을 하고 싶은데요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-01_t5.mp3",
+            "ko": "audio/ko/D5/D5-U02-01_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Something in marketing. I've always been interested in it.",
+          "ko": "마케팅 쪽이요. 늘 관심이 있었거든요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-01_t6.mp3",
+            "ko": "audio/ko/D5/D5-U02-01_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Have you taken any classes?",
+          "ko": "수업을 들어 본 적 있어요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-01_t7.mp3",
+            "ko": "audio/ko/D5/D5-U02-01_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Not yet. I don't know where to start.",
+          "ko": "아직요. 어디서부터 시작해야 할지 모르겠어요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-01_t8.mp3",
+            "ko": "audio/ko/D5/D5-U02-01_t8.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Why don't you try an online course first?",
+          "ko": "먼저 온라인 강좌를 들어 보는 게 어때요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-01_t9.mp3",
+            "ko": "audio/ko/D5/D5-U02-01_t9.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "That's a good idea. I can do it after work.",
+          "ko": "좋은 생각이에요. 퇴근 후에 할 수 있겠네요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-01_t10.mp3",
+            "ko": "audio/ko/D5/D5-U02-01_t10.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "And talk to people who work in marketing.",
+          "ko": "그리고 마케팅 일하는 사람들과 이야기해 봐요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-01_t11.mp3",
+            "ko": "audio/ko/D5/D5-U02-01_t11.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Thanks. I feel a little clearer now.",
+          "ko": "고마워요. 이제 좀 정리가 되는 것 같아요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-01_t12.mp3",
+            "ko": "audio/ko/D5/D5-U02-01_t12.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D5-U02-02",
+      "topic": "전공 선택",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Mom, can I talk to you about my major?",
+          "ko": "엄마, 제 전공에 대해 얘기 좀 할 수 있어요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-02_t1.mp3",
+            "ko": "audio/ko/D5/D5-U02-02_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Of course. What's on your mind?",
+          "ko": "물론이지. 무슨 생각 하고 있어?",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-02_t2.mp3",
+            "ko": "audio/ko/D5/D5-U02-02_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "I'm not sure about studying business anymore.",
+          "ko": "이제 경영학을 공부하는 게 맞는지 모르겠어요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-02_t3.mp3",
+            "ko": "audio/ko/D5/D5-U02-02_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Oh, I thought you liked it.",
+          "ko": "어머, 좋아하는 줄 알았는데.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-02_t4.mp3",
+            "ko": "audio/ko/D5/D5-U02-02_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "It's fine, but I really love art.",
+          "ko": "괜찮긴 한데 저는 미술을 정말 좋아해요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-02_t5.mp3",
+            "ko": "audio/ko/D5/D5-U02-02_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Do you want to change your major?",
+          "ko": "전공을 바꾸고 싶어?",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-02_t6.mp3",
+            "ko": "audio/ko/D5/D5-U02-02_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Maybe. But I'm worried about finding a job.",
+          "ko": "아마도요. 그런데 취업이 걱정돼요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-02_t7.mp3",
+            "ko": "audio/ko/D5/D5-U02-02_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "That's a fair worry. Have you thought about design?",
+          "ko": "그럴 만한 걱정이지. 디자인은 생각해 봤어?",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-02_t8.mp3",
+            "ko": "audio/ko/D5/D5-U02-02_t8.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Design? Like graphic design?",
+          "ko": "디자인이요? 그래픽 디자인 같은 거요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-02_t9.mp3",
+            "ko": "audio/ko/D5/D5-U02-02_t9.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes. It's creative, and there are many jobs.",
+          "ko": "그래. 창의적이고 일자리도 많잖아.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-02_t10.mp3",
+            "ko": "audio/ko/D5/D5-U02-02_t10.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "That's true. I'll look into it.",
+          "ko": "맞아요. 한번 알아볼게요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-02_t11.mp3",
+            "ko": "audio/ko/D5/D5-U02-02_t11.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Whatever you choose, I'll support you.",
+          "ko": "뭘 선택하든 엄마는 응원할게.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-02_t12.mp3",
+            "ko": "audio/ko/D5/D5-U02-02_t12.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D5-U02-03",
+      "topic": "승진 제안",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "I got some big news today.",
+          "ko": "오늘 큰 소식이 있었어.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-03_t1.mp3",
+            "ko": "audio/ko/D5/D5-U02-03_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "What is it? Tell me!",
+          "ko": "뭔데? 말해 봐!",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-03_t2.mp3",
+            "ko": "audio/ko/D5/D5-U02-03_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "My boss offered me a promotion.",
+          "ko": "상사가 나한테 승진을 제안했어.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-03_t3.mp3",
+            "ko": "audio/ko/D5/D5-U02-03_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Congratulations! That's amazing!",
+          "ko": "축하해! 대단하다!",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-03_t4.mp3",
+            "ko": "audio/ko/D5/D5-U02-03_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Thanks, but there's a problem.",
+          "ko": "고마워, 근데 문제가 하나 있어.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-03_t5.mp3",
+            "ko": "audio/ko/D5/D5-U02-03_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "What's wrong?",
+          "ko": "뭐가 문제야?",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-03_t6.mp3",
+            "ko": "audio/ko/D5/D5-U02-03_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "I'd have to move to the office in Busan.",
+          "ko": "부산 사무실로 옮겨야 하거든.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-03_t7.mp3",
+            "ko": "audio/ko/D5/D5-U02-03_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Oh, I see. That's a big change.",
+          "ko": "아, 그렇구나. 큰 변화네.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-03_t8.mp3",
+            "ko": "audio/ko/D5/D5-U02-03_t8.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Yes. All my friends and family are here.",
+          "ko": "응. 친구랑 가족이 다 여기 있잖아.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-03_t9.mp3",
+            "ko": "audio/ko/D5/D5-U02-03_t9.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "How long would you stay there?",
+          "ko": "거기 얼마나 있어야 해?",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-03_t10.mp3",
+            "ko": "audio/ko/D5/D5-U02-03_t10.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Maybe two years.",
+          "ko": "아마 2년 정도.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-03_t11.mp3",
+            "ko": "audio/ko/D5/D5-U02-03_t11.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Two years isn't forever. It could be a great experience.",
+          "ko": "2년이 평생은 아니잖아. 좋은 경험이 될 수도 있어.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-03_t12.mp3",
+            "ko": "audio/ko/D5/D5-U02-03_t12.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D5-U02-04",
+      "topic": "대학원 진학",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Are you still thinking about graduate school?",
+          "ko": "아직 대학원 생각하고 있어요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-04_t1.mp3",
+            "ko": "audio/ko/D5/D5-U02-04_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, but I can't decide.",
+          "ko": "네, 그런데 결정을 못 하겠어요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-04_t2.mp3",
+            "ko": "audio/ko/D5/D5-U02-04_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "What's stopping you?",
+          "ko": "뭐가 망설여져요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-04_t3.mp3",
+            "ko": "audio/ko/D5/D5-U02-04_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "It's expensive, and I'd have to quit my job.",
+          "ko": "비싸고 일을 그만둬야 하거든요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-04_t4.mp3",
+            "ko": "audio/ko/D5/D5-U02-04_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Can you study part-time?",
+          "ko": "파트타임으로 공부할 수는 없어요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-04_t5.mp3",
+            "ko": "audio/ko/D5/D5-U02-04_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Some schools have evening programs.",
+          "ko": "야간 과정이 있는 학교도 있어요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-04_t6.mp3",
+            "ko": "audio/ko/D5/D5-U02-04_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "That sounds like a good option.",
+          "ko": "그거 좋은 방법 같은데요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-04_t7.mp3",
+            "ko": "audio/ko/D5/D5-U02-04_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "But it would take three years instead of two.",
+          "ko": "그런데 2년이 아니라 3년이 걸려요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-04_t8.mp3",
+            "ko": "audio/ko/D5/D5-U02-04_t8.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "That's true, but you could keep your salary.",
+          "ko": "그렇긴 하지만 월급은 계속 받을 수 있잖아요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-04_t9.mp3",
+            "ko": "audio/ko/D5/D5-U02-04_t9.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "You're right. That's important for me.",
+          "ko": "맞아요. 저한테는 그게 중요해요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-04_t10.mp3",
+            "ko": "audio/ko/D5/D5-U02-04_t10.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Why don't you visit a few schools first?",
+          "ko": "먼저 학교 몇 군데 가 보는 게 어때요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-04_t11.mp3",
+            "ko": "audio/ko/D5/D5-U02-04_t11.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Good idea. I'll go to an information session.",
+          "ko": "좋은 생각이에요. 설명회에 가 볼게요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-04_t12.mp3",
+            "ko": "audio/ko/D5/D5-U02-04_t12.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D5-U02-05",
+      "topic": "창업 꿈",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Can I tell you a secret?",
+          "ko": "비밀 하나 말해도 돼?",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-05_t1.mp3",
+            "ko": "audio/ko/D5/D5-U02-05_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Sure. What is it?",
+          "ko": "그럼. 뭔데?",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-05_t2.mp3",
+            "ko": "audio/ko/D5/D5-U02-05_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "I want to open my own bakery someday.",
+          "ko": "언젠가 내 빵집을 열고 싶어.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-05_t3.mp3",
+            "ko": "audio/ko/D5/D5-U02-05_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Really? You do make great bread.",
+          "ko": "정말? 너 빵 진짜 잘 만들잖아.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-05_t4.mp3",
+            "ko": "audio/ko/D5/D5-U02-05_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Thanks. But I'm scared to quit my job.",
+          "ko": "고마워. 근데 회사 그만두는 게 무서워.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-05_t5.mp3",
+            "ko": "audio/ko/D5/D5-U02-05_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "You don't have to quit right away.",
+          "ko": "당장 그만둘 필요는 없잖아.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-05_t6.mp3",
+            "ko": "audio/ko/D5/D5-U02-05_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "What do you mean?",
+          "ko": "무슨 뜻이야?",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-05_t7.mp3",
+            "ko": "audio/ko/D5/D5-U02-05_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "You could sell bread at weekend markets first.",
+          "ko": "먼저 주말 장터에서 빵을 팔아 볼 수 있잖아.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-05_t8.mp3",
+            "ko": "audio/ko/D5/D5-U02-05_t8.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Oh, that's a smart idea.",
+          "ko": "오, 그거 똑똑한 생각이다.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-05_t9.mp3",
+            "ko": "audio/ko/D5/D5-U02-05_t9.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Then you can see if people like it.",
+          "ko": "그럼 사람들이 좋아하는지 알 수 있지.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-05_t10.mp3",
+            "ko": "audio/ko/D5/D5-U02-05_t10.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "And I can save money at the same time.",
+          "ko": "그리고 동시에 돈도 모을 수 있고.",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-05_t11.mp3",
+            "ko": "audio/ko/D5/D5-U02-05_t11.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Exactly. I'll be your first customer!",
+          "ko": "바로 그거야. 내가 첫 손님 할게!",
+          "audio": {
+            "en": "audio/en/D5/D5-U02-05_t12.mp3",
+            "ko": "audio/ko/D5/D5-U02-05_t12.mp3"
+          }
+        }
+      ]
+    }
+  ]
+}

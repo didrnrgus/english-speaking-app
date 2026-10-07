@@ -1,0 +1,579 @@
+{
+  "unit": "D5-U07",
+  "version": 1,
+  "level": "D5",
+  "track": "dialogue",
+  "title": "이웃 간 문제",
+  "items": [
+    {
+      "id": "D5-U07-01",
+      "topic": "층간 소음",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Hi, I live downstairs in 302.",
+          "ko": "안녕하세요, 아래층 302호 사는 사람인데요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-01_t1.mp3",
+            "ko": "audio/ko/D5/D5-U07-01_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Oh, hi. Is something wrong?",
+          "ko": "아, 안녕하세요. 무슨 일 있으세요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-01_t2.mp3",
+            "ko": "audio/ko/D5/D5-U07-01_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "I'm sorry to bother you, but it's been noisy at night.",
+          "ko": "귀찮게 해서 죄송한데 밤에 좀 시끄러워서요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-01_t3.mp3",
+            "ko": "audio/ko/D5/D5-U07-01_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Oh, really? I didn't know.",
+          "ko": "아, 정말요? 몰랐어요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-01_t4.mp3",
+            "ko": "audio/ko/D5/D5-U07-01_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "I hear footsteps and furniture moving after midnight.",
+          "ko": "자정 넘어서 발소리랑 가구 끄는 소리가 들려요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-01_t5.mp3",
+            "ko": "audio/ko/D5/D5-U07-01_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I'm so sorry. I work late, so I clean at night.",
+          "ko": "정말 죄송해요. 늦게까지 일해서 밤에 청소를 하거든요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-01_t6.mp3",
+            "ko": "audio/ko/D5/D5-U07-01_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "I understand, but I have to get up early.",
+          "ko": "이해는 하는데 제가 일찍 일어나야 해서요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-01_t7.mp3",
+            "ko": "audio/ko/D5/D5-U07-01_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Of course. I'll try to finish before eleven.",
+          "ko": "그럼요. 11시 전에 끝내도록 할게요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-01_t8.mp3",
+            "ko": "audio/ko/D5/D5-U07-01_t8.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Thank you. That would really help.",
+          "ko": "고마워요. 그러면 정말 도움이 될 거예요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-01_t9.mp3",
+            "ko": "audio/ko/D5/D5-U07-01_t9.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I'll also buy some soft slippers.",
+          "ko": "푹신한 슬리퍼도 살게요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-01_t10.mp3",
+            "ko": "audio/ko/D5/D5-U07-01_t10.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "That's very kind of you.",
+          "ko": "정말 친절하시네요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-01_t11.mp3",
+            "ko": "audio/ko/D5/D5-U07-01_t11.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Please tell me if it happens again.",
+          "ko": "또 그러면 꼭 말씀해 주세요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-01_t12.mp3",
+            "ko": "audio/ko/D5/D5-U07-01_t12.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D5-U07-02",
+      "topic": "주차 문제",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Excuse me. Is this your car?",
+          "ko": "실례합니다. 이거 그쪽 차예요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-02_t1.mp3",
+            "ko": "audio/ko/D5/D5-U07-02_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, it is. Is there a problem?",
+          "ko": "네, 맞아요. 문제 있어요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-02_t2.mp3",
+            "ko": "audio/ko/D5/D5-U07-02_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "It's blocking my garage. I can't get my car out.",
+          "ko": "우리 차고를 막고 있어서요. 차를 못 빼요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-02_t3.mp3",
+            "ko": "audio/ko/D5/D5-U07-02_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Oh, I'm so sorry. I didn't see the sign.",
+          "ko": "어머, 정말 죄송해요. 표지판을 못 봤어요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-02_t4.mp3",
+            "ko": "audio/ko/D5/D5-U07-02_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "It's okay. I'm just in a hurry.",
+          "ko": "괜찮아요. 제가 좀 급해서요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-02_t5.mp3",
+            "ko": "audio/ko/D5/D5-U07-02_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I'll move it right now.",
+          "ko": "지금 바로 뺄게요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-02_t6.mp3",
+            "ko": "audio/ko/D5/D5-U07-02_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Thank you. Are you visiting someone here?",
+          "ko": "고마워요. 여기 누구 만나러 오셨어요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-02_t7.mp3",
+            "ko": "audio/ko/D5/D5-U07-02_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, my friend lives in this building.",
+          "ko": "네, 친구가 이 건물에 살아요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-02_t8.mp3",
+            "ko": "audio/ko/D5/D5-U07-02_t8.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "There's a visitor parking lot behind the building.",
+          "ko": "건물 뒤에 방문자 주차장이 있어요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-02_t9.mp3",
+            "ko": "audio/ko/D5/D5-U07-02_t9.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Oh, I didn't know that. Thanks for telling me.",
+          "ko": "아, 몰랐어요. 알려 주셔서 고마워요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-02_t10.mp3",
+            "ko": "audio/ko/D5/D5-U07-02_t10.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "No problem. Have a nice day.",
+          "ko": "별말씀을요. 좋은 하루 보내세요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-02_t11.mp3",
+            "ko": "audio/ko/D5/D5-U07-02_t11.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "You too. Sorry again!",
+          "ko": "그쪽도요. 다시 한번 죄송해요!",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-02_t12.mp3",
+            "ko": "audio/ko/D5/D5-U07-02_t12.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D5-U07-03",
+      "topic": "담배 냄새",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Hi. Do you have a minute?",
+          "ko": "안녕하세요. 잠깐 시간 괜찮으세요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-03_t1.mp3",
+            "ko": "audio/ko/D5/D5-U07-03_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Sure. What is it?",
+          "ko": "네. 무슨 일이세요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-03_t2.mp3",
+            "ko": "audio/ko/D5/D5-U07-03_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "I smell cigarette smoke in my apartment every evening.",
+          "ko": "매일 저녁 우리 집에 담배 냄새가 나서요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-03_t3.mp3",
+            "ko": "audio/ko/D5/D5-U07-03_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Oh, I sometimes smoke on my balcony.",
+          "ko": "아, 제가 가끔 베란다에서 담배를 피워요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-03_t4.mp3",
+            "ko": "audio/ko/D5/D5-U07-03_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "I think the smoke comes into my window.",
+          "ko": "연기가 우리 집 창문으로 들어오는 것 같아요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-03_t5.mp3",
+            "ko": "audio/ko/D5/D5-U07-03_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I'm sorry. I didn't realize that.",
+          "ko": "죄송해요. 그건 몰랐어요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-03_t6.mp3",
+            "ko": "audio/ko/D5/D5-U07-03_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "My baby is very young, so I'm worried.",
+          "ko": "우리 아기가 아주 어려서 걱정이 돼요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-03_t7.mp3",
+            "ko": "audio/ko/D5/D5-U07-03_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I completely understand.",
+          "ko": "충분히 이해해요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-03_t8.mp3",
+            "ko": "audio/ko/D5/D5-U07-03_t8.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Could you smoke somewhere else?",
+          "ko": "다른 곳에서 피워 주실 수 있을까요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-03_t9.mp3",
+            "ko": "audio/ko/D5/D5-U07-03_t9.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Sure. I'll go to the smoking area outside.",
+          "ko": "그럼요. 밖에 있는 흡연 구역으로 갈게요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-03_t10.mp3",
+            "ko": "audio/ko/D5/D5-U07-03_t10.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Thank you so much for understanding.",
+          "ko": "이해해 주셔서 정말 고마워요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-03_t11.mp3",
+            "ko": "audio/ko/D5/D5-U07-03_t11.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "No problem. I should have thought of it.",
+          "ko": "별말씀을요. 제가 먼저 생각했어야 했는데요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-03_t12.mp3",
+            "ko": "audio/ko/D5/D5-U07-03_t12.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D5-U07-04",
+      "topic": "강아지 짖는 소리",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Excuse me. Do you have a dog?",
+          "ko": "실례합니다. 강아지 키우세요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-04_t1.mp3",
+            "ko": "audio/ko/D5/D5-U07-04_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, I do. Why do you ask?",
+          "ko": "네, 키워요. 왜 그러세요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-04_t2.mp3",
+            "ko": "audio/ko/D5/D5-U07-04_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "It barks a lot during the day.",
+          "ko": "낮에 강아지가 많이 짖어서요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-04_t3.mp3",
+            "ko": "audio/ko/D5/D5-U07-04_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Really? I'm at work during the day.",
+          "ko": "정말요? 저는 낮에 회사에 있어서요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-04_t4.mp3",
+            "ko": "audio/ko/D5/D5-U07-04_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "I work from home, so I hear it all the time.",
+          "ko": "저는 재택근무를 해서 계속 들려요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-04_t5.mp3",
+            "ko": "audio/ko/D5/D5-U07-04_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I'm sorry. He must be lonely when I'm gone.",
+          "ko": "죄송해요. 제가 없으면 외로운가 봐요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-04_t6.mp3",
+            "ko": "audio/ko/D5/D5-U07-04_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "I understand. He's probably bored.",
+          "ko": "이해해요. 아마 심심한가 봐요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-04_t7.mp3",
+            "ko": "audio/ko/D5/D5-U07-04_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I'll ask a dog walker to come at lunch.",
+          "ko": "점심때 산책 도우미를 불러 볼게요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-04_t8.mp3",
+            "ko": "audio/ko/D5/D5-U07-04_t8.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "That's a good idea.",
+          "ko": "좋은 생각이에요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-04_t9.mp3",
+            "ko": "audio/ko/D5/D5-U07-04_t9.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I'll also leave him some toys.",
+          "ko": "장난감도 좀 놔둘게요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-04_t10.mp3",
+            "ko": "audio/ko/D5/D5-U07-04_t10.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Thanks. I hope it helps him, too.",
+          "ko": "고마워요. 강아지한테도 도움이 됐으면 좋겠어요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-04_t11.mp3",
+            "ko": "audio/ko/D5/D5-U07-04_t11.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Thanks for telling me nicely.",
+          "ko": "좋게 말씀해 주셔서 고마워요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-04_t12.mp3",
+            "ko": "audio/ko/D5/D5-U07-04_t12.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D5-U07-05",
+      "topic": "공용 공간 청소",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Did you see the hallway? It's really messy.",
+          "ko": "복도 봤어요? 정말 지저분해요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-05_t1.mp3",
+            "ko": "audio/ko/D5/D5-U07-05_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes. Someone left boxes everywhere.",
+          "ko": "네. 누가 상자를 여기저기 놔뒀더라고요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-05_t2.mp3",
+            "ko": "audio/ko/D5/D5-U07-05_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Should we tell the building manager?",
+          "ko": "관리인한테 말할까요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-05_t3.mp3",
+            "ko": "audio/ko/D5/D5-U07-05_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Maybe we should leave a note first.",
+          "ko": "먼저 쪽지를 남기는 게 좋겠어요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-05_t4.mp3",
+            "ko": "audio/ko/D5/D5-U07-05_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Good idea. What should we write?",
+          "ko": "좋은 생각이에요. 뭐라고 쓸까요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-05_t5.mp3",
+            "ko": "audio/ko/D5/D5-U07-05_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Something polite, like, \"Please keep the hallway clean.\"",
+          "ko": "정중하게요. \"복도를 깨끗하게 사용해 주세요\" 같은 거요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-05_t6.mp3",
+            "ko": "audio/ko/D5/D5-U07-05_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "And we can add the recycling day.",
+          "ko": "재활용 버리는 날도 적으면 되겠네요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-05_t7.mp3",
+            "ko": "audio/ko/D5/D5-U07-05_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, maybe they don't know about it.",
+          "ko": "네, 모르고 있을 수도 있잖아요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-05_t8.mp3",
+            "ko": "audio/ko/D5/D5-U07-05_t8.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "I'll write it tonight and put it up.",
+          "ko": "오늘 밤에 써서 붙여 둘게요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-05_t9.mp3",
+            "ko": "audio/ko/D5/D5-U07-05_t9.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Thanks. Let me know if it doesn't work.",
+          "ko": "고마워요. 효과 없으면 알려 줘요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-05_t10.mp3",
+            "ko": "audio/ko/D5/D5-U07-05_t10.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Then we'll talk to the manager together.",
+          "ko": "그때는 같이 관리인한테 얘기해요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-05_t11.mp3",
+            "ko": "audio/ko/D5/D5-U07-05_t11.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Sounds like a plan.",
+          "ko": "좋아요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U07-05_t12.mp3",
+            "ko": "audio/ko/D5/D5-U07-05_t12.mp3"
+          }
+        }
+      ]
+    }
+  ]
+}

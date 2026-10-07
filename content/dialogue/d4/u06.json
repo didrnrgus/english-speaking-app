@@ -1,0 +1,399 @@
+{
+  "unit": "D4-U06",
+  "version": 1,
+  "level": "D4",
+  "track": "dialogue",
+  "title": "여행 계획 세우기",
+  "items": [
+    {
+      "id": "D4-U06-01",
+      "topic": "여행지 고르기",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Where should we go for our summer trip?",
+          "ko": "여름휴가 어디로 갈까?",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-01_t1.mp3",
+            "ko": "audio/ko/D4/D4-U06-01_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "How about the beach? I want to swim.",
+          "ko": "바닷가 어때? 수영하고 싶어.",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-01_t2.mp3",
+            "ko": "audio/ko/D4/D4-U06-01_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Hmm, I'd rather go to the mountains. It's cooler.",
+          "ko": "음, 난 산이 더 좋아. 더 시원하잖아.",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-01_t3.mp3",
+            "ko": "audio/ko/D4/D4-U06-01_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "What about a place with both?",
+          "ko": "둘 다 있는 곳은 어때?",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-01_t4.mp3",
+            "ko": "audio/ko/D4/D4-U06-01_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Like Gangwon Province?",
+          "ko": "강원도 같은 데?",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-01_t5.mp3",
+            "ko": "audio/ko/D4/D4-U06-01_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Exactly! We can hike and go to the beach.",
+          "ko": "바로 그거야! 등산도 하고 바다도 갈 수 있어.",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-01_t6.mp3",
+            "ko": "audio/ko/D4/D4-U06-01_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Perfect. Let's look for a place to stay.",
+          "ko": "완벽해. 숙소 찾아보자.",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-01_t7.mp3",
+            "ko": "audio/ko/D4/D4-U06-01_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I'll check some hotels tonight.",
+          "ko": "오늘 밤에 호텔 좀 알아볼게.",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-01_t8.mp3",
+            "ko": "audio/ko/D4/D4-U06-01_t8.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D4-U06-02",
+      "topic": "예산 정하기",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "How much should we spend on this trip?",
+          "ko": "이번 여행에 얼마나 쓸까?",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-02_t1.mp3",
+            "ko": "audio/ko/D4/D4-U06-02_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Maybe five hundred dollars each?",
+          "ko": "각자 500달러 정도?",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-02_t2.mp3",
+            "ko": "audio/ko/D4/D4-U06-02_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "That sounds good. What about hotels?",
+          "ko": "좋아. 숙소는?",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-02_t3.mp3",
+            "ko": "audio/ko/D4/D4-U06-02_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Let's find something cheap but clean.",
+          "ko": "싸지만 깨끗한 곳으로 찾자.",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-02_t4.mp3",
+            "ko": "audio/ko/D4/D4-U06-02_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Should we eat at restaurants every day?",
+          "ko": "매일 식당에서 먹을까?",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-02_t5.mp3",
+            "ko": "audio/ko/D4/D4-U06-02_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Let's cook breakfast and eat out for dinner.",
+          "ko": "아침은 해 먹고 저녁은 사 먹자.",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-02_t6.mp3",
+            "ko": "audio/ko/D4/D4-U06-02_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Good plan. That will save money.",
+          "ko": "좋은 계획이야. 돈이 절약되겠다.",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-02_t7.mp3",
+            "ko": "audio/ko/D4/D4-U06-02_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "And we can spend more on activities.",
+          "ko": "그리고 활동에 더 쓸 수 있고.",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-02_t8.mp3",
+            "ko": "audio/ko/D4/D4-U06-02_t8.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D4-U06-03",
+      "topic": "교통편",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Should we drive or take the train?",
+          "ko": "차로 갈까, 기차 탈까?",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-03_t1.mp3",
+            "ko": "audio/ko/D4/D4-U06-03_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "The train is faster and more comfortable.",
+          "ko": "기차가 더 빠르고 편해.",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-03_t2.mp3",
+            "ko": "audio/ko/D4/D4-U06-03_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "But we need a car to move around there.",
+          "ko": "근데 거기서 돌아다니려면 차가 필요해.",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-03_t3.mp3",
+            "ko": "audio/ko/D4/D4-U06-03_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "We could rent a car at the station.",
+          "ko": "역에서 차를 빌리면 되지.",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-03_t4.mp3",
+            "ko": "audio/ko/D4/D4-U06-03_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Oh, that's a great idea.",
+          "ko": "아, 그거 좋은 생각이다.",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-03_t5.mp3",
+            "ko": "audio/ko/D4/D4-U06-03_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I'll book the train tickets now.",
+          "ko": "내가 지금 기차표 예매할게.",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-03_t6.mp3",
+            "ko": "audio/ko/D4/D4-U06-03_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Get seats by the window, please.",
+          "ko": "창가 자리로 부탁해.",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-03_t7.mp3",
+            "ko": "audio/ko/D4/D4-U06-03_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Sure!",
+          "ko": "그래!",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-03_t8.mp3",
+            "ko": "audio/ko/D4/D4-U06-03_t8.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D4-U06-04",
+      "topic": "일정 짜기",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "How many days should we stay in Paris?",
+          "ko": "파리에 며칠 있을까?",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-04_t1.mp3",
+            "ko": "audio/ko/D4/D4-U06-04_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I think three days is enough.",
+          "ko": "3일이면 충분할 것 같아.",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-04_t2.mp3",
+            "ko": "audio/ko/D4/D4-U06-04_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "What do you want to see the most?",
+          "ko": "제일 보고 싶은 게 뭐야?",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-04_t3.mp3",
+            "ko": "audio/ko/D4/D4-U06-04_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "The Eiffel Tower and the museums.",
+          "ko": "에펠탑이랑 박물관들.",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-04_t4.mp3",
+            "ko": "audio/ko/D4/D4-U06-04_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Let's visit the museums in the morning.",
+          "ko": "박물관은 오전에 가자.",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-04_t5.mp3",
+            "ko": "audio/ko/D4/D4-U06-04_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Why in the morning?",
+          "ko": "왜 오전에?",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-04_t6.mp3",
+            "ko": "audio/ko/D4/D4-U06-04_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "There are fewer people.",
+          "ko": "사람이 더 적거든.",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-04_t7.mp3",
+            "ko": "audio/ko/D4/D4-U06-04_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Smart. Then we can see the tower at night.",
+          "ko": "똑똑하네. 그럼 탑은 밤에 보면 되겠다.",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-04_t8.mp3",
+            "ko": "audio/ko/D4/D4-U06-04_t8.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D4-U06-05",
+      "topic": "짐 싸기",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "What should I pack for the trip?",
+          "ko": "여행 짐 뭐 챙길까?",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-05_t1.mp3",
+            "ko": "audio/ko/D4/D4-U06-05_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "It might rain, so bring a jacket.",
+          "ko": "비가 올 수도 있으니까 재킷 챙겨.",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-05_t2.mp3",
+            "ko": "audio/ko/D4/D4-U06-05_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Good point. What about shoes?",
+          "ko": "맞다. 신발은?",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-05_t3.mp3",
+            "ko": "audio/ko/D4/D4-U06-05_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Comfortable walking shoes. We'll walk a lot.",
+          "ko": "걷기 편한 신발. 많이 걸을 거야.",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-05_t4.mp3",
+            "ko": "audio/ko/D4/D4-U06-05_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Should I bring my laptop?",
+          "ko": "노트북 가져갈까?",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-05_t5.mp3",
+            "ko": "audio/ko/D4/D4-U06-05_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "No, it's a vacation! Leave work at home.",
+          "ko": "아니, 휴가잖아! 일은 집에 두고 와.",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-05_t6.mp3",
+            "ko": "audio/ko/D4/D4-U06-05_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Ha ha, you're right.",
+          "ko": "하하, 네 말이 맞아.",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-05_t7.mp3",
+            "ko": "audio/ko/D4/D4-U06-05_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Just don't forget your passport.",
+          "ko": "여권만 잊지 마.",
+          "audio": {
+            "en": "audio/en/D4/D4-U06-05_t8.mp3",
+            "ko": "audio/ko/D4/D4-U06-05_t8.mp3"
+          }
+        }
+      ]
+    }
+  ]
+}

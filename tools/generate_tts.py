@@ -1,4 +1,4 @@
-"""콘텐츠 JSON → <콘텐츠 폴더>/audio/{en,ko}/*.mp3 생성 (Supertonic-3, 로컬 실행).
+"""콘텐츠 JSON → <콘텐츠 폴더>/audio/{en,ko}/<레벨>/*.mp3 생성 (Supertonic-3, 로컬 실행).
 
 엔진: Supertonic-3 (Supertone) — 영어·한국어를 한 모델로, 무료, 오프라인 실행.
       코드 MIT / 모델 OpenRAIL-M (상업적 이용 가능, 사용 제한 조항 있음).
@@ -32,7 +32,7 @@ MANIFEST = "audio/tts_manifest.json"
 
 def targets(content):
     index = json.loads((content / "index.json").read_text(encoding="utf-8"))
-    for entry in index["stages"]:
+    for entry in index["units"]:
         data = json.loads((content / entry["file"]).read_text(encoding="utf-8"))
         for item in data["items"]:
             for seg in item.get("turns", [item]):
@@ -75,12 +75,18 @@ def main():
             subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(wav_path), *MP3_ARGS, str(out)],
                            check=True)
             manifest[rel] = spec
-            print(f"[{n}/{len(todo)}] {rel}")
+            print(f"[{n}/{len(todo)}] {rel}", flush=True)
+            if n % 50 == 0:  # 중간에 끊겨도 만든 파일은 다시 만들지 않도록
+                save_manifest(manifest_path, manifest)
 
     # 콘텐츠에서 빠진 항목은 manifest 에서도 정리
     live = {rel for rel, _ in all_targets}
-    manifest = {k: manifest[k] for k in sorted(manifest) if k in live}
-    manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    save_manifest(manifest_path, {k: v for k, v in manifest.items() if k in live})
+
+
+def save_manifest(path, manifest):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(dict(sorted(manifest.items())), ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
 if __name__ == "__main__":

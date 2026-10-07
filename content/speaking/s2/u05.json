@@ -1,0 +1,54 @@
+{
+  "unit": "S2-U05",
+  "version": 1,
+  "level": "S2",
+  "track": "speaking",
+  "title": "날씨",
+  "items": [
+    {
+      "id": "S2-U05-01",
+      "en": "It's sunny and warm today.",
+      "ko": "오늘은 맑고 따뜻해요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U05-01.mp3",
+        "ko": "audio/ko/S2/S2-U05-01.mp3"
+      }
+    },
+    {
+      "id": "S2-U05-02",
+      "en": "It's raining a lot outside.",
+      "ko": "밖에 비가 많이 와요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U05-02.mp3",
+        "ko": "audio/ko/S2/S2-U05-02.mp3"
+      }
+    },
+    {
+      "id": "S2-U05-03",
+      "en": "It's very hot today.",
+      "ko": "오늘 정말 더워요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U05-03.mp3",
+        "ko": "audio/ko/S2/S2-U05-03.mp3"
+      }
+    },
+    {
+      "id": "S2-U05-04",
+      "en": "It's cold and windy.",
+      "ko": "춥고 바람이 불어요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U05-04.mp3",
+        "ko": "audio/ko/S2/S2-U05-04.mp3"
+      }
+    },
+    {
+      "id": "S2-U05-05",
+      "en": "It might snow tomorrow.",
+      "ko": "내일 눈이 올지도 몰라요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U05-05.mp3",
+        "ko": "audio/ko/S2/S2-U05-05.mp3"
+      }
+    }
+  ]
+}

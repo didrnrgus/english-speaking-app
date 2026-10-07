@@ -1,0 +1,579 @@
+{
+  "unit": "D5-U10",
+  "version": 1,
+  "level": "D5",
+  "track": "dialogue",
+  "title": "행사 준비",
+  "items": [
+    {
+      "id": "D5-U10-01",
+      "topic": "깜짝 생일 파티",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Jenny's birthday is next Saturday.",
+          "ko": "다음 주 토요일이 제니 생일이야.",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-01_t1.mp3",
+            "ko": "audio/ko/D5/D5-U10-01_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Let's throw her a surprise party!",
+          "ko": "깜짝 파티 해 주자!",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-01_t2.mp3",
+            "ko": "audio/ko/D5/D5-U10-01_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Great idea. Where should we have it?",
+          "ko": "좋은 생각이다. 어디서 할까?",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-01_t3.mp3",
+            "ko": "audio/ko/D5/D5-U10-01_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "How about my apartment? It's big enough.",
+          "ko": "우리 집 어때? 충분히 넓어.",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-01_t4.mp3",
+            "ko": "audio/ko/D5/D5-U10-01_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Perfect. Who should we invite?",
+          "ko": "완벽해. 누구를 초대할까?",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-01_t5.mp3",
+            "ko": "audio/ko/D5/D5-U10-01_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Her close friends and her sister.",
+          "ko": "친한 친구들이랑 언니.",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-01_t6.mp3",
+            "ko": "audio/ko/D5/D5-U10-01_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "I'll make the guest list and send invitations.",
+          "ko": "내가 초대 명단 만들어서 초대장 보낼게.",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-01_t7.mp3",
+            "ko": "audio/ko/D5/D5-U10-01_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "And I'll order the cake.",
+          "ko": "나는 케이크 주문할게.",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-01_t8.mp3",
+            "ko": "audio/ko/D5/D5-U10-01_t8.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "How will we get her to come without telling her?",
+          "ko": "말 안 하고 어떻게 오게 하지?",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-01_t9.mp3",
+            "ko": "audio/ko/D5/D5-U10-01_t9.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Tell her we're having a simple dinner at my place.",
+          "ko": "우리 집에서 간단히 저녁 먹자고 해.",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-01_t10.mp3",
+            "ko": "audio/ko/D5/D5-U10-01_t10.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Ha ha, she'll be so surprised.",
+          "ko": "하하, 엄청 놀라겠다.",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-01_t11.mp3",
+            "ko": "audio/ko/D5/D5-U10-01_t11.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Just don't tell anyone who might tell her!",
+          "ko": "제니한테 말할 만한 사람한테는 절대 비밀!",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-01_t12.mp3",
+            "ko": "audio/ko/D5/D5-U10-01_t12.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D5-U10-02",
+      "topic": "회사 송년회",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "We need to plan the year-end party.",
+          "ko": "송년회 계획을 세워야 해요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-02_t1.mp3",
+            "ko": "audio/ko/D5/D5-U10-02_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "How many people are coming?",
+          "ko": "몇 명이나 와요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-02_t2.mp3",
+            "ko": "audio/ko/D5/D5-U10-02_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "About forty, including the managers.",
+          "ko": "관리자들 포함해서 40명 정도요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-02_t3.mp3",
+            "ko": "audio/ko/D5/D5-U10-02_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Should we book a restaurant?",
+          "ko": "식당을 예약할까요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-02_t4.mp3",
+            "ko": "audio/ko/D5/D5-U10-02_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Yes, somewhere with a private room.",
+          "ko": "네, 단독 룸이 있는 곳으로요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-02_t5.mp3",
+            "ko": "audio/ko/D5/D5-U10-02_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I know a good Korean barbecue place.",
+          "ko": "괜찮은 고깃집을 알아요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-02_t6.mp3",
+            "ko": "audio/ko/D5/D5-U10-02_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Can they hold forty people?",
+          "ko": "40명 들어갈 수 있어요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-02_t7.mp3",
+            "ko": "audio/ko/D5/D5-U10-02_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, they have a big room upstairs.",
+          "ko": "네, 위층에 큰 방이 있어요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-02_t8.mp3",
+            "ko": "audio/ko/D5/D5-U10-02_t8.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Great. What about games or prizes?",
+          "ko": "좋네요. 게임이나 상품은요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-02_t9.mp3",
+            "ko": "audio/ko/D5/D5-U10-02_t9.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Let's do a lucky draw. Everyone loves that.",
+          "ko": "경품 추첨 해요. 다들 좋아하잖아요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-02_t10.mp3",
+            "ko": "audio/ko/D5/D5-U10-02_t10.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Good idea. I'll ask the boss for a budget.",
+          "ko": "좋은 생각이에요. 사장님께 예산 여쭤볼게요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-02_t11.mp3",
+            "ko": "audio/ko/D5/D5-U10-02_t11.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "And I'll call the restaurant today.",
+          "ko": "저는 오늘 식당에 전화할게요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-02_t12.mp3",
+            "ko": "audio/ko/D5/D5-U10-02_t12.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D5-U10-03",
+      "topic": "결혼식 준비",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "How's the wedding planning going?",
+          "ko": "결혼 준비는 잘돼 가?",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-03_t1.mp3",
+            "ko": "audio/ko/D5/D5-U10-03_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "It's so busy. There's so much to do.",
+          "ko": "너무 바빠. 할 게 너무 많아.",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-03_t2.mp3",
+            "ko": "audio/ko/D5/D5-U10-03_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Did you find a place yet?",
+          "ko": "장소는 정했어?",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-03_t3.mp3",
+            "ko": "audio/ko/D5/D5-U10-03_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, a small garden near the river.",
+          "ko": "응, 강 근처 작은 정원으로.",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-03_t4.mp3",
+            "ko": "audio/ko/D5/D5-U10-03_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "That sounds beautiful. What about the dress?",
+          "ko": "정말 예쁘겠다. 드레스는?",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-03_t5.mp3",
+            "ko": "audio/ko/D5/D5-U10-03_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I'm trying some on this weekend.",
+          "ko": "이번 주말에 입어 보러 가.",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-03_t6.mp3",
+            "ko": "audio/ko/D5/D5-U10-03_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Do you want me to come with you?",
+          "ko": "같이 가 줄까?",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-03_t7.mp3",
+            "ko": "audio/ko/D5/D5-U10-03_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Would you? I really want your opinion.",
+          "ko": "그래 줄래? 네 의견이 정말 듣고 싶어.",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-03_t8.mp3",
+            "ko": "audio/ko/D5/D5-U10-03_t8.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Of course! I'd love to.",
+          "ko": "물론이지! 꼭 가고 싶어.",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-03_t9.mp3",
+            "ko": "audio/ko/D5/D5-U10-03_t9.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Thanks. And I have another question for you.",
+          "ko": "고마워. 그리고 하나 더 물어볼 게 있어.",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-03_t10.mp3",
+            "ko": "audio/ko/D5/D5-U10-03_t10.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "What is it?",
+          "ko": "뭔데?",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-03_t11.mp3",
+            "ko": "audio/ko/D5/D5-U10-03_t11.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Will you give a speech at my wedding?",
+          "ko": "내 결혼식에서 축사해 줄래?",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-03_t12.mp3",
+            "ko": "audio/ko/D5/D5-U10-03_t12.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D5-U10-04",
+      "topic": "학교 축제",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "The school festival is in two weeks.",
+          "ko": "학교 축제가 2주 남았어.",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-04_t1.mp3",
+            "ko": "audio/ko/D5/D5-U10-04_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "What should our class do this year?",
+          "ko": "올해 우리 반은 뭘 할까?",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-04_t2.mp3",
+            "ko": "audio/ko/D5/D5-U10-04_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "How about a food stand?",
+          "ko": "음식 부스는 어때?",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-04_t3.mp3",
+            "ko": "audio/ko/D5/D5-U10-04_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "We did that last year. Let's try something new.",
+          "ko": "그건 작년에 했잖아. 새로운 걸 해 보자.",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-04_t4.mp3",
+            "ko": "audio/ko/D5/D5-U10-04_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "What about a haunted house?",
+          "ko": "귀신의 집은 어때?",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-04_t5.mp3",
+            "ko": "audio/ko/D5/D5-U10-04_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Oh, that sounds fun! But it's a lot of work.",
+          "ko": "오, 재미있겠다! 근데 일이 많겠는데.",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-04_t6.mp3",
+            "ko": "audio/ko/D5/D5-U10-04_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "If everyone helps, we can do it.",
+          "ko": "다 같이 도우면 할 수 있어.",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-04_t7.mp3",
+            "ko": "audio/ko/D5/D5-U10-04_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "True. Who will make the decorations?",
+          "ko": "맞아. 장식은 누가 만들어?",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-04_t8.mp3",
+            "ko": "audio/ko/D5/D5-U10-04_t8.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "The art club members can help.",
+          "ko": "미술부 애들이 도와줄 수 있어.",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-04_t9.mp3",
+            "ko": "audio/ko/D5/D5-U10-04_t9.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "And we need people to scare the visitors.",
+          "ko": "그리고 손님 놀래 줄 사람도 필요해.",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-04_t10.mp3",
+            "ko": "audio/ko/D5/D5-U10-04_t10.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "I'll do that. I'm good at screaming.",
+          "ko": "그건 내가 할게. 소리 지르는 건 자신 있어.",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-04_t11.mp3",
+            "ko": "audio/ko/D5/D5-U10-04_t11.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Ha ha! Let's tell the class tomorrow.",
+          "ko": "하하! 내일 반 애들한테 말하자.",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-04_t12.mp3",
+            "ko": "audio/ko/D5/D5-U10-04_t12.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D5-U10-05",
+      "topic": "자선 행사",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Our company is having a charity run next month.",
+          "ko": "다음 달에 우리 회사에서 자선 달리기 대회를 해요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-05_t1.mp3",
+            "ko": "audio/ko/D5/D5-U10-05_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "That's nice. What's it for?",
+          "ko": "좋네요. 무엇을 위한 거예요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-05_t2.mp3",
+            "ko": "audio/ko/D5/D5-U10-05_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "To raise money for a children's hospital.",
+          "ko": "어린이 병원 기금을 모으려고요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-05_t3.mp3",
+            "ko": "audio/ko/D5/D5-U10-05_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "How long is the run?",
+          "ko": "몇 킬로미터 달려요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-05_t4.mp3",
+            "ko": "audio/ko/D5/D5-U10-05_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Five kilometers. You can walk, too.",
+          "ko": "5킬로미터요. 걸어도 돼요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-05_t5.mp3",
+            "ko": "audio/ko/D5/D5-U10-05_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Can people from outside the company join?",
+          "ko": "회사 밖 사람도 참여할 수 있어요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-05_t6.mp3",
+            "ko": "audio/ko/D5/D5-U10-05_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Yes, everyone is welcome.",
+          "ko": "네, 누구나 환영이에요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-05_t7.mp3",
+            "ko": "audio/ko/D5/D5-U10-05_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Then I'll join with my family.",
+          "ko": "그럼 가족이랑 같이 참여할게요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-05_t8.mp3",
+            "ko": "audio/ko/D5/D5-U10-05_t8.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Great! It costs twenty dollars per person.",
+          "ko": "좋아요! 한 사람당 20달러예요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-05_t9.mp3",
+            "ko": "audio/ko/D5/D5-U10-05_t9.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Does all the money go to the hospital?",
+          "ko": "돈은 전부 병원에 가요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-05_t10.mp3",
+            "ko": "audio/ko/D5/D5-U10-05_t10.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Yes, every dollar.",
+          "ko": "네, 전액이요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-05_t11.mp3",
+            "ko": "audio/ko/D5/D5-U10-05_t11.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Wonderful. Please sign us up.",
+          "ko": "멋지네요. 우리 가족 신청해 주세요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U10-05_t12.mp3",
+            "ko": "audio/ko/D5/D5-U10-05_t12.mp3"
+          }
+        }
+      ]
+    }
+  ]
+}

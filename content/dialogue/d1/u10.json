@@ -1,0 +1,129 @@
+{
+  "unit": "D1-U10",
+  "version": 1,
+  "level": "D1",
+  "track": "dialogue",
+  "title": "축하하기",
+  "items": [
+    {
+      "id": "D1-U10-01",
+      "topic": "생일",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Happy birthday!",
+          "ko": "생일 축하해요!",
+          "audio": {
+            "en": "audio/en/D1/D1-U10-01_t1.mp3",
+            "ko": "audio/ko/D1/D1-U10-01_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Aw, thank you!",
+          "ko": "와, 고마워요!",
+          "audio": {
+            "en": "audio/en/D1/D1-U10-01_t2.mp3",
+            "ko": "audio/ko/D1/D1-U10-01_t2.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D1-U10-02",
+      "topic": "합격",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "I passed the test!",
+          "ko": "시험 합격했어요!",
+          "audio": {
+            "en": "audio/en/D1/D1-U10-02_t1.mp3",
+            "ko": "audio/ko/D1/D1-U10-02_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Wow, congratulations!",
+          "ko": "와, 축하해요!",
+          "audio": {
+            "en": "audio/en/D1/D1-U10-02_t2.mp3",
+            "ko": "audio/ko/D1/D1-U10-02_t2.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D1-U10-03",
+      "topic": "새해",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Happy New Year!",
+          "ko": "새해 복 많이 받으세요!",
+          "audio": {
+            "en": "audio/en/D1/D1-U10-03_t1.mp3",
+            "ko": "audio/ko/D1/D1-U10-03_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Happy New Year to you, too!",
+          "ko": "당신도 새해 복 많이 받으세요!",
+          "audio": {
+            "en": "audio/en/D1/D1-U10-03_t2.mp3",
+            "ko": "audio/ko/D1/D1-U10-03_t2.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D1-U10-04",
+      "topic": "새 직장",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "I got the job!",
+          "ko": "저 취직했어요!",
+          "audio": {
+            "en": "audio/en/D1/D1-U10-04_t1.mp3",
+            "ko": "audio/ko/D1/D1-U10-04_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "That's amazing!",
+          "ko": "정말 대단해요!",
+          "audio": {
+            "en": "audio/en/D1/D1-U10-04_t2.mp3",
+            "ko": "audio/ko/D1/D1-U10-04_t2.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D1-U10-05",
+      "topic": "결혼",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "We're getting married!",
+          "ko": "저희 결혼해요!",
+          "audio": {
+            "en": "audio/en/D1/D1-U10-05_t1.mp3",
+            "ko": "audio/ko/D1/D1-U10-05_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Congratulations! I'm so happy for you.",
+          "ko": "축하해요! 정말 잘됐어요.",
+          "audio": {
+            "en": "audio/en/D1/D1-U10-05_t2.mp3",
+            "ko": "audio/ko/D1/D1-U10-05_t2.mp3"
+          }
+        }
+      ]
+    }
+  ]
+}

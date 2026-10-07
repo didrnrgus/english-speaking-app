@@ -1,0 +1,309 @@
+{
+  "unit": "D3-U10",
+  "version": 1,
+  "level": "D3",
+  "track": "dialogue",
+  "title": "미용실",
+  "items": [
+    {
+      "id": "D3-U10-01",
+      "topic": "예약 전화",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Hello, Bella Hair Salon.",
+          "ko": "안녕하세요, 벨라 헤어입니다.",
+          "audio": {
+            "en": "audio/en/D3/D3-U10-01_t1.mp3",
+            "ko": "audio/ko/D3/D3-U10-01_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Hi, I'd like to make an appointment for a haircut.",
+          "ko": "안녕하세요, 커트 예약하고 싶어요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U10-01_t2.mp3",
+            "ko": "audio/ko/D3/D3-U10-01_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Sure. When would you like to come in?",
+          "ko": "네. 언제 오시겠어요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U10-01_t3.mp3",
+            "ko": "audio/ko/D3/D3-U10-01_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Tomorrow afternoon, if possible.",
+          "ko": "가능하면 내일 오후요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U10-01_t4.mp3",
+            "ko": "audio/ko/D3/D3-U10-01_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "How about three o'clock?",
+          "ko": "3시 어떠세요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U10-01_t5.mp3",
+            "ko": "audio/ko/D3/D3-U10-01_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Perfect. My name is Sora.",
+          "ko": "좋아요. 이름은 소라예요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U10-01_t6.mp3",
+            "ko": "audio/ko/D3/D3-U10-01_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U10-02",
+      "topic": "원하는 스타일",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "What would you like today?",
+          "ko": "오늘 어떻게 해 드릴까요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U10-02_t1.mp3",
+            "ko": "audio/ko/D3/D3-U10-02_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Just a trim, please.",
+          "ko": "그냥 다듬기만 해 주세요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U10-02_t2.mp3",
+            "ko": "audio/ko/D3/D3-U10-02_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "How much should I cut?",
+          "ko": "얼마나 자를까요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U10-02_t3.mp3",
+            "ko": "audio/ko/D3/D3-U10-02_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "About two centimeters.",
+          "ko": "2센티 정도요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U10-02_t4.mp3",
+            "ko": "audio/ko/D3/D3-U10-02_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Do you want to keep the bangs?",
+          "ko": "앞머리는 그대로 둘까요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U10-02_t5.mp3",
+            "ko": "audio/ko/D3/D3-U10-02_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, but make them a little shorter.",
+          "ko": "네, 그런데 조금만 더 짧게요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U10-02_t6.mp3",
+            "ko": "audio/ko/D3/D3-U10-02_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U10-03",
+      "topic": "사진 보여 주기",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "I want my hair like this picture.",
+          "ko": "이 사진처럼 머리 하고 싶어요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U10-03_t1.mp3",
+            "ko": "audio/ko/D3/D3-U10-03_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Oh, that's a nice style.",
+          "ko": "아, 예쁜 스타일이네요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U10-03_t2.mp3",
+            "ko": "audio/ko/D3/D3-U10-03_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Do you think it will look good on me?",
+          "ko": "저한테 어울릴까요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U10-03_t3.mp3",
+            "ko": "audio/ko/D3/D3-U10-03_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, I think it will suit you.",
+          "ko": "네, 잘 어울릴 것 같아요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U10-03_t4.mp3",
+            "ko": "audio/ko/D3/D3-U10-03_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "How long will it take?",
+          "ko": "얼마나 걸려요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U10-03_t5.mp3",
+            "ko": "audio/ko/D3/D3-U10-03_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "About an hour.",
+          "ko": "한 시간 정도요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U10-03_t6.mp3",
+            "ko": "audio/ko/D3/D3-U10-03_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U10-04",
+      "topic": "염색",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "I'd like to dye my hair.",
+          "ko": "염색하고 싶어요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U10-04_t1.mp3",
+            "ko": "audio/ko/D3/D3-U10-04_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "What color are you thinking of?",
+          "ko": "어떤 색 생각하세요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U10-04_t2.mp3",
+            "ko": "audio/ko/D3/D3-U10-04_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Something light brown.",
+          "ko": "밝은 갈색 같은 거요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U10-04_t3.mp3",
+            "ko": "audio/ko/D3/D3-U10-04_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Here are some samples.",
+          "ko": "여기 샘플이 있어요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U10-04_t4.mp3",
+            "ko": "audio/ko/D3/D3-U10-04_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "I like this one.",
+          "ko": "이게 마음에 들어요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U10-04_t5.mp3",
+            "ko": "audio/ko/D3/D3-U10-04_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Good choice. It's very natural.",
+          "ko": "잘 고르셨어요. 아주 자연스러워요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U10-04_t6.mp3",
+            "ko": "audio/ko/D3/D3-U10-04_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U10-05",
+      "topic": "마무리",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "All done. What do you think?",
+          "ko": "다 됐어요. 어떠세요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U10-05_t1.mp3",
+            "ko": "audio/ko/D3/D3-U10-05_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Wow, I love it!",
+          "ko": "와, 정말 마음에 들어요!",
+          "audio": {
+            "en": "audio/en/D3/D3-U10-05_t2.mp3",
+            "ko": "audio/ko/D3/D3-U10-05_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "I'm glad. You look great.",
+          "ko": "다행이에요. 정말 잘 어울려요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U10-05_t3.mp3",
+            "ko": "audio/ko/D3/D3-U10-05_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Thank you. How much is it?",
+          "ko": "감사합니다. 얼마예요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U10-05_t4.mp3",
+            "ko": "audio/ko/D3/D3-U10-05_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "It's twenty-five thousand won.",
+          "ko": "2만 5천 원이에요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U10-05_t5.mp3",
+            "ko": "audio/ko/D3/D3-U10-05_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Here's my card.",
+          "ko": "여기 카드요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U10-05_t6.mp3",
+            "ko": "audio/ko/D3/D3-U10-05_t6.mp3"
+          }
+        }
+      ]
+    }
+  ]
+}

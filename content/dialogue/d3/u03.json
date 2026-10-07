@@ -1,0 +1,309 @@
+{
+  "unit": "D3-U03",
+  "version": 1,
+  "level": "D3",
+  "track": "dialogue",
+  "title": "병원 진료",
+  "items": [
+    {
+      "id": "D3-U03-01",
+      "topic": "접수",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Hello. Do you have an appointment?",
+          "ko": "안녕하세요. 예약하셨어요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U03-01_t1.mp3",
+            "ko": "audio/ko/D3/D3-U03-01_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "No, I don't. Can I see a doctor today?",
+          "ko": "아니요. 오늘 진료받을 수 있나요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U03-01_t2.mp3",
+            "ko": "audio/ko/D3/D3-U03-01_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Yes, but you'll have to wait about thirty minutes.",
+          "ko": "네, 그런데 30분 정도 기다리셔야 해요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U03-01_t3.mp3",
+            "ko": "audio/ko/D3/D3-U03-01_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "That's fine.",
+          "ko": "괜찮아요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U03-01_t4.mp3",
+            "ko": "audio/ko/D3/D3-U03-01_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Please fill out this form first.",
+          "ko": "먼저 이 서류를 작성해 주세요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U03-01_t5.mp3",
+            "ko": "audio/ko/D3/D3-U03-01_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Okay, thank you.",
+          "ko": "네, 감사합니다.",
+          "audio": {
+            "en": "audio/en/D3/D3-U03-01_t6.mp3",
+            "ko": "audio/ko/D3/D3-U03-01_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U03-02",
+      "topic": "증상 말하기",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "What seems to be the problem?",
+          "ko": "어디가 불편하세요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U03-02_t1.mp3",
+            "ko": "audio/ko/D3/D3-U03-02_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I've had a sore throat for three days.",
+          "ko": "사흘째 목이 아파요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U03-02_t2.mp3",
+            "ko": "audio/ko/D3/D3-U03-02_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Do you have a fever or a cough?",
+          "ko": "열이나 기침도 있어요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U03-02_t3.mp3",
+            "ko": "audio/ko/D3/D3-U03-02_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I have a slight fever.",
+          "ko": "열이 조금 있어요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U03-02_t4.mp3",
+            "ko": "audio/ko/D3/D3-U03-02_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Let me take a look. Open your mouth, please.",
+          "ko": "한번 볼게요. 입 벌려 보세요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U03-02_t5.mp3",
+            "ko": "audio/ko/D3/D3-U03-02_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Ahh.",
+          "ko": "아.",
+          "audio": {
+            "en": "audio/en/D3/D3-U03-02_t6.mp3",
+            "ko": "audio/ko/D3/D3-U03-02_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U03-03",
+      "topic": "처방",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "You have a throat infection.",
+          "ko": "목에 염증이 있어요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U03-03_t1.mp3",
+            "ko": "audio/ko/D3/D3-U03-03_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Is it serious?",
+          "ko": "심각한가요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U03-03_t2.mp3",
+            "ko": "audio/ko/D3/D3-U03-03_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "No, but you need to take some medicine.",
+          "ko": "아니요, 그래도 약은 드셔야 해요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U03-03_t3.mp3",
+            "ko": "audio/ko/D3/D3-U03-03_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "How often should I take it?",
+          "ko": "얼마나 자주 먹어야 해요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U03-03_t4.mp3",
+            "ko": "audio/ko/D3/D3-U03-03_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Three times a day, after meals.",
+          "ko": "하루 세 번, 식후에 드세요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U03-03_t5.mp3",
+            "ko": "audio/ko/D3/D3-U03-03_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Okay. Thank you, doctor.",
+          "ko": "알겠습니다. 감사합니다, 선생님.",
+          "audio": {
+            "en": "audio/en/D3/D3-U03-03_t6.mp3",
+            "ko": "audio/ko/D3/D3-U03-03_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U03-04",
+      "topic": "다친 발목",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "I hurt my ankle while running.",
+          "ko": "달리다가 발목을 다쳤어요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U03-04_t1.mp3",
+            "ko": "audio/ko/D3/D3-U03-04_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "When did it happen?",
+          "ko": "언제 그랬어요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U03-04_t2.mp3",
+            "ko": "audio/ko/D3/D3-U03-04_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "This morning. It's really swollen.",
+          "ko": "오늘 아침에요. 많이 부었어요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U03-04_t3.mp3",
+            "ko": "audio/ko/D3/D3-U03-04_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Let's take an X-ray to be sure.",
+          "ko": "확실히 하려면 엑스레이를 찍어 봅시다.",
+          "audio": {
+            "en": "audio/en/D3/D3-U03-04_t4.mp3",
+            "ko": "audio/ko/D3/D3-U03-04_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Do you think it's broken?",
+          "ko": "부러진 것 같아요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U03-04_t5.mp3",
+            "ko": "audio/ko/D3/D3-U03-04_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I don't think so, but let's check.",
+          "ko": "아닐 것 같지만 확인해 봐요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U03-04_t6.mp3",
+            "ko": "audio/ko/D3/D3-U03-04_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U03-05",
+      "topic": "예약 변경",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Hello, this is City Clinic.",
+          "ko": "안녕하세요, 시티 의원입니다.",
+          "audio": {
+            "en": "audio/en/D3/D3-U03-05_t1.mp3",
+            "ko": "audio/ko/D3/D3-U03-05_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Hi, I need to change my appointment.",
+          "ko": "안녕하세요, 예약을 변경해야 해서요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U03-05_t2.mp3",
+            "ko": "audio/ko/D3/D3-U03-05_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Sure. What's your name?",
+          "ko": "네. 성함이 어떻게 되세요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U03-05_t3.mp3",
+            "ko": "audio/ko/D3/D3-U03-05_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "It's Jinwoo Park. I have one tomorrow at ten.",
+          "ko": "박진우예요. 내일 10시에 예약이 있어요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U03-05_t4.mp3",
+            "ko": "audio/ko/D3/D3-U03-05_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "How about Friday at two?",
+          "ko": "금요일 2시 어떠세요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U03-05_t5.mp3",
+            "ko": "audio/ko/D3/D3-U03-05_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "That works. Thank you.",
+          "ko": "좋아요. 감사합니다.",
+          "audio": {
+            "en": "audio/en/D3/D3-U03-05_t6.mp3",
+            "ko": "audio/ko/D3/D3-U03-05_t6.mp3"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "unit": "S3-U10",
+  "version": 1,
+  "level": "S3",
+  "track": "speaking",
+  "title": "부탁과 제안",
+  "items": [
+    {
+      "id": "S3-U10-01",
+      "en": "Could you help me carry these boxes, please?",
+      "ko": "이 상자들 옮기는 것 좀 도와주실래요?",
+      "audio": {
+        "en": "audio/en/S3/S3-U10-01.mp3",
+        "ko": "audio/ko/S3/S3-U10-01.mp3"
+      }
+    },
+    {
+      "id": "S3-U10-02",
+      "en": "Would you mind closing the window for me?",
+      "ko": "창문 좀 닫아 주시겠어요?",
+      "audio": {
+        "en": "audio/en/S3/S3-U10-02.mp3",
+        "ko": "audio/ko/S3/S3-U10-02.mp3"
+      }
+    },
+    {
+      "id": "S3-U10-03",
+      "en": "Why don't we take a short break and get coffee?",
+      "ko": "잠깐 쉬면서 커피 마시는 게 어때요?",
+      "audio": {
+        "en": "audio/en/S3/S3-U10-03.mp3",
+        "ko": "audio/ko/S3/S3-U10-03.mp3"
+      }
+    },
+    {
+      "id": "S3-U10-04",
+      "en": "How about having dinner together at my place this Friday?",
+      "ko": "이번 금요일에 우리 집에서 같이 저녁 먹는 거 어때요?",
+      "audio": {
+        "en": "audio/en/S3/S3-U10-04.mp3",
+        "ko": "audio/ko/S3/S3-U10-04.mp3"
+      }
+    },
+    {
+      "id": "S3-U10-05",
+      "en": "Can you send me the file by tomorrow?",
+      "ko": "내일까지 그 파일 좀 보내 줄 수 있어요?",
+      "audio": {
+        "en": "audio/en/S3/S3-U10-05.mp3",
+        "ko": "audio/ko/S3/S3-U10-05.mp3"
+      }
+    }
+  ]
+}

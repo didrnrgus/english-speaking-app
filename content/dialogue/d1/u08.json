@@ -1,0 +1,129 @@
+{
+  "unit": "D1-U08",
+  "version": 1,
+  "level": "D1",
+  "track": "dialogue",
+  "title": "부탁과 허락",
+  "items": [
+    {
+      "id": "D1-U08-01",
+      "topic": "앉아도 될까요",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Can I sit here?",
+          "ko": "여기 앉아도 돼요?",
+          "audio": {
+            "en": "audio/en/D1/D1-U08-01_t1.mp3",
+            "ko": "audio/ko/D1/D1-U08-01_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Sure, go ahead.",
+          "ko": "그럼요, 앉으세요.",
+          "audio": {
+            "en": "audio/en/D1/D1-U08-01_t2.mp3",
+            "ko": "audio/ko/D1/D1-U08-01_t2.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D1-U08-02",
+      "topic": "펜 빌리기",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Can I borrow a pen?",
+          "ko": "펜 좀 빌려도 될까요?",
+          "audio": {
+            "en": "audio/en/D1/D1-U08-02_t1.mp3",
+            "ko": "audio/ko/D1/D1-U08-02_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Here you go.",
+          "ko": "여기 있어요.",
+          "audio": {
+            "en": "audio/en/D1/D1-U08-02_t2.mp3",
+            "ko": "audio/ko/D1/D1-U08-02_t2.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D1-U08-03",
+      "topic": "창문 열기",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Can I open the window?",
+          "ko": "창문 열어도 돼요?",
+          "audio": {
+            "en": "audio/en/D1/D1-U08-03_t1.mp3",
+            "ko": "audio/ko/D1/D1-U08-03_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Of course.",
+          "ko": "물론이죠.",
+          "audio": {
+            "en": "audio/en/D1/D1-U08-03_t2.mp3",
+            "ko": "audio/ko/D1/D1-U08-03_t2.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D1-U08-04",
+      "topic": "사진 부탁",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Could you take a picture?",
+          "ko": "사진 좀 찍어 주실래요?",
+          "audio": {
+            "en": "audio/en/D1/D1-U08-04_t1.mp3",
+            "ko": "audio/ko/D1/D1-U08-04_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Sure, no problem.",
+          "ko": "네, 그럼요.",
+          "audio": {
+            "en": "audio/en/D1/D1-U08-04_t2.mp3",
+            "ko": "audio/ko/D1/D1-U08-04_t2.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D1-U08-05",
+      "topic": "화장실 쓰기",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Can I use the bathroom?",
+          "ko": "화장실 써도 될까요?",
+          "audio": {
+            "en": "audio/en/D1/D1-U08-05_t1.mp3",
+            "ko": "audio/ko/D1/D1-U08-05_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, it's over there.",
+          "ko": "네, 저쪽이에요.",
+          "audio": {
+            "en": "audio/en/D1/D1-U08-05_t2.mp3",
+            "ko": "audio/ko/D1/D1-U08-05_t2.mp3"
+          }
+        }
+      ]
+    }
+  ]
+}

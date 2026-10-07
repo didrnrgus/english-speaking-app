@@ -1,0 +1,54 @@
+{
+  "unit": "S2-U03",
+  "version": 1,
+  "level": "S2",
+  "track": "speaking",
+  "title": "가족",
+  "items": [
+    {
+      "id": "S2-U03-01",
+      "en": "I have one older brother.",
+      "ko": "저는 오빠가 한 명 있어요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U03-01.mp3",
+        "ko": "audio/ko/S2/S2-U03-01.mp3"
+      }
+    },
+    {
+      "id": "S2-U03-02",
+      "en": "My mom is a teacher.",
+      "ko": "우리 엄마는 선생님이에요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U03-02.mp3",
+        "ko": "audio/ko/S2/S2-U03-02.mp3"
+      }
+    },
+    {
+      "id": "S2-U03-03",
+      "en": "My dad likes fishing.",
+      "ko": "우리 아빠는 낚시를 좋아해요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U03-03.mp3",
+        "ko": "audio/ko/S2/S2-U03-03.mp3"
+      }
+    },
+    {
+      "id": "S2-U03-04",
+      "en": "I live with my parents.",
+      "ko": "저는 부모님과 함께 살아요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U03-04.mp3",
+        "ko": "audio/ko/S2/S2-U03-04.mp3"
+      }
+    },
+    {
+      "id": "S2-U03-05",
+      "en": "We have a small dog.",
+      "ko": "우리는 작은 강아지를 키워요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U03-05.mp3",
+        "ko": "audio/ko/S2/S2-U03-05.mp3"
+      }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "unit": "S2-U07",
+  "version": 1,
+  "level": "S2",
+  "track": "speaking",
+  "title": "음식 주문",
+  "items": [
+    {
+      "id": "S2-U07-01",
+      "en": "I'd like a cheeseburger.",
+      "ko": "치즈버거 하나 주세요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U07-01.mp3",
+        "ko": "audio/ko/S2/S2-U07-01.mp3"
+      }
+    },
+    {
+      "id": "S2-U07-02",
+      "en": "Can I see the menu?",
+      "ko": "메뉴 좀 볼 수 있을까요?",
+      "audio": {
+        "en": "audio/en/S2/S2-U07-02.mp3",
+        "ko": "audio/ko/S2/S2-U07-02.mp3"
+      }
+    },
+    {
+      "id": "S2-U07-03",
+      "en": "No onions on mine, please.",
+      "ko": "제 건 양파 빼 주세요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U07-03.mp3",
+        "ko": "audio/ko/S2/S2-U07-03.mp3"
+      }
+    },
+    {
+      "id": "S2-U07-04",
+      "en": "A large coke, please.",
+      "ko": "콜라 큰 걸로 주세요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U07-04.mp3",
+        "ko": "audio/ko/S2/S2-U07-04.mp3"
+      }
+    },
+    {
+      "id": "S2-U07-05",
+      "en": "What do you recommend?",
+      "ko": "뭘 추천하세요?",
+      "audio": {
+        "en": "audio/en/S2/S2-U07-05.mp3",
+        "ko": "audio/ko/S2/S2-U07-05.mp3"
+      }
+    }
+  ]
+}

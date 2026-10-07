@@ -1,0 +1,399 @@
+{
+  "unit": "D4-U07",
+  "version": 1,
+  "level": "D4",
+  "track": "dialogue",
+  "title": "수리 요청",
+  "items": [
+    {
+      "id": "D4-U07-01",
+      "topic": "세탁기 고장",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Hello, I'm calling about my washing machine.",
+          "ko": "안녕하세요, 세탁기 때문에 전화했어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-01_t1.mp3",
+            "ko": "audio/ko/D4/D4-U07-01_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "What seems to be the problem?",
+          "ko": "어떤 문제가 있으세요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-01_t2.mp3",
+            "ko": "audio/ko/D4/D4-U07-01_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "It stops in the middle and won't drain the water.",
+          "ko": "중간에 멈추고 물이 안 빠져요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-01_t3.mp3",
+            "ko": "audio/ko/D4/D4-U07-01_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "How old is the machine?",
+          "ko": "세탁기를 쓰신 지 얼마나 됐어요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-01_t4.mp3",
+            "ko": "audio/ko/D4/D4-U07-01_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "About three years.",
+          "ko": "3년 정도요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-01_t5.mp3",
+            "ko": "audio/ko/D4/D4-U07-01_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "It's still under warranty. We can send a technician.",
+          "ko": "아직 보증 기간이에요. 기사님을 보내 드릴게요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-01_t6.mp3",
+            "ko": "audio/ko/D4/D4-U07-01_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Great. When can someone come?",
+          "ko": "좋아요. 언제 오실 수 있어요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-01_t7.mp3",
+            "ko": "audio/ko/D4/D4-U07-01_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Tomorrow between ten and twelve.",
+          "ko": "내일 10시에서 12시 사이요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-01_t8.mp3",
+            "ko": "audio/ko/D4/D4-U07-01_t8.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D4-U07-02",
+      "topic": "물 새는 천장",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Hi, this is Mina in apartment 4B.",
+          "ko": "안녕하세요, 4B호 미나예요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-02_t1.mp3",
+            "ko": "audio/ko/D4/D4-U07-02_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Hi, Mina. What can I do for you?",
+          "ko": "안녕하세요, 미나 씨. 무슨 일이세요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-02_t2.mp3",
+            "ko": "audio/ko/D4/D4-U07-02_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "There's water leaking from my bathroom ceiling.",
+          "ko": "욕실 천장에서 물이 새요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-02_t3.mp3",
+            "ko": "audio/ko/D4/D4-U07-02_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Oh no. Is it a lot of water?",
+          "ko": "이런. 물이 많이 새요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-02_t4.mp3",
+            "ko": "audio/ko/D4/D4-U07-02_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "It's dripping slowly, but it's getting worse.",
+          "ko": "천천히 떨어지는데 점점 심해지고 있어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-02_t5.mp3",
+            "ko": "audio/ko/D4/D4-U07-02_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "It might be from the apartment upstairs. I'll check it now.",
+          "ko": "위층 집에서 새는 걸 수도 있어요. 지금 확인해 볼게요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-02_t6.mp3",
+            "ko": "audio/ko/D4/D4-U07-02_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Thank you. Should I put a bucket under it?",
+          "ko": "고마워요. 밑에 양동이 받쳐 둘까요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-02_t7.mp3",
+            "ko": "audio/ko/D4/D4-U07-02_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, please. I'll be there in twenty minutes.",
+          "ko": "네, 그렇게 해 주세요. 20분 안에 갈게요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-02_t8.mp3",
+            "ko": "audio/ko/D4/D4-U07-02_t8.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D4-U07-03",
+      "topic": "휴대폰 화면",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "I dropped my phone, and the screen cracked.",
+          "ko": "휴대폰을 떨어뜨려서 화면이 깨졌어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-03_t1.mp3",
+            "ko": "audio/ko/D4/D4-U07-03_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Let me take a look. Does the touch screen still work?",
+          "ko": "한번 볼게요. 터치는 아직 돼요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-03_t2.mp3",
+            "ko": "audio/ko/D4/D4-U07-03_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Yes, but some parts don't work well.",
+          "ko": "네, 그런데 몇 군데는 잘 안 돼요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-03_t3.mp3",
+            "ko": "audio/ko/D4/D4-U07-03_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "We need to replace the screen.",
+          "ko": "화면을 교체해야 해요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-03_t4.mp3",
+            "ko": "audio/ko/D4/D4-U07-03_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "How much will it cost?",
+          "ko": "비용이 얼마나 들어요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-03_t5.mp3",
+            "ko": "audio/ko/D4/D4-U07-03_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "About one hundred and fifty dollars.",
+          "ko": "150달러 정도요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-03_t6.mp3",
+            "ko": "audio/ko/D4/D4-U07-03_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "How long will it take?",
+          "ko": "얼마나 걸려요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-03_t7.mp3",
+            "ko": "audio/ko/D4/D4-U07-03_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "About an hour. You can wait here or come back later.",
+          "ko": "한 시간 정도요. 여기서 기다리셔도 되고 나중에 오셔도 돼요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-03_t8.mp3",
+            "ko": "audio/ko/D4/D4-U07-03_t8.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D4-U07-04",
+      "topic": "인터넷 끊김",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "My internet keeps disconnecting.",
+          "ko": "인터넷이 계속 끊겨요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-04_t1.mp3",
+            "ko": "audio/ko/D4/D4-U07-04_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I'm sorry about that. Have you tried restarting the router?",
+          "ko": "불편을 드려 죄송합니다. 공유기를 다시 켜 보셨어요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-04_t2.mp3",
+            "ko": "audio/ko/D4/D4-U07-04_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Yes, twice, but it didn't help.",
+          "ko": "네, 두 번이나요. 그런데 소용없었어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-04_t3.mp3",
+            "ko": "audio/ko/D4/D4-U07-04_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Let me check your line from here.",
+          "ko": "여기서 회선을 확인해 볼게요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-04_t4.mp3",
+            "ko": "audio/ko/D4/D4-U07-04_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Okay, thanks.",
+          "ko": "네, 고마워요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-04_t5.mp3",
+            "ko": "audio/ko/D4/D4-U07-04_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "It looks like there's a problem with the cable.",
+          "ko": "케이블에 문제가 있는 것 같아요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-04_t6.mp3",
+            "ko": "audio/ko/D4/D4-U07-04_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Can you fix it today?",
+          "ko": "오늘 고칠 수 있어요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-04_t7.mp3",
+            "ko": "audio/ko/D4/D4-U07-04_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "A technician can visit this afternoon.",
+          "ko": "오늘 오후에 기사님이 방문하실 수 있어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-04_t8.mp3",
+            "ko": "audio/ko/D4/D4-U07-04_t8.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D4-U07-05",
+      "topic": "자전거 수리",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Hi, can you fix my bike?",
+          "ko": "안녕하세요, 자전거 좀 고칠 수 있어요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-05_t1.mp3",
+            "ko": "audio/ko/D4/D4-U07-05_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Sure. What's wrong with it?",
+          "ko": "그럼요. 어디가 문제예요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-05_t2.mp3",
+            "ko": "audio/ko/D4/D4-U07-05_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "The brakes don't work very well.",
+          "ko": "브레이크가 잘 안 들어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-05_t3.mp3",
+            "ko": "audio/ko/D4/D4-U07-05_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Let me see. The brake pads are worn out.",
+          "ko": "볼게요. 브레이크 패드가 다 닳았네요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-05_t4.mp3",
+            "ko": "audio/ko/D4/D4-U07-05_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Can you replace them?",
+          "ko": "교체해 주실 수 있어요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-05_t5.mp3",
+            "ko": "audio/ko/D4/D4-U07-05_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes. It'll take about thirty minutes.",
+          "ko": "네. 30분 정도 걸려요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-05_t6.mp3",
+            "ko": "audio/ko/D4/D4-U07-05_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Could you check the tires, too?",
+          "ko": "타이어도 봐 주실래요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-05_t7.mp3",
+            "ko": "audio/ko/D4/D4-U07-05_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "No problem. I'll check everything.",
+          "ko": "그럼요. 전부 확인해 드릴게요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U07-05_t8.mp3",
+            "ko": "audio/ko/D4/D4-U07-05_t8.mp3"
+          }
+        }
+      ]
+    }
+  ]
+}

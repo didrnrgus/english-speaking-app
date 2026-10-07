@@ -1,0 +1,219 @@
+{
+  "unit": "D2-U03",
+  "version": 1,
+  "level": "D2",
+  "track": "dialogue",
+  "title": "식당 주문",
+  "items": [
+    {
+      "id": "D2-U03-01",
+      "topic": "자리 안내",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "How many people?",
+          "ko": "몇 분이세요?",
+          "audio": {
+            "en": "audio/en/D2/D2-U03-01_t1.mp3",
+            "ko": "audio/ko/D2/D2-U03-01_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Two, please.",
+          "ko": "두 명이요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U03-01_t2.mp3",
+            "ko": "audio/ko/D2/D2-U03-01_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Follow me, please.",
+          "ko": "이쪽으로 오세요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U03-01_t3.mp3",
+            "ko": "audio/ko/D2/D2-U03-01_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Thank you.",
+          "ko": "감사합니다.",
+          "audio": {
+            "en": "audio/en/D2/D2-U03-01_t4.mp3",
+            "ko": "audio/ko/D2/D2-U03-01_t4.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D2-U03-02",
+      "topic": "주문하기",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Are you ready to order?",
+          "ko": "주문하시겠어요?",
+          "audio": {
+            "en": "audio/en/D2/D2-U03-02_t1.mp3",
+            "ko": "audio/ko/D2/D2-U03-02_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, I'll have the steak.",
+          "ko": "네, 스테이크로 할게요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U03-02_t2.mp3",
+            "ko": "audio/ko/D2/D2-U03-02_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "How would you like it cooked?",
+          "ko": "굽기는 어떻게 해 드릴까요?",
+          "audio": {
+            "en": "audio/en/D2/D2-U03-02_t3.mp3",
+            "ko": "audio/ko/D2/D2-U03-02_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Medium, please.",
+          "ko": "미디엄으로 해 주세요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U03-02_t4.mp3",
+            "ko": "audio/ko/D2/D2-U03-02_t4.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D2-U03-03",
+      "topic": "음료",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Anything to drink?",
+          "ko": "마실 건요?",
+          "audio": {
+            "en": "audio/en/D2/D2-U03-03_t1.mp3",
+            "ko": "audio/ko/D2/D2-U03-03_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Just water, please.",
+          "ko": "그냥 물 주세요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U03-03_t2.mp3",
+            "ko": "audio/ko/D2/D2-U03-03_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Sparkling or still?",
+          "ko": "탄산수요, 일반 물이요?",
+          "audio": {
+            "en": "audio/en/D2/D2-U03-03_t3.mp3",
+            "ko": "audio/ko/D2/D2-U03-03_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Still is fine.",
+          "ko": "일반 물이면 돼요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U03-03_t4.mp3",
+            "ko": "audio/ko/D2/D2-U03-03_t4.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D2-U03-04",
+      "topic": "맛 확인",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "How is everything?",
+          "ko": "음식 괜찮으세요?",
+          "audio": {
+            "en": "audio/en/D2/D2-U03-04_t1.mp3",
+            "ko": "audio/ko/D2/D2-U03-04_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "It's really good.",
+          "ko": "정말 맛있어요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U03-04_t2.mp3",
+            "ko": "audio/ko/D2/D2-U03-04_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Great. Enjoy your meal.",
+          "ko": "다행이네요. 맛있게 드세요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U03-04_t3.mp3",
+            "ko": "audio/ko/D2/D2-U03-04_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Thanks!",
+          "ko": "고마워요!",
+          "audio": {
+            "en": "audio/en/D2/D2-U03-04_t4.mp3",
+            "ko": "audio/ko/D2/D2-U03-04_t4.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D2-U03-05",
+      "topic": "계산",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Can we get the check?",
+          "ko": "계산서 주시겠어요?",
+          "audio": {
+            "en": "audio/en/D2/D2-U03-05_t1.mp3",
+            "ko": "audio/ko/D2/D2-U03-05_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Sure. Together or separate?",
+          "ko": "네. 같이 하세요, 따로 하세요?",
+          "audio": {
+            "en": "audio/en/D2/D2-U03-05_t2.mp3",
+            "ko": "audio/ko/D2/D2-U03-05_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Separate, please.",
+          "ko": "따로 해 주세요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U03-05_t3.mp3",
+            "ko": "audio/ko/D2/D2-U03-05_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "No problem.",
+          "ko": "알겠습니다.",
+          "audio": {
+            "en": "audio/en/D2/D2-U03-05_t4.mp3",
+            "ko": "audio/ko/D2/D2-U03-05_t4.mp3"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "unit": "S4-U08",
+  "version": 1,
+  "level": "S4",
+  "track": "speaking",
+  "title": "경험 이야기",
+  "items": [
+    {
+      "id": "S4-U08-01",
+      "en": "I once got lost in a big city abroad. A kind stranger helped me find my hotel.",
+      "ko": "해외의 큰 도시에서 길을 잃은 적이 있어요. 친절한 낯선 사람이 호텔 찾는 걸 도와줬어요.",
+      "audio": {
+        "en": "audio/en/S4/S4-U08-01.mp3",
+        "ko": "audio/ko/S4/S4-U08-01.mp3"
+      }
+    },
+    {
+      "id": "S4-U08-02",
+      "en": "When I was a child, I lived near the sea. I went swimming almost every day in summer.",
+      "ko": "어렸을 때 바닷가 근처에 살았어요. 여름에는 거의 매일 수영하러 갔어요.",
+      "audio": {
+        "en": "audio/en/S4/S4-U08-02.mp3",
+        "ko": "audio/ko/S4/S4-U08-02.mp3"
+      }
+    },
+    {
+      "id": "S4-U08-03",
+      "en": "I tried skiing for the first time last winter. I fell down many times, but it was fun.",
+      "ko": "지난겨울에 처음으로 스키를 타 봤어요. 여러 번 넘어졌지만 재미있었어요.",
+      "audio": {
+        "en": "audio/en/S4/S4-U08-03.mp3",
+        "ko": "audio/ko/S4/S4-U08-03.mp3"
+      }
+    },
+    {
+      "id": "S4-U08-04",
+      "en": "I've never been on a plane before. I hope I can fly somewhere next year.",
+      "ko": "저는 비행기를 한 번도 타 본 적이 없어요. 내년에는 어디든 비행기 타고 가 보고 싶어요.",
+      "audio": {
+        "en": "audio/en/S4/S4-U08-04.mp3",
+        "ko": "audio/ko/S4/S4-U08-04.mp3"
+      }
+    },
+    {
+      "id": "S4-U08-05",
+      "en": "I gave a speech in front of a hundred people once. My hands were shaking the whole time.",
+      "ko": "백 명 앞에서 발표를 한 적이 있어요. 내내 손이 떨렸어요.",
+      "audio": {
+        "en": "audio/en/S4/S4-U08-05.mp3",
+        "ko": "audio/ko/S4/S4-U08-05.mp3"
+      }
+    }
+  ]
+}

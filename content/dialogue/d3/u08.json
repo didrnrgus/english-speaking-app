@@ -1,0 +1,309 @@
+{
+  "unit": "D3-U08",
+  "version": 1,
+  "level": "D3",
+  "track": "dialogue",
+  "title": "회사 첫날",
+  "items": [
+    {
+      "id": "D3-U08-01",
+      "topic": "자리 안내",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Good morning! You must be Jiwon.",
+          "ko": "좋은 아침이에요! 지원 씨죠?",
+          "audio": {
+            "en": "audio/en/D3/D3-U08-01_t1.mp3",
+            "ko": "audio/ko/D3/D3-U08-01_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, that's right. Nice to meet you.",
+          "ko": "네, 맞아요. 만나서 반가워요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U08-01_t2.mp3",
+            "ko": "audio/ko/D3/D3-U08-01_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "I'm Paul, your team leader. Let me show you your desk.",
+          "ko": "저는 팀장 폴이에요. 자리 안내해 드릴게요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U08-01_t3.mp3",
+            "ko": "audio/ko/D3/D3-U08-01_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Thank you.",
+          "ko": "감사합니다.",
+          "audio": {
+            "en": "audio/en/D3/D3-U08-01_t4.mp3",
+            "ko": "audio/ko/D3/D3-U08-01_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Here it is. Your computer is already set up.",
+          "ko": "여기예요. 컴퓨터는 이미 세팅해 뒀어요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U08-01_t5.mp3",
+            "ko": "audio/ko/D3/D3-U08-01_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Great. Thanks for preparing everything.",
+          "ko": "좋네요. 다 준비해 주셔서 감사해요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U08-01_t6.mp3",
+            "ko": "audio/ko/D3/D3-U08-01_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U08-02",
+      "topic": "사무실 둘러보기",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Let me give you a quick tour.",
+          "ko": "간단히 둘러보게 해 드릴게요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U08-02_t1.mp3",
+            "ko": "audio/ko/D3/D3-U08-02_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "That would be great.",
+          "ko": "좋아요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U08-02_t2.mp3",
+            "ko": "audio/ko/D3/D3-U08-02_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "This is the meeting room, and the kitchen is over there.",
+          "ko": "여기가 회의실이고, 탕비실은 저쪽이에요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U08-02_t3.mp3",
+            "ko": "audio/ko/D3/D3-U08-02_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Is the coffee free?",
+          "ko": "커피는 무료인가요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U08-02_t4.mp3",
+            "ko": "audio/ko/D3/D3-U08-02_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Yes, help yourself anytime.",
+          "ko": "네, 언제든 마음껏 드세요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U08-02_t5.mp3",
+            "ko": "audio/ko/D3/D3-U08-02_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "That's the best news today!",
+          "ko": "오늘 들은 소식 중 최고네요!",
+          "audio": {
+            "en": "audio/en/D3/D3-U08-02_t6.mp3",
+            "ko": "audio/ko/D3/D3-U08-02_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U08-03",
+      "topic": "점심 같이",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Do you want to have lunch with us?",
+          "ko": "우리랑 같이 점심 먹을래요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U08-03_t1.mp3",
+            "ko": "audio/ko/D3/D3-U08-03_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I'd love to. Where do you usually go?",
+          "ko": "좋아요. 보통 어디로 가요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U08-03_t2.mp3",
+            "ko": "audio/ko/D3/D3-U08-03_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "There's a good noodle place nearby.",
+          "ko": "근처에 괜찮은 국숫집이 있어요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U08-03_t3.mp3",
+            "ko": "audio/ko/D3/D3-U08-03_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Sounds good. What time?",
+          "ko": "좋네요. 몇 시에요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U08-03_t4.mp3",
+            "ko": "audio/ko/D3/D3-U08-03_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Around twelve. I'll come get you.",
+          "ko": "12시쯤이요. 제가 데리러 갈게요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U08-03_t5.mp3",
+            "ko": "audio/ko/D3/D3-U08-03_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Thanks. See you then.",
+          "ko": "고마워요. 그때 봐요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U08-03_t6.mp3",
+            "ko": "audio/ko/D3/D3-U08-03_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U08-04",
+      "topic": "업무 설명",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Today, I'd like you to read these documents.",
+          "ko": "오늘은 이 문서들을 읽어 주세요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U08-04_t1.mp3",
+            "ko": "audio/ko/D3/D3-U08-04_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Sure. What are they about?",
+          "ko": "네. 무슨 내용이에요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U08-04_t2.mp3",
+            "ko": "audio/ko/D3/D3-U08-04_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Our main projects this year.",
+          "ko": "올해 우리 주요 프로젝트들이요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U08-04_t3.mp3",
+            "ko": "audio/ko/D3/D3-U08-04_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Okay. Should I take notes?",
+          "ko": "알겠어요. 메모해야 할까요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U08-04_t4.mp3",
+            "ko": "audio/ko/D3/D3-U08-04_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Yes, and write down any questions.",
+          "ko": "네, 궁금한 점도 적어 두세요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U08-04_t5.mp3",
+            "ko": "audio/ko/D3/D3-U08-04_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I will. Thank you.",
+          "ko": "그럴게요. 감사합니다.",
+          "audio": {
+            "en": "audio/en/D3/D3-U08-04_t6.mp3",
+            "ko": "audio/ko/D3/D3-U08-04_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U08-05",
+      "topic": "퇴근 인사",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "How was your first day?",
+          "ko": "첫날 어땠어요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U08-05_t1.mp3",
+            "ko": "audio/ko/D3/D3-U08-05_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "It was busy, but everyone was very kind.",
+          "ko": "바빴지만 모두 정말 친절했어요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U08-05_t2.mp3",
+            "ko": "audio/ko/D3/D3-U08-05_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Glad to hear that. Any questions?",
+          "ko": "다행이네요. 궁금한 거 있어요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U08-05_t3.mp3",
+            "ko": "audio/ko/D3/D3-U08-05_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "What time should I come in tomorrow?",
+          "ko": "내일 몇 시까지 오면 돼요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U08-05_t4.mp3",
+            "ko": "audio/ko/D3/D3-U08-05_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Nine o'clock is fine.",
+          "ko": "9시면 돼요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U08-05_t5.mp3",
+            "ko": "audio/ko/D3/D3-U08-05_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Okay. See you tomorrow!",
+          "ko": "알겠습니다. 내일 봬요!",
+          "audio": {
+            "en": "audio/en/D3/D3-U08-05_t6.mp3",
+            "ko": "audio/ko/D3/D3-U08-05_t6.mp3"
+          }
+        }
+      ]
+    }
+  ]
+}

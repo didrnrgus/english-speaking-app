@@ -1,0 +1,54 @@
+{
+  "unit": "S1-U10",
+  "version": 1,
+  "level": "S1",
+  "track": "speaking",
+  "title": "축하와 응원",
+  "items": [
+    {
+      "id": "S1-U10-01",
+      "en": "Congratulations!",
+      "ko": "축하해요!",
+      "audio": {
+        "en": "audio/en/S1/S1-U10-01.mp3",
+        "ko": "audio/ko/S1/S1-U10-01.mp3"
+      }
+    },
+    {
+      "id": "S1-U10-02",
+      "en": "Happy birthday!",
+      "ko": "생일 축하해요!",
+      "audio": {
+        "en": "audio/en/S1/S1-U10-02.mp3",
+        "ko": "audio/ko/S1/S1-U10-02.mp3"
+      }
+    },
+    {
+      "id": "S1-U10-03",
+      "en": "Good luck!",
+      "ko": "행운을 빌어요!",
+      "audio": {
+        "en": "audio/en/S1/S1-U10-03.mp3",
+        "ko": "audio/ko/S1/S1-U10-03.mp3"
+      }
+    },
+    {
+      "id": "S1-U10-04",
+      "en": "Cheer up!",
+      "ko": "힘내요!",
+      "audio": {
+        "en": "audio/en/S1/S1-U10-04.mp3",
+        "ko": "audio/ko/S1/S1-U10-04.mp3"
+      }
+    },
+    {
+      "id": "S1-U10-05",
+      "en": "Well done!",
+      "ko": "잘했어요!",
+      "audio": {
+        "en": "audio/en/S1/S1-U10-05.mp3",
+        "ko": "audio/ko/S1/S1-U10-05.mp3"
+      }
+    }
+  ]
+}

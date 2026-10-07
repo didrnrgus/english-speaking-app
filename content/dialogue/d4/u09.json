@@ -1,0 +1,399 @@
+{
+  "unit": "D4-U09",
+  "version": 1,
+  "level": "D4",
+  "track": "dialogue",
+  "title": "이사 준비",
+  "items": [
+    {
+      "id": "D4-U09-01",
+      "topic": "이사 업체",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Hello, I need help with moving next month.",
+          "ko": "안녕하세요, 다음 달 이사 때문에 도움이 필요해요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-01_t1.mp3",
+            "ko": "audio/ko/D4/D4-U09-01_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Sure. When exactly are you moving?",
+          "ko": "네. 정확히 언제 이사하세요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-01_t2.mp3",
+            "ko": "audio/ko/D4/D4-U09-01_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "On the fifteenth.",
+          "ko": "15일이요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-01_t3.mp3",
+            "ko": "audio/ko/D4/D4-U09-01_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "How big is your apartment?",
+          "ko": "집 크기가 어느 정도예요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-01_t4.mp3",
+            "ko": "audio/ko/D4/D4-U09-01_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "It has two bedrooms.",
+          "ko": "방 두 개짜리예요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-01_t5.mp3",
+            "ko": "audio/ko/D4/D4-U09-01_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Do you need packing service, too?",
+          "ko": "포장 서비스도 필요하세요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-01_t6.mp3",
+            "ko": "audio/ko/D4/D4-U09-01_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Yes, please. I'm very busy at work.",
+          "ko": "네, 부탁해요. 회사 일이 너무 바빠서요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-01_t7.mp3",
+            "ko": "audio/ko/D4/D4-U09-01_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Okay. I'll send you a price by email today.",
+          "ko": "알겠습니다. 오늘 이메일로 견적 보내 드릴게요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-01_t8.mp3",
+            "ko": "audio/ko/D4/D4-U09-01_t8.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D4-U09-02",
+      "topic": "집 보러 가기",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Hi, I'm here to see the apartment.",
+          "ko": "안녕하세요, 집 보러 왔어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-02_t1.mp3",
+            "ko": "audio/ko/D4/D4-U09-02_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Welcome. Come in and look around.",
+          "ko": "어서 오세요. 들어와서 둘러보세요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-02_t2.mp3",
+            "ko": "audio/ko/D4/D4-U09-02_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "It's bright. Which way do the windows face?",
+          "ko": "밝네요. 창문이 어느 방향이에요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-02_t3.mp3",
+            "ko": "audio/ko/D4/D4-U09-02_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "South, so you get sunshine all day.",
+          "ko": "남향이라 하루 종일 햇빛이 들어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-02_t4.mp3",
+            "ko": "audio/ko/D4/D4-U09-02_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "How far is the subway station?",
+          "ko": "지하철역은 얼마나 멀어요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-02_t5.mp3",
+            "ko": "audio/ko/D4/D4-U09-02_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "It's a five-minute walk.",
+          "ko": "걸어서 5분이에요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-02_t6.mp3",
+            "ko": "audio/ko/D4/D4-U09-02_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Is parking included?",
+          "ko": "주차도 포함돼요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-02_t7.mp3",
+            "ko": "audio/ko/D4/D4-U09-02_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, you get one parking space.",
+          "ko": "네, 주차 자리 하나가 있어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-02_t8.mp3",
+            "ko": "audio/ko/D4/D4-U09-02_t8.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D4-U09-03",
+      "topic": "짐 정리",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "We have too much stuff to move.",
+          "ko": "옮길 짐이 너무 많아.",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-03_t1.mp3",
+            "ko": "audio/ko/D4/D4-U09-03_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Let's throw away things we don't use.",
+          "ko": "안 쓰는 건 버리자.",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-03_t2.mp3",
+            "ko": "audio/ko/D4/D4-U09-03_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "What about these old books?",
+          "ko": "이 오래된 책들은?",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-03_t3.mp3",
+            "ko": "audio/ko/D4/D4-U09-03_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "We can donate them to the library.",
+          "ko": "도서관에 기부하면 되지.",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-03_t4.mp3",
+            "ko": "audio/ko/D4/D4-U09-03_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "And these clothes?",
+          "ko": "이 옷들은?",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-03_t5.mp3",
+            "ko": "audio/ko/D4/D4-U09-03_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "If you haven't worn them in a year, give them away.",
+          "ko": "1년 동안 안 입었으면 남 줘.",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-03_t6.mp3",
+            "ko": "audio/ko/D4/D4-U09-03_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "That's a good rule.",
+          "ko": "좋은 규칙이다.",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-03_t7.mp3",
+            "ko": "audio/ko/D4/D4-U09-03_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Moving is a good chance to start fresh.",
+          "ko": "이사는 새로 시작할 좋은 기회야.",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-03_t8.mp3",
+            "ko": "audio/ko/D4/D4-U09-03_t8.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D4-U09-04",
+      "topic": "주소 변경",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "I'm moving next week. Do I need to do anything here?",
+          "ko": "다음 주에 이사하는데, 여기서 해야 할 게 있나요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-04_t1.mp3",
+            "ko": "audio/ko/D4/D4-U09-04_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, you should change your address.",
+          "ko": "네, 주소를 변경하셔야 해요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-04_t2.mp3",
+            "ko": "audio/ko/D4/D4-U09-04_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Can I do it today?",
+          "ko": "오늘 할 수 있어요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-04_t3.mp3",
+            "ko": "audio/ko/D4/D4-U09-04_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Sure. Please fill out this form.",
+          "ko": "그럼요. 이 서류를 작성해 주세요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-04_t4.mp3",
+            "ko": "audio/ko/D4/D4-U09-04_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Do I need my new rental contract?",
+          "ko": "새 임대 계약서가 필요해요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-04_t5.mp3",
+            "ko": "audio/ko/D4/D4-U09-04_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, and your ID card.",
+          "ko": "네, 그리고 신분증도요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-04_t6.mp3",
+            "ko": "audio/ko/D4/D4-U09-04_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Here they are.",
+          "ko": "여기 있어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-04_t7.mp3",
+            "ko": "audio/ko/D4/D4-U09-04_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Thank you. It's all done.",
+          "ko": "감사합니다. 다 처리됐어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-04_t8.mp3",
+            "ko": "audio/ko/D4/D4-U09-04_t8.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D4-U09-05",
+      "topic": "이사 도와주기",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Thanks for helping me move today.",
+          "ko": "오늘 이사 도와줘서 고마워.",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-05_t1.mp3",
+            "ko": "audio/ko/D4/D4-U09-05_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "No problem. Where should I put this box?",
+          "ko": "별말을. 이 상자는 어디에 둘까?",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-05_t2.mp3",
+            "ko": "audio/ko/D4/D4-U09-05_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "That goes in the kitchen.",
+          "ko": "그건 부엌에.",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-05_t3.mp3",
+            "ko": "audio/ko/D4/D4-U09-05_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "It's really heavy. What's in it?",
+          "ko": "정말 무겁다. 뭐가 들었어?",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-05_t4.mp3",
+            "ko": "audio/ko/D4/D4-U09-05_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Plates and pots. Be careful.",
+          "ko": "접시랑 냄비. 조심해.",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-05_t5.mp3",
+            "ko": "audio/ko/D4/D4-U09-05_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Okay. Let's take a break after this.",
+          "ko": "알겠어. 이거 하고 좀 쉬자.",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-05_t6.mp3",
+            "ko": "audio/ko/D4/D4-U09-05_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Sure. I'll order some food for us.",
+          "ko": "그래. 먹을 것 좀 시킬게.",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-05_t7.mp3",
+            "ko": "audio/ko/D4/D4-U09-05_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Pizza sounds good!",
+          "ko": "피자 좋다!",
+          "audio": {
+            "en": "audio/en/D4/D4-U09-05_t8.mp3",
+            "ko": "audio/ko/D4/D4-U09-05_t8.mp3"
+          }
+        }
+      ]
+    }
+  ]
+}

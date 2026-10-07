@@ -1,0 +1,54 @@
+{
+  "unit": "S1-U07",
+  "version": 1,
+  "level": "S1",
+  "track": "speaking",
+  "title": "쇼핑",
+  "items": [
+    {
+      "id": "S1-U07-01",
+      "en": "How much?",
+      "ko": "얼마예요?",
+      "audio": {
+        "en": "audio/en/S1/S1-U07-01.mp3",
+        "ko": "audio/ko/S1/S1-U07-01.mp3"
+      }
+    },
+    {
+      "id": "S1-U07-02",
+      "en": "Too expensive.",
+      "ko": "너무 비싸요.",
+      "audio": {
+        "en": "audio/en/S1/S1-U07-02.mp3",
+        "ko": "audio/ko/S1/S1-U07-02.mp3"
+      }
+    },
+    {
+      "id": "S1-U07-03",
+      "en": "I'll take it.",
+      "ko": "이걸로 할게요.",
+      "audio": {
+        "en": "audio/en/S1/S1-U07-03.mp3",
+        "ko": "audio/ko/S1/S1-U07-03.mp3"
+      }
+    },
+    {
+      "id": "S1-U07-04",
+      "en": "Just looking.",
+      "ko": "그냥 구경하는 중이에요.",
+      "audio": {
+        "en": "audio/en/S1/S1-U07-04.mp3",
+        "ko": "audio/ko/S1/S1-U07-04.mp3"
+      }
+    },
+    {
+      "id": "S1-U07-05",
+      "en": "Card, please.",
+      "ko": "카드로 할게요.",
+      "audio": {
+        "en": "audio/en/S1/S1-U07-05.mp3",
+        "ko": "audio/ko/S1/S1-U07-05.mp3"
+      }
+    }
+  ]
+}

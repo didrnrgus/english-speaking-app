@@ -1,0 +1,54 @@
+{
+  "unit": "S5-U10",
+  "version": 1,
+  "level": "S5",
+  "track": "speaking",
+  "title": "어려움을 이겨 낸 경험",
+  "items": [
+    {
+      "id": "S5-U10-01",
+      "en": "When I moved to Canada for work, I had a really hard time. My English wasn't good, so I was afraid to speak in meetings. I also missed my family and Korean food. For the first three months, I felt lonely almost every day. Then I decided to change something. I joined a weekend soccer club and started talking with people there. They were patient with my English and invited me to dinner. Slowly, I became more confident. Now I have many friends here, and I'm glad I didn't give up.",
+      "ko": "일 때문에 캐나다로 이사했을 때 정말 힘든 시간을 보냈어요. 영어를 잘 못해서 회의 때 말하기가 두려웠어요. 가족과 한국 음식도 그리웠어요. 처음 석 달 동안은 거의 매일 외로웠어요. 그러다 뭔가 바꿔 보기로 했어요. 주말 축구 동호회에 들어가서 거기 사람들과 이야기하기 시작했어요. 그들은 제 영어를 참을성 있게 들어 주고 저녁 식사에도 초대해 줬어요. 조금씩 자신감이 생겼어요. 지금은 여기 친구가 많고, 포기하지 않아서 다행이라고 생각해요.",
+      "audio": {
+        "en": "audio/en/S5/S5-U10-01.mp3",
+        "ko": "audio/ko/S5/S5-U10-01.mp3"
+      }
+    },
+    {
+      "id": "S5-U10-02",
+      "en": "Three years ago, I failed an important job interview. I had prepared for weeks, so I was very disappointed. For a few days, I didn't want to see anyone. Then I asked a friend who works in that industry for advice. She helped me find my weak points. I wasn't explaining my experience clearly, and I spoke too fast when I was nervous. I practiced with her every weekend for two months. At my next interview, I felt much more confident, and I got the job. Failure taught me more than success.",
+      "ko": "3년 전에 중요한 면접에서 떨어졌어요. 몇 주 동안 준비했기 때문에 정말 실망했어요. 며칠 동안은 아무도 만나고 싶지 않았어요. 그러다 그 업계에서 일하는 친구에게 조언을 구했어요. 친구가 제 약점을 찾도록 도와줬어요. 저는 제 경험을 분명하게 설명하지 못했고, 긴장하면 말이 너무 빨라졌어요. 두 달 동안 주말마다 친구와 연습했어요. 다음 면접에서는 훨씬 자신감이 있었고, 합격했어요. 실패가 성공보다 더 많은 걸 가르쳐 줬어요.",
+      "audio": {
+        "en": "audio/en/S5/S5-U10-02.mp3",
+        "ko": "audio/ko/S5/S5-U10-02.mp3"
+      }
+    },
+    {
+      "id": "S5-U10-03",
+      "en": "When I was in high school, I was very shy. I couldn't speak in front of the class, and my voice always shook. My teacher noticed this and suggested that I join the school drama club. I didn't want to, but she kept encouraging me. At first, I only had small roles with one or two lines. But every practice made me a little braver. In my last year, I played the main character in our school play. Hundreds of people watched, and I wasn't scared at all. That teacher changed my life.",
+      "ko": "저는 고등학생 때 아주 수줍음이 많았어요. 반 친구들 앞에서 말을 못 했고 목소리가 늘 떨렸어요. 선생님이 그걸 알아채시고 학교 연극부에 들어가 보라고 하셨어요. 저는 싫었지만 선생님이 계속 격려해 주셨어요. 처음에는 대사가 한두 줄뿐인 작은 역할만 맡았어요. 하지만 연습할 때마다 조금씩 용기가 생겼어요. 마지막 학년에는 학교 연극에서 주인공을 맡았어요. 수백 명이 봤는데 하나도 무섭지 않았어요. 그 선생님이 제 인생을 바꿔 주셨어요.",
+      "audio": {
+        "en": "audio/en/S5/S5-U10-03.mp3",
+        "ko": "audio/ko/S5/S5-U10-03.mp3"
+      }
+    },
+    {
+      "id": "S5-U10-04",
+      "en": "Last year, I broke my leg in a ski accident. I couldn't walk for two months, and I had to stay at home most of the time. At first, I felt angry and bored. I couldn't go to work, meet friends, or exercise. But then I decided to use this time well. I started an online course in graphic design, which I had always wanted to learn. I studied every day and finished three projects. When my leg healed, I had a new skill. Now I even do small design jobs on weekends.",
+      "ko": "작년에 스키 사고로 다리가 부러졌어요. 두 달 동안 걷지 못해서 대부분의 시간을 집에 있어야 했어요. 처음에는 화도 나고 지루했어요. 출근도, 친구를 만나는 것도, 운동도 할 수 없었어요. 그러다 이 시간을 잘 써 보기로 했어요. 항상 배우고 싶었던 그래픽 디자인 온라인 강좌를 시작했어요. 매일 공부해서 프로젝트를 세 개 끝냈어요. 다리가 나았을 때는 새로운 기술이 생겨 있었어요. 지금은 주말에 작은 디자인 일까지 하고 있어요.",
+      "audio": {
+        "en": "audio/en/S5/S5-U10-04.mp3",
+        "ko": "audio/ko/S5/S5-U10-04.mp3"
+      }
+    },
+    {
+      "id": "S5-U10-05",
+      "en": "A few years ago, I had a lot of debt from my student loans and credit cards. I was always worried about money, and I couldn't sleep well. One day, I decided to make a serious plan. I wrote down everything I spent for a month. I was surprised to see how much I spent on delivery food and coffee. So I started cooking at home and making coffee myself. I also sold things I didn't need online. It took two and a half years, but I paid back every dollar. Now I save money every month.",
+      "ko": "몇 년 전에 저는 학자금 대출과 신용카드 때문에 빚이 많았어요. 항상 돈 걱정을 했고 잠도 잘 못 잤어요. 어느 날 제대로 계획을 세우기로 했어요. 한 달 동안 쓴 돈을 전부 적었어요. 배달 음식과 커피에 쓴 돈이 얼마나 많은지 보고 깜짝 놀랐어요. 그래서 집에서 요리하고 커피도 직접 내려 마시기 시작했어요. 필요 없는 물건은 인터넷으로 팔았어요. 2년 반이 걸렸지만 한 푼도 빠짐없이 다 갚았어요. 지금은 매달 저축을 해요.",
+      "audio": {
+        "en": "audio/en/S5/S5-U10-05.mp3",
+        "ko": "audio/ko/S5/S5-U10-05.mp3"
+      }
+    }
+  ]
+}

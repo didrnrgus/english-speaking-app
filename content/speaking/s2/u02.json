@@ -1,0 +1,54 @@
+{
+  "unit": "S2-U02",
+  "version": 1,
+  "level": "S2",
+  "track": "speaking",
+  "title": "자기소개",
+  "items": [
+    {
+      "id": "S2-U02-01",
+      "en": "My name is Jisu Kim.",
+      "ko": "제 이름은 김지수예요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U02-01.mp3",
+        "ko": "audio/ko/S2/S2-U02-01.mp3"
+      }
+    },
+    {
+      "id": "S2-U02-02",
+      "en": "I'm a college student.",
+      "ko": "저는 대학생이에요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U02-02.mp3",
+        "ko": "audio/ko/S2/S2-U02-02.mp3"
+      }
+    },
+    {
+      "id": "S2-U02-03",
+      "en": "I live in Busan.",
+      "ko": "저는 부산에 살아요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U02-03.mp3",
+        "ko": "audio/ko/S2/S2-U02-03.mp3"
+      }
+    },
+    {
+      "id": "S2-U02-04",
+      "en": "I'm twenty-five years old.",
+      "ko": "저는 스물다섯 살이에요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U02-04.mp3",
+        "ko": "audio/ko/S2/S2-U02-04.mp3"
+      }
+    },
+    {
+      "id": "S2-U02-05",
+      "en": "I work at a bank.",
+      "ko": "저는 은행에서 일해요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U02-05.mp3",
+        "ko": "audio/ko/S2/S2-U02-05.mp3"
+      }
+    }
+  ]
+}

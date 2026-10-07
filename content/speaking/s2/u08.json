@@ -1,0 +1,54 @@
+{
+  "unit": "S2-U08",
+  "version": 1,
+  "level": "S2",
+  "track": "speaking",
+  "title": "대중교통",
+  "items": [
+    {
+      "id": "S2-U08-01",
+      "en": "Where is the bus stop?",
+      "ko": "버스 정류장이 어디예요?",
+      "audio": {
+        "en": "audio/en/S2/S2-U08-01.mp3",
+        "ko": "audio/ko/S2/S2-U08-01.mp3"
+      }
+    },
+    {
+      "id": "S2-U08-02",
+      "en": "Does this bus go downtown?",
+      "ko": "이 버스 시내로 가나요?",
+      "audio": {
+        "en": "audio/en/S2/S2-U08-02.mp3",
+        "ko": "audio/ko/S2/S2-U08-02.mp3"
+      }
+    },
+    {
+      "id": "S2-U08-03",
+      "en": "One ticket to Seoul, please.",
+      "ko": "서울행 표 한 장 주세요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U08-03.mp3",
+        "ko": "audio/ko/S2/S2-U08-03.mp3"
+      }
+    },
+    {
+      "id": "S2-U08-04",
+      "en": "Where do I transfer?",
+      "ko": "어디서 갈아타요?",
+      "audio": {
+        "en": "audio/en/S2/S2-U08-04.mp3",
+        "ko": "audio/ko/S2/S2-U08-04.mp3"
+      }
+    },
+    {
+      "id": "S2-U08-05",
+      "en": "Please stop at the corner.",
+      "ko": "모퉁이에서 세워 주세요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U08-05.mp3",
+        "ko": "audio/ko/S2/S2-U08-05.mp3"
+      }
+    }
+  ]
+}

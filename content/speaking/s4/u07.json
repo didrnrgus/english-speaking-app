@@ -1,0 +1,54 @@
+{
+  "unit": "S4-U07",
+  "version": 1,
+  "level": "S4",
+  "track": "speaking",
+  "title": "비교하기",
+  "items": [
+    {
+      "id": "S4-U07-01",
+      "en": "I prefer tea to coffee. Coffee is too strong for me, and it keeps me awake at night.",
+      "ko": "저는 커피보다 차가 좋아요. 커피는 너무 진하고 밤에 잠이 안 와요.",
+      "audio": {
+        "en": "audio/en/S4/S4-U07-01.mp3",
+        "ko": "audio/ko/S4/S4-U07-01.mp3"
+      }
+    },
+    {
+      "id": "S4-U07-02",
+      "en": "Living in the city is convenient. But life in the countryside is much more relaxing.",
+      "ko": "도시에 사는 건 편리해요. 하지만 시골 생활이 훨씬 더 여유로워요.",
+      "audio": {
+        "en": "audio/en/S4/S4-U07-02.mp3",
+        "ko": "audio/ko/S4/S4-U07-02.mp3"
+      }
+    },
+    {
+      "id": "S4-U07-03",
+      "en": "The new phone is faster than my old one. However, the battery doesn't last as long.",
+      "ko": "새 휴대폰이 예전 것보다 빨라요. 하지만 배터리는 그만큼 오래가지 않아요.",
+      "audio": {
+        "en": "audio/en/S4/S4-U07-03.mp3",
+        "ko": "audio/ko/S4/S4-U07-03.mp3"
+      }
+    },
+    {
+      "id": "S4-U07-04",
+      "en": "Taking the subway is cheaper than taking a taxi. It's often faster during rush hour, too.",
+      "ko": "지하철을 타는 게 택시보다 싸요. 출퇴근 시간에는 더 빠를 때도 많아요.",
+      "audio": {
+        "en": "audio/en/S4/S4-U07-04.mp3",
+        "ko": "audio/ko/S4/S4-U07-04.mp3"
+      }
+    },
+    {
+      "id": "S4-U07-05",
+      "en": "I like summer more than winter. I can wear light clothes and stay outside longer.",
+      "ko": "저는 겨울보다 여름이 더 좋아요. 옷을 가볍게 입을 수 있고 밖에 더 오래 있을 수 있거든요.",
+      "audio": {
+        "en": "audio/en/S4/S4-U07-05.mp3",
+        "ko": "audio/ko/S4/S4-U07-05.mp3"
+      }
+    }
+  ]
+}

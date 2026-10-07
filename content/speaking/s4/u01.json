@@ -1,0 +1,54 @@
+{
+  "unit": "S4-U01",
+  "version": 1,
+  "level": "S4",
+  "track": "speaking",
+  "title": "나와 일상",
+  "items": [
+    {
+      "id": "S4-U01-01",
+      "en": "I work at a small company in Seoul. I usually commute by subway, and it takes about forty minutes.",
+      "ko": "저는 서울에 있는 작은 회사에서 일해요. 보통 지하철로 출근하는데, 약 40분 걸려요.",
+      "audio": {
+        "en": "audio/en/S4/S4-U01-01.mp3",
+        "ko": "audio/ko/S4/S4-U01-01.mp3"
+      }
+    },
+    {
+      "id": "S4-U01-02",
+      "en": "Last weekend, I went hiking with my friends. The weather was great, and the view from the top was amazing.",
+      "ko": "지난 주말에 친구들과 등산을 갔어요. 날씨가 좋았고, 정상에서 보는 경치가 정말 멋졌어요.",
+      "audio": {
+        "en": "audio/en/S4/S4-U01-02.mp3",
+        "ko": "audio/ko/S4/S4-U01-02.mp3"
+      }
+    },
+    {
+      "id": "S4-U01-03",
+      "en": "I'd like to book a table for two tonight. Do you have any seats available around seven?",
+      "ko": "오늘 밤 두 명 자리를 예약하고 싶어요. 7시쯤 자리가 있나요?",
+      "audio": {
+        "en": "audio/en/S4/S4-U01-03.mp3",
+        "ko": "audio/ko/S4/S4-U01-03.mp3"
+      }
+    },
+    {
+      "id": "S4-U01-04",
+      "en": "I've been studying English for three months. It's difficult, but I enjoy it more every day.",
+      "ko": "저는 3개월 동안 영어를 공부해 왔어요. 어렵지만 매일 조금씩 더 즐거워요.",
+      "audio": {
+        "en": "audio/en/S4/S4-U01-04.mp3",
+        "ko": "audio/ko/S4/S4-U01-04.mp3"
+      }
+    },
+    {
+      "id": "S4-U01-05",
+      "en": "My favorite season is autumn. The air is cool, the leaves change color, and it's perfect for walking.",
+      "ko": "제가 가장 좋아하는 계절은 가을이에요. 공기가 시원하고 단풍이 들어서 산책하기 딱 좋아요.",
+      "audio": {
+        "en": "audio/en/S4/S4-U01-05.mp3",
+        "ko": "audio/ko/S4/S4-U01-05.mp3"
+      }
+    }
+  ]
+}

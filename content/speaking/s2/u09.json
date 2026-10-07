@@ -1,0 +1,54 @@
+{
+  "unit": "S2-U09",
+  "version": 1,
+  "level": "S2",
+  "track": "speaking",
+  "title": "옷 가게",
+  "items": [
+    {
+      "id": "S2-U09-01",
+      "en": "Can I try this on?",
+      "ko": "이거 입어 봐도 돼요?",
+      "audio": {
+        "en": "audio/en/S2/S2-U09-01.mp3",
+        "ko": "audio/ko/S2/S2-U09-01.mp3"
+      }
+    },
+    {
+      "id": "S2-U09-02",
+      "en": "Do you have a smaller size?",
+      "ko": "더 작은 사이즈 있어요?",
+      "audio": {
+        "en": "audio/en/S2/S2-U09-02.mp3",
+        "ko": "audio/ko/S2/S2-U09-02.mp3"
+      }
+    },
+    {
+      "id": "S2-U09-03",
+      "en": "This is too big.",
+      "ko": "이건 너무 커요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U09-03.mp3",
+        "ko": "audio/ko/S2/S2-U09-03.mp3"
+      }
+    },
+    {
+      "id": "S2-U09-04",
+      "en": "Do you have it in black?",
+      "ko": "이거 검은색 있어요?",
+      "audio": {
+        "en": "audio/en/S2/S2-U09-04.mp3",
+        "ko": "audio/ko/S2/S2-U09-04.mp3"
+      }
+    },
+    {
+      "id": "S2-U09-05",
+      "en": "Where is the fitting room?",
+      "ko": "탈의실이 어디예요?",
+      "audio": {
+        "en": "audio/en/S2/S2-U09-05.mp3",
+        "ko": "audio/ko/S2/S2-U09-05.mp3"
+      }
+    }
+  ]
+}

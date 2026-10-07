@@ -1,0 +1,54 @@
+{
+  "unit": "S1-U08",
+  "version": 1,
+  "level": "S1",
+  "track": "speaking",
+  "title": "식당",
+  "items": [
+    {
+      "id": "S1-U08-01",
+      "en": "Menu, please.",
+      "ko": "메뉴판 주세요.",
+      "audio": {
+        "en": "audio/en/S1/S1-U08-01.mp3",
+        "ko": "audio/ko/S1/S1-U08-01.mp3"
+      }
+    },
+    {
+      "id": "S1-U08-02",
+      "en": "Check, please.",
+      "ko": "계산서 주세요.",
+      "audio": {
+        "en": "audio/en/S1/S1-U08-02.mp3",
+        "ko": "audio/ko/S1/S1-U08-02.mp3"
+      }
+    },
+    {
+      "id": "S1-U08-03",
+      "en": "It's delicious!",
+      "ko": "맛있어요!",
+      "audio": {
+        "en": "audio/en/S1/S1-U08-03.mp3",
+        "ko": "audio/ko/S1/S1-U08-03.mp3"
+      }
+    },
+    {
+      "id": "S1-U08-04",
+      "en": "For here.",
+      "ko": "여기서 먹을게요.",
+      "audio": {
+        "en": "audio/en/S1/S1-U08-04.mp3",
+        "ko": "audio/ko/S1/S1-U08-04.mp3"
+      }
+    },
+    {
+      "id": "S1-U08-05",
+      "en": "To go, please.",
+      "ko": "포장해 주세요.",
+      "audio": {
+        "en": "audio/en/S1/S1-U08-05.mp3",
+        "ko": "audio/ko/S1/S1-U08-05.mp3"
+      }
+    }
+  ]
+}

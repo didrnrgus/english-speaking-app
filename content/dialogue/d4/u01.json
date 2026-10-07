@@ -1,0 +1,399 @@
+{
+  "unit": "D4-U01",
+  "version": 1,
+  "level": "D4",
+  "track": "dialogue",
+  "title": "문제 해결",
+  "items": [
+    {
+      "id": "D4-U01-01",
+      "topic": "면접",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Thank you for coming in today. Please have a seat.",
+          "ko": "오늘 와주셔서 감사합니다. 앉으세요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-01_t1.mp3",
+            "ko": "audio/ko/D4/D4-U01-01_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Thank you for having me.",
+          "ko": "불러주셔서 감사합니다.",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-01_t2.mp3",
+            "ko": "audio/ko/D4/D4-U01-01_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Could you tell me a little about yourself?",
+          "ko": "간단히 자기소개를 해주시겠어요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-01_t3.mp3",
+            "ko": "audio/ko/D4/D4-U01-01_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Sure. I have three years of experience in marketing.",
+          "ko": "네. 저는 마케팅 분야에서 3년 경력이 있습니다.",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-01_t4.mp3",
+            "ko": "audio/ko/D4/D4-U01-01_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Why do you want to work for our company?",
+          "ko": "왜 저희 회사에서 일하고 싶으세요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-01_t5.mp3",
+            "ko": "audio/ko/D4/D4-U01-01_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I admire your products, and I want to grow with your team.",
+          "ko": "귀사의 제품을 존경하고, 팀과 함께 성장하고 싶습니다.",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-01_t6.mp3",
+            "ko": "audio/ko/D4/D4-U01-01_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "What would you say is your biggest strength?",
+          "ko": "가장 큰 강점이 뭐라고 생각하세요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-01_t7.mp3",
+            "ko": "audio/ko/D4/D4-U01-01_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I'm a quick learner, and I work well with others.",
+          "ko": "저는 빨리 배우고, 다른 사람들과 협업을 잘합니다.",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-01_t8.mp3",
+            "ko": "audio/ko/D4/D4-U01-01_t8.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D4-U01-02",
+      "topic": "교환/환불",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Hello. How can I help you?",
+          "ko": "안녕하세요. 무엇을 도와드릴까요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-02_t1.mp3",
+            "ko": "audio/ko/D4/D4-U01-02_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I bought this jacket yesterday, but it's too small.",
+          "ko": "어제 이 재킷을 샀는데, 너무 작아요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-02_t2.mp3",
+            "ko": "audio/ko/D4/D4-U01-02_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "I'm sorry to hear that. Do you have the receipt?",
+          "ko": "유감이네요. 영수증 가지고 계세요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-02_t3.mp3",
+            "ko": "audio/ko/D4/D4-U01-02_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, here it is.",
+          "ko": "네, 여기 있어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-02_t4.mp3",
+            "ko": "audio/ko/D4/D4-U01-02_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Would you like to exchange it or get a refund?",
+          "ko": "교환하시겠어요, 환불하시겠어요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-02_t5.mp3",
+            "ko": "audio/ko/D4/D4-U01-02_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Can I exchange it for a bigger size?",
+          "ko": "더 큰 사이즈로 교환할 수 있나요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-02_t6.mp3",
+            "ko": "audio/ko/D4/D4-U01-02_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Of course. Let me check if we have one in stock.",
+          "ko": "물론이죠. 재고가 있는지 확인해 볼게요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-02_t7.mp3",
+            "ko": "audio/ko/D4/D4-U01-02_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Thank you. I appreciate your help.",
+          "ko": "감사합니다. 도와주셔서 고마워요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-02_t8.mp3",
+            "ko": "audio/ko/D4/D4-U01-02_t8.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D4-U01-03",
+      "topic": "공항",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Excuse me. I can't find my gate.",
+          "ko": "실례합니다. 제 게이트를 못 찾겠어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-03_t1.mp3",
+            "ko": "audio/ko/D4/D4-U01-03_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "May I see your boarding pass?",
+          "ko": "탑승권을 보여주시겠어요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-03_t2.mp3",
+            "ko": "audio/ko/D4/D4-U01-03_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Sure. Here you go.",
+          "ko": "네. 여기요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-03_t3.mp3",
+            "ko": "audio/ko/D4/D4-U01-03_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "You're going to gate twenty-two. It's on the second floor.",
+          "ko": "22번 게이트네요. 2층에 있어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-03_t4.mp3",
+            "ko": "audio/ko/D4/D4-U01-03_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "How long does it take to get there?",
+          "ko": "거기까지 얼마나 걸려요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-03_t5.mp3",
+            "ko": "audio/ko/D4/D4-U01-03_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "About ten minutes on foot. Take the escalator on your right.",
+          "ko": "걸어서 10분 정도예요. 오른쪽 에스컬레이터를 타세요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-03_t6.mp3",
+            "ko": "audio/ko/D4/D4-U01-03_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Thanks. Does the flight leave on time?",
+          "ko": "감사합니다. 비행기는 정시에 출발하나요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-03_t7.mp3",
+            "ko": "audio/ko/D4/D4-U01-03_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, boarding starts in thirty minutes.",
+          "ko": "네, 30분 후에 탑승이 시작돼요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-03_t8.mp3",
+            "ko": "audio/ko/D4/D4-U01-03_t8.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D4-U01-04",
+      "topic": "영화 이야기",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Did you watch the new movie yesterday?",
+          "ko": "어제 새 영화 봤어?",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-04_t1.mp3",
+            "ko": "audio/ko/D4/D4-U01-04_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, I did. I thought it was really exciting.",
+          "ko": "응, 봤어. 정말 흥미진진하다고 생각했어.",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-04_t2.mp3",
+            "ko": "audio/ko/D4/D4-U01-04_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Really? I heard the ending was a bit disappointing.",
+          "ko": "정말? 결말이 좀 아쉽다고 들었는데.",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-04_t3.mp3",
+            "ko": "audio/ko/D4/D4-U01-04_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Well, it was unexpected, but I liked it.",
+          "ko": "글쎄, 예상 밖이었지만 난 좋았어.",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-04_t4.mp3",
+            "ko": "audio/ko/D4/D4-U01-04_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "What was your favorite part?",
+          "ko": "가장 좋았던 부분이 뭐야?",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-04_t5.mp3",
+            "ko": "audio/ko/D4/D4-U01-04_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "The music was amazing, and the actors were great.",
+          "ko": "음악이 멋졌고 배우들도 훌륭했어.",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-04_t6.mp3",
+            "ko": "audio/ko/D4/D4-U01-04_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Maybe I should watch it this weekend.",
+          "ko": "이번 주말에 봐야겠다.",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-04_t7.mp3",
+            "ko": "audio/ko/D4/D4-U01-04_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "You should. I'm sure you'll enjoy it.",
+          "ko": "꼭 봐. 분명 재미있을 거야.",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-04_t8.mp3",
+            "ko": "audio/ko/D4/D4-U01-04_t8.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D4-U01-05",
+      "topic": "배달 주문 전화",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Hello, thank you for calling Tasty Pizza.",
+          "ko": "안녕하세요, 테이스티 피자에 전화 주셔서 감사합니다.",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-05_t1.mp3",
+            "ko": "audio/ko/D4/D4-U01-05_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Hi. I'd like to order a large pepperoni pizza for delivery.",
+          "ko": "안녕하세요. 라지 페퍼로니 피자를 배달로 주문하고 싶어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-05_t2.mp3",
+            "ko": "audio/ko/D4/D4-U01-05_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Sure. Would you like anything to drink?",
+          "ko": "네. 음료도 드릴까요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-05_t3.mp3",
+            "ko": "audio/ko/D4/D4-U01-05_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, two bottles of cola, please.",
+          "ko": "네, 콜라 두 병 주세요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-05_t4.mp3",
+            "ko": "audio/ko/D4/D4-U01-05_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Could I have your address?",
+          "ko": "주소를 알려주시겠어요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-05_t5.mp3",
+            "ko": "audio/ko/D4/D4-U01-05_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "It's 25 Maple Street, apartment 302.",
+          "ko": "메이플 가 25번지, 302호예요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-05_t6.mp3",
+            "ko": "audio/ko/D4/D4-U01-05_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Your total is twenty-five dollars. It'll arrive in thirty minutes.",
+          "ko": "총 25달러입니다. 30분 안에 도착합니다.",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-05_t7.mp3",
+            "ko": "audio/ko/D4/D4-U01-05_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Great. Can I pay by card when it arrives?",
+          "ko": "좋아요. 도착했을 때 카드로 결제해도 되나요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U01-05_t8.mp3",
+            "ko": "audio/ko/D4/D4-U01-05_t8.mp3"
+          }
+        }
+      ]
+    }
+  ]
+}

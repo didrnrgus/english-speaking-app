@@ -1,0 +1,309 @@
+{
+  "unit": "D3-U05",
+  "version": 1,
+  "level": "D3",
+  "track": "dialogue",
+  "title": "길을 잃었을 때",
+  "items": [
+    {
+      "id": "D3-U05-01",
+      "topic": "길 묻기",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Excuse me. I think I'm lost.",
+          "ko": "저기요. 길을 잃은 것 같아요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U05-01_t1.mp3",
+            "ko": "audio/ko/D3/D3-U05-01_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Where are you trying to go?",
+          "ko": "어디 가시려고요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U05-01_t2.mp3",
+            "ko": "audio/ko/D3/D3-U05-01_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "I'm looking for the City Museum.",
+          "ko": "시립 박물관을 찾고 있어요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U05-01_t3.mp3",
+            "ko": "audio/ko/D3/D3-U05-01_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Oh, it's not far. Go straight two blocks.",
+          "ko": "아, 멀지 않아요. 두 블록 직진하세요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U05-01_t4.mp3",
+            "ko": "audio/ko/D3/D3-U05-01_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "And then?",
+          "ko": "그다음에는요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U05-01_t5.mp3",
+            "ko": "audio/ko/D3/D3-U05-01_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Turn right. It's next to the bank.",
+          "ko": "오른쪽으로 도세요. 은행 옆에 있어요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U05-01_t6.mp3",
+            "ko": "audio/ko/D3/D3-U05-01_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U05-02",
+      "topic": "지도 보기",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Can you show me where we are on this map?",
+          "ko": "이 지도에서 지금 우리가 어디인지 알려 주실래요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U05-02_t1.mp3",
+            "ko": "audio/ko/D3/D3-U05-02_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Sure. We're right here, near the park.",
+          "ko": "그럼요. 바로 여기, 공원 근처예요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U05-02_t2.mp3",
+            "ko": "audio/ko/D3/D3-U05-02_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "How do I get to the train station?",
+          "ko": "기차역은 어떻게 가요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U05-02_t3.mp3",
+            "ko": "audio/ko/D3/D3-U05-02_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Take the number 10 bus from that stop.",
+          "ko": "저 정류장에서 10번 버스를 타세요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U05-02_t4.mp3",
+            "ko": "audio/ko/D3/D3-U05-02_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "How long does it take?",
+          "ko": "얼마나 걸려요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U05-02_t5.mp3",
+            "ko": "audio/ko/D3/D3-U05-02_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "About fifteen minutes.",
+          "ko": "15분 정도요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U05-02_t6.mp3",
+            "ko": "audio/ko/D3/D3-U05-02_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U05-03",
+      "topic": "걸어갈 수 있나요",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Is the beach within walking distance?",
+          "ko": "해변까지 걸어갈 수 있는 거리예요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U05-03_t1.mp3",
+            "ko": "audio/ko/D3/D3-U05-03_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, it's about ten minutes on foot.",
+          "ko": "네, 걸어서 10분 정도예요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U05-03_t2.mp3",
+            "ko": "audio/ko/D3/D3-U05-03_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Which way should I go?",
+          "ko": "어느 쪽으로 가야 해요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U05-03_t3.mp3",
+            "ko": "audio/ko/D3/D3-U05-03_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Follow this road until you see the sea.",
+          "ko": "바다가 보일 때까지 이 길을 따라가세요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U05-03_t4.mp3",
+            "ko": "audio/ko/D3/D3-U05-03_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Thank you so much.",
+          "ko": "정말 감사해요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U05-03_t5.mp3",
+            "ko": "audio/ko/D3/D3-U05-03_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "You're welcome. Enjoy the beach!",
+          "ko": "천만에요. 해변에서 즐거운 시간 보내세요!",
+          "audio": {
+            "en": "audio/en/D3/D3-U05-03_t6.mp3",
+            "ko": "audio/ko/D3/D3-U05-03_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U05-04",
+      "topic": "호텔 찾기",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Excuse me, do you know the Grand Hotel?",
+          "ko": "실례지만, 그랜드 호텔 아세요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U05-04_t1.mp3",
+            "ko": "audio/ko/D3/D3-U05-04_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes. It's behind that tall building.",
+          "ko": "네. 저 높은 건물 뒤에 있어요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U05-04_t2.mp3",
+            "ko": "audio/ko/D3/D3-U05-04_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Can I walk there from here?",
+          "ko": "여기서 걸어갈 수 있어요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U05-04_t3.mp3",
+            "ko": "audio/ko/D3/D3-U05-04_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, but there's a hill.",
+          "ko": "네, 그런데 언덕이 있어요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U05-04_t4.mp3",
+            "ko": "audio/ko/D3/D3-U05-04_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "That's okay. I have time.",
+          "ko": "괜찮아요. 시간 있어요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U05-04_t5.mp3",
+            "ko": "audio/ko/D3/D3-U05-04_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Then go up this street and turn left.",
+          "ko": "그럼 이 길로 올라가서 왼쪽으로 도세요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U05-04_t6.mp3",
+            "ko": "audio/ko/D3/D3-U05-04_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U05-05",
+      "topic": "휴대폰 배터리",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "My phone died, and I can't find my friend's house.",
+          "ko": "휴대폰이 꺼져서 친구 집을 못 찾겠어요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U05-05_t1.mp3",
+            "ko": "audio/ko/D3/D3-U05-05_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Do you know the address?",
+          "ko": "주소 알아요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U05-05_t2.mp3",
+            "ko": "audio/ko/D3/D3-U05-05_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Yes, it's 25 Maple Street.",
+          "ko": "네, 메이플 가 25번지예요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U05-05_t3.mp3",
+            "ko": "audio/ko/D3/D3-U05-05_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "That's on the other side of the river.",
+          "ko": "강 건너편이에요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U05-05_t4.mp3",
+            "ko": "audio/ko/D3/D3-U05-05_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Oh no. Is there a bus?",
+          "ko": "이런. 버스 있어요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U05-05_t5.mp3",
+            "ko": "audio/ko/D3/D3-U05-05_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, I'll show you the bus stop.",
+          "ko": "네, 정류장 알려 드릴게요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U05-05_t6.mp3",
+            "ko": "audio/ko/D3/D3-U05-05_t6.mp3"
+          }
+        }
+      ]
+    }
+  ]
+}

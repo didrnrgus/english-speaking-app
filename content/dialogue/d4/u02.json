@@ -1,0 +1,399 @@
+{
+  "unit": "D4-U02",
+  "version": 1,
+  "level": "D4",
+  "track": "dialogue",
+  "title": "호텔에서",
+  "items": [
+    {
+      "id": "D4-U02-01",
+      "topic": "방 교체",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Hello, front desk. How can I help you?",
+          "ko": "네, 프런트입니다. 무엇을 도와드릴까요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-01_t1.mp3",
+            "ko": "audio/ko/D4/D4-U02-01_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Hi, I'm in room 512. The air conditioner isn't working.",
+          "ko": "안녕하세요, 512호인데요. 에어컨이 작동을 안 해요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-01_t2.mp3",
+            "ko": "audio/ko/D4/D4-U02-01_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "I'm very sorry about that. I'll send someone right away.",
+          "ko": "정말 죄송합니다. 바로 사람을 보내 드릴게요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-01_t3.mp3",
+            "ko": "audio/ko/D4/D4-U02-01_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Thanks. It's really hot in here.",
+          "ko": "고마워요. 방이 정말 더워요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-01_t4.mp3",
+            "ko": "audio/ko/D4/D4-U02-01_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "If it can't be fixed quickly, we can give you another room.",
+          "ko": "금방 못 고치면 다른 방을 드릴 수 있어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-01_t5.mp3",
+            "ko": "audio/ko/D4/D4-U02-01_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "That would be great.",
+          "ko": "그러면 좋겠어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-01_t6.mp3",
+            "ko": "audio/ko/D4/D4-U02-01_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Again, we apologize for the trouble.",
+          "ko": "불편을 드려 다시 한번 사과드립니다.",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-01_t7.mp3",
+            "ko": "audio/ko/D4/D4-U02-01_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "That's okay. Thanks for your help.",
+          "ko": "괜찮아요. 도와주셔서 고마워요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-01_t8.mp3",
+            "ko": "audio/ko/D4/D4-U02-01_t8.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D4-U02-02",
+      "topic": "늦은 체크아웃",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Good morning. Can I ask for a late checkout?",
+          "ko": "좋은 아침이에요. 체크아웃을 늦게 할 수 있을까요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-02_t1.mp3",
+            "ko": "audio/ko/D4/D4-U02-02_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "What time would you like to leave?",
+          "ko": "몇 시에 나가고 싶으세요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-02_t2.mp3",
+            "ko": "audio/ko/D4/D4-U02-02_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Around two o'clock. My flight is in the evening.",
+          "ko": "2시쯤이요. 비행기가 저녁이라서요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-02_t3.mp3",
+            "ko": "audio/ko/D4/D4-U02-02_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Let me check. Yes, two o'clock is fine.",
+          "ko": "확인해 볼게요. 네, 2시 괜찮아요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-02_t4.mp3",
+            "ko": "audio/ko/D4/D4-U02-02_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Is there an extra charge?",
+          "ko": "추가 요금이 있나요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-02_t5.mp3",
+            "ko": "audio/ko/D4/D4-U02-02_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "No, it's free until two.",
+          "ko": "아니요, 2시까지는 무료예요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-02_t6.mp3",
+            "ko": "audio/ko/D4/D4-U02-02_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Perfect. Thank you so much.",
+          "ko": "완벽해요. 정말 고마워요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-02_t7.mp3",
+            "ko": "audio/ko/D4/D4-U02-02_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "You're welcome. Enjoy your last day.",
+          "ko": "천만에요. 마지막 날 즐겁게 보내세요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-02_t8.mp3",
+            "ko": "audio/ko/D4/D4-U02-02_t8.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D4-U02-03",
+      "topic": "짐 보관",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Excuse me. I've already checked out.",
+          "ko": "실례합니다. 체크아웃은 이미 했는데요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-03_t1.mp3",
+            "ko": "audio/ko/D4/D4-U02-03_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, how can I help you?",
+          "ko": "네, 무엇을 도와드릴까요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-03_t2.mp3",
+            "ko": "audio/ko/D4/D4-U02-03_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Could you keep my luggage until five?",
+          "ko": "5시까지 짐 좀 맡아 주실 수 있어요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-03_t3.mp3",
+            "ko": "audio/ko/D4/D4-U02-03_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Of course. How many bags do you have?",
+          "ko": "물론이죠. 가방이 몇 개세요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-03_t4.mp3",
+            "ko": "audio/ko/D4/D4-U02-03_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Two suitcases and a backpack.",
+          "ko": "캐리어 두 개랑 배낭 하나요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-03_t5.mp3",
+            "ko": "audio/ko/D4/D4-U02-03_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Here's your ticket. Please show it when you come back.",
+          "ko": "여기 보관증이에요. 돌아오시면 보여 주세요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-03_t6.mp3",
+            "ko": "audio/ko/D4/D4-U02-03_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Great. Is there a good place for lunch nearby?",
+          "ko": "좋네요. 근처에 점심 먹기 좋은 곳 있어요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-03_t7.mp3",
+            "ko": "audio/ko/D4/D4-U02-03_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, there's a nice cafe across the street.",
+          "ko": "네, 길 건너에 괜찮은 카페가 있어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-03_t8.mp3",
+            "ko": "audio/ko/D4/D4-U02-03_t8.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D4-U02-04",
+      "topic": "시끄러운 옆방",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Hello, front desk?",
+          "ko": "여보세요, 프런트죠?",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-04_t1.mp3",
+            "ko": "audio/ko/D4/D4-U02-04_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, this is the front desk.",
+          "ko": "네, 프런트입니다.",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-04_t2.mp3",
+            "ko": "audio/ko/D4/D4-U02-04_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "The people next door are being very loud.",
+          "ko": "옆방 사람들이 너무 시끄러워요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-04_t3.mp3",
+            "ko": "audio/ko/D4/D4-U02-04_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I'm sorry. Which room are you in?",
+          "ko": "죄송합니다. 몇 호실이세요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-04_t4.mp3",
+            "ko": "audio/ko/D4/D4-U02-04_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Room 708. It's almost midnight, and I can't sleep.",
+          "ko": "708호요. 거의 자정인데 잠을 못 자겠어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-04_t5.mp3",
+            "ko": "audio/ko/D4/D4-U02-04_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I'll call them and ask them to be quiet.",
+          "ko": "그 방에 전화해서 조용히 해 달라고 할게요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-04_t6.mp3",
+            "ko": "audio/ko/D4/D4-U02-04_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Thank you. I have an early meeting tomorrow.",
+          "ko": "고마워요. 내일 아침 일찍 회의가 있어서요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-04_t7.mp3",
+            "ko": "audio/ko/D4/D4-U02-04_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I understand. Please call again if it continues.",
+          "ko": "알겠습니다. 계속 그러면 다시 전화 주세요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-04_t8.mp3",
+            "ko": "audio/ko/D4/D4-U02-04_t8.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D4-U02-05",
+      "topic": "예약 확인",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Hi, I have a reservation under Lee.",
+          "ko": "안녕하세요, 이 씨 이름으로 예약했어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-05_t1.mp3",
+            "ko": "audio/ko/D4/D4-U02-05_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Let me see. I'm sorry, I can't find it.",
+          "ko": "확인해 볼게요. 죄송하지만 예약이 안 보이네요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-05_t2.mp3",
+            "ko": "audio/ko/D4/D4-U02-05_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Really? I booked it online last week.",
+          "ko": "정말요? 지난주에 인터넷으로 예약했는데요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-05_t3.mp3",
+            "ko": "audio/ko/D4/D4-U02-05_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Do you have a confirmation email?",
+          "ko": "확인 이메일 있으세요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-05_t4.mp3",
+            "ko": "audio/ko/D4/D4-U02-05_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Yes, here it is on my phone.",
+          "ko": "네, 휴대폰에 있어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-05_t5.mp3",
+            "ko": "audio/ko/D4/D4-U02-05_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Ah, I see. It was under your first name.",
+          "ko": "아, 그렇군요. 이름으로 되어 있었네요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-05_t6.mp3",
+            "ko": "audio/ko/D4/D4-U02-05_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Oh, that's a relief.",
+          "ko": "아, 다행이다.",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-05_t7.mp3",
+            "ko": "audio/ko/D4/D4-U02-05_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Here's your key. You're in room 302.",
+          "ko": "여기 열쇠요. 302호입니다.",
+          "audio": {
+            "en": "audio/en/D4/D4-U02-05_t8.mp3",
+            "ko": "audio/ko/D4/D4-U02-05_t8.mp3"
+          }
+        }
+      ]
+    }
+  ]
+}

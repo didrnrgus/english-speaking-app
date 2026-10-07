@@ -1,0 +1,54 @@
+{
+  "unit": "S1-U01",
+  "version": 1,
+  "level": "S1",
+  "track": "speaking",
+  "title": "인사와 예절",
+  "items": [
+    {
+      "id": "S1-U01-01",
+      "en": "Hello.",
+      "ko": "안녕하세요.",
+      "audio": {
+        "en": "audio/en/S1/S1-U01-01.mp3",
+        "ko": "audio/ko/S1/S1-U01-01.mp3"
+      }
+    },
+    {
+      "id": "S1-U01-02",
+      "en": "Thank you.",
+      "ko": "감사합니다.",
+      "audio": {
+        "en": "audio/en/S1/S1-U01-02.mp3",
+        "ko": "audio/ko/S1/S1-U01-02.mp3"
+      }
+    },
+    {
+      "id": "S1-U01-03",
+      "en": "I'm sorry.",
+      "ko": "죄송합니다.",
+      "audio": {
+        "en": "audio/en/S1/S1-U01-03.mp3",
+        "ko": "audio/ko/S1/S1-U01-03.mp3"
+      }
+    },
+    {
+      "id": "S1-U01-04",
+      "en": "Nice to meet you.",
+      "ko": "만나서 반갑습니다.",
+      "audio": {
+        "en": "audio/en/S1/S1-U01-04.mp3",
+        "ko": "audio/ko/S1/S1-U01-04.mp3"
+      }
+    },
+    {
+      "id": "S1-U01-05",
+      "en": "Excuse me.",
+      "ko": "실례합니다. / 저기요.",
+      "audio": {
+        "en": "audio/en/S1/S1-U01-05.mp3",
+        "ko": "audio/ko/S1/S1-U01-05.mp3"
+      }
+    }
+  ]
+}

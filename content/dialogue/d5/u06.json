@@ -1,0 +1,579 @@
+{
+  "unit": "D5-U06",
+  "version": 1,
+  "level": "D5",
+  "track": "dialogue",
+  "title": "건강 고민 상담",
+  "items": [
+    {
+      "id": "D5-U06-01",
+      "topic": "잠을 못 잘 때",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "You've looked tired all week.",
+          "ko": "일주일 내내 피곤해 보여요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-01_t1.mp3",
+            "ko": "audio/ko/D5/D5-U06-01_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I can't sleep well these days.",
+          "ko": "요즘 잠을 잘 못 자요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-01_t2.mp3",
+            "ko": "audio/ko/D5/D5-U06-01_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Oh no. Since when?",
+          "ko": "저런. 언제부터요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-01_t3.mp3",
+            "ko": "audio/ko/D5/D5-U06-01_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "About two weeks. I keep waking up at night.",
+          "ko": "2주 정도요. 밤에 계속 깨요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-01_t4.mp3",
+            "ko": "audio/ko/D5/D5-U06-01_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Are you stressed about something?",
+          "ko": "뭐 스트레스받는 일 있어요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-01_t5.mp3",
+            "ko": "audio/ko/D5/D5-U06-01_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Maybe. Work has been really busy.",
+          "ko": "아마도요. 일이 정말 바빴거든요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-01_t6.mp3",
+            "ko": "audio/ko/D5/D5-U06-01_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Do you drink coffee in the afternoon?",
+          "ko": "오후에 커피 마셔요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-01_t7.mp3",
+            "ko": "audio/ko/D5/D5-U06-01_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, two or three cups.",
+          "ko": "네, 두세 잔이요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-01_t8.mp3",
+            "ko": "audio/ko/D5/D5-U06-01_t8.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "That might be the problem.",
+          "ko": "그게 문제일 수도 있어요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-01_t9.mp3",
+            "ko": "audio/ko/D5/D5-U06-01_t9.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Really? Coffee helps me stay awake at work.",
+          "ko": "정말요? 커피 덕분에 회사에서 버티는데요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-01_t10.mp3",
+            "ko": "audio/ko/D5/D5-U06-01_t10.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Try stopping after lunch for a week.",
+          "ko": "일주일만 점심 이후에는 끊어 봐요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-01_t11.mp3",
+            "ko": "audio/ko/D5/D5-U06-01_t11.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Okay, I'll give it a try.",
+          "ko": "알겠어요, 한번 해 볼게요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-01_t12.mp3",
+            "ko": "audio/ko/D5/D5-U06-01_t12.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D5-U06-02",
+      "topic": "허리 통증",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Are you okay? You keep touching your back.",
+          "ko": "괜찮아요? 계속 허리를 만지네요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-02_t1.mp3",
+            "ko": "audio/ko/D5/D5-U06-02_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "My lower back hurts these days.",
+          "ko": "요즘 허리 아래쪽이 아파요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-02_t2.mp3",
+            "ko": "audio/ko/D5/D5-U06-02_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Did you hurt it somehow?",
+          "ko": "어디서 다쳤어요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-02_t3.mp3",
+            "ko": "audio/ko/D5/D5-U06-02_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "No, I think it's from sitting all day.",
+          "ko": "아니요, 하루 종일 앉아 있어서 그런 것 같아요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-02_t4.mp3",
+            "ko": "audio/ko/D5/D5-U06-02_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Do you take breaks?",
+          "ko": "쉬는 시간은 가져요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-02_t5.mp3",
+            "ko": "audio/ko/D5/D5-U06-02_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Not really. I'm always busy.",
+          "ko": "별로요. 항상 바빠서요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-02_t6.mp3",
+            "ko": "audio/ko/D5/D5-U06-02_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "You should stand up and stretch every hour.",
+          "ko": "한 시간마다 일어나서 스트레칭해야 해요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-02_t7.mp3",
+            "ko": "audio/ko/D5/D5-U06-02_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Is that enough?",
+          "ko": "그거면 될까요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-02_t8.mp3",
+            "ko": "audio/ko/D5/D5-U06-02_t8.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "It helps. But if it gets worse, see a doctor.",
+          "ko": "도움이 돼요. 그래도 심해지면 병원에 가 봐요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-02_t9.mp3",
+            "ko": "audio/ko/D5/D5-U06-02_t9.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Do you know a good clinic?",
+          "ko": "괜찮은 병원 알아요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-02_t10.mp3",
+            "ko": "audio/ko/D5/D5-U06-02_t10.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Yes, I'll send you the name.",
+          "ko": "네, 이름 보내 줄게요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-02_t11.mp3",
+            "ko": "audio/ko/D5/D5-U06-02_t11.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Thanks. I'll make an appointment.",
+          "ko": "고마워요. 예약할게요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-02_t12.mp3",
+            "ko": "audio/ko/D5/D5-U06-02_t12.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D5-U06-03",
+      "topic": "살 빼기",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "I want to lose some weight before summer.",
+          "ko": "여름 전에 살을 좀 빼고 싶어.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-03_t1.mp3",
+            "ko": "audio/ko/D5/D5-U06-03_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "How are you planning to do it?",
+          "ko": "어떻게 할 계획이야?",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-03_t2.mp3",
+            "ko": "audio/ko/D5/D5-U06-03_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "I'm thinking of skipping dinner.",
+          "ko": "저녁을 거를까 생각 중이야.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-03_t3.mp3",
+            "ko": "audio/ko/D5/D5-U06-03_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Hmm, I don't think that's a good idea.",
+          "ko": "음, 그건 좋은 생각 같지 않아.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-03_t4.mp3",
+            "ko": "audio/ko/D5/D5-U06-03_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Why not?",
+          "ko": "왜?",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-03_t5.mp3",
+            "ko": "audio/ko/D5/D5-U06-03_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "You'll be too hungry and eat more later.",
+          "ko": "너무 배고파서 나중에 더 먹게 될 거야.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-03_t6.mp3",
+            "ko": "audio/ko/D5/D5-U06-03_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Then what should I do?",
+          "ko": "그럼 어떻게 해야 해?",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-03_t7.mp3",
+            "ko": "audio/ko/D5/D5-U06-03_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Eat smaller meals and more vegetables.",
+          "ko": "양을 줄이고 채소를 더 먹어.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-03_t8.mp3",
+            "ko": "audio/ko/D5/D5-U06-03_t8.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "What about exercise?",
+          "ko": "운동은?",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-03_t9.mp3",
+            "ko": "audio/ko/D5/D5-U06-03_t9.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Start by walking thirty minutes a day.",
+          "ko": "하루 30분 걷기부터 시작해.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-03_t10.mp3",
+            "ko": "audio/ko/D5/D5-U06-03_t10.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "That sounds easy enough.",
+          "ko": "그 정도는 쉽겠다.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-03_t11.mp3",
+            "ko": "audio/ko/D5/D5-U06-03_t11.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Small changes are easier to keep.",
+          "ko": "작은 변화가 지키기 더 쉬워.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-03_t12.mp3",
+            "ko": "audio/ko/D5/D5-U06-03_t12.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D5-U06-04",
+      "topic": "스트레스",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "You've seemed down lately. What's going on?",
+          "ko": "요즘 기운이 없어 보여. 무슨 일 있어?",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-04_t1.mp3",
+            "ko": "audio/ko/D5/D5-U06-04_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I'm just really stressed.",
+          "ko": "그냥 스트레스가 너무 심해.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-04_t2.mp3",
+            "ko": "audio/ko/D5/D5-U06-04_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Is it work or something personal?",
+          "ko": "일 때문이야, 개인적인 일이야?",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-04_t3.mp3",
+            "ko": "audio/ko/D5/D5-U06-04_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Both, I guess. Everything feels like too much.",
+          "ko": "둘 다인 것 같아. 모든 게 버거워.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-04_t4.mp3",
+            "ko": "audio/ko/D5/D5-U06-04_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "I'm sorry. Do you want to talk about it?",
+          "ko": "저런. 얘기하고 싶어?",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-04_t5.mp3",
+            "ko": "audio/ko/D5/D5-U06-04_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Maybe later. I just need a break.",
+          "ko": "나중에. 그냥 좀 쉬고 싶어.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-04_t6.mp3",
+            "ko": "audio/ko/D5/D5-U06-04_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "How about a walk in the park after work?",
+          "ko": "퇴근하고 공원 산책하는 거 어때?",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-04_t7.mp3",
+            "ko": "audio/ko/D5/D5-U06-04_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "That actually sounds nice.",
+          "ko": "그거 괜찮겠다.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-04_t8.mp3",
+            "ko": "audio/ko/D5/D5-U06-04_t8.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "And let's get some good food after.",
+          "ko": "그리고 끝나고 맛있는 거 먹자.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-04_t9.mp3",
+            "ko": "audio/ko/D5/D5-U06-04_t9.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Thanks. You always know how to cheer me up.",
+          "ko": "고마워. 넌 항상 날 기운 나게 하는 법을 알아.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-04_t10.mp3",
+            "ko": "audio/ko/D5/D5-U06-04_t10.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "That's what friends are for.",
+          "ko": "친구 좋다는 게 뭐야.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-04_t11.mp3",
+            "ko": "audio/ko/D5/D5-U06-04_t11.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I'm really lucky to have you.",
+          "ko": "너 같은 친구가 있어서 정말 다행이야.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-04_t12.mp3",
+            "ko": "audio/ko/D5/D5-U06-04_t12.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D5-U06-05",
+      "topic": "건강 검진",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Did you get the results of your checkup?",
+          "ko": "건강 검진 결과 받았어요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-05_t1.mp3",
+            "ko": "audio/ko/D5/D5-U06-05_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, yesterday.",
+          "ko": "네, 어제요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-05_t2.mp3",
+            "ko": "audio/ko/D5/D5-U06-05_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Is everything okay?",
+          "ko": "다 괜찮아요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-05_t3.mp3",
+            "ko": "audio/ko/D5/D5-U06-05_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Mostly. But my blood pressure is a little high.",
+          "ko": "대부분은요. 그런데 혈압이 조금 높아요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-05_t4.mp3",
+            "ko": "audio/ko/D5/D5-U06-05_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Oh. What did the doctor say?",
+          "ko": "아. 의사 선생님이 뭐래요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-05_t5.mp3",
+            "ko": "audio/ko/D5/D5-U06-05_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I need to eat less salt and exercise more.",
+          "ko": "소금을 덜 먹고 운동을 더 해야 한대요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-05_t6.mp3",
+            "ko": "audio/ko/D5/D5-U06-05_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "That's not too bad. You can change that.",
+          "ko": "그 정도면 나쁘지 않네요. 바꿀 수 있잖아요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-05_t7.mp3",
+            "ko": "audio/ko/D5/D5-U06-05_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, but I love salty food.",
+          "ko": "네, 그런데 짠 음식을 정말 좋아해서요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-05_t8.mp3",
+            "ko": "audio/ko/D5/D5-U06-05_t8.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Me too. Let's try to eat healthier together.",
+          "ko": "저도요. 같이 건강하게 먹어 봐요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-05_t9.mp3",
+            "ko": "audio/ko/D5/D5-U06-05_t9.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "That would help. It's easier with a friend.",
+          "ko": "그러면 도움이 되겠어요. 친구랑 하면 더 쉽죠.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-05_t10.mp3",
+            "ko": "audio/ko/D5/D5-U06-05_t10.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Let's start with lunch tomorrow.",
+          "ko": "내일 점심부터 시작해요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-05_t11.mp3",
+            "ko": "audio/ko/D5/D5-U06-05_t11.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Deal. No more instant noodles!",
+          "ko": "좋아요. 이제 라면은 그만!",
+          "audio": {
+            "en": "audio/en/D5/D5-U06-05_t12.mp3",
+            "ko": "audio/ko/D5/D5-U06-05_t12.mp3"
+          }
+        }
+      ]
+    }
+  ]
+}

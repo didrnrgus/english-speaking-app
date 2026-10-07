@@ -1,0 +1,399 @@
+{
+  "unit": "D4-U04",
+  "version": 1,
+  "level": "D4",
+  "track": "dialogue",
+  "title": "회의 일정 조율",
+  "items": [
+    {
+      "id": "D4-U04-01",
+      "topic": "회의 잡기",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Do you have time for a meeting this week?",
+          "ko": "이번 주에 회의할 시간 있어요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-01_t1.mp3",
+            "ko": "audio/ko/D4/D4-U04-01_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Let me check my schedule. How about Wednesday?",
+          "ko": "일정 확인해 볼게요. 수요일 어때요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-01_t2.mp3",
+            "ko": "audio/ko/D4/D4-U04-01_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Wednesday morning is difficult for me.",
+          "ko": "수요일 오전은 제가 어려워요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-01_t3.mp3",
+            "ko": "audio/ko/D4/D4-U04-01_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Then how about Wednesday afternoon?",
+          "ko": "그럼 수요일 오후는요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-01_t4.mp3",
+            "ko": "audio/ko/D4/D4-U04-01_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Two o'clock would be perfect.",
+          "ko": "2시면 딱 좋아요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-01_t5.mp3",
+            "ko": "audio/ko/D4/D4-U04-01_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Great. I'll book a meeting room.",
+          "ko": "좋아요. 회의실 예약할게요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-01_t6.mp3",
+            "ko": "audio/ko/D4/D4-U04-01_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Thanks. I'll send you the documents before then.",
+          "ko": "고마워요. 그 전에 자료 보내 드릴게요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-01_t7.mp3",
+            "ko": "audio/ko/D4/D4-U04-01_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Sounds good. See you on Wednesday.",
+          "ko": "좋아요. 수요일에 봬요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-01_t8.mp3",
+            "ko": "audio/ko/D4/D4-U04-01_t8.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D4-U04-02",
+      "topic": "일정 변경",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "I'm sorry, but I need to move our meeting.",
+          "ko": "죄송하지만 회의를 옮겨야 할 것 같아요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-02_t1.mp3",
+            "ko": "audio/ko/D4/D4-U04-02_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "No problem. What happened?",
+          "ko": "괜찮아요. 무슨 일 있어요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-02_t2.mp3",
+            "ko": "audio/ko/D4/D4-U04-02_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "I have to visit a client tomorrow morning.",
+          "ko": "내일 아침에 고객사를 방문해야 해서요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-02_t3.mp3",
+            "ko": "audio/ko/D4/D4-U04-02_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I see. When are you free?",
+          "ko": "그렇군요. 언제 시간 되세요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-02_t4.mp3",
+            "ko": "audio/ko/D4/D4-U04-02_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Is Thursday at ten okay for you?",
+          "ko": "목요일 10시 괜찮으세요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-02_t5.mp3",
+            "ko": "audio/ko/D4/D4-U04-02_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, that works for me.",
+          "ko": "네, 저는 괜찮아요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-02_t6.mp3",
+            "ko": "audio/ko/D4/D4-U04-02_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Thank you for understanding.",
+          "ko": "이해해 주셔서 감사해요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-02_t7.mp3",
+            "ko": "audio/ko/D4/D4-U04-02_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Not at all. Good luck with the client.",
+          "ko": "별말씀을요. 고객 미팅 잘하세요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-02_t8.mp3",
+            "ko": "audio/ko/D4/D4-U04-02_t8.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D4-U04-03",
+      "topic": "화상 회의",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Can we have the meeting online instead?",
+          "ko": "회의를 대신 온라인으로 할 수 있을까요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-03_t1.mp3",
+            "ko": "audio/ko/D4/D4-U04-03_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Sure. Are you working from home today?",
+          "ko": "그럼요. 오늘 재택근무해요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-03_t2.mp3",
+            "ko": "audio/ko/D4/D4-U04-03_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Yes, my son is sick, so I'm staying home.",
+          "ko": "네, 아들이 아파서 집에 있어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-03_t3.mp3",
+            "ko": "audio/ko/D4/D4-U04-03_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I'm sorry to hear that. I'll send you a link.",
+          "ko": "저런. 링크 보내 드릴게요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-03_t4.mp3",
+            "ko": "audio/ko/D4/D4-U04-03_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Thanks. Should I turn on my camera?",
+          "ko": "고마워요. 카메라 켜야 할까요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-03_t5.mp3",
+            "ko": "audio/ko/D4/D4-U04-03_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "It's up to you.",
+          "ko": "편하실 대로 하세요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-03_t6.mp3",
+            "ko": "audio/ko/D4/D4-U04-03_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Okay. I'll join five minutes early to test it.",
+          "ko": "알겠어요. 테스트하려고 5분 일찍 들어갈게요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-03_t7.mp3",
+            "ko": "audio/ko/D4/D4-U04-03_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Perfect. Talk to you soon.",
+          "ko": "좋아요. 곧 얘기해요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-03_t8.mp3",
+            "ko": "audio/ko/D4/D4-U04-03_t8.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D4-U04-04",
+      "topic": "회의 시간 조정",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "The meeting is scheduled for one hour.",
+          "ko": "회의가 한 시간으로 잡혀 있어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-04_t1.mp3",
+            "ko": "audio/ko/D4/D4-U04-04_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Do you think we need that much time?",
+          "ko": "그렇게 많은 시간이 필요할까요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-04_t2.mp3",
+            "ko": "audio/ko/D4/D4-U04-04_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Not really. Thirty minutes should be enough.",
+          "ko": "별로요. 30분이면 충분할 거예요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-04_t3.mp3",
+            "ko": "audio/ko/D4/D4-U04-04_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Then let's finish early.",
+          "ko": "그럼 일찍 끝내요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-04_t4.mp3",
+            "ko": "audio/ko/D4/D4-U04-04_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Could you prepare the sales numbers?",
+          "ko": "매출 자료 좀 준비해 주실래요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-04_t5.mp3",
+            "ko": "audio/ko/D4/D4-U04-04_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Sure. Should I make slides?",
+          "ko": "네. 슬라이드도 만들까요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-04_t6.mp3",
+            "ko": "audio/ko/D4/D4-U04-04_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Just a simple table is fine.",
+          "ko": "그냥 간단한 표면 돼요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-04_t7.mp3",
+            "ko": "audio/ko/D4/D4-U04-04_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Got it. I'll have it ready.",
+          "ko": "알겠어요. 준비해 둘게요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-04_t8.mp3",
+            "ko": "audio/ko/D4/D4-U04-04_t8.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D4-U04-05",
+      "topic": "모두의 일정",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "We need to find a time for the whole team.",
+          "ko": "팀 전체가 모일 시간을 찾아야 해요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-05_t1.mp3",
+            "ko": "audio/ko/D4/D4-U04-05_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "That's not easy. Everyone is so busy.",
+          "ko": "쉽지 않네요. 다들 너무 바빠서요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-05_t2.mp3",
+            "ko": "audio/ko/D4/D4-U04-05_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Let's send a quick online survey.",
+          "ko": "간단히 온라인 설문을 돌려 봐요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-05_t3.mp3",
+            "ko": "audio/ko/D4/D4-U04-05_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Good idea. How many options should we give?",
+          "ko": "좋은 생각이에요. 선택지를 몇 개 줄까요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-05_t4.mp3",
+            "ko": "audio/ko/D4/D4-U04-05_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Maybe three times next week.",
+          "ko": "다음 주 시간으로 세 개 정도요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-05_t5.mp3",
+            "ko": "audio/ko/D4/D4-U04-05_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Okay. I'll make it and share it today.",
+          "ko": "알겠어요. 오늘 만들어서 공유할게요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-05_t6.mp3",
+            "ko": "audio/ko/D4/D4-U04-05_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Please ask them to answer by Friday.",
+          "ko": "금요일까지 답해 달라고 해 주세요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-05_t7.mp3",
+            "ko": "audio/ko/D4/D4-U04-05_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Will do.",
+          "ko": "그럴게요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U04-05_t8.mp3",
+            "ko": "audio/ko/D4/D4-U04-05_t8.mp3"
+          }
+        }
+      ]
+    }
+  ]
+}

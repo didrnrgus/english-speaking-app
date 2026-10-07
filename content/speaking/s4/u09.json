@@ -1,0 +1,54 @@
+{
+  "unit": "S4-U09",
+  "version": 1,
+  "level": "S4",
+  "track": "speaking",
+  "title": "감사와 사과 전하기",
+  "items": [
+    {
+      "id": "S4-U09-01",
+      "en": "Thank you so much for your help yesterday. I couldn't have finished it without you.",
+      "ko": "어제 도와줘서 정말 고마워요. 당신이 아니었으면 끝내지 못했을 거예요.",
+      "audio": {
+        "en": "audio/en/S4/S4-U09-01.mp3",
+        "ko": "audio/ko/S4/S4-U09-01.mp3"
+      }
+    },
+    {
+      "id": "S4-U09-02",
+      "en": "I'm sorry I was late this morning. My train stopped for twenty minutes.",
+      "ko": "오늘 아침에 늦어서 죄송해요. 기차가 20분 동안 멈춰 있었어요.",
+      "audio": {
+        "en": "audio/en/S4/S4-U09-02.mp3",
+        "ko": "audio/ko/S4/S4-U09-02.mp3"
+      }
+    },
+    {
+      "id": "S4-U09-03",
+      "en": "Thanks for the lovely gift. I'll use it every day.",
+      "ko": "예쁜 선물 고마워요. 매일 쓸게요.",
+      "audio": {
+        "en": "audio/en/S4/S4-U09-03.mp3",
+        "ko": "audio/ko/S4/S4-U09-03.mp3"
+      }
+    },
+    {
+      "id": "S4-U09-04",
+      "en": "I'm sorry for not calling you back. I was really busy at work all week.",
+      "ko": "다시 전화 못 해서 미안해요. 일주일 내내 회사에서 정말 바빴어요.",
+      "audio": {
+        "en": "audio/en/S4/S4-U09-04.mp3",
+        "ko": "audio/ko/S4/S4-U09-04.mp3"
+      }
+    },
+    {
+      "id": "S4-U09-05",
+      "en": "I really appreciate your advice. It helped me make the right decision.",
+      "ko": "조언해 줘서 정말 감사해요. 덕분에 올바른 결정을 할 수 있었어요.",
+      "audio": {
+        "en": "audio/en/S4/S4-U09-05.mp3",
+        "ko": "audio/ko/S4/S4-U09-05.mp3"
+      }
+    }
+  ]
+}

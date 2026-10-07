@@ -1,0 +1,54 @@
+{
+  "unit": "S3-U01",
+  "version": 1,
+  "level": "S3",
+  "track": "speaking",
+  "title": "일상과 여행",
+  "items": [
+    {
+      "id": "S3-U01-01",
+      "en": "I usually wake up at seven and have breakfast at home.",
+      "ko": "저는 보통 7시에 일어나서 집에서 아침을 먹어요.",
+      "audio": {
+        "en": "audio/en/S3/S3-U01-01.mp3",
+        "ko": "audio/ko/S3/S3-U01-01.mp3"
+      }
+    },
+    {
+      "id": "S3-U01-02",
+      "en": "Could you tell me how to get to the subway station?",
+      "ko": "지하철역에 어떻게 가는지 알려주시겠어요?",
+      "audio": {
+        "en": "audio/en/S3/S3-U01-02.mp3",
+        "ko": "audio/ko/S3/S3-U01-02.mp3"
+      }
+    },
+    {
+      "id": "S3-U01-03",
+      "en": "I'm learning English because I want to travel abroad.",
+      "ko": "저는 해외여행을 하고 싶어서 영어를 배우고 있어요.",
+      "audio": {
+        "en": "audio/en/S3/S3-U01-03.mp3",
+        "ko": "audio/ko/S3/S3-U01-03.mp3"
+      }
+    },
+    {
+      "id": "S3-U01-04",
+      "en": "It was raining this morning, so I took an umbrella with me.",
+      "ko": "오늘 아침에 비가 와서 우산을 가져갔어요.",
+      "audio": {
+        "en": "audio/en/S3/S3-U01-04.mp3",
+        "ko": "audio/ko/S3/S3-U01-04.mp3"
+      }
+    },
+    {
+      "id": "S3-U01-05",
+      "en": "Can I have a cup of hot coffee and a piece of cake?",
+      "ko": "따뜻한 커피 한 잔과 케이크 한 조각 주시겠어요?",
+      "audio": {
+        "en": "audio/en/S3/S3-U01-05.mp3",
+        "ko": "audio/ko/S3/S3-U01-05.mp3"
+      }
+    }
+  ]
+}

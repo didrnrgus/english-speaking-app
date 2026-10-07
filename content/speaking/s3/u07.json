@@ -1,0 +1,54 @@
+{
+  "unit": "S3-U07",
+  "version": 1,
+  "level": "S3",
+  "track": "speaking",
+  "title": "전화와 약속",
+  "items": [
+    {
+      "id": "S3-U07-01",
+      "en": "Can I call you back in ten minutes?",
+      "ko": "10분 후에 다시 전화해도 될까요?",
+      "audio": {
+        "en": "audio/en/S3/S3-U07-01.mp3",
+        "ko": "audio/ko/S3/S3-U07-01.mp3"
+      }
+    },
+    {
+      "id": "S3-U07-02",
+      "en": "Let's meet in front of the station at six.",
+      "ko": "여섯 시에 역 앞에서 만나요.",
+      "audio": {
+        "en": "audio/en/S3/S3-U07-02.mp3",
+        "ko": "audio/ko/S3/S3-U07-02.mp3"
+      }
+    },
+    {
+      "id": "S3-U07-03",
+      "en": "I'm sorry, but I have to cancel our plans.",
+      "ko": "미안하지만 우리 약속을 취소해야 할 것 같아요.",
+      "audio": {
+        "en": "audio/en/S3/S3-U07-03.mp3",
+        "ko": "audio/ko/S3/S3-U07-03.mp3"
+      }
+    },
+    {
+      "id": "S3-U07-04",
+      "en": "What time works best for you tomorrow afternoon?",
+      "ko": "내일 오후 몇 시가 제일 좋으세요?",
+      "audio": {
+        "en": "audio/en/S3/S3-U07-04.mp3",
+        "ko": "audio/ko/S3/S3-U07-04.mp3"
+      }
+    },
+    {
+      "id": "S3-U07-05",
+      "en": "I'll be about fifteen minutes late because of traffic.",
+      "ko": "차가 막혀서 15분 정도 늦을 것 같아요.",
+      "audio": {
+        "en": "audio/en/S3/S3-U07-05.mp3",
+        "ko": "audio/ko/S3/S3-U07-05.mp3"
+      }
+    }
+  ]
+}

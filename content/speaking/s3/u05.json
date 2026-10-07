@@ -1,0 +1,54 @@
+{
+  "unit": "S3-U05",
+  "version": 1,
+  "level": "S3",
+  "track": "speaking",
+  "title": "여행 경험",
+  "items": [
+    {
+      "id": "S3-U05-01",
+      "en": "I went to Japan with my sister last spring.",
+      "ko": "작년 봄에 언니와 일본에 갔어요.",
+      "audio": {
+        "en": "audio/en/S3/S3-U05-01.mp3",
+        "ko": "audio/ko/S3/S3-U05-01.mp3"
+      }
+    },
+    {
+      "id": "S3-U05-02",
+      "en": "The hotel was small, but it was very clean.",
+      "ko": "호텔은 작았지만 아주 깨끗했어요.",
+      "audio": {
+        "en": "audio/en/S3/S3-U05-02.mp3",
+        "ko": "audio/ko/S3/S3-U05-02.mp3"
+      }
+    },
+    {
+      "id": "S3-U05-03",
+      "en": "We tried a lot of delicious street food there.",
+      "ko": "거기서 맛있는 길거리 음식을 많이 먹어 봤어요.",
+      "audio": {
+        "en": "audio/en/S3/S3-U05-03.mp3",
+        "ko": "audio/ko/S3/S3-U05-03.mp3"
+      }
+    },
+    {
+      "id": "S3-U05-04",
+      "en": "I lost my phone at the airport, but I found it.",
+      "ko": "공항에서 휴대폰을 잃어버렸는데 다시 찾았어요.",
+      "audio": {
+        "en": "audio/en/S3/S3-U05-04.mp3",
+        "ko": "audio/ko/S3/S3-U05-04.mp3"
+      }
+    },
+    {
+      "id": "S3-U05-05",
+      "en": "It was my first time traveling alone in another country.",
+      "ko": "다른 나라를 혼자 여행한 건 그때가 처음이었어요.",
+      "audio": {
+        "en": "audio/en/S3/S3-U05-05.mp3",
+        "ko": "audio/ko/S3/S3-U05-05.mp3"
+      }
+    }
+  ]
+}

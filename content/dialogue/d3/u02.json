@@ -1,0 +1,309 @@
+{
+  "unit": "D3-U02",
+  "version": 1,
+  "level": "D3",
+  "track": "dialogue",
+  "title": "은행과 우체국",
+  "items": [
+    {
+      "id": "D3-U02-01",
+      "topic": "계좌 만들기",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Hello. How can I help you today?",
+          "ko": "안녕하세요. 무엇을 도와드릴까요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U02-01_t1.mp3",
+            "ko": "audio/ko/D3/D3-U02-01_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I'd like to open a bank account.",
+          "ko": "은행 계좌를 만들고 싶어요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U02-01_t2.mp3",
+            "ko": "audio/ko/D3/D3-U02-01_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Sure. Do you have your ID with you?",
+          "ko": "네. 신분증 가지고 오셨어요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U02-01_t3.mp3",
+            "ko": "audio/ko/D3/D3-U02-01_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, here's my passport.",
+          "ko": "네, 여기 여권이요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U02-01_t4.mp3",
+            "ko": "audio/ko/D3/D3-U02-01_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Thank you. Please fill out this form.",
+          "ko": "감사합니다. 이 서류를 작성해 주세요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U02-01_t5.mp3",
+            "ko": "audio/ko/D3/D3-U02-01_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Okay. Can I borrow a pen?",
+          "ko": "네. 펜 좀 빌릴 수 있을까요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U02-01_t6.mp3",
+            "ko": "audio/ko/D3/D3-U02-01_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U02-02",
+      "topic": "환전",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Next, please. What can I do for you?",
+          "ko": "다음 분이요. 무엇을 도와드릴까요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U02-02_t1.mp3",
+            "ko": "audio/ko/D3/D3-U02-02_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I want to exchange dollars for won.",
+          "ko": "달러를 원화로 바꾸고 싶어요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U02-02_t2.mp3",
+            "ko": "audio/ko/D3/D3-U02-02_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "How much would you like to exchange?",
+          "ko": "얼마나 바꾸시겠어요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U02-02_t3.mp3",
+            "ko": "audio/ko/D3/D3-U02-02_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Three hundred dollars, please.",
+          "ko": "300달러요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U02-02_t4.mp3",
+            "ko": "audio/ko/D3/D3-U02-02_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Here you are. Please count it.",
+          "ko": "여기 있습니다. 확인해 보세요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U02-02_t5.mp3",
+            "ko": "audio/ko/D3/D3-U02-02_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "It's all correct. Thank you.",
+          "ko": "다 맞네요. 감사합니다.",
+          "audio": {
+            "en": "audio/en/D3/D3-U02-02_t6.mp3",
+            "ko": "audio/ko/D3/D3-U02-02_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U02-03",
+      "topic": "소포 보내기",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "I'd like to send this package to Canada.",
+          "ko": "이 소포를 캐나다로 보내고 싶어요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U02-03_t1.mp3",
+            "ko": "audio/ko/D3/D3-U02-03_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Please put it on the scale.",
+          "ko": "저울에 올려 주세요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U02-03_t2.mp3",
+            "ko": "audio/ko/D3/D3-U02-03_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "How long will it take?",
+          "ko": "얼마나 걸려요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U02-03_t3.mp3",
+            "ko": "audio/ko/D3/D3-U02-03_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "About a week by airmail.",
+          "ko": "항공편으로 일주일 정도요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U02-03_t4.mp3",
+            "ko": "audio/ko/D3/D3-U02-03_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "How much is it?",
+          "ko": "얼마예요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U02-03_t5.mp3",
+            "ko": "audio/ko/D3/D3-U02-03_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "It's twenty-five thousand won.",
+          "ko": "2만 5천 원이에요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U02-03_t6.mp3",
+            "ko": "audio/ko/D3/D3-U02-03_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U02-04",
+      "topic": "카드 분실",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "I think I lost my bank card.",
+          "ko": "은행 카드를 잃어버린 것 같아요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U02-04_t1.mp3",
+            "ko": "audio/ko/D3/D3-U02-04_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I'm sorry to hear that. When did you last use it?",
+          "ko": "저런. 마지막으로 언제 쓰셨어요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U02-04_t2.mp3",
+            "ko": "audio/ko/D3/D3-U02-04_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Yesterday evening, at a supermarket.",
+          "ko": "어제 저녁에 슈퍼마켓에서요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U02-04_t3.mp3",
+            "ko": "audio/ko/D3/D3-U02-04_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I'll stop the card right away.",
+          "ko": "바로 카드를 정지해 드릴게요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U02-04_t4.mp3",
+            "ko": "audio/ko/D3/D3-U02-04_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Thank you. Can I get a new one?",
+          "ko": "감사합니다. 새로 발급받을 수 있나요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U02-04_t5.mp3",
+            "ko": "audio/ko/D3/D3-U02-04_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, it will arrive in five days.",
+          "ko": "네, 5일 후에 도착할 거예요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U02-04_t6.mp3",
+            "ko": "audio/ko/D3/D3-U02-04_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U02-05",
+      "topic": "택배 찾기",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "I got a note that I missed a delivery.",
+          "ko": "택배를 못 받았다는 쪽지를 받았어요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U02-05_t1.mp3",
+            "ko": "audio/ko/D3/D3-U02-05_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Can I see the note, please?",
+          "ko": "쪽지 좀 보여 주시겠어요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U02-05_t2.mp3",
+            "ko": "audio/ko/D3/D3-U02-05_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Here it is.",
+          "ko": "여기 있어요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U02-05_t3.mp3",
+            "ko": "audio/ko/D3/D3-U02-05_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Just a moment. I'll go and get it.",
+          "ko": "잠시만요. 가져다 드릴게요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U02-05_t4.mp3",
+            "ko": "audio/ko/D3/D3-U02-05_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Thanks. Do I need to sign anything?",
+          "ko": "고마워요. 서명해야 하나요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U02-05_t5.mp3",
+            "ko": "audio/ko/D3/D3-U02-05_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, please sign here.",
+          "ko": "네, 여기 서명해 주세요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U02-05_t6.mp3",
+            "ko": "audio/ko/D3/D3-U02-05_t6.mp3"
+          }
+        }
+      ]
+    }
+  ]
+}

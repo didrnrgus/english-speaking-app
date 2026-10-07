@@ -1,0 +1,54 @@
+{
+  "unit": "S3-U09",
+  "version": 1,
+  "level": "S3",
+  "track": "speaking",
+  "title": "집과 동네",
+  "items": [
+    {
+      "id": "S3-U09-01",
+      "en": "There's a nice coffee shop near my apartment.",
+      "ko": "우리 아파트 근처에 괜찮은 카페가 있어요.",
+      "audio": {
+        "en": "audio/en/S3/S3-U09-01.mp3",
+        "ko": "audio/ko/S3/S3-U09-01.mp3"
+      }
+    },
+    {
+      "id": "S3-U09-02",
+      "en": "My neighborhood is quiet, and the people are friendly.",
+      "ko": "우리 동네는 조용하고 사람들이 친절해요.",
+      "audio": {
+        "en": "audio/en/S3/S3-U09-02.mp3",
+        "ko": "audio/ko/S3/S3-U09-02.mp3"
+      }
+    },
+    {
+      "id": "S3-U09-03",
+      "en": "I live on the third floor of a small building.",
+      "ko": "저는 작은 건물 3층에 살아요.",
+      "audio": {
+        "en": "audio/en/S3/S3-U09-03.mp3",
+        "ko": "audio/ko/S3/S3-U09-03.mp3"
+      }
+    },
+    {
+      "id": "S3-U09-04",
+      "en": "It takes ten minutes to walk to the subway.",
+      "ko": "지하철역까지 걸어서 10분 걸려요.",
+      "audio": {
+        "en": "audio/en/S3/S3-U09-04.mp3",
+        "ko": "audio/ko/S3/S3-U09-04.mp3"
+      }
+    },
+    {
+      "id": "S3-U09-05",
+      "en": "I want to move to a bigger place next year.",
+      "ko": "내년에는 더 넓은 집으로 이사하고 싶어요.",
+      "audio": {
+        "en": "audio/en/S3/S3-U09-05.mp3",
+        "ko": "audio/ko/S3/S3-U09-05.mp3"
+      }
+    }
+  ]
+}

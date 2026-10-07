@@ -1,0 +1,399 @@
+{
+  "unit": "D4-U08",
+  "version": 1,
+  "level": "D4",
+  "track": "dialogue",
+  "title": "선물 고르기",
+  "items": [
+    {
+      "id": "D4-U08-01",
+      "topic": "엄마 생신 선물",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "What should I get my mom for her birthday?",
+          "ko": "엄마 생신 선물 뭘로 하지?",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-01_t1.mp3",
+            "ko": "audio/ko/D4/D4-U08-01_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "What does she like?",
+          "ko": "어머니가 뭘 좋아하셔?",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-01_t2.mp3",
+            "ko": "audio/ko/D4/D4-U08-01_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "She loves gardening and cooking.",
+          "ko": "정원 가꾸기랑 요리를 좋아하셔.",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-01_t3.mp3",
+            "ko": "audio/ko/D4/D4-U08-01_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "How about some nice gardening gloves?",
+          "ko": "좋은 원예 장갑은 어때?",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-01_t4.mp3",
+            "ko": "audio/ko/D4/D4-U08-01_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Hmm, that's a little too simple.",
+          "ko": "음, 그건 좀 너무 간단해.",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-01_t5.mp3",
+            "ko": "audio/ko/D4/D4-U08-01_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Then how about a cooking class together?",
+          "ko": "그럼 같이 요리 수업 듣는 건?",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-01_t6.mp3",
+            "ko": "audio/ko/D4/D4-U08-01_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Oh, I love that idea! We can spend time together.",
+          "ko": "오, 그거 좋다! 같이 시간도 보낼 수 있고.",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-01_t7.mp3",
+            "ko": "audio/ko/D4/D4-U08-01_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Exactly. Experiences are better than things.",
+          "ko": "바로 그거야. 물건보다 경험이 더 좋아.",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-01_t8.mp3",
+            "ko": "audio/ko/D4/D4-U08-01_t8.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D4-U08-02",
+      "topic": "동료 송별 선물",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Jenny is leaving the company next week.",
+          "ko": "제니가 다음 주에 회사를 그만둬요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-02_t1.mp3",
+            "ko": "audio/ko/D4/D4-U08-02_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Really? We should get her a gift.",
+          "ko": "정말요? 선물 하나 해야겠네요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-02_t2.mp3",
+            "ko": "audio/ko/D4/D4-U08-02_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Let's collect money from the team.",
+          "ko": "팀에서 돈을 모아요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-02_t3.mp3",
+            "ko": "audio/ko/D4/D4-U08-02_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Good idea. What should we buy?",
+          "ko": "좋은 생각이에요. 뭘 살까요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-02_t4.mp3",
+            "ko": "audio/ko/D4/D4-U08-02_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "She just moved, so maybe something for her home.",
+          "ko": "얼마 전에 이사했으니까 집에 쓸 만한 거요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-02_t5.mp3",
+            "ko": "audio/ko/D4/D4-U08-02_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "How about a nice coffee machine?",
+          "ko": "좋은 커피 머신은 어때요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-02_t6.mp3",
+            "ko": "audio/ko/D4/D4-U08-02_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Perfect. She drinks coffee all day.",
+          "ko": "딱이에요. 하루 종일 커피를 마시거든요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-02_t7.mp3",
+            "ko": "audio/ko/D4/D4-U08-02_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I'll send a message to the team.",
+          "ko": "제가 팀에 메시지 보낼게요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-02_t8.mp3",
+            "ko": "audio/ko/D4/D4-U08-02_t8.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D4-U08-03",
+      "topic": "가게에서 추천받기",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "I'm looking for a gift for my boyfriend.",
+          "ko": "남자 친구 선물을 찾고 있어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-03_t1.mp3",
+            "ko": "audio/ko/D4/D4-U08-03_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "What's the occasion?",
+          "ko": "무슨 날이에요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-03_t2.mp3",
+            "ko": "audio/ko/D4/D4-U08-03_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Our first anniversary.",
+          "ko": "사귄 지 1주년이요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-03_t3.mp3",
+            "ko": "audio/ko/D4/D4-U08-03_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "How about a watch? These are very popular.",
+          "ko": "시계는 어떠세요? 이게 아주 인기 있어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-03_t4.mp3",
+            "ko": "audio/ko/D4/D4-U08-03_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "They look nice, but they're a bit expensive.",
+          "ko": "멋지긴 한데 조금 비싸네요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-03_t5.mp3",
+            "ko": "audio/ko/D4/D4-U08-03_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Then how about a leather wallet?",
+          "ko": "그럼 가죽 지갑은 어떠세요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-03_t6.mp3",
+            "ko": "audio/ko/D4/D4-U08-03_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "That's perfect. His wallet is very old.",
+          "ko": "딱이에요. 지갑이 아주 낡았거든요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-03_t7.mp3",
+            "ko": "audio/ko/D4/D4-U08-03_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Would you like his initials on it?",
+          "ko": "이니셜 새겨 드릴까요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-03_t8.mp3",
+            "ko": "audio/ko/D4/D4-U08-03_t8.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D4-U08-04",
+      "topic": "아기 선물",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "My sister just had a baby.",
+          "ko": "언니가 얼마 전에 아기를 낳았어.",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-04_t1.mp3",
+            "ko": "audio/ko/D4/D4-U08-04_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Congratulations! You're an aunt now!",
+          "ko": "축하해! 이제 이모네!",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-04_t2.mp3",
+            "ko": "audio/ko/D4/D4-U08-04_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Thanks! I want to buy a gift for the baby.",
+          "ko": "고마워! 아기 선물을 사고 싶어.",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-04_t3.mp3",
+            "ko": "audio/ko/D4/D4-U08-04_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Clothes are always useful.",
+          "ko": "옷은 늘 쓸모가 있지.",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-04_t4.mp3",
+            "ko": "audio/ko/D4/D4-U08-04_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "But babies grow so fast.",
+          "ko": "근데 아기들은 너무 빨리 크잖아.",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-04_t5.mp3",
+            "ko": "audio/ko/D4/D4-U08-04_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Then buy them in a bigger size.",
+          "ko": "그럼 큰 사이즈로 사.",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-04_t6.mp3",
+            "ko": "audio/ko/D4/D4-U08-04_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Good idea. Maybe for six months old.",
+          "ko": "좋은 생각이야. 6개월용으로 사야겠다.",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-04_t7.mp3",
+            "ko": "audio/ko/D4/D4-U08-04_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "And add a soft toy, too.",
+          "ko": "그리고 부드러운 인형도 하나 같이.",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-04_t8.mp3",
+            "ko": "audio/ko/D4/D4-U08-04_t8.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D4-U08-05",
+      "topic": "선물 교환",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "My friend gave me this sweater, but it's too small.",
+          "ko": "친구가 이 스웨터를 줬는데 너무 작아요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-05_t1.mp3",
+            "ko": "audio/ko/D4/D4-U08-05_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Do you have the receipt?",
+          "ko": "영수증 있으세요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-05_t2.mp3",
+            "ko": "audio/ko/D4/D4-U08-05_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "No, it was a gift.",
+          "ko": "아니요, 선물로 받은 거라서요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-05_t3.mp3",
+            "ko": "audio/ko/D4/D4-U08-05_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "That's okay. We can exchange it for another size.",
+          "ko": "괜찮아요. 다른 사이즈로 교환해 드릴 수 있어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-05_t4.mp3",
+            "ko": "audio/ko/D4/D4-U08-05_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Great. Do you have it in a large?",
+          "ko": "좋네요. 라지 있어요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-05_t5.mp3",
+            "ko": "audio/ko/D4/D4-U08-05_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Let me check. Yes, here it is.",
+          "ko": "확인해 볼게요. 네, 여기 있어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-05_t6.mp3",
+            "ko": "audio/ko/D4/D4-U08-05_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Can I try it on?",
+          "ko": "입어 봐도 돼요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-05_t7.mp3",
+            "ko": "audio/ko/D4/D4-U08-05_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Of course. The fitting room is over there.",
+          "ko": "물론이죠. 탈의실은 저쪽이에요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U08-05_t8.mp3",
+            "ko": "audio/ko/D4/D4-U08-05_t8.mp3"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,309 @@
+{
+  "unit": "D3-U01",
+  "version": 1,
+  "level": "D3",
+  "track": "dialogue",
+  "title": "외출할 때",
+  "items": [
+    {
+      "id": "D3-U01-01",
+      "topic": "식당",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Welcome! Do you have a reservation?",
+          "ko": "어서 오세요! 예약하셨나요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U01-01_t1.mp3",
+            "ko": "audio/ko/D3/D3-U01-01_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "No, we don't. Do you have a table for two?",
+          "ko": "아니요. 두 명 자리 있나요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U01-01_t2.mp3",
+            "ko": "audio/ko/D3/D3-U01-01_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Yes, please follow me. Here is the menu.",
+          "ko": "네, 따라오세요. 메뉴 여기 있습니다.",
+          "audio": {
+            "en": "audio/en/D3/D3-U01-01_t3.mp3",
+            "ko": "audio/ko/D3/D3-U01-01_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Thank you. What do you recommend?",
+          "ko": "감사합니다. 뭘 추천하세요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U01-01_t4.mp3",
+            "ko": "audio/ko/D3/D3-U01-01_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Our pasta is very popular today.",
+          "ko": "오늘은 파스타가 인기가 많아요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U01-01_t5.mp3",
+            "ko": "audio/ko/D3/D3-U01-01_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Great. I'll have the pasta, please.",
+          "ko": "좋네요. 파스타로 주세요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U01-01_t6.mp3",
+            "ko": "audio/ko/D3/D3-U01-01_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U01-02",
+      "topic": "호텔 체크인",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Hello. I have a reservation under Kim.",
+          "ko": "안녕하세요. 김 이름으로 예약했어요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U01-02_t1.mp3",
+            "ko": "audio/ko/D3/D3-U01-02_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Let me check. Yes, a room for two nights, right?",
+          "ko": "확인해 볼게요. 네, 2박 객실 맞으시죠?",
+          "audio": {
+            "en": "audio/en/D3/D3-U01-02_t2.mp3",
+            "ko": "audio/ko/D3/D3-U01-02_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "That's correct. What time is check-out?",
+          "ko": "맞아요. 체크아웃은 몇 시예요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U01-02_t3.mp3",
+            "ko": "audio/ko/D3/D3-U01-02_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Check-out is at eleven in the morning.",
+          "ko": "체크아웃은 오전 11시입니다.",
+          "audio": {
+            "en": "audio/en/D3/D3-U01-02_t4.mp3",
+            "ko": "audio/ko/D3/D3-U01-02_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Is breakfast included?",
+          "ko": "조식이 포함되어 있나요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U01-02_t5.mp3",
+            "ko": "audio/ko/D3/D3-U01-02_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, it's served on the second floor from seven.",
+          "ko": "네, 2층에서 7시부터 제공됩니다.",
+          "audio": {
+            "en": "audio/en/D3/D3-U01-02_t6.mp3",
+            "ko": "audio/ko/D3/D3-U01-02_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U01-03",
+      "topic": "친구와 약속",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Are you free this Saturday?",
+          "ko": "이번 토요일에 시간 있어?",
+          "audio": {
+            "en": "audio/en/D3/D3-U01-03_t1.mp3",
+            "ko": "audio/ko/D3/D3-U01-03_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I think so. What do you have in mind?",
+          "ko": "아마도. 뭐 생각하고 있어?",
+          "audio": {
+            "en": "audio/en/D3/D3-U01-03_t2.mp3",
+            "ko": "audio/ko/D3/D3-U01-03_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "How about watching a movie?",
+          "ko": "영화 보는 건 어때?",
+          "audio": {
+            "en": "audio/en/D3/D3-U01-03_t3.mp3",
+            "ko": "audio/ko/D3/D3-U01-03_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Sounds good. What time?",
+          "ko": "좋아. 몇 시에?",
+          "audio": {
+            "en": "audio/en/D3/D3-U01-03_t4.mp3",
+            "ko": "audio/ko/D3/D3-U01-03_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Let's meet at two in front of the theater.",
+          "ko": "2시에 극장 앞에서 만나자.",
+          "audio": {
+            "en": "audio/en/D3/D3-U01-03_t5.mp3",
+            "ko": "audio/ko/D3/D3-U01-03_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Perfect. See you then!",
+          "ko": "완벽해. 그때 보자!",
+          "audio": {
+            "en": "audio/en/D3/D3-U01-03_t6.mp3",
+            "ko": "audio/ko/D3/D3-U01-03_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U01-04",
+      "topic": "택시",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Where to, please?",
+          "ko": "어디로 모실까요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U01-04_t1.mp3",
+            "ko": "audio/ko/D3/D3-U01-04_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "To the airport, please.",
+          "ko": "공항으로 가주세요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U01-04_t2.mp3",
+            "ko": "audio/ko/D3/D3-U01-04_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Sure. Are you in a hurry?",
+          "ko": "알겠습니다. 급하세요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U01-04_t3.mp3",
+            "ko": "audio/ko/D3/D3-U01-04_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, my flight is at six.",
+          "ko": "네, 비행기가 6시예요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U01-04_t4.mp3",
+            "ko": "audio/ko/D3/D3-U01-04_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Don't worry. We'll be there in thirty minutes.",
+          "ko": "걱정 마세요. 30분 안에 도착할 거예요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U01-04_t5.mp3",
+            "ko": "audio/ko/D3/D3-U01-04_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Thank you so much.",
+          "ko": "정말 감사합니다.",
+          "audio": {
+            "en": "audio/en/D3/D3-U01-04_t6.mp3",
+            "ko": "audio/ko/D3/D3-U01-04_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U01-05",
+      "topic": "약국",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Hi. I have a headache and a sore throat.",
+          "ko": "안녕하세요. 머리가 아프고 목도 아파요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U01-05_t1.mp3",
+            "ko": "audio/ko/D3/D3-U01-05_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Do you have a fever?",
+          "ko": "열은 있으세요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U01-05_t2.mp3",
+            "ko": "audio/ko/D3/D3-U01-05_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "A little, since last night.",
+          "ko": "어젯밤부터 조금요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U01-05_t3.mp3",
+            "ko": "audio/ko/D3/D3-U01-05_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Take this medicine after meals, three times a day.",
+          "ko": "이 약을 식후에 하루 세 번 드세요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U01-05_t4.mp3",
+            "ko": "audio/ko/D3/D3-U01-05_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Is there anything I should avoid?",
+          "ko": "피해야 할 게 있나요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U01-05_t5.mp3",
+            "ko": "audio/ko/D3/D3-U01-05_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Please drink lots of water and get some rest.",
+          "ko": "물을 많이 마시고 푹 쉬세요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U01-05_t6.mp3",
+            "ko": "audio/ko/D3/D3-U01-05_t6.mp3"
+          }
+        }
+      ]
+    }
+  ]
+}

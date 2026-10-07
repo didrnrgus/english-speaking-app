@@ -1,0 +1,219 @@
+{
+  "unit": "D2-U08",
+  "version": 1,
+  "level": "D2",
+  "track": "dialogue",
+  "title": "가족 이야기",
+  "items": [
+    {
+      "id": "D2-U08-01",
+      "topic": "형제자매",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Do you have any brothers or sisters?",
+          "ko": "형제자매 있어요?",
+          "audio": {
+            "en": "audio/en/D2/D2-U08-01_t1.mp3",
+            "ko": "audio/ko/D2/D2-U08-01_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I have one younger sister.",
+          "ko": "여동생이 한 명 있어요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U08-01_t2.mp3",
+            "ko": "audio/ko/D2/D2-U08-01_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Do you get along?",
+          "ko": "사이좋아요?",
+          "audio": {
+            "en": "audio/en/D2/D2-U08-01_t3.mp3",
+            "ko": "audio/ko/D2/D2-U08-01_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, we're very close.",
+          "ko": "네, 아주 친해요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U08-01_t4.mp3",
+            "ko": "audio/ko/D2/D2-U08-01_t4.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D2-U08-02",
+      "topic": "부모님",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Where do your parents live?",
+          "ko": "부모님은 어디 사세요?",
+          "audio": {
+            "en": "audio/en/D2/D2-U08-02_t1.mp3",
+            "ko": "audio/ko/D2/D2-U08-02_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "They live in Daegu.",
+          "ko": "대구에 사세요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U08-02_t2.mp3",
+            "ko": "audio/ko/D2/D2-U08-02_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Do you visit them often?",
+          "ko": "자주 찾아뵈어요?",
+          "audio": {
+            "en": "audio/en/D2/D2-U08-02_t3.mp3",
+            "ko": "audio/ko/D2/D2-U08-02_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "About once a month.",
+          "ko": "한 달에 한 번 정도요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U08-02_t4.mp3",
+            "ko": "audio/ko/D2/D2-U08-02_t4.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D2-U08-03",
+      "topic": "아이들",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Do you have kids?",
+          "ko": "아이 있어요?",
+          "audio": {
+            "en": "audio/en/D2/D2-U08-03_t1.mp3",
+            "ko": "audio/ko/D2/D2-U08-03_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, two boys.",
+          "ko": "네, 아들 둘이요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U08-03_t2.mp3",
+            "ko": "audio/ko/D2/D2-U08-03_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "How old are they?",
+          "ko": "몇 살이에요?",
+          "audio": {
+            "en": "audio/en/D2/D2-U08-03_t3.mp3",
+            "ko": "audio/ko/D2/D2-U08-03_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Five and eight.",
+          "ko": "다섯 살, 여덟 살이요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U08-03_t4.mp3",
+            "ko": "audio/ko/D2/D2-U08-03_t4.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D2-U08-04",
+      "topic": "가족 사진",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Is this your family?",
+          "ko": "이분들이 가족이에요?",
+          "audio": {
+            "en": "audio/en/D2/D2-U08-04_t1.mp3",
+            "ko": "audio/ko/D2/D2-U08-04_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, this is my mom and dad.",
+          "ko": "네, 이쪽이 엄마랑 아빠예요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U08-04_t2.mp3",
+            "ko": "audio/ko/D2/D2-U08-04_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "You look like your dad.",
+          "ko": "아빠 닮았네요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U08-04_t3.mp3",
+            "ko": "audio/ko/D2/D2-U08-04_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Everyone says that!",
+          "ko": "다들 그렇게 말해요!",
+          "audio": {
+            "en": "audio/en/D2/D2-U08-04_t4.mp3",
+            "ko": "audio/ko/D2/D2-U08-04_t4.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D2-U08-05",
+      "topic": "반려동물",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Do you have any pets?",
+          "ko": "반려동물 키워요?",
+          "audio": {
+            "en": "audio/en/D2/D2-U08-05_t1.mp3",
+            "ko": "audio/ko/D2/D2-U08-05_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, I have a cat.",
+          "ko": "네, 고양이 한 마리 있어요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U08-05_t2.mp3",
+            "ko": "audio/ko/D2/D2-U08-05_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "What's her name?",
+          "ko": "이름이 뭐예요?",
+          "audio": {
+            "en": "audio/en/D2/D2-U08-05_t3.mp3",
+            "ko": "audio/ko/D2/D2-U08-05_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Her name is Nabi.",
+          "ko": "나비예요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U08-05_t4.mp3",
+            "ko": "audio/ko/D2/D2-U08-05_t4.mp3"
+          }
+        }
+      ]
+    }
+  ]
+}

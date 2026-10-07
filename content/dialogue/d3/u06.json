@@ -1,0 +1,309 @@
+{
+  "unit": "D3-U06",
+  "version": 1,
+  "level": "D3",
+  "track": "dialogue",
+  "title": "이웃과 대화",
+  "items": [
+    {
+      "id": "D3-U06-01",
+      "topic": "새 이웃",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Hi! Are you new in the building?",
+          "ko": "안녕하세요! 이 건물에 새로 오셨어요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U06-01_t1.mp3",
+            "ko": "audio/ko/D3/D3-U06-01_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, I moved in last week.",
+          "ko": "네, 지난주에 이사 왔어요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U06-01_t2.mp3",
+            "ko": "audio/ko/D3/D3-U06-01_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Welcome! I live in 302.",
+          "ko": "환영해요! 저는 302호 살아요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U06-01_t3.mp3",
+            "ko": "audio/ko/D3/D3-U06-01_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Nice to meet you. I'm in 405.",
+          "ko": "반가워요. 저는 405호예요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U06-01_t4.mp3",
+            "ko": "audio/ko/D3/D3-U06-01_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Let me know if you need anything.",
+          "ko": "필요한 거 있으면 말해요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U06-01_t5.mp3",
+            "ko": "audio/ko/D3/D3-U06-01_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Thanks. That's very kind of you.",
+          "ko": "고마워요. 정말 친절하시네요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U06-01_t6.mp3",
+            "ko": "audio/ko/D3/D3-U06-01_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U06-02",
+      "topic": "분리수거",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Excuse me. Where do I put the recycling?",
+          "ko": "실례지만 재활용품은 어디에 버려요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U06-02_t1.mp3",
+            "ko": "audio/ko/D3/D3-U06-02_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Behind the building, next to the parking lot.",
+          "ko": "건물 뒤 주차장 옆이에요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U06-02_t2.mp3",
+            "ko": "audio/ko/D3/D3-U06-02_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Is there a special day for it?",
+          "ko": "버리는 요일이 따로 있어요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U06-02_t3.mp3",
+            "ko": "audio/ko/D3/D3-U06-02_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, every Wednesday evening.",
+          "ko": "네, 매주 수요일 저녁이요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U06-02_t4.mp3",
+            "ko": "audio/ko/D3/D3-U06-02_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Good to know. Thanks!",
+          "ko": "알려 줘서 고마워요!",
+          "audio": {
+            "en": "audio/en/D3/D3-U06-02_t5.mp3",
+            "ko": "audio/ko/D3/D3-U06-02_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "No problem.",
+          "ko": "별말씀을요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U06-02_t6.mp3",
+            "ko": "audio/ko/D3/D3-U06-02_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U06-03",
+      "topic": "택배 대신 받기",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Hi, I think this package is yours.",
+          "ko": "안녕하세요, 이 택배 그쪽 것 같아요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U06-03_t1.mp3",
+            "ko": "audio/ko/D3/D3-U06-03_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Oh, yes! Thank you so much.",
+          "ko": "아, 맞아요! 정말 고마워요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U06-03_t2.mp3",
+            "ko": "audio/ko/D3/D3-U06-03_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "It was in front of my door.",
+          "ko": "우리 집 문 앞에 있었어요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U06-03_t3.mp3",
+            "ko": "audio/ko/D3/D3-U06-03_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "The delivery person must have made a mistake.",
+          "ko": "택배 기사님이 실수하셨나 봐요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U06-03_t4.mp3",
+            "ko": "audio/ko/D3/D3-U06-03_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "It happens. Have a good day!",
+          "ko": "그럴 수도 있죠. 좋은 하루 보내요!",
+          "audio": {
+            "en": "audio/en/D3/D3-U06-03_t5.mp3",
+            "ko": "audio/ko/D3/D3-U06-03_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "You too. Thanks again!",
+          "ko": "그쪽도요. 다시 한번 고마워요!",
+          "audio": {
+            "en": "audio/en/D3/D3-U06-03_t6.mp3",
+            "ko": "audio/ko/D3/D3-U06-03_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U06-04",
+      "topic": "강아지 산책",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "What a cute dog! What's his name?",
+          "ko": "강아지 정말 귀엽네요! 이름이 뭐예요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U06-04_t1.mp3",
+            "ko": "audio/ko/D3/D3-U06-04_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "His name is Max. He's three.",
+          "ko": "맥스예요. 세 살이에요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U06-04_t2.mp3",
+            "ko": "audio/ko/D3/D3-U06-04_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Can I pet him?",
+          "ko": "만져 봐도 돼요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U06-04_t3.mp3",
+            "ko": "audio/ko/D3/D3-U06-04_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Sure. He loves people.",
+          "ko": "그럼요. 사람을 정말 좋아해요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U06-04_t4.mp3",
+            "ko": "audio/ko/D3/D3-U06-04_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "He's so soft!",
+          "ko": "정말 부드러워요!",
+          "audio": {
+            "en": "audio/en/D3/D3-U06-04_t5.mp3",
+            "ko": "audio/ko/D3/D3-U06-04_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "He just had a bath yesterday.",
+          "ko": "어제 목욕했거든요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U06-04_t6.mp3",
+            "ko": "audio/ko/D3/D3-U06-04_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U06-05",
+      "topic": "엘리베이터 고장",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Is the elevator broken again?",
+          "ko": "엘리베이터 또 고장 났어요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U06-05_t1.mp3",
+            "ko": "audio/ko/D3/D3-U06-05_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes. They're fixing it now.",
+          "ko": "네. 지금 고치고 있대요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U06-05_t2.mp3",
+            "ko": "audio/ko/D3/D3-U06-05_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Oh no. I live on the tenth floor.",
+          "ko": "이런. 저 10층 사는데요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U06-05_t3.mp3",
+            "ko": "audio/ko/D3/D3-U06-05_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Me too. Let's take the stairs together.",
+          "ko": "저도요. 같이 계단으로 가요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U06-05_t4.mp3",
+            "ko": "audio/ko/D3/D3-U06-05_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Good idea. It's good exercise, right?",
+          "ko": "좋아요. 운동도 되고 좋죠?",
+          "audio": {
+            "en": "audio/en/D3/D3-U06-05_t5.mp3",
+            "ko": "audio/ko/D3/D3-U06-05_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Ha ha, that's one way to look at it.",
+          "ko": "하하, 그렇게 볼 수도 있겠네요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U06-05_t6.mp3",
+            "ko": "audio/ko/D3/D3-U06-05_t6.mp3"
+          }
+        }
+      ]
+    }
+  ]
+}

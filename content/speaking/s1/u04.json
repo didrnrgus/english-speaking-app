@@ -1,0 +1,54 @@
+{
+  "unit": "S1-U04",
+  "version": 1,
+  "level": "S1",
+  "track": "speaking",
+  "title": "부탁하기",
+  "items": [
+    {
+      "id": "S1-U04-01",
+      "en": "Help me, please.",
+      "ko": "좀 도와주세요.",
+      "audio": {
+        "en": "audio/en/S1/S1-U04-01.mp3",
+        "ko": "audio/ko/S1/S1-U04-01.mp3"
+      }
+    },
+    {
+      "id": "S1-U04-02",
+      "en": "One more, please.",
+      "ko": "하나 더 주세요.",
+      "audio": {
+        "en": "audio/en/S1/S1-U04-02.mp3",
+        "ko": "audio/ko/S1/S1-U04-02.mp3"
+      }
+    },
+    {
+      "id": "S1-U04-03",
+      "en": "Slowly, please.",
+      "ko": "천천히 말해 주세요.",
+      "audio": {
+        "en": "audio/en/S1/S1-U04-03.mp3",
+        "ko": "audio/ko/S1/S1-U04-03.mp3"
+      }
+    },
+    {
+      "id": "S1-U04-04",
+      "en": "Wait a minute.",
+      "ko": "잠깐만요.",
+      "audio": {
+        "en": "audio/en/S1/S1-U04-04.mp3",
+        "ko": "audio/ko/S1/S1-U04-04.mp3"
+      }
+    },
+    {
+      "id": "S1-U04-05",
+      "en": "Say that again?",
+      "ko": "다시 말해 줄래요?",
+      "audio": {
+        "en": "audio/en/S1/S1-U04-05.mp3",
+        "ko": "audio/ko/S1/S1-U04-05.mp3"
+      }
+    }
+  ]
+}

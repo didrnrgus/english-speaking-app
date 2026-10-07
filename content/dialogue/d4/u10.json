@@ -1,0 +1,399 @@
+{
+  "unit": "D4-U10",
+  "version": 1,
+  "level": "D4",
+  "track": "dialogue",
+  "title": "동호회 가입",
+  "items": [
+    {
+      "id": "D4-U10-01",
+      "topic": "독서 모임",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Hi, is this the book club?",
+          "ko": "안녕하세요, 여기가 독서 모임인가요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-01_t1.mp3",
+            "ko": "audio/ko/D4/D4-U10-01_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, welcome! Are you new?",
+          "ko": "네, 환영해요! 처음 오셨어요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-01_t2.mp3",
+            "ko": "audio/ko/D4/D4-U10-01_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Yes, I saw your post online.",
+          "ko": "네, 인터넷에서 글 보고 왔어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-01_t3.mp3",
+            "ko": "audio/ko/D4/D4-U10-01_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Great. We meet every other Thursday.",
+          "ko": "잘 오셨어요. 우리는 격주 목요일에 모여요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-01_t4.mp3",
+            "ko": "audio/ko/D4/D4-U10-01_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "What are you reading now?",
+          "ko": "지금은 뭘 읽고 있어요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-01_t5.mp3",
+            "ko": "audio/ko/D4/D4-U10-01_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "A mystery novel. I'll lend you a copy.",
+          "ko": "추리 소설이요. 한 권 빌려 드릴게요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-01_t6.mp3",
+            "ko": "audio/ko/D4/D4-U10-01_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Thanks. Do I have to finish it by next time?",
+          "ko": "고마워요. 다음 모임까지 다 읽어야 해요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-01_t7.mp3",
+            "ko": "audio/ko/D4/D4-U10-01_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Try your best, but it's okay if you don't.",
+          "ko": "최대한 읽어 보세요. 못 읽어도 괜찮아요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-01_t8.mp3",
+            "ko": "audio/ko/D4/D4-U10-01_t8.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D4-U10-02",
+      "topic": "축구 동호회",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "I heard you play soccer on weekends.",
+          "ko": "주말에 축구 한다고 들었어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-02_t1.mp3",
+            "ko": "audio/ko/D4/D4-U10-02_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, I'm in a local team. Do you want to join?",
+          "ko": "네, 동네 팀에 있어요. 같이 할래요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-02_t2.mp3",
+            "ko": "audio/ko/D4/D4-U10-02_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "I'd love to, but I'm not very good.",
+          "ko": "하고 싶은데 잘 못해요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-02_t3.mp3",
+            "ko": "audio/ko/D4/D4-U10-02_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "That's okay. It's just for fun.",
+          "ko": "괜찮아요. 그냥 재미로 하는 거예요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-02_t4.mp3",
+            "ko": "audio/ko/D4/D4-U10-02_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "When do you play?",
+          "ko": "언제 해요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-02_t5.mp3",
+            "ko": "audio/ko/D4/D4-U10-02_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Every Sunday morning at nine.",
+          "ko": "매주 일요일 아침 9시요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-02_t6.mp3",
+            "ko": "audio/ko/D4/D4-U10-02_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "What should I bring?",
+          "ko": "뭘 가져가면 돼요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-02_t7.mp3",
+            "ko": "audio/ko/D4/D4-U10-02_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Just soccer shoes and water.",
+          "ko": "축구화랑 물만요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-02_t8.mp3",
+            "ko": "audio/ko/D4/D4-U10-02_t8.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D4-U10-03",
+      "topic": "요리 수업",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Is there still space in the cooking class?",
+          "ko": "요리 수업에 아직 자리 있어요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-03_t1.mp3",
+            "ko": "audio/ko/D4/D4-U10-03_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, we have two spots left.",
+          "ko": "네, 두 자리 남았어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-03_t2.mp3",
+            "ko": "audio/ko/D4/D4-U10-03_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "What do you cook in the class?",
+          "ko": "수업에서 뭘 만들어요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-03_t3.mp3",
+            "ko": "audio/ko/D4/D4-U10-03_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Different food every week. This week is Thai food.",
+          "ko": "매주 다른 요리요. 이번 주는 태국 음식이에요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-03_t4.mp3",
+            "ko": "audio/ko/D4/D4-U10-03_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Sounds fun. Do I need to bring ingredients?",
+          "ko": "재미있겠네요. 재료를 가져가야 해요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-03_t5.mp3",
+            "ko": "audio/ko/D4/D4-U10-03_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "No, everything is included.",
+          "ko": "아니요, 전부 포함돼 있어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-03_t6.mp3",
+            "ko": "audio/ko/D4/D4-U10-03_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Great. I'll sign up now.",
+          "ko": "좋아요. 지금 신청할게요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-03_t7.mp3",
+            "ko": "audio/ko/D4/D4-U10-03_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Please write your name and phone number here.",
+          "ko": "여기에 이름과 전화번호를 적어 주세요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-03_t8.mp3",
+            "ko": "audio/ko/D4/D4-U10-03_t8.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D4-U10-04",
+      "topic": "사진 동호회",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Are you in the photography club?",
+          "ko": "사진 동호회 하세요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-04_t1.mp3",
+            "ko": "audio/ko/D4/D4-U10-04_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, we go on photo walks every month.",
+          "ko": "네, 매달 사진 산책을 가요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-04_t2.mp3",
+            "ko": "audio/ko/D4/D4-U10-04_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Can beginners join?",
+          "ko": "초보자도 들어갈 수 있어요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-04_t3.mp3",
+            "ko": "audio/ko/D4/D4-U10-04_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Of course. Many members are beginners.",
+          "ko": "물론이죠. 회원 중에 초보자가 많아요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-04_t4.mp3",
+            "ko": "audio/ko/D4/D4-U10-04_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "I only have a phone camera.",
+          "ko": "저는 휴대폰 카메라밖에 없어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-04_t5.mp3",
+            "ko": "audio/ko/D4/D4-U10-04_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "That's totally fine.",
+          "ko": "전혀 상관없어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-04_t6.mp3",
+            "ko": "audio/ko/D4/D4-U10-04_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Where's the next photo walk?",
+          "ko": "다음 사진 산책은 어디예요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-04_t7.mp3",
+            "ko": "audio/ko/D4/D4-U10-04_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "At the flower garden on Saturday.",
+          "ko": "토요일에 꽃 정원에서요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-04_t8.mp3",
+            "ko": "audio/ko/D4/D4-U10-04_t8.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D4-U10-05",
+      "topic": "첫 모임 후",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "How was your first club meeting?",
+          "ko": "동호회 첫 모임 어땠어?",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-05_t1.mp3",
+            "ko": "audio/ko/D4/D4-U10-05_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "It was great. Everyone was very friendly.",
+          "ko": "좋았어. 다들 정말 친절했어.",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-05_t2.mp3",
+            "ko": "audio/ko/D4/D4-U10-05_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Did you talk to many people?",
+          "ko": "사람들이랑 얘기 많이 했어?",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-05_t3.mp3",
+            "ko": "audio/ko/D4/D4-U10-05_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, I met someone who lives near me.",
+          "ko": "응, 우리 집 근처에 사는 사람도 만났어.",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-05_t4.mp3",
+            "ko": "audio/ko/D4/D4-U10-05_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "That's nice. Are you going again?",
+          "ko": "잘됐다. 또 갈 거야?",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-05_t5.mp3",
+            "ko": "audio/ko/D4/D4-U10-05_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Definitely. I already signed up for next month.",
+          "ko": "당연하지. 벌써 다음 달 것도 신청했어.",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-05_t6.mp3",
+            "ko": "audio/ko/D4/D4-U10-05_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "I'm glad you found a new hobby.",
+          "ko": "새 취미를 찾아서 다행이다.",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-05_t7.mp3",
+            "ko": "audio/ko/D4/D4-U10-05_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Me too. You should come with me sometime.",
+          "ko": "나도. 너도 언제 같이 가자.",
+          "audio": {
+            "en": "audio/en/D4/D4-U10-05_t8.mp3",
+            "ko": "audio/ko/D4/D4-U10-05_t8.mp3"
+          }
+        }
+      ]
+    }
+  ]
+}

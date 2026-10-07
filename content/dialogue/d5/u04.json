@@ -1,0 +1,579 @@
+{
+  "unit": "D5-U04",
+  "version": 1,
+  "level": "D5",
+  "track": "dialogue",
+  "title": "팀 프로젝트 회의",
+  "items": [
+    {
+      "id": "D5-U04-01",
+      "topic": "역할 나누기",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Okay, everyone. Let's start the meeting.",
+          "ko": "자, 여러분. 회의 시작할게요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-01_t1.mp3",
+            "ko": "audio/ko/D5/D5-U04-01_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Sure. What's first on the agenda?",
+          "ko": "네. 첫 번째 안건이 뭐예요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-01_t2.mp3",
+            "ko": "audio/ko/D5/D5-U04-01_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "We need to divide the work for the new project.",
+          "ko": "새 프로젝트 업무를 나눠야 해요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-01_t3.mp3",
+            "ko": "audio/ko/D5/D5-U04-01_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "What are the main tasks?",
+          "ko": "주요 업무가 뭐예요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-01_t4.mp3",
+            "ko": "audio/ko/D5/D5-U04-01_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Research, design, and the final presentation.",
+          "ko": "조사, 디자인, 그리고 최종 발표요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-01_t5.mp3",
+            "ko": "audio/ko/D5/D5-U04-01_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I can do the research. I've done it before.",
+          "ko": "조사는 제가 할게요. 전에 해 본 적 있어요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-01_t6.mp3",
+            "ko": "audio/ko/D5/D5-U04-01_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Great. Who wants to handle the design?",
+          "ko": "좋아요. 디자인은 누가 맡을래요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-01_t7.mp3",
+            "ko": "audio/ko/D5/D5-U04-01_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Maybe Jin? She's really good at it.",
+          "ko": "진 씨 어때요? 디자인 정말 잘하잖아요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-01_t8.mp3",
+            "ko": "audio/ko/D5/D5-U04-01_t8.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Good idea. I'll ask her after the meeting.",
+          "ko": "좋은 생각이에요. 회의 끝나고 물어볼게요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-01_t9.mp3",
+            "ko": "audio/ko/D5/D5-U04-01_t9.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "What about the presentation?",
+          "ko": "발표는요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-01_t10.mp3",
+            "ko": "audio/ko/D5/D5-U04-01_t10.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "I'll do it, but I'll need everyone's help.",
+          "ko": "제가 할게요. 그래도 모두의 도움이 필요해요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-01_t11.mp3",
+            "ko": "audio/ko/D5/D5-U04-01_t11.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Of course. Let's meet again next Monday.",
+          "ko": "물론이죠. 다음 주 월요일에 다시 모여요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-01_t12.mp3",
+            "ko": "audio/ko/D5/D5-U04-01_t12.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D5-U04-02",
+      "topic": "마감 걱정",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "I'm worried about the deadline.",
+          "ko": "마감이 걱정돼요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-02_t1.mp3",
+            "ko": "audio/ko/D5/D5-U04-02_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Me too. We only have one week left.",
+          "ko": "저도요. 일주일밖에 안 남았어요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-02_t2.mp3",
+            "ko": "audio/ko/D5/D5-U04-02_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Where are we right now?",
+          "ko": "지금 어디까지 했죠?",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-02_t3.mp3",
+            "ko": "audio/ko/D5/D5-U04-02_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "The research is done, but the report isn't finished.",
+          "ko": "조사는 끝났는데 보고서가 아직이에요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-02_t4.mp3",
+            "ko": "audio/ko/D5/D5-U04-02_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "How much is left?",
+          "ko": "얼마나 남았어요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-02_t5.mp3",
+            "ko": "audio/ko/D5/D5-U04-02_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "About half.",
+          "ko": "절반 정도요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-02_t6.mp3",
+            "ko": "audio/ko/D5/D5-U04-02_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Should we ask for more time?",
+          "ko": "시간을 더 달라고 할까요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-02_t7.mp3",
+            "ko": "audio/ko/D5/D5-U04-02_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I don't think that's possible.",
+          "ko": "그건 안 될 것 같아요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-02_t8.mp3",
+            "ko": "audio/ko/D5/D5-U04-02_t8.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Then let's split the report into parts.",
+          "ko": "그럼 보고서를 나눠서 써요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-02_t9.mp3",
+            "ko": "audio/ko/D5/D5-U04-02_t9.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Good idea. Each of us can write one section.",
+          "ko": "좋은 생각이에요. 한 사람이 한 부분씩 쓰면 되겠네요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-02_t10.mp3",
+            "ko": "audio/ko/D5/D5-U04-02_t10.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Let's share our drafts by Thursday.",
+          "ko": "목요일까지 초안을 공유해요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-02_t11.mp3",
+            "ko": "audio/ko/D5/D5-U04-02_t11.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Okay. I think we can make it.",
+          "ko": "좋아요. 해낼 수 있을 것 같아요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-02_t12.mp3",
+            "ko": "audio/ko/D5/D5-U04-02_t12.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D5-U04-03",
+      "topic": "의견 충돌",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "I don't think this design will work.",
+          "ko": "이 디자인은 안 될 것 같아요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-03_t1.mp3",
+            "ko": "audio/ko/D5/D5-U04-03_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Why not? I spent a lot of time on it.",
+          "ko": "왜요? 저 이거 오래 걸려서 만들었는데요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-03_t2.mp3",
+            "ko": "audio/ko/D5/D5-U04-03_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "I know, and it looks great.",
+          "ko": "알아요, 그리고 정말 멋져요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-03_t3.mp3",
+            "ko": "audio/ko/D5/D5-U04-03_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Then what's the problem?",
+          "ko": "그럼 뭐가 문제예요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-03_t4.mp3",
+            "ko": "audio/ko/D5/D5-U04-03_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "The colors are too dark for our customers.",
+          "ko": "우리 고객들한테는 색이 너무 어두워요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-03_t5.mp3",
+            "ko": "audio/ko/D5/D5-U04-03_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Hmm. Our customers are mostly young people, right?",
+          "ko": "음. 우리 고객은 주로 젊은 사람들이죠?",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-03_t6.mp3",
+            "ko": "audio/ko/D5/D5-U04-03_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Yes. They usually like bright colors.",
+          "ko": "네. 보통 밝은 색을 좋아하잖아요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-03_t7.mp3",
+            "ko": "audio/ko/D5/D5-U04-03_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Okay, that makes sense.",
+          "ko": "알겠어요, 일리가 있네요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-03_t8.mp3",
+            "ko": "audio/ko/D5/D5-U04-03_t8.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Could you try a brighter version?",
+          "ko": "더 밝은 버전으로 해 볼 수 있어요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-03_t9.mp3",
+            "ko": "audio/ko/D5/D5-U04-03_t9.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Sure. I'll keep the layout and change the colors.",
+          "ko": "그럼요. 배치는 그대로 두고 색만 바꿀게요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-03_t10.mp3",
+            "ko": "audio/ko/D5/D5-U04-03_t10.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Thanks. I'm sorry if that sounded rude.",
+          "ko": "고마워요. 무례하게 들렸다면 미안해요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-03_t11.mp3",
+            "ko": "audio/ko/D5/D5-U04-03_t11.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Not at all. Honest feedback helps.",
+          "ko": "전혀요. 솔직한 의견이 도움이 돼요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-03_t12.mp3",
+            "ko": "audio/ko/D5/D5-U04-03_t12.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D5-U04-04",
+      "topic": "발표 연습",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Can you listen to my presentation?",
+          "ko": "제 발표 좀 들어 줄래요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-04_t1.mp3",
+            "ko": "audio/ko/D5/D5-U04-04_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Of course. Go ahead.",
+          "ko": "물론이죠. 해 보세요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-04_t2.mp3",
+            "ko": "audio/ko/D5/D5-U04-04_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Good morning, everyone. Today, I'll talk about our new app.",
+          "ko": "안녕하세요, 여러분. 오늘은 저희 새 앱에 대해 말씀드리겠습니다.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-04_t3.mp3",
+            "ko": "audio/ko/D5/D5-U04-04_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Good start. Keep going.",
+          "ko": "시작 좋아요. 계속하세요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-04_t4.mp3",
+            "ko": "audio/ko/D5/D5-U04-04_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Our app helps people save money every day.",
+          "ko": "저희 앱은 사람들이 매일 돈을 아낄 수 있게 돕습니다.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-04_t5.mp3",
+            "ko": "audio/ko/D5/D5-U04-04_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Can you speak a little slower?",
+          "ko": "조금만 천천히 말해 볼래요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-04_t6.mp3",
+            "ko": "audio/ko/D5/D5-U04-04_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Oh, sorry. I always speak fast when I'm nervous.",
+          "ko": "아, 미안해요. 긴장하면 항상 말이 빨라져요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-04_t7.mp3",
+            "ko": "audio/ko/D5/D5-U04-04_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "That's normal. Take a breath between slides.",
+          "ko": "당연해요. 슬라이드 사이에 숨을 한 번 쉬어요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-04_t8.mp3",
+            "ko": "audio/ko/D5/D5-U04-04_t8.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Okay. Was there anything else?",
+          "ko": "알겠어요. 또 다른 건 없었어요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-04_t9.mp3",
+            "ko": "audio/ko/D5/D5-U04-04_t9.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Try to look at the audience, not the screen.",
+          "ko": "화면 말고 청중을 보도록 해 봐요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-04_t10.mp3",
+            "ko": "audio/ko/D5/D5-U04-04_t10.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Good point. I'll practice again tonight.",
+          "ko": "좋은 지적이에요. 오늘 밤에 다시 연습할게요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-04_t11.mp3",
+            "ko": "audio/ko/D5/D5-U04-04_t11.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "You'll do great tomorrow.",
+          "ko": "내일 잘할 거예요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-04_t12.mp3",
+            "ko": "audio/ko/D5/D5-U04-04_t12.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D5-U04-05",
+      "topic": "프로젝트 끝나고",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "We finally finished the project!",
+          "ko": "드디어 프로젝트 끝났어요!",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-05_t1.mp3",
+            "ko": "audio/ko/D5/D5-U04-05_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I can't believe it. It was a long two months.",
+          "ko": "믿기지 않아요. 길었던 두 달이었어요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-05_t2.mp3",
+            "ko": "audio/ko/D5/D5-U04-05_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "The client said they loved our presentation.",
+          "ko": "고객이 우리 발표가 정말 좋았대요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-05_t3.mp3",
+            "ko": "audio/ko/D5/D5-U04-05_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Really? That's great news!",
+          "ko": "정말요? 좋은 소식이네요!",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-05_t4.mp3",
+            "ko": "audio/ko/D5/D5-U04-05_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Yes. They want to work with us again.",
+          "ko": "네. 다시 우리랑 일하고 싶대요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-05_t5.mp3",
+            "ko": "audio/ko/D5/D5-U04-05_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "All our hard work paid off.",
+          "ko": "고생한 보람이 있네요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-05_t6.mp3",
+            "ko": "audio/ko/D5/D5-U04-05_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Thank you for staying late so many nights.",
+          "ko": "여러 날 밤늦게까지 남아 줘서 고마워요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-05_t7.mp3",
+            "ko": "audio/ko/D5/D5-U04-05_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "We all did. It was a real team effort.",
+          "ko": "다 같이 했잖아요. 진짜 팀워크였어요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-05_t8.mp3",
+            "ko": "audio/ko/D5/D5-U04-05_t8.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Let's celebrate. Dinner on Friday?",
+          "ko": "축하해요. 금요일에 저녁 어때요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-05_t9.mp3",
+            "ko": "audio/ko/D5/D5-U04-05_t9.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Sounds perfect. Should I book a place?",
+          "ko": "좋아요. 제가 장소 예약할까요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-05_t10.mp3",
+            "ko": "audio/ko/D5/D5-U04-05_t10.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Yes, please. Somewhere nice!",
+          "ko": "네, 부탁해요. 좋은 데로요!",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-05_t11.mp3",
+            "ko": "audio/ko/D5/D5-U04-05_t11.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Leave it to me.",
+          "ko": "저한테 맡겨요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U04-05_t12.mp3",
+            "ko": "audio/ko/D5/D5-U04-05_t12.mp3"
+          }
+        }
+      ]
+    }
+  ]
+}

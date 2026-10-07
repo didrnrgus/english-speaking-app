@@ -1,0 +1,579 @@
+{
+  "unit": "D5-U08",
+  "version": 1,
+  "level": "D5",
+  "track": "dialogue",
+  "title": "중고 거래",
+  "items": [
+    {
+      "id": "D5-U08-01",
+      "topic": "자전거 사기",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Hi, are you selling a bicycle?",
+          "ko": "안녕하세요, 자전거 파시는 분이죠?",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-01_t1.mp3",
+            "ko": "audio/ko/D5/D5-U08-01_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes! Are you interested?",
+          "ko": "네! 관심 있으세요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-01_t2.mp3",
+            "ko": "audio/ko/D5/D5-U08-01_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Yes. How old is it?",
+          "ko": "네. 산 지 얼마나 됐어요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-01_t3.mp3",
+            "ko": "audio/ko/D5/D5-U08-01_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "About two years, but I didn't ride it much.",
+          "ko": "2년 정도 됐는데 많이 안 탔어요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-01_t4.mp3",
+            "ko": "audio/ko/D5/D5-U08-01_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Is there anything wrong with it?",
+          "ko": "어디 문제 있는 데는 없어요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-01_t5.mp3",
+            "ko": "audio/ko/D5/D5-U08-01_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "No, it works perfectly. I just changed the tires.",
+          "ko": "아니요, 완벽하게 잘 돼요. 타이어도 얼마 전에 갈았어요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-01_t6.mp3",
+            "ko": "audio/ko/D5/D5-U08-01_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Can I try riding it?",
+          "ko": "한번 타 봐도 돼요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-01_t7.mp3",
+            "ko": "audio/ko/D5/D5-U08-01_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Of course. Go ahead.",
+          "ko": "물론이죠. 타 보세요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-01_t8.mp3",
+            "ko": "audio/ko/D5/D5-U08-01_t8.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "It's really nice. Can you lower the price a little?",
+          "ko": "정말 좋네요. 가격 좀 깎아 줄 수 있어요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-01_t9.mp3",
+            "ko": "audio/ko/D5/D5-U08-01_t9.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I'm asking for one hundred dollars. How about ninety?",
+          "ko": "100달러에 내놨는데, 90달러 어때요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-01_t10.mp3",
+            "ko": "audio/ko/D5/D5-U08-01_t10.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Deal. Can I pay by bank transfer?",
+          "ko": "좋아요. 계좌 이체해도 돼요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-01_t11.mp3",
+            "ko": "audio/ko/D5/D5-U08-01_t11.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Sure. Here's my account number.",
+          "ko": "그럼요. 여기 제 계좌 번호요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-01_t12.mp3",
+            "ko": "audio/ko/D5/D5-U08-01_t12.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D5-U08-02",
+      "topic": "사진과 다를 때",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Hi, I'm here for the desk.",
+          "ko": "안녕하세요, 책상 사러 왔어요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-02_t1.mp3",
+            "ko": "audio/ko/D5/D5-U08-02_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Hi. Here it is.",
+          "ko": "안녕하세요. 여기 있어요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-02_t2.mp3",
+            "ko": "audio/ko/D5/D5-U08-02_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Hmm, it looks different from the photo.",
+          "ko": "음, 사진이랑 좀 달라 보이네요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-02_t3.mp3",
+            "ko": "audio/ko/D5/D5-U08-02_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "What do you mean?",
+          "ko": "무슨 말씀이세요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-02_t4.mp3",
+            "ko": "audio/ko/D5/D5-U08-02_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "There's a big scratch on the top.",
+          "ko": "위에 큰 흠집이 있어요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-02_t5.mp3",
+            "ko": "audio/ko/D5/D5-U08-02_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Oh, I'm sorry. I forgot to mention that.",
+          "ko": "아, 죄송해요. 말씀드리는 걸 깜빡했어요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-02_t6.mp3",
+            "ko": "audio/ko/D5/D5-U08-02_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "I'm not sure I still want it at that price.",
+          "ko": "그 가격이면 사야 할지 모르겠어요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-02_t7.mp3",
+            "ko": "audio/ko/D5/D5-U08-02_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I understand. How about twenty dollars less?",
+          "ko": "이해해요. 20달러 깎아 드리면 어때요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-02_t8.mp3",
+            "ko": "audio/ko/D5/D5-U08-02_t8.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "That sounds fair.",
+          "ko": "그럼 괜찮네요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-02_t9.mp3",
+            "ko": "audio/ko/D5/D5-U08-02_t9.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I'll help you carry it to your car.",
+          "ko": "차까지 옮기는 거 도와드릴게요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-02_t10.mp3",
+            "ko": "audio/ko/D5/D5-U08-02_t10.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Thanks. It's heavier than I thought.",
+          "ko": "고마워요. 생각보다 무겁네요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-02_t11.mp3",
+            "ko": "audio/ko/D5/D5-U08-02_t11.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "It's solid wood. It'll last a long time.",
+          "ko": "원목이라서요. 오래 쓰실 거예요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-02_t12.mp3",
+            "ko": "audio/ko/D5/D5-U08-02_t12.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D5-U08-03",
+      "topic": "옷 팔기",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "I want to sell some clothes I don't wear.",
+          "ko": "안 입는 옷을 좀 팔고 싶어.",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-03_t1.mp3",
+            "ko": "audio/ko/D5/D5-U08-03_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "You should try the second-hand app.",
+          "ko": "중고 거래 앱을 써 봐.",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-03_t2.mp3",
+            "ko": "audio/ko/D5/D5-U08-03_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Is it easy to use?",
+          "ko": "쓰기 쉬워?",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-03_t3.mp3",
+            "ko": "audio/ko/D5/D5-U08-03_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Very. Just take photos and write a description.",
+          "ko": "아주 쉬워. 사진 찍고 설명만 쓰면 돼.",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-03_t4.mp3",
+            "ko": "audio/ko/D5/D5-U08-03_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "How much should I ask for?",
+          "ko": "얼마에 팔아야 할까?",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-03_t5.mp3",
+            "ko": "audio/ko/D5/D5-U08-03_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Check what similar items sell for.",
+          "ko": "비슷한 물건이 얼마에 팔리는지 봐.",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-03_t6.mp3",
+            "ko": "audio/ko/D5/D5-U08-03_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Good idea. What kind of photos sell best?",
+          "ko": "좋은 생각이다. 어떤 사진이 제일 잘 팔려?",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-03_t7.mp3",
+            "ko": "audio/ko/D5/D5-U08-03_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Bright photos with a plain background.",
+          "ko": "배경이 깔끔하고 밝은 사진.",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-03_t8.mp3",
+            "ko": "audio/ko/D5/D5-U08-03_t8.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Should I meet buyers in person?",
+          "ko": "구매자를 직접 만나야 해?",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-03_t9.mp3",
+            "ko": "audio/ko/D5/D5-U08-03_t9.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, but always meet in a public place.",
+          "ko": "응, 근데 항상 사람 많은 곳에서 만나.",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-03_t10.mp3",
+            "ko": "audio/ko/D5/D5-U08-03_t10.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Thanks. I'll try it this weekend.",
+          "ko": "고마워. 이번 주말에 해 볼게.",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-03_t11.mp3",
+            "ko": "audio/ko/D5/D5-U08-03_t11.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Good luck! Maybe you'll make some money.",
+          "ko": "행운을 빌어! 돈 좀 벌지도 모르겠다.",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-03_t12.mp3",
+            "ko": "audio/ko/D5/D5-U08-03_t12.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D5-U08-04",
+      "topic": "가격 흥정",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Hello, I saw your ad for the camera.",
+          "ko": "안녕하세요, 카메라 광고 보고 연락드려요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-04_t1.mp3",
+            "ko": "audio/ko/D5/D5-U08-04_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Hi. Yes, it's still available.",
+          "ko": "안녕하세요. 네, 아직 있어요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-04_t2.mp3",
+            "ko": "audio/ko/D5/D5-U08-04_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Why are you selling it?",
+          "ko": "왜 파시는 거예요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-04_t3.mp3",
+            "ko": "audio/ko/D5/D5-U08-04_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I bought a new one, so I don't need this anymore.",
+          "ko": "새 걸 사서 이제 필요 없거든요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-04_t4.mp3",
+            "ko": "audio/ko/D5/D5-U08-04_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Does it come with the lens?",
+          "ko": "렌즈도 같이 주시나요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-04_t5.mp3",
+            "ko": "audio/ko/D5/D5-U08-04_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, and a bag and an extra battery.",
+          "ko": "네, 가방이랑 여분 배터리도요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-04_t6.mp3",
+            "ko": "audio/ko/D5/D5-U08-04_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "The price is three hundred dollars, right?",
+          "ko": "가격이 300달러 맞죠?",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-04_t7.mp3",
+            "ko": "audio/ko/D5/D5-U08-04_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, that's right.",
+          "ko": "네, 맞아요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-04_t8.mp3",
+            "ko": "audio/ko/D5/D5-U08-04_t8.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Could you do two hundred and fifty?",
+          "ko": "250달러에 안 될까요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-04_t9.mp3",
+            "ko": "audio/ko/D5/D5-U08-04_t9.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "That's too low. How about two hundred and eighty?",
+          "ko": "그건 너무 낮아요. 280달러 어때요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-04_t10.mp3",
+            "ko": "audio/ko/D5/D5-U08-04_t10.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Okay, it's a deal. When can we meet?",
+          "ko": "좋아요, 그렇게 해요. 언제 만날 수 있어요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-04_t11.mp3",
+            "ko": "audio/ko/D5/D5-U08-04_t11.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "How about tomorrow at the subway station?",
+          "ko": "내일 지하철역에서 어때요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-04_t12.mp3",
+            "ko": "audio/ko/D5/D5-U08-04_t12.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D5-U08-05",
+      "topic": "무료 나눔",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Are you still giving away the bookshelf?",
+          "ko": "아직 책장 무료로 나눠 주시는 거예요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-05_t1.mp3",
+            "ko": "audio/ko/D5/D5-U08-05_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, it's still here.",
+          "ko": "네, 아직 여기 있어요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-05_t2.mp3",
+            "ko": "audio/ko/D5/D5-U08-05_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "That's great. Why are you giving it away?",
+          "ko": "잘됐네요. 왜 그냥 주시는 거예요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-05_t3.mp3",
+            "ko": "audio/ko/D5/D5-U08-05_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I'm moving abroad next week.",
+          "ko": "다음 주에 해외로 이사 가거든요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-05_t4.mp3",
+            "ko": "audio/ko/D5/D5-U08-05_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Oh, exciting! Where are you going?",
+          "ko": "오, 신나겠네요! 어디로 가세요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-05_t5.mp3",
+            "ko": "audio/ko/D5/D5-U08-05_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "To Germany, for work.",
+          "ko": "일 때문에 독일로요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-05_t6.mp3",
+            "ko": "audio/ko/D5/D5-U08-05_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Wow. Good luck with the move.",
+          "ko": "와. 이사 잘하세요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-05_t7.mp3",
+            "ko": "audio/ko/D5/D5-U08-05_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Thanks. Do you have a car?",
+          "ko": "고마워요. 차 있으세요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-05_t8.mp3",
+            "ko": "audio/ko/D5/D5-U08-05_t8.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Yes, I parked right outside.",
+          "ko": "네, 바로 밖에 세워 뒀어요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-05_t9.mp3",
+            "ko": "audio/ko/D5/D5-U08-05_t9.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Great. Let's carry it together.",
+          "ko": "좋아요. 같이 옮겨요.",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-05_t10.mp3",
+            "ko": "audio/ko/D5/D5-U08-05_t10.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Thank you so much. Can I give you something?",
+          "ko": "정말 고마워요. 뭐라도 드릴까요?",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-05_t11.mp3",
+            "ko": "audio/ko/D5/D5-U08-05_t11.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "No need. Just enjoy it!",
+          "ko": "괜찮아요. 잘 써 주세요!",
+          "audio": {
+            "en": "audio/en/D5/D5-U08-05_t12.mp3",
+            "ko": "audio/ko/D5/D5-U08-05_t12.mp3"
+          }
+        }
+      ]
+    }
+  ]
+}

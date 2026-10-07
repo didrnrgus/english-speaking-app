@@ -1,0 +1,54 @@
+{
+  "unit": "S1-U09",
+  "version": 1,
+  "level": "S1",
+  "track": "speaking",
+  "title": "길 찾기",
+  "items": [
+    {
+      "id": "S1-U09-01",
+      "en": "Where's the exit?",
+      "ko": "출구가 어디예요?",
+      "audio": {
+        "en": "audio/en/S1/S1-U09-01.mp3",
+        "ko": "audio/ko/S1/S1-U09-01.mp3"
+      }
+    },
+    {
+      "id": "S1-U09-02",
+      "en": "Turn left.",
+      "ko": "왼쪽으로 도세요.",
+      "audio": {
+        "en": "audio/en/S1/S1-U09-02.mp3",
+        "ko": "audio/ko/S1/S1-U09-02.mp3"
+      }
+    },
+    {
+      "id": "S1-U09-03",
+      "en": "Go straight.",
+      "ko": "쭉 가세요.",
+      "audio": {
+        "en": "audio/en/S1/S1-U09-03.mp3",
+        "ko": "audio/ko/S1/S1-U09-03.mp3"
+      }
+    },
+    {
+      "id": "S1-U09-04",
+      "en": "Over there.",
+      "ko": "저쪽이에요.",
+      "audio": {
+        "en": "audio/en/S1/S1-U09-04.mp3",
+        "ko": "audio/ko/S1/S1-U09-04.mp3"
+      }
+    },
+    {
+      "id": "S1-U09-05",
+      "en": "Right here.",
+      "ko": "바로 여기예요.",
+      "audio": {
+        "en": "audio/en/S1/S1-U09-05.mp3",
+        "ko": "audio/ko/S1/S1-U09-05.mp3"
+      }
+    }
+  ]
+}

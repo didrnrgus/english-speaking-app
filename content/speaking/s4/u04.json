@@ -1,0 +1,54 @@
+{
+  "unit": "S4-U04",
+  "version": 1,
+  "level": "S4",
+  "track": "speaking",
+  "title": "문제 상황 설명하기",
+  "items": [
+    {
+      "id": "S4-U04-01",
+      "en": "My laptop suddenly stopped working. I think the battery is the problem, but I'm not sure.",
+      "ko": "노트북이 갑자기 작동을 멈췄어요. 배터리 문제 같은데 확실하지는 않아요.",
+      "audio": {
+        "en": "audio/en/S4/S4-U04-01.mp3",
+        "ko": "audio/ko/S4/S4-U04-01.mp3"
+      }
+    },
+    {
+      "id": "S4-U04-02",
+      "en": "I ordered a blue shirt online. But the one I received is green, and it's too small.",
+      "ko": "인터넷으로 파란 셔츠를 주문했어요. 그런데 받은 건 초록색이고 너무 작아요.",
+      "audio": {
+        "en": "audio/en/S4/S4-U04-02.mp3",
+        "ko": "audio/ko/S4/S4-U04-02.mp3"
+      }
+    },
+    {
+      "id": "S4-U04-03",
+      "en": "The air conditioner in my room is making a strange noise. Could someone come and check it?",
+      "ko": "제 방 에어컨에서 이상한 소리가 나요. 누가 와서 좀 봐 주실 수 있을까요?",
+      "audio": {
+        "en": "audio/en/S4/S4-U04-03.mp3",
+        "ko": "audio/ko/S4/S4-U04-03.mp3"
+      }
+    },
+    {
+      "id": "S4-U04-04",
+      "en": "I missed the last bus home. Is there a taxi stand near here?",
+      "ko": "집에 가는 막차를 놓쳤어요. 이 근처에 택시 승강장이 있나요?",
+      "audio": {
+        "en": "audio/en/S4/S4-U04-04.mp3",
+        "ko": "audio/ko/S4/S4-U04-04.mp3"
+      }
+    },
+    {
+      "id": "S4-U04-05",
+      "en": "I think I left my umbrella on the train. It's black with a wooden handle.",
+      "ko": "기차에 우산을 두고 내린 것 같아요. 손잡이가 나무로 된 검은 우산이에요.",
+      "audio": {
+        "en": "audio/en/S4/S4-U04-05.mp3",
+        "ko": "audio/ko/S4/S4-U04-05.mp3"
+      }
+    }
+  ]
+}

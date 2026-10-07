@@ -1,0 +1,219 @@
+{
+  "unit": "D2-U10",
+  "version": 1,
+  "level": "D2",
+  "track": "dialogue",
+  "title": "주말 이야기",
+  "items": [
+    {
+      "id": "D2-U10-01",
+      "topic": "주말 계획",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Any plans for the weekend?",
+          "ko": "주말에 계획 있어요?",
+          "audio": {
+            "en": "audio/en/D2/D2-U10-01_t1.mp3",
+            "ko": "audio/ko/D2/D2-U10-01_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I'm going camping.",
+          "ko": "캠핑 가요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U10-01_t2.mp3",
+            "ko": "audio/ko/D2/D2-U10-01_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "That sounds fun! Where?",
+          "ko": "재미있겠다! 어디로요?",
+          "audio": {
+            "en": "audio/en/D2/D2-U10-01_t3.mp3",
+            "ko": "audio/ko/D2/D2-U10-01_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Near a lake in Gapyeong.",
+          "ko": "가평에 있는 호수 근처요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U10-01_t4.mp3",
+            "ko": "audio/ko/D2/D2-U10-01_t4.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D2-U10-02",
+      "topic": "지난 주말",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "What did you do last weekend?",
+          "ko": "지난 주말에 뭐 했어요?",
+          "audio": {
+            "en": "audio/en/D2/D2-U10-02_t1.mp3",
+            "ko": "audio/ko/D2/D2-U10-02_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I just stayed home.",
+          "ko": "그냥 집에 있었어요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U10-02_t2.mp3",
+            "ko": "audio/ko/D2/D2-U10-02_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "That sounds relaxing.",
+          "ko": "편하게 쉬었겠네요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U10-02_t3.mp3",
+            "ko": "audio/ko/D2/D2-U10-02_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "It was. I slept a lot.",
+          "ko": "네. 잠을 많이 잤어요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U10-02_t4.mp3",
+            "ko": "audio/ko/D2/D2-U10-02_t4.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D2-U10-03",
+      "topic": "같이 놀기",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Are you free on Saturday?",
+          "ko": "토요일에 시간 있어요?",
+          "audio": {
+            "en": "audio/en/D2/D2-U10-03_t1.mp3",
+            "ko": "audio/ko/D2/D2-U10-03_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, why?",
+          "ko": "네, 왜요?",
+          "audio": {
+            "en": "audio/en/D2/D2-U10-03_t2.mp3",
+            "ko": "audio/ko/D2/D2-U10-03_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Let's go to a movie.",
+          "ko": "영화 보러 가요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U10-03_t3.mp3",
+            "ko": "audio/ko/D2/D2-U10-03_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Sure, I'd love to.",
+          "ko": "좋아요, 꼭 가고 싶어요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U10-03_t4.mp3",
+            "ko": "audio/ko/D2/D2-U10-03_t4.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D2-U10-04",
+      "topic": "바쁜 주말",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "How was your weekend?",
+          "ko": "주말 어땠어요?",
+          "audio": {
+            "en": "audio/en/D2/D2-U10-04_t1.mp3",
+            "ko": "audio/ko/D2/D2-U10-04_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Busy. I moved to a new place.",
+          "ko": "바빴어요. 이사했거든요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U10-04_t2.mp3",
+            "ko": "audio/ko/D2/D2-U10-04_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Wow! Do you like it?",
+          "ko": "와! 새집 마음에 들어요?",
+          "audio": {
+            "en": "audio/en/D2/D2-U10-04_t3.mp3",
+            "ko": "audio/ko/D2/D2-U10-04_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, it's much bigger.",
+          "ko": "네, 훨씬 넓어요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U10-04_t4.mp3",
+            "ko": "audio/ko/D2/D2-U10-04_t4.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D2-U10-05",
+      "topic": "일요일 브런치",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Let's have brunch on Sunday.",
+          "ko": "일요일에 브런치 먹어요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U10-05_t1.mp3",
+            "ko": "audio/ko/D2/D2-U10-05_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Good idea. What time?",
+          "ko": "좋아요. 몇 시에요?",
+          "audio": {
+            "en": "audio/en/D2/D2-U10-05_t2.mp3",
+            "ko": "audio/ko/D2/D2-U10-05_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "How about eleven?",
+          "ko": "11시 어때요?",
+          "audio": {
+            "en": "audio/en/D2/D2-U10-05_t3.mp3",
+            "ko": "audio/ko/D2/D2-U10-05_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Perfect. See you then.",
+          "ko": "딱 좋아요. 그때 봐요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U10-05_t4.mp3",
+            "ko": "audio/ko/D2/D2-U10-05_t4.mp3"
+          }
+        }
+      ]
+    }
+  ]
+}

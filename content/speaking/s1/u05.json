@@ -1,0 +1,54 @@
+{
+  "unit": "S1-U05",
+  "version": 1,
+  "level": "S1",
+  "track": "speaking",
+  "title": "기분 말하기",
+  "items": [
+    {
+      "id": "S1-U05-01",
+      "en": "I'm happy.",
+      "ko": "기뻐요.",
+      "audio": {
+        "en": "audio/en/S1/S1-U05-01.mp3",
+        "ko": "audio/ko/S1/S1-U05-01.mp3"
+      }
+    },
+    {
+      "id": "S1-U05-02",
+      "en": "I'm tired.",
+      "ko": "피곤해요.",
+      "audio": {
+        "en": "audio/en/S1/S1-U05-02.mp3",
+        "ko": "audio/ko/S1/S1-U05-02.mp3"
+      }
+    },
+    {
+      "id": "S1-U05-03",
+      "en": "I'm hungry.",
+      "ko": "배고파요.",
+      "audio": {
+        "en": "audio/en/S1/S1-U05-03.mp3",
+        "ko": "audio/ko/S1/S1-U05-03.mp3"
+      }
+    },
+    {
+      "id": "S1-U05-04",
+      "en": "I'm cold.",
+      "ko": "추워요.",
+      "audio": {
+        "en": "audio/en/S1/S1-U05-04.mp3",
+        "ko": "audio/ko/S1/S1-U05-04.mp3"
+      }
+    },
+    {
+      "id": "S1-U05-05",
+      "en": "I'm so excited!",
+      "ko": "정말 신나요!",
+      "audio": {
+        "en": "audio/en/S1/S1-U05-05.mp3",
+        "ko": "audio/ko/S1/S1-U05-05.mp3"
+      }
+    }
+  ]
+}

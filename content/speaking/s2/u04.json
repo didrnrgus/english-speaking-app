@@ -1,0 +1,54 @@
+{
+  "unit": "S2-U04",
+  "version": 1,
+  "level": "S2",
+  "track": "speaking",
+  "title": "취미",
+  "items": [
+    {
+      "id": "S2-U04-01",
+      "en": "I like playing soccer.",
+      "ko": "저는 축구 하는 걸 좋아해요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U04-01.mp3",
+        "ko": "audio/ko/S2/S2-U04-01.mp3"
+      }
+    },
+    {
+      "id": "S2-U04-02",
+      "en": "I often watch movies.",
+      "ko": "저는 영화를 자주 봐요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U04-02.mp3",
+        "ko": "audio/ko/S2/S2-U04-02.mp3"
+      }
+    },
+    {
+      "id": "S2-U04-03",
+      "en": "I enjoy cooking on weekends.",
+      "ko": "저는 주말에 요리하는 걸 즐겨요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U04-03.mp3",
+        "ko": "audio/ko/S2/S2-U04-03.mp3"
+      }
+    },
+    {
+      "id": "S2-U04-04",
+      "en": "I play the guitar.",
+      "ko": "저는 기타를 쳐요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U04-04.mp3",
+        "ko": "audio/ko/S2/S2-U04-04.mp3"
+      }
+    },
+    {
+      "id": "S2-U04-05",
+      "en": "Reading is my favorite hobby.",
+      "ko": "독서가 제일 좋아하는 취미예요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U04-05.mp3",
+        "ko": "audio/ko/S2/S2-U04-05.mp3"
+      }
+    }
+  ]
+}

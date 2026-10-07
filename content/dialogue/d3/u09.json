@@ -1,0 +1,309 @@
+{
+  "unit": "D3-U09",
+  "version": 1,
+  "level": "D3",
+  "track": "dialogue",
+  "title": "초대와 파티",
+  "items": [
+    {
+      "id": "D3-U09-01",
+      "topic": "생일 파티 초대",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "I'm having a birthday party on Saturday. Can you come?",
+          "ko": "토요일에 생일 파티 하는데, 올 수 있어요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U09-01_t1.mp3",
+            "ko": "audio/ko/D3/D3-U09-01_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Of course! What time?",
+          "ko": "물론이죠! 몇 시에요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U09-01_t2.mp3",
+            "ko": "audio/ko/D3/D3-U09-01_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "At six, at my place.",
+          "ko": "6시에 우리 집에서요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U09-01_t3.mp3",
+            "ko": "audio/ko/D3/D3-U09-01_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Should I bring anything?",
+          "ko": "뭐 가져갈까요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U09-01_t4.mp3",
+            "ko": "audio/ko/D3/D3-U09-01_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Just bring yourself!",
+          "ko": "그냥 몸만 와요!",
+          "audio": {
+            "en": "audio/en/D3/D3-U09-01_t5.mp3",
+            "ko": "audio/ko/D3/D3-U09-01_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Okay. I can't wait.",
+          "ko": "알겠어요. 너무 기대돼요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U09-01_t6.mp3",
+            "ko": "audio/ko/D3/D3-U09-01_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U09-02",
+      "topic": "초대 거절",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "We're having a barbecue on Sunday. Want to join?",
+          "ko": "일요일에 바비큐 하는데 같이 할래요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U09-02_t1.mp3",
+            "ko": "audio/ko/D3/D3-U09-02_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I'd love to, but I have plans.",
+          "ko": "정말 가고 싶은데 약속이 있어요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U09-02_t2.mp3",
+            "ko": "audio/ko/D3/D3-U09-02_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "That's too bad.",
+          "ko": "아쉽네요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U09-02_t3.mp3",
+            "ko": "audio/ko/D3/D3-U09-02_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Maybe next time?",
+          "ko": "다음에 꼭요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U09-02_t4.mp3",
+            "ko": "audio/ko/D3/D3-U09-02_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Sure. I'll let you know.",
+          "ko": "그래요. 다음에 알려 줄게요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U09-02_t5.mp3",
+            "ko": "audio/ko/D3/D3-U09-02_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Thanks for inviting me.",
+          "ko": "초대해 줘서 고마워요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U09-02_t6.mp3",
+            "ko": "audio/ko/D3/D3-U09-02_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U09-03",
+      "topic": "집들이",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Welcome! Come on in.",
+          "ko": "어서 와요! 들어와요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U09-03_t1.mp3",
+            "ko": "audio/ko/D3/D3-U09-03_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Thanks for inviting me. This is for you.",
+          "ko": "초대해 줘서 고마워요. 이거 선물이에요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U09-03_t2.mp3",
+            "ko": "audio/ko/D3/D3-U09-03_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Oh, you didn't have to! Thank you.",
+          "ko": "어머, 안 그래도 되는데! 고마워요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U09-03_t3.mp3",
+            "ko": "audio/ko/D3/D3-U09-03_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Your new place is really nice.",
+          "ko": "새집 정말 좋네요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U09-03_t4.mp3",
+            "ko": "audio/ko/D3/D3-U09-03_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Thanks. Let me show you around.",
+          "ko": "고마워요. 구경시켜 줄게요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U09-03_t5.mp3",
+            "ko": "audio/ko/D3/D3-U09-03_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I love the big windows.",
+          "ko": "큰 창문이 정말 마음에 들어요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U09-03_t6.mp3",
+            "ko": "audio/ko/D3/D3-U09-03_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U09-04",
+      "topic": "파티에서 처음 만남",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Hi, I don't think we've met. I'm Sam.",
+          "ko": "안녕하세요, 처음 뵙는 것 같네요. 샘이에요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U09-04_t1.mp3",
+            "ko": "audio/ko/D3/D3-U09-04_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Hi, Sam. I'm Hana. I'm Jenny's coworker.",
+          "ko": "안녕하세요, 샘. 하나예요. 제니 회사 동료예요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U09-04_t2.mp3",
+            "ko": "audio/ko/D3/D3-U09-04_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Oh, nice. I'm Jenny's college friend.",
+          "ko": "아, 그렇군요. 저는 제니 대학 친구예요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U09-04_t3.mp3",
+            "ko": "audio/ko/D3/D3-U09-04_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "How long have you known her?",
+          "ko": "제니를 안 지 얼마나 됐어요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U09-04_t4.mp3",
+            "ko": "audio/ko/D3/D3-U09-04_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "About ten years.",
+          "ko": "10년쯤이요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U09-04_t5.mp3",
+            "ko": "audio/ko/D3/D3-U09-04_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Wow, that's a long time!",
+          "ko": "와, 오래됐네요!",
+          "audio": {
+            "en": "audio/en/D3/D3-U09-04_t6.mp3",
+            "ko": "audio/ko/D3/D3-U09-04_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U09-05",
+      "topic": "파티 끝나고",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Thank you for coming tonight.",
+          "ko": "오늘 밤 와 줘서 고마워요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U09-05_t1.mp3",
+            "ko": "audio/ko/D3/D3-U09-05_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Thank you for having me. I had a great time.",
+          "ko": "초대해 줘서 고마워요. 정말 즐거웠어요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U09-05_t2.mp3",
+            "ko": "audio/ko/D3/D3-U09-05_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Let me call you a taxi.",
+          "ko": "택시 불러 줄게요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U09-05_t3.mp3",
+            "ko": "audio/ko/D3/D3-U09-05_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "That's okay. I'll take the subway.",
+          "ko": "괜찮아요. 지하철 탈게요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U09-05_t4.mp3",
+            "ko": "audio/ko/D3/D3-U09-05_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Text me when you get home.",
+          "ko": "집에 도착하면 문자해요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U09-05_t5.mp3",
+            "ko": "audio/ko/D3/D3-U09-05_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I will. Good night!",
+          "ko": "그럴게요. 잘 자요!",
+          "audio": {
+            "en": "audio/en/D3/D3-U09-05_t6.mp3",
+            "ko": "audio/ko/D3/D3-U09-05_t6.mp3"
+          }
+        }
+      ]
+    }
+  ]
+}

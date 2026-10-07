@@ -1,0 +1,54 @@
+{
+  "unit": "S3-U04",
+  "version": 1,
+  "level": "S3",
+  "track": "speaking",
+  "title": "음식과 요리",
+  "items": [
+    {
+      "id": "S3-U04-01",
+      "en": "I make kimchi fried rice when I'm really hungry.",
+      "ko": "저는 정말 배고플 때 김치볶음밥을 만들어요.",
+      "audio": {
+        "en": "audio/en/S3/S3-U04-01.mp3",
+        "ko": "audio/ko/S3/S3-U04-01.mp3"
+      }
+    },
+    {
+      "id": "S3-U04-02",
+      "en": "This soup tastes better with a little more salt.",
+      "ko": "이 국은 소금을 조금 더 넣으면 더 맛있어요.",
+      "audio": {
+        "en": "audio/en/S3/S3-U04-02.mp3",
+        "ko": "audio/ko/S3/S3-U04-02.mp3"
+      }
+    },
+    {
+      "id": "S3-U04-03",
+      "en": "I'm trying to eat more vegetables these days.",
+      "ko": "요즘 채소를 더 많이 먹으려고 노력하고 있어요.",
+      "audio": {
+        "en": "audio/en/S3/S3-U04-03.mp3",
+        "ko": "audio/ko/S3/S3-U04-03.mp3"
+      }
+    },
+    {
+      "id": "S3-U04-04",
+      "en": "My mother's cooking is the best in the world.",
+      "ko": "우리 엄마 요리가 세상에서 제일 맛있어요.",
+      "audio": {
+        "en": "audio/en/S3/S3-U04-04.mp3",
+        "ko": "audio/ko/S3/S3-U04-04.mp3"
+      }
+    },
+    {
+      "id": "S3-U04-05",
+      "en": "Let's order some chicken and watch a movie tonight.",
+      "ko": "오늘 밤에 치킨 시켜 먹고 영화 보자.",
+      "audio": {
+        "en": "audio/en/S3/S3-U04-05.mp3",
+        "ko": "audio/ko/S3/S3-U04-05.mp3"
+      }
+    }
+  ]
+}

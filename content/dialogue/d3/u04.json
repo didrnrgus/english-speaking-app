@@ -1,0 +1,309 @@
+{
+  "unit": "D3-U04",
+  "version": 1,
+  "level": "D3",
+  "track": "dialogue",
+  "title": "옷 가게",
+  "items": [
+    {
+      "id": "D3-U04-01",
+      "topic": "사이즈 찾기",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Excuse me. Do you have this jacket in a medium?",
+          "ko": "저기요. 이 재킷 미디엄 있어요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U04-01_t1.mp3",
+            "ko": "audio/ko/D3/D3-U04-01_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Let me check. What color do you want?",
+          "ko": "확인해 볼게요. 어떤 색 원하세요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U04-01_t2.mp3",
+            "ko": "audio/ko/D3/D3-U04-01_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Navy, please.",
+          "ko": "남색이요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U04-01_t3.mp3",
+            "ko": "audio/ko/D3/D3-U04-01_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Here you are. The fitting room is over there.",
+          "ko": "여기 있습니다. 탈의실은 저쪽이에요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U04-01_t4.mp3",
+            "ko": "audio/ko/D3/D3-U04-01_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Thanks. I'll try it on.",
+          "ko": "고마워요. 입어 볼게요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U04-01_t5.mp3",
+            "ko": "audio/ko/D3/D3-U04-01_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Take your time.",
+          "ko": "천천히 보세요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U04-01_t6.mp3",
+            "ko": "audio/ko/D3/D3-U04-01_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U04-02",
+      "topic": "입어 본 후",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "How does it fit?",
+          "ko": "잘 맞으세요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U04-02_t1.mp3",
+            "ko": "audio/ko/D3/D3-U04-02_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "It's a little tight around the shoulders.",
+          "ko": "어깨가 조금 껴요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U04-02_t2.mp3",
+            "ko": "audio/ko/D3/D3-U04-02_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Would you like to try a large?",
+          "ko": "라지 사이즈 입어 보시겠어요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U04-02_t3.mp3",
+            "ko": "audio/ko/D3/D3-U04-02_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, please.",
+          "ko": "네, 주세요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U04-02_t4.mp3",
+            "ko": "audio/ko/D3/D3-U04-02_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "How is this one?",
+          "ko": "이건 어떠세요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U04-02_t5.mp3",
+            "ko": "audio/ko/D3/D3-U04-02_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Much better. I'll take it.",
+          "ko": "훨씬 나아요. 이걸로 할게요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U04-02_t6.mp3",
+            "ko": "audio/ko/D3/D3-U04-02_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U04-03",
+      "topic": "할인",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Is this shirt on sale?",
+          "ko": "이 셔츠 세일하나요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U04-03_t1.mp3",
+            "ko": "audio/ko/D3/D3-U04-03_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, it's thirty percent off today.",
+          "ko": "네, 오늘 30퍼센트 할인이에요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U04-03_t2.mp3",
+            "ko": "audio/ko/D3/D3-U04-03_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Great! What about these pants?",
+          "ko": "좋네요! 이 바지는요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U04-03_t3.mp3",
+            "ko": "audio/ko/D3/D3-U04-03_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Sorry, those are new, so there's no discount.",
+          "ko": "죄송하지만 그건 신상품이라 할인이 없어요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U04-03_t4.mp3",
+            "ko": "audio/ko/D3/D3-U04-03_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "I see. I'll just take the shirt, then.",
+          "ko": "그렇군요. 그럼 셔츠만 살게요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U04-03_t5.mp3",
+            "ko": "audio/ko/D3/D3-U04-03_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Sure. I'll ring it up for you.",
+          "ko": "네. 계산해 드릴게요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U04-03_t6.mp3",
+            "ko": "audio/ko/D3/D3-U04-03_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U04-04",
+      "topic": "선물 포장",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "I'm looking for a scarf for my mother.",
+          "ko": "어머니께 드릴 스카프를 찾고 있어요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U04-04_t1.mp3",
+            "ko": "audio/ko/D3/D3-U04-04_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "How about this silk one? It's very popular.",
+          "ko": "이 실크 스카프는 어떠세요? 아주 인기 있어요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U04-04_t2.mp3",
+            "ko": "audio/ko/D3/D3-U04-04_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "It's beautiful. How much is it?",
+          "ko": "예쁘네요. 얼마예요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U04-04_t3.mp3",
+            "ko": "audio/ko/D3/D3-U04-04_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "It's forty-five thousand won.",
+          "ko": "4만 5천 원이에요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U04-04_t4.mp3",
+            "ko": "audio/ko/D3/D3-U04-04_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "I'll take it. Can you gift-wrap it?",
+          "ko": "이걸로 할게요. 선물 포장해 주실 수 있어요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U04-04_t5.mp3",
+            "ko": "audio/ko/D3/D3-U04-04_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Of course. It'll take just a minute.",
+          "ko": "물론이죠. 금방 해 드릴게요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U04-04_t6.mp3",
+            "ko": "audio/ko/D3/D3-U04-04_t6.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3-U04-05",
+      "topic": "다른 색",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Do you have these shoes in white?",
+          "ko": "이 신발 흰색 있어요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U04-05_t1.mp3",
+            "ko": "audio/ko/D3/D3-U04-05_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Sorry, we only have black and brown.",
+          "ko": "죄송해요, 검은색이랑 갈색만 있어요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U04-05_t2.mp3",
+            "ko": "audio/ko/D3/D3-U04-05_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Will you get white ones soon?",
+          "ko": "흰색은 곧 들어오나요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U04-05_t3.mp3",
+            "ko": "audio/ko/D3/D3-U04-05_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, next week.",
+          "ko": "네, 다음 주에요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U04-05_t4.mp3",
+            "ko": "audio/ko/D3/D3-U04-05_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Can you call me when they arrive?",
+          "ko": "들어오면 전화 주실 수 있어요?",
+          "audio": {
+            "en": "audio/en/D3/D3-U04-05_t5.mp3",
+            "ko": "audio/ko/D3/D3-U04-05_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Sure. Please leave your number here.",
+          "ko": "그럼요. 여기 번호 남겨 주세요.",
+          "audio": {
+            "en": "audio/en/D3/D3-U04-05_t6.mp3",
+            "ko": "audio/ko/D3/D3-U04-05_t6.mp3"
+          }
+        }
+      ]
+    }
+  ]
+}

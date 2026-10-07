@@ -1,0 +1,54 @@
+{
+  "unit": "S5-U05",
+  "version": 1,
+  "level": "S5",
+  "track": "speaking",
+  "title": "기억에 남는 하루",
+  "items": [
+    {
+      "id": "S5-U05-01",
+      "en": "I will never forget my first day at university. I was very nervous because I didn't know anyone there. The campus was huge, and I got lost trying to find my first class. I was ten minutes late, and everyone looked at me when I opened the door. I wanted to disappear. But after class, a girl sitting next to me said hello and asked if I wanted to have lunch. Her name was Sora, and she became my best friend. That bad morning turned into one of the best days of my life.",
+      "ko": "저는 대학교 첫날을 절대 잊지 못할 거예요. 아는 사람이 아무도 없어서 아주 긴장했어요. 캠퍼스가 엄청 넓어서 첫 수업 강의실을 찾다가 길을 잃었어요. 10분 늦었는데, 제가 문을 열자 모두가 저를 쳐다봤어요. 사라지고 싶었어요. 그런데 수업이 끝나고 옆자리 여자아이가 인사하며 같이 점심 먹겠냐고 물었어요. 그 아이의 이름은 소라였고, 제 가장 친한 친구가 됐어요. 그 끔찍한 아침이 제 인생 최고의 날 중 하루가 됐어요.",
+      "audio": {
+        "en": "audio/en/S5/S5-U05-01.mp3",
+        "ko": "audio/ko/S5/S5-U05-01.mp3"
+      }
+    },
+    {
+      "id": "S5-U05-02",
+      "en": "One day I remember well is the day I saw snow for the first time. I grew up in a warm city, so snow was something I had only seen in movies. When I was twenty, I traveled to the mountains in winter. In the morning, I opened the curtains, and everything outside was white. I ran outside without a jacket and touched the snow with my hands. It was so cold, but I was too excited to care. I built a small snowman and took a hundred pictures. I felt like a child again.",
+      "ko": "제가 잘 기억하는 날은 처음으로 눈을 본 날이에요. 저는 따뜻한 도시에서 자라서 눈은 영화에서만 본 거였어요. 스무 살 때 겨울에 산으로 여행을 갔어요. 아침에 커튼을 열었더니 밖이 온통 하얬어요. 저는 재킷도 안 입고 밖으로 뛰어나가 손으로 눈을 만졌어요. 정말 차가웠지만 너무 신나서 신경 쓰지 않았어요. 작은 눈사람을 만들고 사진을 백 장은 찍었어요. 다시 어린아이가 된 기분이었어요.",
+      "audio": {
+        "en": "audio/en/S5/S5-U05-02.mp3",
+        "ko": "audio/ko/S5/S5-U05-02.mp3"
+      }
+    },
+    {
+      "id": "S5-U05-03",
+      "en": "The most memorable day of my life was when my nephew was born. I was at work when my sister called me from the hospital. I left the office right away and took a taxi. When I arrived, I saw a tiny baby sleeping in my sister's arms. He was so small and perfect. My sister let me hold him, and I was afraid I might drop him. He opened his eyes for a moment and held my finger. At that moment, I felt so much love. Now he is five, and we are best friends.",
+      "ko": "제 인생에서 가장 기억에 남는 날은 조카가 태어난 날이에요. 회사에 있는데 언니가 병원에서 전화를 했어요. 저는 바로 회사를 나와 택시를 탔어요. 도착했더니 아주 작은 아기가 언니 품에서 자고 있었어요. 너무 작고 완벽했어요. 언니가 아기를 안아 보게 해 줬는데, 떨어뜨릴까 봐 겁이 났어요. 아기가 잠깐 눈을 뜨더니 제 손가락을 잡았어요. 그 순간 사랑이 넘쳐흘렀어요. 이제 조카는 다섯 살이고, 우리는 단짝이에요.",
+      "audio": {
+        "en": "audio/en/S5/S5-U05-03.mp3",
+        "ko": "audio/ko/S5/S5-U05-03.mp3"
+      }
+    },
+    {
+      "id": "S5-U05-04",
+      "en": "I remember the day I ran my first marathon. I trained for six months, running almost every morning before work. On the day of the race, it was raining, and the wind was strong. After thirty kilometers, my legs hurt so much that I wanted to stop. But people on the street were cheering for every runner. A little boy shouted my name from my shirt and gave me a high five. That gave me the energy to continue. When I crossed the finish line, I cried. It took five hours, but I did it.",
+      "ko": "처음으로 마라톤을 완주한 날을 기억해요. 저는 6개월 동안 거의 매일 아침 출근 전에 달리며 훈련했어요. 경기 당일에는 비가 오고 바람도 강했어요. 30킬로미터를 지나자 다리가 너무 아파서 멈추고 싶었어요. 하지만 길가의 사람들이 모든 주자를 응원하고 있었어요. 한 어린 남자아이가 제 셔츠에 적힌 이름을 외치며 하이파이브를 해 줬어요. 그 덕분에 계속 달릴 힘이 생겼어요. 결승선을 통과했을 때 저는 울었어요. 다섯 시간이 걸렸지만 해냈어요.",
+      "audio": {
+        "en": "audio/en/S5/S5-U05-04.mp3",
+        "ko": "audio/ko/S5/S5-U05-04.mp3"
+      }
+    },
+    {
+      "id": "S5-U05-05",
+      "en": "Last year, I had a really unlucky day that I can laugh about now. In the morning, my alarm didn't ring, so I woke up late. I ran to the bus stop, but the bus left right in front of me. When I finally got to the office, I realized I had left my laptop at home. Then, at lunch, I spilled coffee all over my white shirt. On the way home, it started raining, and I didn't have an umbrella. At home, I just laughed. Some days are like that, and that's okay.",
+      "ko": "작년에 정말 운 나쁜 날이 있었는데, 지금은 웃으며 이야기할 수 있어요. 아침에 알람이 안 울려서 늦게 일어났어요. 버스 정류장으로 뛰어갔지만 버스가 바로 눈앞에서 떠났어요. 겨우 회사에 도착했더니 노트북을 집에 두고 온 걸 알았어요. 그러고 나서 점심때는 하얀 셔츠에 커피를 쏟았어요. 집에 가는 길에는 비가 오기 시작했는데 우산이 없었어요. 집에 와서 그냥 웃었어요. 그런 날도 있는 거고, 그래도 괜찮아요.",
+      "audio": {
+        "en": "audio/en/S5/S5-U05-05.mp3",
+        "ko": "audio/ko/S5/S5-U05-05.mp3"
+      }
+    }
+  ]
+}

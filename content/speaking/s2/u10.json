@@ -1,0 +1,54 @@
+{
+  "unit": "S2-U10",
+  "version": 1,
+  "level": "S2",
+  "track": "speaking",
+  "title": "건강",
+  "items": [
+    {
+      "id": "S2-U10-01",
+      "en": "I have a headache.",
+      "ko": "머리가 아파요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U10-01.mp3",
+        "ko": "audio/ko/S2/S2-U10-01.mp3"
+      }
+    },
+    {
+      "id": "S2-U10-02",
+      "en": "I have a bad cold.",
+      "ko": "감기에 심하게 걸렸어요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U10-02.mp3",
+        "ko": "audio/ko/S2/S2-U10-02.mp3"
+      }
+    },
+    {
+      "id": "S2-U10-03",
+      "en": "My stomach hurts a lot.",
+      "ko": "배가 많이 아파요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U10-03.mp3",
+        "ko": "audio/ko/S2/S2-U10-03.mp3"
+      }
+    },
+    {
+      "id": "S2-U10-04",
+      "en": "I need some medicine.",
+      "ko": "약이 좀 필요해요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U10-04.mp3",
+        "ko": "audio/ko/S2/S2-U10-04.mp3"
+      }
+    },
+    {
+      "id": "S2-U10-05",
+      "en": "I feel much better now.",
+      "ko": "이제 훨씬 나아졌어요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U10-05.mp3",
+        "ko": "audio/ko/S2/S2-U10-05.mp3"
+      }
+    }
+  ]
+}

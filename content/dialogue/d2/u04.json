@@ -1,0 +1,219 @@
+{
+  "unit": "D2-U04",
+  "version": 1,
+  "level": "D2",
+  "track": "dialogue",
+  "title": "날씨 이야기",
+  "items": [
+    {
+      "id": "D2-U04-01",
+      "topic": "좋은 날씨",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Nice weather today!",
+          "ko": "오늘 날씨 좋네요!",
+          "audio": {
+            "en": "audio/en/D2/D2-U04-01_t1.mp3",
+            "ko": "audio/ko/D2/D2-U04-01_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, it's perfect.",
+          "ko": "네, 완벽해요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U04-01_t2.mp3",
+            "ko": "audio/ko/D2/D2-U04-01_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Let's eat lunch outside.",
+          "ko": "점심은 밖에서 먹어요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U04-01_t3.mp3",
+            "ko": "audio/ko/D2/D2-U04-01_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Good idea!",
+          "ko": "좋은 생각이에요!",
+          "audio": {
+            "en": "audio/en/D2/D2-U04-01_t4.mp3",
+            "ko": "audio/ko/D2/D2-U04-01_t4.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D2-U04-02",
+      "topic": "비 소식",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Is it going to rain?",
+          "ko": "비 올까요?",
+          "audio": {
+            "en": "audio/en/D2/D2-U04-02_t1.mp3",
+            "ko": "audio/ko/D2/D2-U04-02_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, this afternoon.",
+          "ko": "네, 오늘 오후에요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U04-02_t2.mp3",
+            "ko": "audio/ko/D2/D2-U04-02_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "I didn't bring an umbrella.",
+          "ko": "우산을 안 가져왔어요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U04-02_t3.mp3",
+            "ko": "audio/ko/D2/D2-U04-02_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "You can use mine.",
+          "ko": "제 거 쓰세요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U04-02_t4.mp3",
+            "ko": "audio/ko/D2/D2-U04-02_t4.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D2-U04-03",
+      "topic": "추운 날",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "It's freezing today.",
+          "ko": "오늘 너무 추워요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U04-03_t1.mp3",
+            "ko": "audio/ko/D2/D2-U04-03_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I know. It's minus ten.",
+          "ko": "그러게요. 영하 10도래요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U04-03_t2.mp3",
+            "ko": "audio/ko/D2/D2-U04-03_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "I need a warmer coat.",
+          "ko": "더 따뜻한 코트가 필요해요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U04-03_t3.mp3",
+            "ko": "audio/ko/D2/D2-U04-03_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Me too.",
+          "ko": "저도요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U04-03_t4.mp3",
+            "ko": "audio/ko/D2/D2-U04-03_t4.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D2-U04-04",
+      "topic": "더운 날",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "It's so hot!",
+          "ko": "너무 더워요!",
+          "audio": {
+            "en": "audio/en/D2/D2-U04-04_t1.mp3",
+            "ko": "audio/ko/D2/D2-U04-04_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Let's get some ice cream.",
+          "ko": "아이스크림 먹으러 가요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U04-04_t2.mp3",
+            "ko": "audio/ko/D2/D2-U04-04_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Sounds great.",
+          "ko": "좋아요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U04-04_t3.mp3",
+            "ko": "audio/ko/D2/D2-U04-04_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I know a good place.",
+          "ko": "제가 좋은 데 알아요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U04-04_t4.mp3",
+            "ko": "audio/ko/D2/D2-U04-04_t4.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D2-U04-05",
+      "topic": "일기 예보",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "What's the weather like tomorrow?",
+          "ko": "내일 날씨 어때요?",
+          "audio": {
+            "en": "audio/en/D2/D2-U04-05_t1.mp3",
+            "ko": "audio/ko/D2/D2-U04-05_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "It'll be sunny.",
+          "ko": "맑을 거래요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U04-05_t2.mp3",
+            "ko": "audio/ko/D2/D2-U04-05_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Great! Let's go hiking.",
+          "ko": "좋아요! 등산 가요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U04-05_t3.mp3",
+            "ko": "audio/ko/D2/D2-U04-05_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Okay, let's meet early.",
+          "ko": "좋아요, 일찍 만나요.",
+          "audio": {
+            "en": "audio/en/D2/D2-U04-05_t4.mp3",
+            "ko": "audio/ko/D2/D2-U04-05_t4.mp3"
+          }
+        }
+      ]
+    }
+  ]
+}

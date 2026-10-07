@@ -1,0 +1,54 @@
+{
+  "unit": "S5-U03",
+  "version": 1,
+  "level": "S5",
+  "track": "speaking",
+  "title": "우리 동네 소개",
+  "items": [
+    {
+      "id": "S5-U03-01",
+      "en": "I live in a quiet neighborhood on the edge of the city. There are many old houses and small shops on my street. In the morning, you can smell fresh bread from the bakery on the corner. There is also a small park with a pond, and many people walk their dogs there. The best thing about my neighborhood is the people. The man at the fruit store always remembers my name and gives me extra apples. It's not a fancy place, but it feels like home. I don't want to move anywhere else.",
+      "ko": "저는 도시 외곽의 조용한 동네에 살아요. 우리 거리에는 오래된 집과 작은 가게가 많아요. 아침이면 모퉁이 빵집에서 갓 구운 빵 냄새가 나요. 연못이 있는 작은 공원도 있는데, 많은 사람들이 거기서 개를 산책시켜요. 우리 동네의 가장 좋은 점은 사람들이에요. 과일 가게 아저씨는 항상 제 이름을 기억하고 사과를 더 얹어 주세요. 화려한 곳은 아니지만 집처럼 편안해요. 다른 곳으로 이사 가고 싶지 않아요.",
+      "audio": {
+        "en": "audio/en/S5/S5-U03-01.mp3",
+        "ko": "audio/ko/S5/S5-U03-01.mp3"
+      }
+    },
+    {
+      "id": "S5-U03-02",
+      "en": "My neighborhood is very busy and full of energy. I live near a big university, so there are always lots of young people around. On my street, there are many cafes, cheap restaurants, and clothing stores. At night, the streets are bright and noisy until very late. Sometimes it's hard to sleep, but I like the lively atmosphere. My favorite spot is a small bookstore that also sells coffee. I often go there after work to read and relax. If you like a busy life, you would enjoy living here.",
+      "ko": "우리 동네는 아주 붐비고 활기가 넘쳐요. 큰 대학교 근처에 살아서 주변에 항상 젊은 사람들이 많아요. 우리 거리에는 카페, 싼 식당, 옷 가게가 많아요. 밤에는 아주 늦게까지 거리가 밝고 시끄러워요. 가끔 잠들기 힘들 때도 있지만 저는 활기찬 분위기가 좋아요. 제가 제일 좋아하는 곳은 커피도 파는 작은 서점이에요. 퇴근 후에 자주 가서 책을 읽으며 쉬어요. 바쁜 생활을 좋아한다면 여기 사는 걸 좋아할 거예요.",
+      "audio": {
+        "en": "audio/en/S5/S5-U03-02.mp3",
+        "ko": "audio/ko/S5/S5-U03-02.mp3"
+      }
+    },
+    {
+      "id": "S5-U03-03",
+      "en": "I live in a small town by the sea. From my window, I can see fishing boats coming back to the harbor every morning. There is a fish market near the beach, and the seafood there is very fresh and cheap. In summer, many tourists come to swim and enjoy the beach. In winter, the town becomes very quiet, and only local people stay. I like winter here more because I can walk along the beach alone and listen to the waves. Living by the sea makes me feel calm and free.",
+      "ko": "저는 바닷가의 작은 마을에 살아요. 창문으로 매일 아침 고깃배들이 항구로 돌아오는 게 보여요. 해변 근처에 수산 시장이 있는데, 거기 해산물은 아주 싱싱하고 싸요. 여름에는 많은 관광객이 수영하고 해변을 즐기러 와요. 겨울에는 마을이 아주 조용해지고 동네 사람들만 남아요. 저는 혼자 해변을 걸으며 파도 소리를 들을 수 있어서 이곳의 겨울이 더 좋아요. 바닷가에 살면 마음이 차분하고 자유로워져요.",
+      "audio": {
+        "en": "audio/en/S5/S5-U03-03.mp3",
+        "ko": "audio/ko/S5/S5-U03-03.mp3"
+      }
+    },
+    {
+      "id": "S5-U03-04",
+      "en": "Let me tell you about the traditional market in my neighborhood. It's about fifty years old, and it's open every day except Monday. You can buy almost anything there, from vegetables and meat to clothes and kitchen tools. My favorite part is the food alley. There, you can eat hot pancakes, noodles, and rice cakes at very low prices. The sellers are loud, but they are also friendly and generous. On weekends, I go there with my mother to buy food for the week. The market is the heart of my neighborhood.",
+      "ko": "우리 동네 전통 시장에 대해 이야기할게요. 생긴 지 50년쯤 됐고 월요일만 빼고 매일 열어요. 채소와 고기부터 옷과 주방용품까지 거의 모든 걸 살 수 있어요. 제가 제일 좋아하는 곳은 먹자골목이에요. 거기서는 따끈한 전, 국수, 떡을 아주 싼 값에 먹을 수 있어요. 상인들은 목소리가 크지만 친절하고 인심이 좋아요. 주말에는 엄마와 함께 거기 가서 일주일 동안 먹을 음식을 사요. 시장은 우리 동네의 심장이에요.",
+      "audio": {
+        "en": "audio/en/S5/S5-U03-04.mp3",
+        "ko": "audio/ko/S5/S5-U03-04.mp3"
+      }
+    },
+    {
+      "id": "S5-U03-05",
+      "en": "My neighborhood has changed a lot over the last ten years. When I was in elementary school, there were many empty fields and old buildings. Now there are tall apartments, a big shopping mall, and a new subway station. Life is much more convenient than before. I can get to downtown in twenty minutes. However, I sometimes miss the old days. The small playground where I played with my friends is gone now. There is a parking lot in its place. Change is good, but I hope we don't lose everything from the past.",
+      "ko": "우리 동네는 지난 10년 동안 많이 변했어요. 제가 초등학생이었을 때는 빈 들판과 오래된 건물이 많았어요. 지금은 높은 아파트, 큰 쇼핑몰, 새 지하철역이 생겼어요. 생활은 예전보다 훨씬 편리해졌어요. 시내까지 20분이면 갈 수 있어요. 하지만 가끔 옛날이 그리워요. 친구들과 놀던 작은 놀이터는 이제 없어졌어요. 그 자리에는 주차장이 들어섰어요. 변화는 좋지만, 과거의 모든 걸 잃지는 않았으면 좋겠어요.",
+      "audio": {
+        "en": "audio/en/S5/S5-U03-05.mp3",
+        "ko": "audio/ko/S5/S5-U03-05.mp3"
+      }
+    }
+  ]
+}

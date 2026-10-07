@@ -1,0 +1,54 @@
+{
+  "unit": "S1-U06",
+  "version": 1,
+  "level": "S1",
+  "track": "speaking",
+  "title": "맞장구",
+  "items": [
+    {
+      "id": "S1-U06-01",
+      "en": "Really?",
+      "ko": "정말요?",
+      "audio": {
+        "en": "audio/en/S1/S1-U06-01.mp3",
+        "ko": "audio/ko/S1/S1-U06-01.mp3"
+      }
+    },
+    {
+      "id": "S1-U06-02",
+      "en": "Me too.",
+      "ko": "저도요.",
+      "audio": {
+        "en": "audio/en/S1/S1-U06-02.mp3",
+        "ko": "audio/ko/S1/S1-U06-02.mp3"
+      }
+    },
+    {
+      "id": "S1-U06-03",
+      "en": "That's great!",
+      "ko": "잘됐네요!",
+      "audio": {
+        "en": "audio/en/S1/S1-U06-03.mp3",
+        "ko": "audio/ko/S1/S1-U06-03.mp3"
+      }
+    },
+    {
+      "id": "S1-U06-04",
+      "en": "Good idea.",
+      "ko": "좋은 생각이에요.",
+      "audio": {
+        "en": "audio/en/S1/S1-U06-04.mp3",
+        "ko": "audio/ko/S1/S1-U06-04.mp3"
+      }
+    },
+    {
+      "id": "S1-U06-05",
+      "en": "I see.",
+      "ko": "그렇군요.",
+      "audio": {
+        "en": "audio/en/S1/S1-U06-05.mp3",
+        "ko": "audio/ko/S1/S1-U06-05.mp3"
+      }
+    }
+  ]
+}

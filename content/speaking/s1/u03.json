@@ -1,0 +1,54 @@
+{
+  "unit": "S1-U03",
+  "version": 1,
+  "level": "S1",
+  "track": "speaking",
+  "title": "작별 인사",
+  "items": [
+    {
+      "id": "S1-U03-01",
+      "en": "Goodbye.",
+      "ko": "안녕히 가세요.",
+      "audio": {
+        "en": "audio/en/S1/S1-U03-01.mp3",
+        "ko": "audio/ko/S1/S1-U03-01.mp3"
+      }
+    },
+    {
+      "id": "S1-U03-02",
+      "en": "See you later.",
+      "ko": "나중에 봐요.",
+      "audio": {
+        "en": "audio/en/S1/S1-U03-02.mp3",
+        "ko": "audio/ko/S1/S1-U03-02.mp3"
+      }
+    },
+    {
+      "id": "S1-U03-03",
+      "en": "Good night.",
+      "ko": "잘 자요.",
+      "audio": {
+        "en": "audio/en/S1/S1-U03-03.mp3",
+        "ko": "audio/ko/S1/S1-U03-03.mp3"
+      }
+    },
+    {
+      "id": "S1-U03-04",
+      "en": "Take care.",
+      "ko": "잘 지내요. / 조심히 가요.",
+      "audio": {
+        "en": "audio/en/S1/S1-U03-04.mp3",
+        "ko": "audio/ko/S1/S1-U03-04.mp3"
+      }
+    },
+    {
+      "id": "S1-U03-05",
+      "en": "See you tomorrow.",
+      "ko": "내일 봐요.",
+      "audio": {
+        "en": "audio/en/S1/S1-U03-05.mp3",
+        "ko": "audio/ko/S1/S1-U03-05.mp3"
+      }
+    }
+  ]
+}

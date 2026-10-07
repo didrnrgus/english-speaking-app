@@ -1,0 +1,54 @@
+{
+  "unit": "S4-U02",
+  "version": 1,
+  "level": "S4",
+  "track": "speaking",
+  "title": "내가 좋아하는 것",
+  "items": [
+    {
+      "id": "S4-U02-01",
+      "en": "I really love spicy food. My favorite dish is tteokbokki, and I eat it almost every week.",
+      "ko": "저는 매운 음식을 정말 좋아해요. 제일 좋아하는 음식은 떡볶이인데, 거의 매주 먹어요.",
+      "audio": {
+        "en": "audio/en/S4/S4-U02-01.mp3",
+        "ko": "audio/ko/S4/S4-U02-01.mp3"
+      }
+    },
+    {
+      "id": "S4-U02-02",
+      "en": "My favorite place in the city is the old library. It's quiet, and I can read there for hours.",
+      "ko": "도시에서 제일 좋아하는 곳은 오래된 도서관이에요. 조용해서 거기서 몇 시간이고 책을 읽을 수 있어요.",
+      "audio": {
+        "en": "audio/en/S4/S4-U02-02.mp3",
+        "ko": "audio/ko/S4/S4-U02-02.mp3"
+      }
+    },
+    {
+      "id": "S4-U02-03",
+      "en": "I like listening to music on the way to work. It helps me wake up and feel better in the morning.",
+      "ko": "저는 출근길에 음악 듣는 걸 좋아해요. 아침에 잠도 깨고 기분도 좋아지거든요.",
+      "audio": {
+        "en": "audio/en/S4/S4-U02-03.mp3",
+        "ko": "audio/ko/S4/S4-U02-03.mp3"
+      }
+    },
+    {
+      "id": "S4-U02-04",
+      "en": "I'm a big fan of baseball. I go to the stadium with my friends a few times every season.",
+      "ko": "저는 야구를 정말 좋아해요. 매 시즌 친구들과 경기장에 몇 번씩 가요.",
+      "audio": {
+        "en": "audio/en/S4/S4-U02-04.mp3",
+        "ko": "audio/ko/S4/S4-U02-04.mp3"
+      }
+    },
+    {
+      "id": "S4-U02-05",
+      "en": "I love taking pictures of the sky. Every sunset looks different, so I never get bored of it.",
+      "ko": "저는 하늘 사진 찍는 걸 좋아해요. 노을이 매번 달라서 절대 질리지 않아요.",
+      "audio": {
+        "en": "audio/en/S4/S4-U02-05.mp3",
+        "ko": "audio/ko/S4/S4-U02-05.mp3"
+      }
+    }
+  ]
+}

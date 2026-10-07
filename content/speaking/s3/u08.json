@@ -1,0 +1,54 @@
+{
+  "unit": "S3-U08",
+  "version": 1,
+  "level": "S3",
+  "track": "speaking",
+  "title": "의견 말하기",
+  "items": [
+    {
+      "id": "S3-U08-01",
+      "en": "I think this movie is better than the book.",
+      "ko": "제 생각엔 이 영화가 책보다 나은 것 같아요.",
+      "audio": {
+        "en": "audio/en/S3/S3-U08-01.mp3",
+        "ko": "audio/ko/S3/S3-U08-01.mp3"
+      }
+    },
+    {
+      "id": "S3-U08-02",
+      "en": "In my opinion, we should leave a little earlier.",
+      "ko": "제 생각에는 우리가 조금 더 일찍 출발해야 해요.",
+      "audio": {
+        "en": "audio/en/S3/S3-U08-02.mp3",
+        "ko": "audio/ko/S3/S3-U08-02.mp3"
+      }
+    },
+    {
+      "id": "S3-U08-03",
+      "en": "I don't agree with you about that, actually.",
+      "ko": "사실 그 점에 대해서는 동의하지 않아요.",
+      "audio": {
+        "en": "audio/en/S3/S3-U08-03.mp3",
+        "ko": "audio/ko/S3/S3-U08-03.mp3"
+      }
+    },
+    {
+      "id": "S3-U08-04",
+      "en": "That sounds like a good plan to me.",
+      "ko": "저는 좋은 계획 같아요.",
+      "audio": {
+        "en": "audio/en/S3/S3-U08-04.mp3",
+        "ko": "audio/ko/S3/S3-U08-04.mp3"
+      }
+    },
+    {
+      "id": "S3-U08-05",
+      "en": "I'm not sure that's the best idea right now.",
+      "ko": "지금은 그게 최선의 생각인지 잘 모르겠어요.",
+      "audio": {
+        "en": "audio/en/S3/S3-U08-05.mp3",
+        "ko": "audio/ko/S3/S3-U08-05.mp3"
+      }
+    }
+  ]
+}

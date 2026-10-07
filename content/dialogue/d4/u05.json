@@ -1,0 +1,399 @@
+{
+  "unit": "D4-U05",
+  "version": 1,
+  "level": "D4",
+  "track": "dialogue",
+  "title": "헬스장 등록",
+  "items": [
+    {
+      "id": "D4-U05-01",
+      "topic": "회원 가입",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Hi, I'm interested in joining the gym.",
+          "ko": "안녕하세요, 헬스장 등록하려고 하는데요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-01_t1.mp3",
+            "ko": "audio/ko/D4/D4-U05-01_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Great! Would you like a monthly or yearly membership?",
+          "ko": "좋아요! 월 회원권과 연 회원권 중 어느 걸로 하시겠어요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-01_t2.mp3",
+            "ko": "audio/ko/D4/D4-U05-01_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "How much is each one?",
+          "ko": "각각 얼마예요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-01_t3.mp3",
+            "ko": "audio/ko/D4/D4-U05-01_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Fifty dollars a month, or five hundred for a year.",
+          "ko": "한 달에 50달러, 1년이면 500달러예요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-01_t4.mp3",
+            "ko": "audio/ko/D4/D4-U05-01_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Can I try it first?",
+          "ko": "먼저 이용해 볼 수 있어요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-01_t5.mp3",
+            "ko": "audio/ko/D4/D4-U05-01_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Sure. You can have a free one-day pass.",
+          "ko": "그럼요. 1일 무료 이용권을 드릴게요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-01_t6.mp3",
+            "ko": "audio/ko/D4/D4-U05-01_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Great. I'll try it today.",
+          "ko": "좋아요. 오늘 이용해 볼게요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-01_t7.mp3",
+            "ko": "audio/ko/D4/D4-U05-01_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Let me show you around.",
+          "ko": "안내해 드릴게요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-01_t8.mp3",
+            "ko": "audio/ko/D4/D4-U05-01_t8.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D4-U05-02",
+      "topic": "개인 트레이닝",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Do you offer personal training?",
+          "ko": "개인 트레이닝 있어요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-02_t1.mp3",
+            "ko": "audio/ko/D4/D4-U05-02_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes. What's your goal?",
+          "ko": "네. 목표가 뭐예요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-02_t2.mp3",
+            "ko": "audio/ko/D4/D4-U05-02_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "I want to lose weight and get stronger.",
+          "ko": "살을 빼고 힘을 기르고 싶어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-02_t3.mp3",
+            "ko": "audio/ko/D4/D4-U05-02_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Our trainers can make a plan just for you.",
+          "ko": "저희 트레이너가 맞춤 계획을 짜 드릴 수 있어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-02_t4.mp3",
+            "ko": "audio/ko/D4/D4-U05-02_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "How often should I come?",
+          "ko": "얼마나 자주 와야 해요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-02_t5.mp3",
+            "ko": "audio/ko/D4/D4-U05-02_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "At least three times a week.",
+          "ko": "최소 일주일에 세 번이요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-02_t6.mp3",
+            "ko": "audio/ko/D4/D4-U05-02_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "That sounds hard, but I'll try.",
+          "ko": "힘들 것 같지만 해 볼게요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-02_t7.mp3",
+            "ko": "audio/ko/D4/D4-U05-02_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Don't worry. We'll start slowly.",
+          "ko": "걱정 마세요. 천천히 시작할 거예요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-02_t8.mp3",
+            "ko": "audio/ko/D4/D4-U05-02_t8.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D4-U05-03",
+      "topic": "운동 기구",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Excuse me. How do I use this machine?",
+          "ko": "실례합니다. 이 기구 어떻게 써요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-03_t1.mp3",
+            "ko": "audio/ko/D4/D4-U05-03_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "First, adjust the seat to your height.",
+          "ko": "먼저 의자를 키에 맞게 조절하세요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-03_t2.mp3",
+            "ko": "audio/ko/D4/D4-U05-03_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Like this?",
+          "ko": "이렇게요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-03_t3.mp3",
+            "ko": "audio/ko/D4/D4-U05-03_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes. Now hold the handles and push slowly.",
+          "ko": "네. 이제 손잡이를 잡고 천천히 미세요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-03_t4.mp3",
+            "ko": "audio/ko/D4/D4-U05-03_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "How many times should I do it?",
+          "ko": "몇 번 해야 해요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-03_t5.mp3",
+            "ko": "audio/ko/D4/D4-U05-03_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Try three sets of twelve.",
+          "ko": "12회씩 3세트 해 보세요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-03_t6.mp3",
+            "ko": "audio/ko/D4/D4-U05-03_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Thanks. That's really helpful.",
+          "ko": "고마워요. 정말 도움이 돼요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-03_t7.mp3",
+            "ko": "audio/ko/D4/D4-U05-03_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Anytime. Don't make it too heavy at first.",
+          "ko": "언제든지요. 처음엔 너무 무겁게 하지 마세요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-03_t8.mp3",
+            "ko": "audio/ko/D4/D4-U05-03_t8.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D4-U05-04",
+      "topic": "수업 시간표",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "What group classes do you have?",
+          "ko": "어떤 그룹 수업이 있어요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-04_t1.mp3",
+            "ko": "audio/ko/D4/D4-U05-04_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "We have yoga, spinning, and dance classes.",
+          "ko": "요가, 스피닝, 댄스 수업이 있어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-04_t2.mp3",
+            "ko": "audio/ko/D4/D4-U05-04_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "When are the yoga classes?",
+          "ko": "요가 수업은 언제예요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-04_t3.mp3",
+            "ko": "audio/ko/D4/D4-U05-04_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Every morning at seven and evening at eight.",
+          "ko": "매일 아침 7시와 저녁 8시요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-04_t4.mp3",
+            "ko": "audio/ko/D4/D4-U05-04_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Do I need to book in advance?",
+          "ko": "미리 예약해야 해요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-04_t5.mp3",
+            "ko": "audio/ko/D4/D4-U05-04_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, you can book on our app.",
+          "ko": "네, 앱에서 예약할 수 있어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-04_t6.mp3",
+            "ko": "audio/ko/D4/D4-U05-04_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Is it included in the membership?",
+          "ko": "회원권에 포함돼 있어요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-04_t7.mp3",
+            "ko": "audio/ko/D4/D4-U05-04_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, all classes are free for members.",
+          "ko": "네, 회원은 모든 수업이 무료예요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-04_t8.mp3",
+            "ko": "audio/ko/D4/D4-U05-04_t8.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D4-U05-05",
+      "topic": "회원권 정지",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "I'm going abroad for a month.",
+          "ko": "한 달 동안 해외에 가요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-05_t1.mp3",
+            "ko": "audio/ko/D4/D4-U05-05_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Would you like to pause your membership?",
+          "ko": "회원권을 일시 정지하시겠어요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-05_t2.mp3",
+            "ko": "audio/ko/D4/D4-U05-05_t2.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Is that possible?",
+          "ko": "그게 가능해요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-05_t3.mp3",
+            "ko": "audio/ko/D4/D4-U05-05_t3.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Yes, you can pause it for up to two months.",
+          "ko": "네, 최대 두 달까지 정지할 수 있어요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-05_t4.mp3",
+            "ko": "audio/ko/D4/D4-U05-05_t4.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Great. Is there a fee?",
+          "ko": "좋네요. 수수료가 있나요?",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-05_t5.mp3",
+            "ko": "audio/ko/D4/D4-U05-05_t5.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "No, it's free.",
+          "ko": "아니요, 무료예요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-05_t6.mp3",
+            "ko": "audio/ko/D4/D4-U05-05_t6.mp3"
+          }
+        },
+        {
+          "speaker": "A",
+          "en": "Then please pause it from next Monday.",
+          "ko": "그럼 다음 주 월요일부터 정지해 주세요.",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-05_t7.mp3",
+            "ko": "audio/ko/D4/D4-U05-05_t7.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Done. Have a nice trip!",
+          "ko": "처리됐어요. 즐거운 여행 되세요!",
+          "audio": {
+            "en": "audio/en/D4/D4-U05-05_t8.mp3",
+            "ko": "audio/ko/D4/D4-U05-05_t8.mp3"
+          }
+        }
+      ]
+    }
+  ]
+}

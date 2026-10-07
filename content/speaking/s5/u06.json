@@ -1,0 +1,54 @@
+{
+  "unit": "S5-U06",
+  "version": 1,
+  "level": "S5",
+  "track": "speaking",
+  "title": "나의 일과 공부",
+  "items": [
+    {
+      "id": "S5-U06-01",
+      "en": "I work as a nurse at a large hospital. My job is very busy and sometimes stressful. I work in shifts, so some weeks I work during the day and other weeks at night. Night shifts are the hardest because I have to stay awake and stay focused. My main job is to take care of patients, give them medicine, and check their condition. It's tiring, but it's also very rewarding. When a patient smiles and says thank you before going home, I feel proud. I chose this job to help people, and I don't regret it.",
+      "ko": "저는 큰 병원에서 간호사로 일해요. 제 일은 아주 바쁘고 가끔은 스트레스도 많아요. 교대 근무를 해서 어떤 주는 낮에, 어떤 주는 밤에 일해요. 깨어 있으면서 집중력을 유지해야 해서 야간 근무가 제일 힘들어요. 제 주된 일은 환자를 돌보고, 약을 드리고, 상태를 확인하는 거예요. 힘들지만 보람도 정말 커요. 환자가 퇴원하기 전에 웃으며 고맙다고 하면 자부심을 느껴요. 사람을 돕고 싶어서 이 일을 선택했고, 후회하지 않아요.",
+      "audio": {
+        "en": "audio/en/S5/S5-U06-01.mp3",
+        "ko": "audio/ko/S5/S5-U06-01.mp3"
+      }
+    },
+    {
+      "id": "S5-U06-02",
+      "en": "I'm a university student, and I major in computer science. I'm in my third year now, and my classes are getting more difficult. This semester, I'm learning about databases and artificial intelligence. I spend a lot of time in the library writing code and doing projects with my classmates. Sometimes we stay there until midnight to finish our work. It's hard, but I enjoy solving problems. After I graduate, I want to work at a company that makes apps for education. I hope I can make learning easier and more fun for students.",
+      "ko": "저는 대학생이고 컴퓨터 공학을 전공해요. 지금 3학년인데 수업이 점점 어려워지고 있어요. 이번 학기에는 데이터베이스와 인공지능에 대해 배우고 있어요. 도서관에서 코드를 짜고 동기들과 프로젝트를 하며 많은 시간을 보내요. 과제를 끝내려고 가끔은 자정까지 거기 있기도 해요. 힘들지만 문제를 해결하는 게 즐거워요. 졸업하면 교육용 앱을 만드는 회사에서 일하고 싶어요. 학생들이 더 쉽고 재미있게 배울 수 있게 만들고 싶어요.",
+      "audio": {
+        "en": "audio/en/S5/S5-U06-02.mp3",
+        "ko": "audio/ko/S5/S5-U06-02.mp3"
+      }
+    },
+    {
+      "id": "S5-U06-03",
+      "en": "I'm a high school English teacher. I've been teaching for eight years at a school in a small city. I teach about one hundred and fifty students every week. My day starts at eight in the morning and usually ends around five. Besides teaching, I also prepare lessons, grade tests, and talk with parents. My favorite part of the job is when a shy student finally speaks up in class. It doesn't happen every day, but when it does, I feel very happy. Teaching isn't easy, but I believe it's one of the most important jobs.",
+      "ko": "저는 고등학교 영어 선생님이에요. 작은 도시의 학교에서 8년째 가르치고 있어요. 매주 150명 정도의 학생을 가르쳐요. 하루는 아침 8시에 시작해서 보통 5시쯤 끝나요. 수업 말고도 수업 준비를 하고, 시험을 채점하고, 학부모님들과 상담도 해요. 이 일에서 제일 좋은 순간은 수줍음 많은 학생이 마침내 수업 시간에 입을 열 때예요. 매일 있는 일은 아니지만, 그럴 때면 정말 행복해요. 가르치는 일은 쉽지 않지만, 가장 중요한 일 중 하나라고 믿어요.",
+      "audio": {
+        "en": "audio/en/S5/S5-U06-03.mp3",
+        "ko": "audio/ko/S5/S5-U06-03.mp3"
+      }
+    },
+    {
+      "id": "S5-U06-04",
+      "en": "I run a small coffee shop near a subway station. I opened it three years ago after working at a big company for ten years. I wanted to do something I really loved. Every morning, I arrive at six to bake muffins and prepare the coffee machine. Most of my customers are office workers who stop by on their way to work. I know many of them by name and remember their favorite drinks. Running my own business is hard, and I don't have many days off. But I'm much happier than I was before.",
+      "ko": "저는 지하철역 근처에서 작은 카페를 운영해요. 대기업에서 10년간 일하다가 3년 전에 문을 열었어요. 정말 좋아하는 일을 하고 싶었거든요. 매일 아침 6시에 나와서 머핀을 굽고 커피 머신을 준비해요. 손님 대부분은 출근길에 들르는 직장인들이에요. 많은 손님의 이름을 알고, 좋아하는 음료도 기억해요. 제 가게를 운영하는 건 힘들고 쉬는 날도 많지 않아요. 하지만 예전보다 훨씬 행복해요.",
+      "audio": {
+        "en": "audio/en/S5/S5-U06-04.mp3",
+        "ko": "audio/ko/S5/S5-U06-04.mp3"
+      }
+    },
+    {
+      "id": "S5-U06-05",
+      "en": "These days, I'm studying for an important certification exam in accounting. I work full-time, so I study before and after work. I wake up at five thirty and study for one hour before breakfast. After work, I go to a study cafe and study for two more hours. On weekends, I take practice tests to check my progress. It's very tiring, and sometimes I want to give up. But I keep thinking about my goal. If I pass this exam, I can get a better position at my company. The exam is in two months.",
+      "ko": "요즘 저는 회계 분야의 중요한 자격증 시험을 준비하고 있어요. 회사에 정규직으로 다녀서 출근 전후에 공부해요. 5시 반에 일어나서 아침 먹기 전에 한 시간 공부해요. 퇴근 후에는 스터디 카페에 가서 두 시간 더 공부해요. 주말에는 모의고사를 풀며 실력을 확인해요. 정말 피곤하고 가끔은 포기하고 싶어요. 하지만 계속 제 목표를 생각해요. 이 시험에 합격하면 회사에서 더 좋은 자리로 갈 수 있어요. 시험은 두 달 뒤예요.",
+      "audio": {
+        "en": "audio/en/S5/S5-U06-05.mp3",
+        "ko": "audio/ko/S5/S5-U06-05.mp3"
+      }
+    }
+  ]
+}

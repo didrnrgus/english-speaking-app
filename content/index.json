@@ -1,56 +1,668 @@
 {
-  "_comment": "예문 콘텐츠 목록. 앱은 이 파일을 먼저 받고 stages[].file 을 이 파일 기준 상대 경로로 받는다. 예문을 고치면 해당 스테이지 파일의 version 을 1 올린다. 검사에 실패한 파일은 버리고 이전(캐시/번들) 내용을 유지한다.",
-  "version": 1,
-  "stages": [
+  "_comment": "레벨·유닛 목록. 앱은 이 파일을 먼저 받고 units[].file 을 이 파일 기준 상대 경로로 받는다. 예문을 고치면 해당 유닛 파일의 version 을 1 올린다. 검사에 실패한 파일은 버리고 이전(캐시/번들) 내용을 유지한다.",
+  "version": 2,
+  "levels": [
     {
-      "stage": "S1",
+      "level": "S1",
       "track": "speaking",
-      "file": "speaking/s1.json"
+      "title": "왕초보 말하기",
+      "desc": "1~3 단어"
     },
     {
-      "stage": "S2",
+      "level": "S2",
       "track": "speaking",
-      "file": "speaking/s2.json"
+      "title": "초급 말하기",
+      "desc": "4~6 단어"
     },
     {
-      "stage": "S3",
+      "level": "S3",
       "track": "speaking",
-      "file": "speaking/s3.json"
+      "title": "중급 말하기",
+      "desc": "8~12 단어"
     },
     {
-      "stage": "S4",
+      "level": "S4",
       "track": "speaking",
-      "file": "speaking/s4.json"
+      "title": "중상급 말하기",
+      "desc": "2~3 문장"
     },
     {
-      "stage": "S5",
+      "level": "S5",
       "track": "speaking",
-      "file": "speaking/s5.json"
+      "title": "1분 말하기",
+      "desc": "90~110 단어"
     },
     {
-      "stage": "D1",
+      "level": "D1",
       "track": "dialogue",
-      "file": "dialogue/d1.json"
+      "title": "왕초보 대화하기",
+      "desc": "2턴"
     },
     {
-      "stage": "D2",
+      "level": "D2",
       "track": "dialogue",
-      "file": "dialogue/d2.json"
+      "title": "초급 대화하기",
+      "desc": "4턴"
     },
     {
-      "stage": "D3",
+      "level": "D3",
       "track": "dialogue",
-      "file": "dialogue/d3.json"
+      "title": "중급 대화하기",
+      "desc": "6턴"
     },
     {
-      "stage": "D4",
+      "level": "D4",
       "track": "dialogue",
-      "file": "dialogue/d4.json"
+      "title": "중상급 대화하기",
+      "desc": "8턴"
     },
     {
-      "stage": "D5",
+      "level": "D5",
       "track": "dialogue",
-      "file": "dialogue/d5.json"
+      "title": "1분 동안 대화하기",
+      "desc": "12턴"
+    }
+  ],
+  "units": [
+    {
+      "unit": "S1-U01",
+      "level": "S1",
+      "title": "인사와 예절",
+      "file": "speaking/s1/u01.json"
+    },
+    {
+      "unit": "S1-U02",
+      "level": "S1",
+      "title": "대답하기",
+      "file": "speaking/s1/u02.json"
+    },
+    {
+      "unit": "S1-U03",
+      "level": "S1",
+      "title": "작별 인사",
+      "file": "speaking/s1/u03.json"
+    },
+    {
+      "unit": "S1-U04",
+      "level": "S1",
+      "title": "부탁하기",
+      "file": "speaking/s1/u04.json"
+    },
+    {
+      "unit": "S1-U05",
+      "level": "S1",
+      "title": "기분 말하기",
+      "file": "speaking/s1/u05.json"
+    },
+    {
+      "unit": "S1-U06",
+      "level": "S1",
+      "title": "맞장구",
+      "file": "speaking/s1/u06.json"
+    },
+    {
+      "unit": "S1-U07",
+      "level": "S1",
+      "title": "쇼핑",
+      "file": "speaking/s1/u07.json"
+    },
+    {
+      "unit": "S1-U08",
+      "level": "S1",
+      "title": "식당",
+      "file": "speaking/s1/u08.json"
+    },
+    {
+      "unit": "S1-U09",
+      "level": "S1",
+      "title": "길 찾기",
+      "file": "speaking/s1/u09.json"
+    },
+    {
+      "unit": "S1-U10",
+      "level": "S1",
+      "title": "축하와 응원",
+      "file": "speaking/s1/u10.json"
+    },
+    {
+      "unit": "S2-U01",
+      "level": "S2",
+      "title": "여행 첫걸음",
+      "file": "speaking/s2/u01.json"
+    },
+    {
+      "unit": "S2-U02",
+      "level": "S2",
+      "title": "자기소개",
+      "file": "speaking/s2/u02.json"
+    },
+    {
+      "unit": "S2-U03",
+      "level": "S2",
+      "title": "가족",
+      "file": "speaking/s2/u03.json"
+    },
+    {
+      "unit": "S2-U04",
+      "level": "S2",
+      "title": "취미",
+      "file": "speaking/s2/u04.json"
+    },
+    {
+      "unit": "S2-U05",
+      "level": "S2",
+      "title": "날씨",
+      "file": "speaking/s2/u05.json"
+    },
+    {
+      "unit": "S2-U06",
+      "level": "S2",
+      "title": "하루 일과",
+      "file": "speaking/s2/u06.json"
+    },
+    {
+      "unit": "S2-U07",
+      "level": "S2",
+      "title": "음식 주문",
+      "file": "speaking/s2/u07.json"
+    },
+    {
+      "unit": "S2-U08",
+      "level": "S2",
+      "title": "대중교통",
+      "file": "speaking/s2/u08.json"
+    },
+    {
+      "unit": "S2-U09",
+      "level": "S2",
+      "title": "옷 가게",
+      "file": "speaking/s2/u09.json"
+    },
+    {
+      "unit": "S2-U10",
+      "level": "S2",
+      "title": "건강",
+      "file": "speaking/s2/u10.json"
+    },
+    {
+      "unit": "S3-U01",
+      "level": "S3",
+      "title": "일상과 여행",
+      "file": "speaking/s3/u01.json"
+    },
+    {
+      "unit": "S3-U02",
+      "level": "S3",
+      "title": "직장과 학교",
+      "file": "speaking/s3/u02.json"
+    },
+    {
+      "unit": "S3-U03",
+      "level": "S3",
+      "title": "주말 계획",
+      "file": "speaking/s3/u03.json"
+    },
+    {
+      "unit": "S3-U04",
+      "level": "S3",
+      "title": "음식과 요리",
+      "file": "speaking/s3/u04.json"
+    },
+    {
+      "unit": "S3-U05",
+      "level": "S3",
+      "title": "여행 경험",
+      "file": "speaking/s3/u05.json"
+    },
+    {
+      "unit": "S3-U06",
+      "level": "S3",
+      "title": "건강과 운동",
+      "file": "speaking/s3/u06.json"
+    },
+    {
+      "unit": "S3-U07",
+      "level": "S3",
+      "title": "전화와 약속",
+      "file": "speaking/s3/u07.json"
+    },
+    {
+      "unit": "S3-U08",
+      "level": "S3",
+      "title": "의견 말하기",
+      "file": "speaking/s3/u08.json"
+    },
+    {
+      "unit": "S3-U09",
+      "level": "S3",
+      "title": "집과 동네",
+      "file": "speaking/s3/u09.json"
+    },
+    {
+      "unit": "S3-U10",
+      "level": "S3",
+      "title": "부탁과 제안",
+      "file": "speaking/s3/u10.json"
+    },
+    {
+      "unit": "S4-U01",
+      "level": "S4",
+      "title": "나와 일상",
+      "file": "speaking/s4/u01.json"
+    },
+    {
+      "unit": "S4-U02",
+      "level": "S4",
+      "title": "내가 좋아하는 것",
+      "file": "speaking/s4/u02.json"
+    },
+    {
+      "unit": "S4-U03",
+      "level": "S4",
+      "title": "최근에 있었던 일",
+      "file": "speaking/s4/u03.json"
+    },
+    {
+      "unit": "S4-U04",
+      "level": "S4",
+      "title": "문제 상황 설명하기",
+      "file": "speaking/s4/u04.json"
+    },
+    {
+      "unit": "S4-U05",
+      "level": "S4",
+      "title": "추천하기",
+      "file": "speaking/s4/u05.json"
+    },
+    {
+      "unit": "S4-U06",
+      "level": "S4",
+      "title": "계획과 목표",
+      "file": "speaking/s4/u06.json"
+    },
+    {
+      "unit": "S4-U07",
+      "level": "S4",
+      "title": "비교하기",
+      "file": "speaking/s4/u07.json"
+    },
+    {
+      "unit": "S4-U08",
+      "level": "S4",
+      "title": "경험 이야기",
+      "file": "speaking/s4/u08.json"
+    },
+    {
+      "unit": "S4-U09",
+      "level": "S4",
+      "title": "감사와 사과 전하기",
+      "file": "speaking/s4/u09.json"
+    },
+    {
+      "unit": "S4-U10",
+      "level": "S4",
+      "title": "의견과 이유",
+      "file": "speaking/s4/u10.json"
+    },
+    {
+      "unit": "S5-U01",
+      "level": "S5",
+      "title": "나의 이야기",
+      "file": "speaking/s5/u01.json"
+    },
+    {
+      "unit": "S5-U02",
+      "level": "S5",
+      "title": "가족 소개",
+      "file": "speaking/s5/u02.json"
+    },
+    {
+      "unit": "S5-U03",
+      "level": "S5",
+      "title": "우리 동네 소개",
+      "file": "speaking/s5/u03.json"
+    },
+    {
+      "unit": "S5-U04",
+      "level": "S5",
+      "title": "좋아하는 음식",
+      "file": "speaking/s5/u04.json"
+    },
+    {
+      "unit": "S5-U05",
+      "level": "S5",
+      "title": "기억에 남는 하루",
+      "file": "speaking/s5/u05.json"
+    },
+    {
+      "unit": "S5-U06",
+      "level": "S5",
+      "title": "나의 일과 공부",
+      "file": "speaking/s5/u06.json"
+    },
+    {
+      "unit": "S5-U07",
+      "level": "S5",
+      "title": "건강한 습관",
+      "file": "speaking/s5/u07.json"
+    },
+    {
+      "unit": "S5-U08",
+      "level": "S5",
+      "title": "취미 소개",
+      "file": "speaking/s5/u08.json"
+    },
+    {
+      "unit": "S5-U09",
+      "level": "S5",
+      "title": "추천하고 싶은 장소",
+      "file": "speaking/s5/u09.json"
+    },
+    {
+      "unit": "S5-U10",
+      "level": "S5",
+      "title": "어려움을 이겨 낸 경험",
+      "file": "speaking/s5/u10.json"
+    },
+    {
+      "unit": "D1-U01",
+      "level": "D1",
+      "title": "인사와 감사",
+      "file": "dialogue/d1/u01.json"
+    },
+    {
+      "unit": "D1-U02",
+      "level": "D1",
+      "title": "안부 묻기",
+      "file": "dialogue/d1/u02.json"
+    },
+    {
+      "unit": "D1-U03",
+      "level": "D1",
+      "title": "이름과 출신",
+      "file": "dialogue/d1/u03.json"
+    },
+    {
+      "unit": "D1-U04",
+      "level": "D1",
+      "title": "작별 인사",
+      "file": "dialogue/d1/u04.json"
+    },
+    {
+      "unit": "D1-U05",
+      "level": "D1",
+      "title": "가게에서",
+      "file": "dialogue/d1/u05.json"
+    },
+    {
+      "unit": "D1-U06",
+      "level": "D1",
+      "title": "카페에서",
+      "file": "dialogue/d1/u06.json"
+    },
+    {
+      "unit": "D1-U07",
+      "level": "D1",
+      "title": "칭찬하기",
+      "file": "dialogue/d1/u07.json"
+    },
+    {
+      "unit": "D1-U08",
+      "level": "D1",
+      "title": "부탁과 허락",
+      "file": "dialogue/d1/u08.json"
+    },
+    {
+      "unit": "D1-U09",
+      "level": "D1",
+      "title": "확인하기",
+      "file": "dialogue/d1/u09.json"
+    },
+    {
+      "unit": "D1-U10",
+      "level": "D1",
+      "title": "축하하기",
+      "file": "dialogue/d1/u10.json"
+    },
+    {
+      "unit": "D2-U01",
+      "level": "D2",
+      "title": "생활 기본 대화",
+      "file": "dialogue/d2/u01.json"
+    },
+    {
+      "unit": "D2-U02",
+      "level": "D2",
+      "title": "자기소개",
+      "file": "dialogue/d2/u02.json"
+    },
+    {
+      "unit": "D2-U03",
+      "level": "D2",
+      "title": "식당 주문",
+      "file": "dialogue/d2/u03.json"
+    },
+    {
+      "unit": "D2-U04",
+      "level": "D2",
+      "title": "날씨 이야기",
+      "file": "dialogue/d2/u04.json"
+    },
+    {
+      "unit": "D2-U05",
+      "level": "D2",
+      "title": "취미 묻기",
+      "file": "dialogue/d2/u05.json"
+    },
+    {
+      "unit": "D2-U06",
+      "level": "D2",
+      "title": "버스와 지하철",
+      "file": "dialogue/d2/u06.json"
+    },
+    {
+      "unit": "D2-U07",
+      "level": "D2",
+      "title": "전화 받기",
+      "file": "dialogue/d2/u07.json"
+    },
+    {
+      "unit": "D2-U08",
+      "level": "D2",
+      "title": "가족 이야기",
+      "file": "dialogue/d2/u08.json"
+    },
+    {
+      "unit": "D2-U09",
+      "level": "D2",
+      "title": "몸이 안 좋을 때",
+      "file": "dialogue/d2/u09.json"
+    },
+    {
+      "unit": "D2-U10",
+      "level": "D2",
+      "title": "주말 이야기",
+      "file": "dialogue/d2/u10.json"
+    },
+    {
+      "unit": "D3-U01",
+      "level": "D3",
+      "title": "외출할 때",
+      "file": "dialogue/d3/u01.json"
+    },
+    {
+      "unit": "D3-U02",
+      "level": "D3",
+      "title": "은행과 우체국",
+      "file": "dialogue/d3/u02.json"
+    },
+    {
+      "unit": "D3-U03",
+      "level": "D3",
+      "title": "병원 진료",
+      "file": "dialogue/d3/u03.json"
+    },
+    {
+      "unit": "D3-U04",
+      "level": "D3",
+      "title": "옷 가게",
+      "file": "dialogue/d3/u04.json"
+    },
+    {
+      "unit": "D3-U05",
+      "level": "D3",
+      "title": "길을 잃었을 때",
+      "file": "dialogue/d3/u05.json"
+    },
+    {
+      "unit": "D3-U06",
+      "level": "D3",
+      "title": "이웃과 대화",
+      "file": "dialogue/d3/u06.json"
+    },
+    {
+      "unit": "D3-U07",
+      "level": "D3",
+      "title": "여행 안내소",
+      "file": "dialogue/d3/u07.json"
+    },
+    {
+      "unit": "D3-U08",
+      "level": "D3",
+      "title": "회사 첫날",
+      "file": "dialogue/d3/u08.json"
+    },
+    {
+      "unit": "D3-U09",
+      "level": "D3",
+      "title": "초대와 파티",
+      "file": "dialogue/d3/u09.json"
+    },
+    {
+      "unit": "D3-U10",
+      "level": "D3",
+      "title": "미용실",
+      "file": "dialogue/d3/u10.json"
+    },
+    {
+      "unit": "D4-U01",
+      "level": "D4",
+      "title": "문제 해결",
+      "file": "dialogue/d4/u01.json"
+    },
+    {
+      "unit": "D4-U02",
+      "level": "D4",
+      "title": "호텔에서",
+      "file": "dialogue/d4/u02.json"
+    },
+    {
+      "unit": "D4-U03",
+      "level": "D4",
+      "title": "룸메이트와 집안일",
+      "file": "dialogue/d4/u03.json"
+    },
+    {
+      "unit": "D4-U04",
+      "level": "D4",
+      "title": "회의 일정 조율",
+      "file": "dialogue/d4/u04.json"
+    },
+    {
+      "unit": "D4-U05",
+      "level": "D4",
+      "title": "헬스장 등록",
+      "file": "dialogue/d4/u05.json"
+    },
+    {
+      "unit": "D4-U06",
+      "level": "D4",
+      "title": "여행 계획 세우기",
+      "file": "dialogue/d4/u06.json"
+    },
+    {
+      "unit": "D4-U07",
+      "level": "D4",
+      "title": "수리 요청",
+      "file": "dialogue/d4/u07.json"
+    },
+    {
+      "unit": "D4-U08",
+      "level": "D4",
+      "title": "선물 고르기",
+      "file": "dialogue/d4/u08.json"
+    },
+    {
+      "unit": "D4-U09",
+      "level": "D4",
+      "title": "이사 준비",
+      "file": "dialogue/d4/u09.json"
+    },
+    {
+      "unit": "D4-U10",
+      "level": "D4",
+      "title": "동호회 가입",
+      "file": "dialogue/d4/u10.json"
+    },
+    {
+      "unit": "D5-U01",
+      "level": "D5",
+      "title": "계획과 부탁",
+      "file": "dialogue/d5/u01.json"
+    },
+    {
+      "unit": "D5-U02",
+      "level": "D5",
+      "title": "진로 고민 상담",
+      "file": "dialogue/d5/u02.json"
+    },
+    {
+      "unit": "D5-U03",
+      "level": "D5",
+      "title": "휴가 다녀온 이야기",
+      "file": "dialogue/d5/u03.json"
+    },
+    {
+      "unit": "D5-U04",
+      "level": "D5",
+      "title": "팀 프로젝트 회의",
+      "file": "dialogue/d5/u04.json"
+    },
+    {
+      "unit": "D5-U05",
+      "level": "D5",
+      "title": "공항과 비행기 문제",
+      "file": "dialogue/d5/u05.json"
+    },
+    {
+      "unit": "D5-U06",
+      "level": "D5",
+      "title": "건강 고민 상담",
+      "file": "dialogue/d5/u06.json"
+    },
+    {
+      "unit": "D5-U07",
+      "level": "D5",
+      "title": "이웃 간 문제",
+      "file": "dialogue/d5/u07.json"
+    },
+    {
+      "unit": "D5-U08",
+      "level": "D5",
+      "title": "중고 거래",
+      "file": "dialogue/d5/u08.json"
+    },
+    {
+      "unit": "D5-U09",
+      "level": "D5",
+      "title": "새 취미 추천",
+      "file": "dialogue/d5/u09.json"
+    },
+    {
+      "unit": "D5-U10",
+      "level": "D5",
+      "title": "행사 준비",
+      "file": "dialogue/d5/u10.json"
     }
   ]
 }

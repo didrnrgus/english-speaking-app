@@ -1,0 +1,54 @@
+{
+  "unit": "S5-U04",
+  "version": 1,
+  "level": "S5",
+  "track": "speaking",
+  "title": "좋아하는 음식",
+  "items": [
+    {
+      "id": "S5-U04-01",
+      "en": "My favorite food is kimchi stew. It's a spicy soup made with kimchi, pork, tofu, and green onions. My mother makes the best kimchi stew in the world. She uses kimchi that is more than a year old, so the taste is very deep and rich. I especially love eating it on cold winter days with a bowl of hot rice. Whenever I feel tired or sad, a bowl of kimchi stew makes me feel better. Last year, I finally learned her recipe. Now I can make it myself, but it's still not as good as hers.",
+      "ko": "제가 제일 좋아하는 음식은 김치찌개예요. 김치, 돼지고기, 두부, 파를 넣어 만든 매운 국물 요리예요. 우리 엄마는 세상에서 제일 맛있는 김치찌개를 만드세요. 1년 넘게 묵은 김치를 쓰셔서 맛이 아주 깊고 진해요. 저는 특히 추운 겨울날 따뜻한 밥 한 그릇과 함께 먹는 걸 좋아해요. 피곤하거나 슬플 때마다 김치찌개 한 그릇이면 기분이 나아져요. 작년에 드디어 엄마의 요리법을 배웠어요. 이제 저도 만들 수 있지만, 아직 엄마 것만큼 맛있지는 않아요.",
+      "audio": {
+        "en": "audio/en/S5/S5-U04-01.mp3",
+        "ko": "audio/ko/S5/S5-U04-01.mp3"
+      }
+    },
+    {
+      "id": "S5-U04-02",
+      "en": "I'm a big fan of pizza. I think pizza is the perfect food because you can put anything on it. My favorite is a simple one with tomato sauce, cheese, and fresh basil. Every Friday night, my roommate and I order a large pizza and watch a movie together. It has become our little tradition. Sometimes we make pizza at home, too. Making the dough is hard, but it's fun to choose our own toppings. Last time, we tried pineapple and ham. My roommate loved it, but I didn't. We still argue about it!",
+      "ko": "저는 피자를 정말 좋아해요. 위에 무엇이든 올릴 수 있어서 피자가 완벽한 음식이라고 생각해요. 제가 제일 좋아하는 건 토마토소스, 치즈, 신선한 바질만 올린 단순한 피자예요. 매주 금요일 밤 룸메이트와 저는 큰 피자를 시켜서 같이 영화를 봐요. 그게 우리만의 작은 전통이 됐어요. 가끔은 집에서 피자를 만들기도 해요. 반죽 만들기는 어렵지만 토핑을 직접 고르는 게 재미있어요. 지난번에는 파인애플과 햄을 올려 봤어요. 룸메이트는 정말 좋아했는데 저는 별로였어요. 아직도 그걸로 티격태격해요!",
+      "audio": {
+        "en": "audio/en/S5/S5-U04-02.mp3",
+        "ko": "audio/ko/S5/S5-U04-02.mp3"
+      }
+    },
+    {
+      "id": "S5-U04-03",
+      "en": "I love trying street food when I travel. I think street food shows the real taste of a country. In Thailand, I ate spicy noodles from a small cart, and they were amazing. In Vietnam, I had a sandwich with grilled pork that cost only one dollar. In my own country, my favorite street food is fish-shaped bread filled with sweet red beans. It's warm, sweet, and perfect in winter. Street food is cheap, fast, and delicious. Most importantly, you can talk with the cooks and learn about their lives.",
+      "ko": "저는 여행할 때 길거리 음식 먹어 보는 걸 좋아해요. 길거리 음식이 그 나라의 진짜 맛을 보여 준다고 생각해요. 태국에서는 작은 손수레에서 매운 국수를 먹었는데 정말 맛있었어요. 베트남에서는 구운 돼지고기가 들어간 샌드위치를 먹었는데 단돈 1달러였어요. 우리나라 길거리 음식 중에서는 단팥이 든 붕어빵을 제일 좋아해요. 따뜻하고 달콤해서 겨울에 딱이에요. 길거리 음식은 싸고 빠르고 맛있어요. 무엇보다 요리하는 사람들과 이야기하며 그들의 삶을 알게 될 수 있어요.",
+      "audio": {
+        "en": "audio/en/S5/S5-U04-03.mp3",
+        "ko": "audio/ko/S5/S5-U04-03.mp3"
+      }
+    },
+    {
+      "id": "S5-U04-04",
+      "en": "Breakfast is my favorite meal of the day. Many people skip breakfast, but I never do. Every morning, I make eggs, toast, and a small salad. I also drink a big glass of orange juice. On weekends, I have more time, so I make pancakes with fresh fruit and honey. Eating breakfast gives me energy and helps me focus at work. When I skip it, I feel hungry and tired before lunch. If you don't eat breakfast, I suggest starting with something simple, like a banana and yogurt. Your body will thank you.",
+      "ko": "아침은 하루 중 제가 제일 좋아하는 식사예요. 많은 사람들이 아침을 거르지만 저는 절대 거르지 않아요. 매일 아침 달걀, 토스트, 작은 샐러드를 만들어요. 오렌지 주스도 큰 잔으로 한 잔 마셔요. 주말에는 시간이 더 있어서 신선한 과일과 꿀을 곁들인 팬케이크를 만들어요. 아침을 먹으면 힘이 나고 회사에서 집중이 잘 돼요. 아침을 거르면 점심 전에 배고프고 피곤해요. 아침을 안 드신다면 바나나와 요거트처럼 간단한 것부터 시작해 보세요. 몸이 고마워할 거예요.",
+      "audio": {
+        "en": "audio/en/S5/S5-U04-04.mp3",
+        "ko": "audio/ko/S5/S5-U04-04.mp3"
+      }
+    },
+    {
+      "id": "S5-U04-05",
+      "en": "I didn't like vegetables when I was a child. I always pushed them to the side of my plate. But two years ago, I decided to eat more healthily. I started cooking at home and adding vegetables to every meal. At first, it was difficult, but I slowly found ways to make them tasty. Now I love grilled vegetables with olive oil and salt. My favorite is roasted sweet potatoes. I feel lighter and have more energy than before. My mother can't believe how much I've changed. Sometimes, I even ask for more salad!",
+      "ko": "저는 어렸을 때 채소를 싫어했어요. 항상 접시 한쪽으로 밀어 놓았죠. 그런데 2년 전에 더 건강하게 먹기로 결심했어요. 집에서 요리를 시작하고 매 끼니에 채소를 넣었어요. 처음엔 힘들었지만, 맛있게 먹는 방법을 조금씩 찾았어요. 지금은 올리브유와 소금을 뿌려 구운 채소를 정말 좋아해요. 제일 좋아하는 건 군고구마예요. 예전보다 몸이 가볍고 힘이 넘쳐요. 엄마는 제가 이렇게 변한 걸 믿지 못하세요. 가끔은 샐러드를 더 달라고 하기도 해요!",
+      "audio": {
+        "en": "audio/en/S5/S5-U04-05.mp3",
+        "ko": "audio/ko/S5/S5-U04-05.mp3"
+      }
+    }
+  ]
+}

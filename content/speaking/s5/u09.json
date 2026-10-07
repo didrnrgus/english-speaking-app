@@ -1,0 +1,54 @@
+{
+  "unit": "S5-U09",
+  "version": 1,
+  "level": "S5",
+  "track": "speaking",
+  "title": "추천하고 싶은 장소",
+  "items": [
+    {
+      "id": "S5-U09-01",
+      "en": "If you visit Seoul, I recommend going to a traditional palace. My favorite is Gyeongbokgung Palace. It was built more than six hundred years ago, and it's very beautiful. You can rent a traditional Korean dress called hanbok near the palace. If you wear hanbok, you can enter the palace for free. Many tourists take photos in hanbok in front of the old buildings. After visiting the palace, walk to a nearby village with old houses and small cafes. It's a perfect way to experience Korea's past and present on the same day.",
+      "ko": "서울에 가면 고궁에 가 보길 추천해요. 제가 제일 좋아하는 곳은 경복궁이에요. 600년도 더 전에 지어졌는데 아주 아름다워요. 궁 근처에서 한복이라는 한국 전통 옷을 빌릴 수 있어요. 한복을 입으면 궁에 무료로 들어갈 수 있어요. 많은 관광객이 오래된 건물 앞에서 한복을 입고 사진을 찍어요. 궁을 둘러본 다음에는 한옥과 작은 카페가 있는 근처 마을까지 걸어가 보세요. 하루에 한국의 과거와 현재를 모두 경험할 수 있는 완벽한 방법이에요.",
+      "audio": {
+        "en": "audio/en/S5/S5-U09-01.mp3",
+        "ko": "audio/ko/S5/S5-U09-01.mp3"
+      }
+    },
+    {
+      "id": "S5-U09-02",
+      "en": "I want to recommend a small island called Udo. It's near Jeju Island, and you can get there by ferry in about fifteen minutes. The island is small, so you can ride a bicycle around it in two or three hours. The sea there is clear and bright blue, almost like the sea in Southeast Asia. There are also beautiful beaches with white sand. Don't forget to try peanut ice cream, the island's most famous snack. I went there last spring, and it was one of the most peaceful days of my trip.",
+      "ko": "우도라는 작은 섬을 추천하고 싶어요. 제주도 근처에 있고, 배를 타면 15분 정도면 갈 수 있어요. 섬이 작아서 자전거로 두세 시간이면 한 바퀴 돌 수 있어요. 그곳 바다는 맑고 밝은 파란색이라 동남아시아 바다 같아요. 하얀 모래가 있는 아름다운 해변도 있어요. 섬에서 가장 유명한 간식인 땅콩 아이스크림도 꼭 먹어 보세요. 저는 지난봄에 갔는데, 여행 중 가장 평화로운 하루 중 하나였어요.",
+      "audio": {
+        "en": "audio/en/S5/S5-U09-02.mp3",
+        "ko": "audio/ko/S5/S5-U09-02.mp3"
+      }
+    },
+    {
+      "id": "S5-U09-03",
+      "en": "My favorite place to relax is a public library near my home. It's a new building with big windows, so it's very bright inside. There's a quiet reading room on the top floor with a great view of the mountains. They also have a children's section, a small cafe, and even a rooftop garden. And the best part is that everything is free! I go there every Sunday afternoon to read books and magazines. If you're looking for a quiet place to rest, try visiting a library near you. You might be surprised.",
+      "ko": "제가 쉬기에 제일 좋아하는 곳은 집 근처 공공 도서관이에요. 창이 큰 새 건물이라 안이 아주 밝아요. 꼭대기 층에는 산이 잘 보이는 조용한 열람실이 있어요. 어린이 코너, 작은 카페, 옥상 정원까지 있어요. 그리고 제일 좋은 건 전부 무료라는 거예요! 저는 매주 일요일 오후에 거기 가서 책과 잡지를 읽어요. 조용히 쉴 곳을 찾고 있다면 가까운 도서관에 가 보세요. 깜짝 놀랄지도 몰라요.",
+      "audio": {
+        "en": "audio/en/S5/S5-U09-03.mp3",
+        "ko": "audio/ko/S5/S5-U09-03.mp3"
+      }
+    },
+    {
+      "id": "S5-U09-04",
+      "en": "If you like nature, I recommend visiting Suncheon Bay. It's in the south of Korea, and it's famous for its huge wetlands. There are wooden paths that go through tall golden reeds. In autumn, the reeds move in the wind, and it looks like a sea of gold. You can also see many kinds of birds there. The best time to visit is just before sunset. From the hill, you can watch the sun go down over the water. It was one of the most beautiful views I've ever seen in my life.",
+      "ko": "자연을 좋아한다면 순천만에 가 보길 추천해요. 한국 남쪽에 있고, 넓은 습지로 유명해요. 키 큰 황금빛 갈대 사이로 나무 산책로가 나 있어요. 가을이면 갈대가 바람에 흔들려서 황금빛 바다처럼 보여요. 거기서 여러 종류의 새도 볼 수 있어요. 가장 좋은 방문 시간은 해 지기 직전이에요. 언덕에서 물 위로 해가 지는 걸 볼 수 있어요. 제 인생에서 본 가장 아름다운 풍경 중 하나였어요.",
+      "audio": {
+        "en": "audio/en/S5/S5-U09-04.mp3",
+        "ko": "audio/ko/S5/S5-U09-04.mp3"
+      }
+    },
+    {
+      "id": "S5-U09-05",
+      "en": "There's a small noodle restaurant in my hometown that I recommend to everyone. It's been open for over forty years, and an old couple still runs it. The menu is very simple. They only sell two kinds of noodles, one cold and one hot. The soup is made with beef bones that they boil for twelve hours. It's not fancy, and you often have to wait in line. But the taste is unforgettable. Whenever I visit my hometown, I go there first. If you're ever in the area, please give it a try.",
+      "ko": "제 고향에 모두에게 추천하는 작은 국숫집이 있어요. 40년 넘게 영업했고, 지금도 노부부가 운영하세요. 메뉴는 아주 단순해요. 차가운 국수와 따뜻한 국수, 딱 두 가지만 팔아요. 국물은 소뼈를 열두 시간 동안 끓여서 만들어요. 화려하지 않고 줄을 서야 할 때도 많아요. 하지만 맛은 잊을 수가 없어요. 고향에 갈 때마다 저는 거기부터 가요. 그 근처에 가게 되면 꼭 한번 드셔 보세요.",
+      "audio": {
+        "en": "audio/en/S5/S5-U09-05.mp3",
+        "ko": "audio/ko/S5/S5-U09-05.mp3"
+      }
+    }
+  ]
+}

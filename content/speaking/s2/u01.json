@@ -1,0 +1,54 @@
+{
+  "unit": "S2-U01",
+  "version": 1,
+  "level": "S2",
+  "track": "speaking",
+  "title": "여행 첫걸음",
+  "items": [
+    {
+      "id": "S2-U01-01",
+      "en": "I'm from Korea.",
+      "ko": "저는 한국에서 왔어요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U01-01.mp3",
+        "ko": "audio/ko/S2/S2-U01-01.mp3"
+      }
+    },
+    {
+      "id": "S2-U01-02",
+      "en": "I like coffee very much.",
+      "ko": "저는 커피를 아주 좋아해요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U01-02.mp3",
+        "ko": "audio/ko/S2/S2-U01-02.mp3"
+      }
+    },
+    {
+      "id": "S2-U01-03",
+      "en": "Where is the bathroom?",
+      "ko": "화장실이 어디예요?",
+      "audio": {
+        "en": "audio/en/S2/S2-U01-03.mp3",
+        "ko": "audio/ko/S2/S2-U01-03.mp3"
+      }
+    },
+    {
+      "id": "S2-U01-04",
+      "en": "I want some water, please.",
+      "ko": "물 좀 주세요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U01-04.mp3",
+        "ko": "audio/ko/S2/S2-U01-04.mp3"
+      }
+    },
+    {
+      "id": "S2-U01-05",
+      "en": "How much is this?",
+      "ko": "이거 얼마예요?",
+      "audio": {
+        "en": "audio/en/S2/S2-U01-05.mp3",
+        "ko": "audio/ko/S2/S2-U01-05.mp3"
+      }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "unit": "S4-U05",
+  "version": 1,
+  "level": "S4",
+  "track": "speaking",
+  "title": "추천하기",
+  "items": [
+    {
+      "id": "S4-U05-01",
+      "en": "You should try the bakery on the corner. Their bread is fresh and not too expensive.",
+      "ko": "모퉁이에 있는 빵집에 꼭 가 보세요. 빵이 신선하고 별로 비싸지 않아요.",
+      "audio": {
+        "en": "audio/en/S4/S4-U05-01.mp3",
+        "ko": "audio/ko/S4/S4-U05-01.mp3"
+      }
+    },
+    {
+      "id": "S4-U05-02",
+      "en": "If you visit Busan, go to the beach early in the morning. It's quiet and really beautiful.",
+      "ko": "부산에 가면 이른 아침에 해변에 가 보세요. 조용하고 정말 아름다워요.",
+      "audio": {
+        "en": "audio/en/S4/S4-U05-02.mp3",
+        "ko": "audio/ko/S4/S4-U05-02.mp3"
+      }
+    },
+    {
+      "id": "S4-U05-03",
+      "en": "I recommend this book to everyone. The story is simple, but it made me think a lot.",
+      "ko": "저는 이 책을 모두에게 추천해요. 이야기는 단순하지만 생각을 많이 하게 됐어요.",
+      "audio": {
+        "en": "audio/en/S4/S4-U05-03.mp3",
+        "ko": "audio/ko/S4/S4-U05-03.mp3"
+      }
+    },
+    {
+      "id": "S4-U05-04",
+      "en": "Try drinking warm water when you wake up. It really helps me feel fresh in the morning.",
+      "ko": "일어나자마자 따뜻한 물을 마셔 보세요. 저는 그게 아침에 개운해지는 데 정말 도움이 돼요.",
+      "audio": {
+        "en": "audio/en/S4/S4-U05-04.mp3",
+        "ko": "audio/ko/S4/S4-U05-04.mp3"
+      }
+    },
+    {
+      "id": "S4-U05-05",
+      "en": "This app is great for learning new words. It sends you five words every day.",
+      "ko": "이 앱은 새 단어를 배우기에 좋아요. 매일 단어를 다섯 개씩 보내 줘요.",
+      "audio": {
+        "en": "audio/en/S4/S4-U05-05.mp3",
+        "ko": "audio/ko/S4/S4-U05-05.mp3"
+      }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "unit": "S3-U03",
+  "version": 1,
+  "level": "S3",
+  "track": "speaking",
+  "title": "주말 계획",
+  "items": [
+    {
+      "id": "S3-U03-01",
+      "en": "I'm going to visit my grandparents this weekend.",
+      "ko": "이번 주말에 조부모님 댁에 갈 거예요.",
+      "audio": {
+        "en": "audio/en/S3/S3-U03-01.mp3",
+        "ko": "audio/ko/S3/S3-U03-01.mp3"
+      }
+    },
+    {
+      "id": "S3-U03-02",
+      "en": "We're planning to have a picnic by the river.",
+      "ko": "우리는 강가에서 소풍을 할 계획이에요.",
+      "audio": {
+        "en": "audio/en/S3/S3-U03-02.mp3",
+        "ko": "audio/ko/S3/S3-U03-02.mp3"
+      }
+    },
+    {
+      "id": "S3-U03-03",
+      "en": "I just want to stay home and relax on Saturday.",
+      "ko": "토요일에는 그냥 집에서 쉬고 싶어요.",
+      "audio": {
+        "en": "audio/en/S3/S3-U03-03.mp3",
+        "ko": "audio/ko/S3/S3-U03-03.mp3"
+      }
+    },
+    {
+      "id": "S3-U03-04",
+      "en": "My friends and I are going to see a concert.",
+      "ko": "친구들이랑 콘서트 보러 갈 거예요.",
+      "audio": {
+        "en": "audio/en/S3/S3-U03-04.mp3",
+        "ko": "audio/ko/S3/S3-U03-04.mp3"
+      }
+    },
+    {
+      "id": "S3-U03-05",
+      "en": "I might go shopping if the weather is nice.",
+      "ko": "날씨가 좋으면 쇼핑하러 갈지도 몰라요.",
+      "audio": {
+        "en": "audio/en/S3/S3-U03-05.mp3",
+        "ko": "audio/ko/S3/S3-U03-05.mp3"
+      }
+    }
+  ]
+}

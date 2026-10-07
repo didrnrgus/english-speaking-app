@@ -1,0 +1,129 @@
+{
+  "unit": "D1-U07",
+  "version": 1,
+  "level": "D1",
+  "track": "dialogue",
+  "title": "칭찬하기",
+  "items": [
+    {
+      "id": "D1-U07-01",
+      "topic": "옷 칭찬",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "I like your shirt.",
+          "ko": "셔츠 예쁘네요.",
+          "audio": {
+            "en": "audio/en/D1/D1-U07-01_t1.mp3",
+            "ko": "audio/ko/D1/D1-U07-01_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Oh, thank you!",
+          "ko": "어머, 고마워요!",
+          "audio": {
+            "en": "audio/en/D1/D1-U07-01_t2.mp3",
+            "ko": "audio/ko/D1/D1-U07-01_t2.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D1-U07-02",
+      "topic": "요리 칭찬",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "This is delicious!",
+          "ko": "이거 정말 맛있어요!",
+          "audio": {
+            "en": "audio/en/D1/D1-U07-02_t1.mp3",
+            "ko": "audio/ko/D1/D1-U07-02_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "I'm glad you like it.",
+          "ko": "마음에 든다니 기뻐요.",
+          "audio": {
+            "en": "audio/en/D1/D1-U07-02_t2.mp3",
+            "ko": "audio/ko/D1/D1-U07-02_t2.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D1-U07-03",
+      "topic": "일 칭찬",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Great job today!",
+          "ko": "오늘 정말 잘했어요!",
+          "audio": {
+            "en": "audio/en/D1/D1-U07-03_t1.mp3",
+            "ko": "audio/ko/D1/D1-U07-03_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Thanks, that means a lot.",
+          "ko": "고마워요, 정말 큰 힘이 돼요.",
+          "audio": {
+            "en": "audio/en/D1/D1-U07-03_t2.mp3",
+            "ko": "audio/ko/D1/D1-U07-03_t2.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D1-U07-04",
+      "topic": "영어 칭찬",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Your English is very good.",
+          "ko": "영어 정말 잘하시네요.",
+          "audio": {
+            "en": "audio/en/D1/D1-U07-04_t1.mp3",
+            "ko": "audio/ko/D1/D1-U07-04_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Thanks! I practice every day.",
+          "ko": "고마워요! 매일 연습해요.",
+          "audio": {
+            "en": "audio/en/D1/D1-U07-04_t2.mp3",
+            "ko": "audio/ko/D1/D1-U07-04_t2.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D1-U07-05",
+      "topic": "머리 바꿨을 때",
+      "turns": [
+        {
+          "speaker": "A",
+          "en": "Nice haircut!",
+          "ko": "머리 멋지네요!",
+          "audio": {
+            "en": "audio/en/D1/D1-U07-05_t1.mp3",
+            "ko": "audio/ko/D1/D1-U07-05_t1.mp3"
+          }
+        },
+        {
+          "speaker": "B",
+          "en": "Thanks, I just got it.",
+          "ko": "고마워요, 방금 잘랐어요.",
+          "audio": {
+            "en": "audio/en/D1/D1-U07-05_t2.mp3",
+            "ko": "audio/ko/D1/D1-U07-05_t2.mp3"
+          }
+        }
+      ]
+    }
+  ]
+}

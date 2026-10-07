@@ -1,0 +1,54 @@
+{
+  "unit": "S2-U06",
+  "version": 1,
+  "level": "S2",
+  "track": "speaking",
+  "title": "하루 일과",
+  "items": [
+    {
+      "id": "S2-U06-01",
+      "en": "I get up at seven.",
+      "ko": "저는 일곱 시에 일어나요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U06-01.mp3",
+        "ko": "audio/ko/S2/S2-U06-01.mp3"
+      }
+    },
+    {
+      "id": "S2-U06-02",
+      "en": "I take a shower first.",
+      "ko": "저는 먼저 샤워를 해요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U06-02.mp3",
+        "ko": "audio/ko/S2/S2-U06-02.mp3"
+      }
+    },
+    {
+      "id": "S2-U06-03",
+      "en": "I go to work by bus.",
+      "ko": "저는 버스로 출근해요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U06-03.mp3",
+        "ko": "audio/ko/S2/S2-U06-03.mp3"
+      }
+    },
+    {
+      "id": "S2-U06-04",
+      "en": "I have lunch at noon.",
+      "ko": "저는 정오에 점심을 먹어요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U06-04.mp3",
+        "ko": "audio/ko/S2/S2-U06-04.mp3"
+      }
+    },
+    {
+      "id": "S2-U06-05",
+      "en": "I go to bed early.",
+      "ko": "저는 일찍 자요.",
+      "audio": {
+        "en": "audio/en/S2/S2-U06-05.mp3",
+        "ko": "audio/ko/S2/S2-U06-05.mp3"
+      }
+    }
+  ]
+}
