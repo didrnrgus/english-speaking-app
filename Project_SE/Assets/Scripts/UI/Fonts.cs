@@ -23,6 +23,7 @@ namespace EnglishApp.UI
         public static readonly Color OutlineColor = Color.black;
 
         private static TMP_FontAsset main;
+        private static TMP_FontAsset template;
 
         public static TMP_FontAsset Main
         {
@@ -33,9 +34,30 @@ namespace EnglishApp.UI
             }
         }
 
+        private static TMP_FontAsset Template
+        {
+            get
+            {
+                if (template == null) template = Resources.Load<TMP_FontAsset>(TemplateResource);
+                return template;
+            }
+        }
+
+        /// <summary>
+        /// 프리팹 글자는 템플릿 에셋을 가리킨다. 실행 시에는 런타임 폰트로 바꿔서 템플릿 파일에 글리프가 쌓이지 않게 한다.
+        /// (프리팹에서 다른 폰트를 고른 글자는 그대로 둔다.)
+        /// </summary>
+        public static void ApplyTo(GameObject root)
+        {
+            var runtime = Main;
+            if (runtime == null || runtime == Template) return;
+            foreach (var t in root.GetComponentsInChildren<TMP_Text>(true))
+                if (t.font == null || t.font == Template) t.font = runtime;
+        }
+
         private static TMP_FontAsset Create()
         {
-            var template = Resources.Load<TMP_FontAsset>(TemplateResource);
+            var template = Template;
             var font = Resources.Load<Font>(FontResource);
             if (font == null)
             {

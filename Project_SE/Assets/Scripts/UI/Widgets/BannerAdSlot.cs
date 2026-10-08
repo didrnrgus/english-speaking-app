@@ -29,8 +29,12 @@ namespace EnglishApp.UI
         private const float LayoutSettleSeconds = 0.5f;
         private const float RecreateMinInterval = 10f;
 
+        [Tooltip("네이티브 배너가 놓일 자리 (띠 안쪽)")]
+        [SerializeField] internal RectTransform bannerArea;
+        [Tooltip("에디터에서만 보이는 배너 자리 표시")]
+        [SerializeField] internal GameObject editorPreview;
+
         private RectTransform rt;
-        private RectTransform bannerArea;
         private Canvas canvas;
         private readonly List<RectTransform> insetTargets = new List<RectTransform>();
         private readonly HashSet<string> blockers = new HashSet<string>();
@@ -62,22 +66,6 @@ namespace EnglishApp.UI
         /// <summary>광고 자리 높이 (캔버스 단위). 광고를 안 쓰면 0.</summary>
         public float Height => Mathf.Max(0f, appliedHeight);
 
-        public static BannerAdSlot Create(RectTransform safeArea)
-        {
-            var bg = UIKit.Image(safeArea, "AdSlot", Theme.AdSlotBg);
-            bg.raycastTarget = true; // 배너 둘레 여백을 눌러도 아래 화면으로 터치가 새지 않게
-            var slot = bg.gameObject.AddComponent<BannerAdSlot>();
-            slot.rt = bg.rectTransform;
-            slot.rt.BottomStrip(0);
-
-            var line = UIKit.Image(bg.transform, "Line", Theme.Line);
-            line.rectTransform.TopStrip(3);
-
-            slot.bannerArea = UIKit.Rect("Banner", bg.transform);
-            slot.Setup();
-            return slot;
-        }
-
         /// <summary>광고 자리만큼 아래를 비울 영역 (화면, 토스트 등).</summary>
         public void AddInsetTarget(RectTransform target)
         {
@@ -92,8 +80,11 @@ namespace EnglishApp.UI
 
         // ---- 준비 ---------------------------------------------------------------------------
 
-        private void Setup()
+        /// <summary>AppRoot 가 캔버스를 띄운 뒤 한 번 부른다.</summary>
+        public void Init()
         {
+            rt = (RectTransform)transform;
+            rt.BottomStrip(0);
             canvas = GetComponentInParent<Canvas>().rootCanvas;
             guard = ClickGuard.Load();
 
@@ -110,7 +101,7 @@ namespace EnglishApp.UI
             DeviceScreen.Poll();
             sizeDp = EstimateAdaptiveSizeDp();
 
-            if (active && !native) BuildEditorPreview();
+            if (editorPreview != null) editorPreview.SetActive(active && !native);
             if (!native) return;
 
             LevelPlayBanner.InitFinished += OnInitFinished;
@@ -139,14 +130,6 @@ namespace EnglishApp.UI
             if (widthDp <= 0f) widthDp = 360f;
             float heightDp = Mathf.Clamp(Mathf.Round(widthDp * 50f / 320f), 50f, 90f);
             return new Vector2(Mathf.Floor(widthDp), heightDp);
-        }
-
-        private void BuildEditorPreview()
-        {
-            var box = UIKit.Image(bannerArea, "EditorPreview", new Color(0.55f, 0.53f, 0.6f, 0.35f));
-            box.rectTransform.Fill();
-            var label = UIKit.Text(box.transform, "Label", "배너 광고 자리 (에디터 미리보기)", 30, Theme.TextSub).SingleLine().AutoSize(18, 30);
-            label.rectTransform.Fill(20, 4, 20, 4);
         }
 
         // ---- 루프 ---------------------------------------------------------------------------

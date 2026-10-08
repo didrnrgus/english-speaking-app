@@ -6,7 +6,7 @@ using UnityEngine.UI;
 namespace EnglishApp.UI
 {
     /// <summary>
-    /// 듣기 시퀀스 목록 (설정 > 전체 듣기). 손잡이(≡)를 끌어서 순서를 바꾼다.
+    /// 듣기 시퀀스 목록 (설정 > 전체 듣기). 줄은 SequenceNodeRow 프리팹. 손잡이(≡)를 끌어서 순서를 바꾼다.
     /// 끄는 동안 자리 표시(placeholder)가 들어갈 위치를 보여주고, 놓으면 설정에 반영한다.
     /// </summary>
     public class SequenceListView : MonoBehaviour
@@ -14,8 +14,14 @@ namespace EnglishApp.UI
         private const float AutoScrollEdge = 160f;
         private const float AutoScrollSpeed = 1400f;
 
+        [Tooltip("이 목록을 담은 페이지 스크롤 (끌어서 끝에 닿으면 스크롤)")]
+        [SerializeField] internal ScrollRect scroll;
+        [SerializeField] internal SequenceNodeRow rowPrefab;
+        [Tooltip("끄는 동안 들어갈 자리 표시 (둥근 사각형)")]
+        [SerializeField] internal Sprite placeholderSprite;
+        [SerializeField] internal Color placeholderColor;
+
         private AppSettings settings;
-        private ScrollRect scroll;
         private RectTransform content;
         private readonly List<SequenceNodeRow> rows = new List<SequenceNodeRow>();
         private readonly HashSet<int> expanded = new HashSet<int>();
@@ -28,27 +34,17 @@ namespace EnglishApp.UI
 
         public bool IsDragging => dragging != null;
 
-        public static SequenceListView Create(Transform parent, AppSettings settings, ScrollRect scroll)
+        public void Init(AppSettings value)
         {
-            var rt = UIKit.Rect("SequenceList", parent);
-            UIKit.VLayout(rt, 16);
-            var view = rt.gameObject.AddComponent<SequenceListView>();
-            view.settings = settings;
-            view.scroll = scroll;
-            view.content = rt;
-            view.Rebuild();
-            return view;
+            settings = value;
+            content = (RectTransform)transform;
+            Rebuild();
         }
 
         public void Rebuild()
         {
             CancelDrag();
-            foreach (var r in rows)
-            {
-                if (r == null) continue;
-                r.gameObject.SetActive(false); // Destroy 는 프레임 끝에 일어나므로 바로 레이아웃에서 뺀다
-                Destroy(r.gameObject);
-            }
+            foreach (var r in rows) UIKit.DestroyNow(r);
             rows.Clear();
 
             var nodes = settings.Nodes;
@@ -56,7 +52,7 @@ namespace EnglishApp.UI
             for (int i = 0; i < nodes.Count; i++)
             {
                 alive.Add(nodes[i].uid);
-                var row = SequenceNodeRow.Create(content, this, settings, i, expanded.Contains(nodes[i].uid));
+                var row = SequenceNodeRow.Create(rowPrefab, content, this, settings, i, expanded.Contains(nodes[i].uid));
                 rows.Add(row);
             }
             expanded.IntersectWith(alive);
@@ -92,8 +88,8 @@ namespace EnglishApp.UI
 
             placeholder = UIKit.Rect("Placeholder", content);
             var ph = placeholder.gameObject.AddComponent<Image>();
-            UIKit.SetRadius(ph, 28);
-            ph.color = Theme.Line;
+            UIKit.SetRadius(ph, placeholderSprite, 28);
+            ph.color = placeholderColor;
             ph.raycastTarget = false;
             UIKit.Layout(placeholder, preferredHeight: rt.rect.height, minHeight: rt.rect.height);
             placeholder.SetSiblingIndex(index);

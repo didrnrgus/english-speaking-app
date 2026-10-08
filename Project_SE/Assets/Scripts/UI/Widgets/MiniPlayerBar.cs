@@ -6,45 +6,32 @@ using UnityEngine.UI;
 namespace EnglishApp.UI
 {
     /// <summary>
-    /// 전체 듣기 중에 다른 화면(메인·레벨)으로 나갔을 때 아래에 뜨는 작은 플레이어.
+    /// 전체 듣기 중에 다른 화면(메인·레벨)으로 나갔을 때 아래에 뜨는 작은 플레이어 (AppCanvas 프리팹 안).
     /// 누르면 그 유닛 화면으로 돌아간다.
     /// </summary>
     public class MiniPlayerBar : MonoBehaviour
     {
-        private CanvasGroup group;
-        private TextMeshProUGUI title;
-        private TextMeshProUGUI sub;
-        private Image playIcon;
+        [SerializeField] internal CanvasGroup group;
+        [Tooltip("바 전체 (누르면 유닛 화면으로)")]
+        [SerializeField] internal Button openButton;
+        [SerializeField] internal TextMeshProUGUI title;
+        [SerializeField] internal TextMeshProUGUI sub;
+        [SerializeField] internal Button playButton;
+        [SerializeField] internal Image playIcon;
+        [SerializeField] internal Button stopButton;
+        [SerializeField] internal Sprite playSprite;
+        [SerializeField] internal Sprite pauseSprite;
+
         private bool visible;
 
         private static AppRoot App => AppRoot.I;
 
-        public static MiniPlayerBar Create(Transform parent)
+        private void Awake()
         {
-            var bg = UIKit.Rounded(parent, "MiniPlayer", Theme.Text, 44);
-            bg.raycastTarget = true;
-            bg.rectTransform.BottomStrip(150, 24, 28, 28);
-            UIKit.AddShadow(bg, 8);
-            var bar = bg.gameObject.AddComponent<MiniPlayerBar>();
-            bar.group = bg.gameObject.AddComponent<CanvasGroup>();
-            bar.SetVisible(false, true);
-
-            var open = bg.gameObject.AddComponent<Button>();
-            open.transition = Selectable.Transition.None;
-            open.navigation = new Navigation { mode = Navigation.Mode.None };
-            open.onClick.AddListener(bar.OpenUnit);
-
-            bar.title = UIKit.Text(bg.transform, "Title", "", 34, Theme.TextOnColor, TextAlignmentOptions.BottomLeft).SingleLine().AutoSize(26, 34);
-            bar.title.rectTransform.Fill(44, 18, 300, 74);
-            bar.sub = UIKit.Text(bg.transform, "Sub", "", 28, new Color(1, 1, 1, 0.75f), TextAlignmentOptions.TopLeft).SingleLine();
-            bar.sub.rectTransform.Fill(44, 82, 300, 18);
-
-            var play = UIKit.IconButton(bg.transform, "PlayPause", IconKind.Pause, Theme.TextOnColor, Theme.Primary, 104, 46, bar.TogglePlay, out bar.playIcon);
-            ((RectTransform)play.transform).Place(new Vector2(1, 0.5f), new Vector2(1, 0.5f), new Vector2(-148, 0), new Vector2(104, 104));
-            var stop = UIKit.IconButton(bg.transform, "Stop", IconKind.Close, Theme.TextOnColor, new Color(1, 1, 1, 0.15f), 104, 40,
-                () => App.Player.Stop(), out _);
-            ((RectTransform)stop.transform).Place(new Vector2(1, 0.5f), new Vector2(1, 0.5f), new Vector2(-28, 0), new Vector2(104, 104));
-            return bar;
+            SetVisible(false, true);
+            openButton.onClick.AddListener(OpenUnit);
+            playButton.onClick.AddListener(TogglePlay);
+            stopButton.onClick.AddListener(() => App.Player.Stop());
         }
 
         private void Update()
@@ -68,7 +55,7 @@ namespace EnglishApp.UI
                 : step != null
                     ? "전체 듣기 · " + (step.page + 1) + " / " + player.Unit.items.Count + " · " + Theme.LangName(step.lang)
                     : "전체 듣기";
-            playIcon.sprite = Sprites.Icon(player.IsPlaying ? IconKind.Pause : IconKind.Play);
+            playIcon.sprite = player.IsPlaying ? pauseSprite : playSprite;
         }
 
         private void SetVisible(bool value, bool force)

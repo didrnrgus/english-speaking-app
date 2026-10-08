@@ -1,8 +1,10 @@
 using System;
-using System.Collections.Generic;
+using System.IO;
+using EnglishApp.UI;
+using UnityEditor;
 using UnityEngine;
 
-namespace EnglishApp.UI
+namespace EnglishApp.EditorTools
 {
     public enum IconKind
     {
@@ -22,69 +24,81 @@ namespace EnglishApp.UI
     }
 
     /// <summary>
-    /// 런타임에 그리는 스프라이트 (둥근 사각형 9-slice, 원, 아이콘).
-    /// 이미지 에셋 없이 해상도와 상관없이 깔끔하게 보이도록 SDF 로 안티앨리어싱해서 그린다.
+    /// UI 스프라이트를 PNG 로 굽는다 (둥근 사각형 9-slice, 원, 아이콘, 배경 블롭).
+    /// SDF 로 안티앨리어싱해서 그린다. 이미 있는 PNG 는 덮어쓰지 않는다 (직접 바꾼 그림 유지).
     /// </summary>
-    public static class Sprites
+    public static class SpriteBaker
     {
+        public const string Folder = "Assets/UI/Sprites";
         private const int RoundSize = 128;
-        private const float RoundRadius = 62f; // px
         private const int IconSize = 96;
+        private const int BgWidth = 540;
+        private const int BgHeight = 960;
 
-        private static Sprite rounded;
-        private static Sprite circle;
-        private static readonly Dictionary<IconKind, Sprite> icons = new Dictionary<IconKind, Sprite>();
+        public static string RoundedPath => Folder + "/Rounded.png";
+        public static string CirclePath => Folder + "/Circle.png";
+        public static string BackgroundPath => Folder + "/Background.png";
+        public static string IconPath(IconKind kind) => Folder + "/Icon_" + kind + ".png";
 
-        /// <summary>둥근 사각형 (Image.type = Sliced, 반경은 UIKit.SetRadius 로).</summary>
-        public static Sprite Rounded
+        public static void BakeAll()
         {
-            get
+            Directory.CreateDirectory(Folder);
+            float b = RoundSize * 0.5f;
+            Write(RoundedPath, () => Draw(RoundSize, p =>
             {
-                if (rounded != null) return rounded;
-                var tex = Draw(RoundSize, p =>
-                {
-                    // 픽셀 단위 rounded box
-                    float half = RoundSize * 0.5f;
-                    var q = new Vector2(Mathf.Abs(p.x - half), Mathf.Abs(p.y - half)) - new Vector2(half - RoundRadius, half - RoundRadius);
-                    float outside = new Vector2(Mathf.Max(q.x, 0), Mathf.Max(q.y, 0)).magnitude;
-                    float inside = Mathf.Min(Mathf.Max(q.x, q.y), 0);
-                    return outside + inside - RoundRadius;
-                }, pixelSpace: true);
-                float b = RoundSize * 0.5f;
-                rounded = Sprite.Create(tex, new Rect(0, 0, RoundSize, RoundSize), new Vector2(0.5f, 0.5f), 100f, 0,
-                    SpriteMeshType.FullRect, new Vector4(b, b, b, b));
-                rounded.name = "Rounded";
-                return rounded;
-            }
+                // 픽셀 단위 rounded box
+                float half = RoundSize * 0.5f;
+                float r = UIKit.RoundedSpriteRadius;
+                var q = new Vector2(Mathf.Abs(p.x - half), Mathf.Abs(p.y - half)) - new Vector2(half - r, half - r);
+                float outside = new Vector2(Mathf.Max(q.x, 0), Mathf.Max(q.y, 0)).magnitude;
+                float inside = Mathf.Min(Mathf.Max(q.x, q.y), 0);
+                return outside + inside - r;
+            }, pixelSpace: true), new Vector4(b, b, b, b));
+            Write(CirclePath, () => Draw(RoundSize, p => (p - new Vector2(RoundSize * 0.5f, RoundSize * 0.5f)).magnitude - (RoundSize * 0.5f - 1f),
+                pixelSpace: true), Vector4.zero);
+            foreach (IconKind kind in Enum.GetValues(typeof(IconKind)))
+                Write(IconPath(kind), () => Draw(IconSize, IconSdf(kind), pixelSpace: false), Vector4.zero);
+            Write(BackgroundPath, DrawBackground, Vector4.zero);
         }
 
-        /// <summary>9-slice 에서 반경 radius(캔버스 단위)를 내려면 Image.pixelsPerUnitMultiplier 를 이 값으로.</summary>
-        public static float RoundedMultiplier(float radius)
-        {
-            return RoundRadius / Mathf.Max(1f, radius);
-        }
+        public static Sprite Rounded => Load(RoundedPath);
+        public static Sprite Circle => Load(CirclePath);
+        public static Sprite Background => Load(BackgroundPath);
+        public static Sprite Icon(IconKind kind) => Load(IconPath(kind));
 
-        public static Sprite Circle
+        private static Sprite Load(string path)
         {
-            get
-            {
-                if (circle != null) return circle;
-                var tex = Draw(RoundSize, p => (p - new Vector2(RoundSize * 0.5f, RoundSize * 0.5f)).magnitude - (RoundSize * 0.5f - 1f), pixelSpace: true);
-                circle = Sprite.Create(tex, new Rect(0, 0, RoundSize, RoundSize), new Vector2(0.5f, 0.5f), 100f);
-                circle.name = "Circle";
-                return circle;
-            }
-        }
-
-        public static Sprite Icon(IconKind kind)
-        {
-            if (icons.TryGetValue(kind, out var s) && s != null) return s;
-            Func<Vector2, float> sdf = IconSdf(kind);
-            var tex = Draw(IconSize, sdf, pixelSpace: false);
-            s = Sprite.Create(tex, new Rect(0, 0, IconSize, IconSize), new Vector2(0.5f, 0.5f), 100f);
-            s.name = "Icon_" + kind;
-            icons[kind] = s;
+            var s = AssetDatabase.LoadAssetAtPath<Sprite>(path);
+            if (s == null) throw new Exception("[UI] 스프라이트가 없습니다: " + path);
             return s;
+        }
+
+        private static void Write(string path, Func<Texture2D> draw, Vector4 border)
+        {
+            if (!File.Exists(path))
+            {
+                var tex = draw();
+                File.WriteAllBytes(path, tex.EncodeToPNG());
+                UnityEngine.Object.DestroyImmediate(tex);
+                AssetDatabase.ImportAsset(path, ImportAssetOptions.ForceSynchronousImport);
+            }
+
+            var importer = (TextureImporter)AssetImporter.GetAtPath(path);
+            if (importer.textureType == TextureImporterType.Sprite) return; // 이미 설정됨 (직접 바꾼 설정 유지)
+            importer.textureType = TextureImporterType.Sprite;
+            importer.spriteImportMode = SpriteImportMode.Single;
+            importer.spritePixelsPerUnit = 100f;
+            importer.spriteBorder = border;
+            importer.mipmapEnabled = false;
+            importer.alphaIsTransparency = true;
+            importer.wrapMode = TextureWrapMode.Clamp;
+            importer.filterMode = FilterMode.Bilinear;
+            importer.textureCompression = TextureImporterCompression.Uncompressed;
+            var settings = new TextureImporterSettings();
+            importer.ReadTextureSettings(settings);
+            settings.spriteMeshType = SpriteMeshType.FullRect;
+            importer.SetTextureSettings(settings);
+            importer.SaveAndReimport();
         }
 
         // ------------------------------------------------------------------------------------
@@ -94,12 +108,7 @@ namespace EnglishApp.UI
         /// </summary>
         private static Texture2D Draw(int size, Func<Vector2, float> sdf, bool pixelSpace)
         {
-            var tex = new Texture2D(size, size, TextureFormat.RGBA32, false)
-            {
-                wrapMode = TextureWrapMode.Clamp,
-                filterMode = FilterMode.Bilinear,
-                name = "Generated",
-            };
+            var tex = new Texture2D(size, size, TextureFormat.RGBA32, false);
             var pixels = new Color32[size * size];
             float toPixel = size * 0.5f;
             for (int y = 0; y < size; y++)
@@ -119,7 +128,44 @@ namespace EnglishApp.UI
                 pixels[y * size + x] = new Color32(255, 255, 255, a);
             }
             tex.SetPixels32(pixels);
-            tex.Apply(false, true);
+            tex.Apply(false);
+            return tex;
+        }
+
+        /// <summary>글래스 뒤에 깔 배경: 크림색 바탕에 앱 색(오렌지·블루·그린·노랑) 블롭을 부드럽게.</summary>
+        private static Texture2D DrawBackground()
+        {
+            var blobs = new[]
+            {
+                // (중심 x, y (0~1, 위가 1), 반경 (폭 기준), 색, 세기)
+                (new Vector2(0.10f, 0.92f), 0.70f, Theme.Hex("#FFB37A"), 0.85f),
+                (new Vector2(0.95f, 0.78f), 0.62f, Theme.Hex("#8EC2FF"), 0.75f),
+                (new Vector2(0.20f, 0.45f), 0.58f, Theme.Hex("#8FE3C4"), 0.65f),
+                (new Vector2(0.90f, 0.30f), 0.66f, Theme.Hex("#FFD27A"), 0.70f),
+                (new Vector2(0.45f, 0.05f), 0.70f, Theme.Hex("#FF9C7A"), 0.60f),
+                (new Vector2(0.55f, 0.62f), 0.40f, Theme.Hex("#FFFFFF"), 0.50f),
+            };
+            var baseColor = Theme.Bg;
+            var tex = new Texture2D(BgWidth, BgHeight, TextureFormat.RGBA32, false);
+            var pixels = new Color32[BgWidth * BgHeight];
+            for (int y = 0; y < BgHeight; y++)
+            for (int x = 0; x < BgWidth; x++)
+            {
+                var uv = new Vector2((x + 0.5f) / BgWidth, (y + 0.5f) / BgHeight);
+                var c = baseColor;
+                foreach (var (center, radius, color, strength) in blobs)
+                {
+                    // 화면 비율(9:16)을 고려한 거리 (폭 기준)
+                    var d = new Vector2(uv.x - center.x, (uv.y - center.y) * BgHeight / BgWidth);
+                    float t = Mathf.Clamp01(1f - d.magnitude / radius);
+                    t = t * t * (3f - 2f * t); // smoothstep
+                    c = Color.Lerp(c, color, t * strength);
+                }
+                c.a = 1f;
+                pixels[y * BgWidth + x] = c;
+            }
+            tex.SetPixels32(pixels);
+            tex.Apply(false);
             return tex;
         }
 

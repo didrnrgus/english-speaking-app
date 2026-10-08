@@ -1,5 +1,6 @@
 using EnglishApp.Audio;
 using EnglishApp.UI;
+using LeTai.Asset.TranslucentImage;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -8,18 +9,11 @@ namespace EnglishApp
 {
     /// <summary>
     /// 앱 시작점. 씬에 아무것도 없어도 실행 시 자동으로 만들어진다 (RuntimeInitializeOnLoadMethod).
-    /// 캔버스·이벤트 시스템·서비스(콘텐츠, 캐시, 설정, 재생)를 만들고 메인 화면을 띄운다.
+    /// 카메라·이벤트 시스템·서비스(콘텐츠, 캐시, 설정, 재생)를 만들고, 캔버스 프리팹(AppCanvas)을 띄운 뒤 메인 화면을 연다.
+    /// 캔버스 계층은 AppCanvas.cs, 프리팹 목록은 UIPrefabs.cs 참고.
     ///
-    /// 계층:
-    ///   Canvas
-    ///   ├─ Background            (화면 전체)
-    ///   ├─ SafeArea              (Screen.safeArea 안쪽, Android 내비게이션 바 위 — 모든 UI 는 여기 안에)
-    ///   │   ├─ AdSlot            (맨 아래 배너 광고 전용 띠 — BannerAdSlot)
-    ///   │   └─ Content           (광고 띠 위쪽)
-    ///   │       ├─ Screens       (메인 / 레벨 / 유닛)
-    ///   │       └─ MiniPlayer    (다른 화면에서 전체 듣기 중일 때)
-    ///   ├─ Overlay               (설정 팝업: 어둡게 덮는 배경은 전체, 패널은 SafeArea 안쪽. 열려 있는 동안 배너는 숨김)
-    ///   └─ ToastLayer            (SafeArea 안쪽, 광고 띠 위)
+    /// 글래스 UI: 카메라는 배경 캔버스만 그리고, TranslucentImageSource 가 그 화면을 흐리게 만든다.
+    /// UI 의 글래스(TranslucentImage + Paraform)는 그 흐린 화면을 비춰 보인다.
     /// </summary>
     public class AppRoot : MonoBehaviour
     {
@@ -32,6 +26,7 @@ namespace EnglishApp
         public Navigator Nav { get; private set; }
         public BannerAdSlot Ads { get; private set; }
 
+        private UIPrefabs prefabs;
         private CanvasScaler scaler;
         private RectTransform overlayLayer;
         private Toast toast;
@@ -73,11 +68,17 @@ namespace EnglishApp
             Player.Init(Settings, Cache);
             Player.Failed += ShowToast;
 
-            EnsureCamera();
+            prefabs = UIPrefabs.I;
+            if (prefabs == null)
+            {
+                enabled = false; // 프리팹을 아직 안 만들었음 (UIPrefabs.I 가 안내 로그를 남긴다)
+                return;
+            }
+            var cam = EnsureCamera();
             EnsureEventSystem();
-            var screensLayer = BuildCanvas();
+            var screensLayer = SpawnCanvas(cam);
 
-            Nav = new Navigator(screensLayer, this);
+            Nav = new Navigator(screensLayer, prefabs, this);
             Nav.Push<MainScreen>();
         }
 
@@ -107,7 +108,7 @@ namespace EnglishApp
                 settingsPopup.SelectTab(tab);
                 return;
             }
-            settingsPopup = SettingsPopup.Open(overlayLayer, tab);
+            settingsPopup = SettingsPopup.Open(prefabs.settingsPopup, overlayLayer, tab);
             Ads.Block(SettingsAdBlocker);
         }
 
@@ -120,20 +121,30 @@ namespace EnglishApp
 
         // ---- 만들기 -----------------------------------------------------------------------
 
-        private void EnsureCamera()
+        /// <summary>카메라는 배경 캔버스(UI 레이어)만 그린다. 글래스가 비출 흐린 화면도 여기서 만든다.</summary>
+        private Camera EnsureCamera()
         {
             var cam = Camera.main;
             if (cam == null)
             {
                 cam = new GameObject("Main Camera").AddComponent<Camera>();
                 cam.tag = "MainCamera";
-                cam.clearFlags = CameraClearFlags.SolidColor;
-                cam.backgroundColor = Theme.Bg;
-                cam.cullingMask = 0;
                 DontDestroyOnLoad(cam.gameObject);
             }
+            cam.clearFlags = CameraClearFlags.SolidColor;
+            cam.backgroundColor = Theme.Bg;
+            cam.cullingMask = 1 << UIKit.UILayer;
             // 에디터/PC 대체 재생(AudioSource)용
             if (cam.GetComponent<AudioListener>() == null) cam.gameObject.AddComponent<AudioListener>();
+
+            var source = cam.GetComponent<TranslucentImageSource>();
+            if (source == null) source = cam.gameObject.AddComponent<TranslucentImageSource>();
+            if (prefabs != null) source.BlurConfig = prefabs.blurConfig;
+            source.Downsample = 1;
+            // 배경은 움직이지 않으므로 자주 다시 흐릴 필요가 없다. 대신 화면 전체를 흐려 둔다 (움직이는 UI 뒤에 빈틈 X)
+            source.SkipCulling = true;
+            source.MaxUpdateRate = 10f;
+            return cam;
         }
 
         private void EnsureEventSystem()
@@ -149,38 +160,21 @@ namespace EnglishApp
             DontDestroyOnLoad(go);
         }
 
-        private RectTransform BuildCanvas()
+        private RectTransform SpawnCanvas(Camera cam)
         {
-            var go = new GameObject("Canvas", typeof(RectTransform)) { layer = 5 };
-            DontDestroyOnLoad(go);
-            var canvas = go.AddComponent<Canvas>();
-            canvas.renderMode = RenderMode.ScreenSpaceOverlay;
-            scaler = go.AddComponent<CanvasScaler>();
-            scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
-            scaler.referenceResolution = new Vector2(1080, 1920);
-            scaler.screenMatchMode = CanvasScaler.ScreenMatchMode.MatchWidthOrHeight;
+            var app = UIKit.Spawn(prefabs.appCanvas, null);
+            DontDestroyOnLoad(app.gameObject);
+            app.BackgroundCanvas.worldCamera = cam;
+            scaler = app.Scaler;
             UpdateScalerMatch();
-            go.AddComponent<GraphicRaycaster>();
-            var root = (RectTransform)go.transform;
 
-            UIKit.Image(root, "Background", Theme.Bg).rectTransform.Fill();
-
-            var safe = UIKit.Rect("SafeArea", root).Fill();
-            safe.gameObject.AddComponent<SafeAreaFitter>();
-            Ads = BannerAdSlot.Create(safe);
-            var content = UIKit.Rect("Content", safe).Fill();
-            Ads.AddInsetTarget(content);
-            var screens = UIKit.Rect("Screens", content).Fill();
-            MiniPlayerBar.Create(content);
-
-            overlayLayer = UIKit.Rect("Overlay", root).Fill();
-
-            var toastLayer = UIKit.Rect("ToastLayer", root).Fill();
-            toastLayer.gameObject.AddComponent<SafeAreaFitter>();
-            var toastArea = UIKit.Rect("ToastArea", toastLayer).Fill();
-            Ads.AddInsetTarget(toastArea);
-            toast = Toast.Create(toastArea);
-            return screens;
+            Ads = app.Ads;
+            Ads.Init();
+            Ads.AddInsetTarget(app.Content);
+            Ads.AddInsetTarget(app.ToastArea);
+            overlayLayer = app.Overlay;
+            toast = app.Toast;
+            return app.Screens;
         }
 
         /// <summary>폰(길쭉한 화면)은 가로 1080 기준, 태블릿처럼 덜 길쭉하면 세로 1920 기준.</summary>

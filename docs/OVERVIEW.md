@@ -168,7 +168,7 @@ Unity 는 0.1초마다 플러그인에 "지금 몇 번째를 재생 중인지" �
 
 ## 코드 구조와 시작 방법
 
-레포는 [didrnrgus/english-speaking-app](https://github.com/didrnrgus/english-speaking-app) 이고, 앱은 `unity/` 폴더에 있다. 화면은 씬·프리팹 없이 코드로 만든다 — 에디터 없이도 읽고 리뷰할 수 있고, 여러 사람이 고쳐도 병합 충돌이 적다.
+레포는 [didrnrgus/english-speaking-app](https://github.com/didrnrgus/english-speaking-app) 이고, 앱은 `unity/` 폴더에 있다. 화면 모양은 프리팹(`Assets/UI/Prefabs/`)에 있고 코드는 데이터만 채운다 — 에디터에서 보고 바로 고칠 수 있다. UI 는 리퀴드 글래스(Le Tai Translucent Image + Paraform) 기반.
 
 | 위치 | 하는 일 |
 | --- | --- |

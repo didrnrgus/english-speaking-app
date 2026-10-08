@@ -15,8 +15,14 @@
 3. 셋업이 만든 파일(`ProjectSettings/*`, `Packages/packages-lock.json`, `.meta`, 폰트 에셋, 씬)을 커밋한다
 4. File → Build Profiles → **Android** 로 전환 → Play 로 에디터 확인 / Build 로 기기 확인
 
-> 씬에는 아무것도 둘 필요가 없다. 실행하면 `AppRoot` 가 캔버스·이벤트 시스템·화면을 모두 코드로 만든다
-> (`[RuntimeInitializeOnLoadMethod]`). UI 는 프리팹 없이 `UIKit` 함수로 생성.
+> 씬에는 아무것도 둘 필요가 없다. 실행하면 `AppRoot` 가 카메라·이벤트 시스템을 만들고 캔버스·화면 프리팹을 띄운다
+> (`[RuntimeInitializeOnLoadMethod]`). 화면 모양은 `Assets/UI/Prefabs/*.prefab` 에 있다 — 열어서 고치면 된다.
+> 프리팹 목록은 `Assets/Resources/UI/UIPrefabs.asset`. 프리팹이 없으면 셋업이 `Tools > English App > Build UI Prefabs`
+> (`UIPrefabBuilder`)로 만든다. 이 메뉴를 다시 누르면 코드 기본값으로 덮어쓴다.
+>
+> UI 는 Le Tai 의 Translucent Image + Paraform(리퀴드 글래스) 기반. 카메라는 배경 캔버스(`Assets/UI/Sprites/Background.png`)만 그리고
+> `TranslucentImageSource` 가 흐리게 만든 화면을 글래스(`TranslucentImage`, 머티리얼 `Assets/UI/Materials/Glass.mat`)가 비춰 보인다.
+> 블러 세기는 `Assets/UI/GlassBlur.asset`.
 
 ## 2. 화면
 
@@ -106,11 +112,14 @@ unity/Assets/
 ├─ Scripts/Core/      AppRoot(시작점·캔버스·뒤로가기), ContentService, AudioCache, AppSettings, ContentModels, DeviceScreen
 ├─ Scripts/Ads/       (어셈블리 EnglishApp.Ads) AdConfig, LevelPlayBanner — 배너 광고 SDK 래퍼
 ├─ Scripts/Audio/     AudioPlayer(재생 제어), AndroidAudioBackend, EditorAudioBackend, PlaybackModels
-├─ Scripts/UI/        Theme, Fonts, Sprites(런타임 SDF 아이콘·둥근 사각형), UIKit, Navigator, BaseScreen
+├─ Scripts/UI/        Theme, Fonts, UIKit, UIPrefabs(프리팹 목록), AppCanvas, Navigator, BaseScreen
 │   ├─ Screens/       MainScreen, LevelScreen, UnitScreen, SettingsPopup
-│   └─ Widgets/       PagerView, DirectionalScrollRect, LabeledSlider, SequenceListView, SequenceNodeRow,
+│   └─ Widgets/       TopBar, LevelButton, UnitCard, UnitPage/SpeakingPage/DialoguePage, SentenceLine, SequenceChip,
+│                     NowPlayingCard, PagerView, DirectionalScrollRect, LabeledSlider, SequenceListView, SequenceNodeRow,
 │                     SequenceDragHandle, MiniPlayerBar, SafeAreaFitter, Toast, PressScale, FillViewportHeight, BannerAdSlot
 ├─ Editor/            ProjectSetup, ContentSync, AndroidGradlePostProcess
+│   └─ UI/            UIPrefabBuilder(프리팹 생성기), UIBuild(글래스 프리셋·생성 도우미), SpriteBaker(아이콘·배경 PNG)
+├─ UI/                Prefabs/, Sprites/, Materials/Glass.mat, GlassBlur.asset  (생성기가 만들고 이후엔 직접 수정)
 ├─ Plugins/Android/EnglishAudio.androidlib/   AudioBridge, PlaybackService, SequenceEngine (Java)
 └─ Resources/Fonts/   JalnanGothicTTF.ttf (+ 셋업이 만드는 JalnanGothic SDF.asset)
 ```

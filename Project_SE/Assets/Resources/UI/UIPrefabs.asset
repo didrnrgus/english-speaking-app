@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dda8cd4d7601f5c478922820c2aa6be0, type: 3}
+  m_Name: UIPrefabs
+  m_EditorClassIdentifier: Assembly-CSharp::EnglishApp.UI.UIPrefabs
+  appCanvas: {fileID: 6455426624036960459, guid: 9b4e7a249a99f0e41b8e4de1aced0845, type: 3}
+  screens:
+  - {fileID: 1699346212949817089, guid: 25bc7f7c28d8da84f9eb50788a751221, type: 3}
+  - {fileID: 7541301070572681075, guid: 7b6d0b421871d7543bf320069a8388e5, type: 3}
+  - {fileID: 4114100253314177333, guid: 60077171c5e9245429522e315020d58f, type: 3}
+  settingsPopup: {fileID: 3893194265789534487, guid: 1ab7ae0d0372a25468603305ed4087fb, type: 3}
+  blurConfig: {fileID: 11400000, guid: 05b7bf3eee1df014eadfbad1ba4c2de9, type: 2}

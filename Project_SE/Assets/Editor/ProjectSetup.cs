@@ -18,6 +18,7 @@ namespace EnglishApp.EditorTools
     /// 2. 잘난체 TMP 폰트 템플릿 만들기 (동적 아틀라스, 외곽선 0.15) → Assets/Resources/Fonts/JalnanGothic SDF.asset
     /// 3. 번들 예문 복사 (레포 content/ → StreamingAssets/content)
     /// 4. Player Settings (세로 고정, 패키지명, minSdk 26, IL2CPP/ARM64) + Main 씬을 빌드 목록에
+    /// 5. UI 프리팹이 없으면 만들기 (UIPrefabBuilder → Assets/UI/Prefabs)
     /// </summary>
     [InitializeOnLoad]
     public static class ProjectSetup
@@ -59,6 +60,7 @@ namespace EnglishApp.EditorTools
 
             if (!File.Exists(FontAssetPath)) CreateFontAsset(); // 다시 만들려면 Tools > English App > Rebuild Font Asset
             ContentSync.SyncIfMissing();
+            if (!File.Exists(UIPrefabBuilder.RegistryPath)) UIPrefabBuilder.Build(); // 다시 만들려면 Tools > English App > Build UI Prefabs
 
             if (force || !File.Exists(MarkerPath))
             {

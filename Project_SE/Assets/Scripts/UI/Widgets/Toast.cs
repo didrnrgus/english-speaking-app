@@ -5,28 +5,19 @@ using UnityEngine.UI;
 
 namespace EnglishApp.UI
 {
-    /// <summary>화면 아래쪽 잠깐 뜨는 안내 문구.</summary>
+    /// <summary>화면 아래쪽 잠깐 뜨는 안내 문구 (AppCanvas 프리팹 안).</summary>
     public class Toast : MonoBehaviour
     {
-        private CanvasGroup group;
-        private TextMeshProUGUI text;
+        [SerializeField] internal CanvasGroup group;
+        [SerializeField] internal TextMeshProUGUI text;
+
         private Coroutine routine;
 
-        public static Toast Create(Transform parent)
+        private void Awake()
         {
-            var rt = UIKit.Rect("Toast", parent);
-            rt.Place(new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(0, 260), new Vector2(900, 120));
-            var t = rt.gameObject.AddComponent<Toast>();
-            t.group = rt.gameObject.AddComponent<CanvasGroup>();
-            t.group.alpha = 0;
-            t.group.blocksRaycasts = false;
-            t.group.interactable = false;
-            var bg = UIKit.Rounded(rt, "Bg", new Color(0.18f, 0.16f, 0.24f, 0.92f), 60);
-            bg.rectTransform.Fill();
-            t.text = UIKit.Text(rt, "Text", "", 36, Color.white);
-            t.text.rectTransform.Fill(40, 10, 40, 10);
-            t.text.AutoSize(24, 36);
-            return t;
+            group.alpha = 0;
+            group.blocksRaycasts = false;
+            group.interactable = false;
         }
 
         public void Show(string message, float seconds = 2.5f)
