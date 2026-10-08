@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 843563635931046880}
   - component: {fileID: 6567081854839112587}
   - component: {fileID: 2054983386539925651}
+  - component: {fileID: 3496682616505247082}
   m_Layer: 5
   m_Name: Label
   m_TagString: Untagged
@@ -137,6 +138,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &3496682616505247082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383347238377971366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d62bb226a2e42ae818fae03d42f41d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnglishApp.UI.ThemeColor
+  role: 4
 --- !u!1 &775709054168127071
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,6 +162,7 @@ GameObject:
   - component: {fileID: 8329269913565435305}
   - component: {fileID: 3514856705511093220}
   - component: {fileID: 6281865525523557368}
+  - component: {fileID: 756749855064386341}
   m_Layer: 5
   m_Name: Line
   m_TagString: Untagged
@@ -212,6 +227,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &756749855064386341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775709054168127071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d62bb226a2e42ae818fae03d42f41d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnglishApp.UI.ThemeColor
+  role: 2
 --- !u!1 &957487183899922815
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,7 +514,7 @@ MonoBehaviour:
     ringThickness: 0
     elevation: 120
     effects:
-    - rid: 8946105089296957828
+    - rid: 8946105093564661798
   _imageMode: 0
   _rawTexture: {fileID: 0}
   _uvRect:
@@ -504,7 +532,7 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 8946105089296957828
+    - rid: 8946105093564661798
       type: {class: Shadow, ns: LeTai.Paraform.Scaffold, asm: LeTai.Paraform.Scaffold}
       data:
         name: Shadow
@@ -607,7 +635,7 @@ MonoBehaviour:
     ringThickness: 0
     elevation: 100
     effects:
-    - rid: 8946105089296957826
+    - rid: 8946105093564661796
   _imageMode: 0
   _rawTexture: {fileID: 0}
   _uvRect:
@@ -625,7 +653,7 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 8946105089296957826
+    - rid: 8946105093564661796
       type: {class: Shadow, ns: LeTai.Paraform.Scaffold, asm: LeTai.Paraform.Scaffold}
       data:
         name: Shadow
@@ -1123,6 +1151,7 @@ GameObject:
   - component: {fileID: 3639450778793981726}
   - component: {fileID: 3520926740138691914}
   - component: {fileID: 1725324268962308335}
+  - component: {fileID: 7675159202578468315}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -1187,6 +1216,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7675159202578468315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6054922055129270615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d62bb226a2e42ae818fae03d42f41d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnglishApp.UI.ThemeColor
+  role: 7
 --- !u!1 &6070116261725946501
 GameObject:
   m_ObjectHideFlags: 0
@@ -1487,7 +1529,7 @@ MonoBehaviour:
     ringThickness: 0
     elevation: 120
     effects:
-    - rid: 8946105089296957825
+    - rid: 8946105093564661795
   _imageMode: 0
   _rawTexture: {fileID: 0}
   _uvRect:
@@ -1505,7 +1547,7 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 8946105089296957825
+    - rid: 8946105093564661795
       type: {class: Shadow, ns: LeTai.Paraform.Scaffold, asm: LeTai.Paraform.Scaffold}
       data:
         name: Shadow
@@ -1769,7 +1811,7 @@ MonoBehaviour:
     ringThickness: 0
     elevation: 100
     effects:
-    - rid: 8946105089296957827
+    - rid: 8946105093564661797
   _imageMode: 0
   _rawTexture: {fileID: 0}
   _uvRect:
@@ -1787,7 +1829,7 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 8946105089296957827
+    - rid: 8946105093564661797
       type: {class: Shadow, ns: LeTai.Paraform.Scaffold, asm: LeTai.Paraform.Scaffold}
       data:
         name: Shadow
@@ -1868,6 +1910,7 @@ GameObject:
   - component: {fileID: 8884079293107194515}
   - component: {fileID: 1294543791293802785}
   - component: {fileID: 368214980423987696}
+  - component: {fileID: 4551792858353473116}
   - component: {fileID: 5610388960979659699}
   m_Layer: 5
   m_Name: AdSlot
@@ -1935,6 +1978,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4551792858353473116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7921077997092256437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d62bb226a2e42ae818fae03d42f41d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnglishApp.UI.ThemeColor
+  role: 6
 --- !u!114 &5610388960979659699
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -21,10 +21,12 @@ namespace EnglishApp.EditorTools
         Plus,
         Close,
         Repeat,
+        Sun,
+        Moon,
     }
 
     /// <summary>
-    /// UI 스프라이트를 PNG 로 굽는다 (둥근 사각형 9-slice, 원, 아이콘, 배경 블롭).
+    /// UI 스프라이트를 PNG 로 굽는다 (둥근 사각형 9-slice, 원, 아이콘, 배경 블롭 — 밝은 / 어두운 모드).
     /// SDF 로 안티앨리어싱해서 그린다. 이미 있는 PNG 는 덮어쓰지 않는다 (직접 바꾼 그림 유지).
     /// </summary>
     public static class SpriteBaker
@@ -38,6 +40,7 @@ namespace EnglishApp.EditorTools
         public static string RoundedPath => Folder + "/Rounded.png";
         public static string CirclePath => Folder + "/Circle.png";
         public static string BackgroundPath => Folder + "/Background.png";
+        public static string BackgroundDarkPath => Folder + "/Background_Dark.png";
         public static string IconPath(IconKind kind) => Folder + "/Icon_" + kind + ".png";
 
         public static void BakeAll()
@@ -58,12 +61,14 @@ namespace EnglishApp.EditorTools
                 pixelSpace: true), Vector4.zero);
             foreach (IconKind kind in Enum.GetValues(typeof(IconKind)))
                 Write(IconPath(kind), () => Draw(IconSize, IconSdf(kind), pixelSpace: false), Vector4.zero);
-            Write(BackgroundPath, DrawBackground, Vector4.zero);
+            Write(BackgroundPath, () => DrawBackground(Theme.Hex("#FFF4E3"), LightBlobs), Vector4.zero);
+            Write(BackgroundDarkPath, () => DrawBackground(Theme.Hex("#16131F"), DarkBlobs), Vector4.zero);
         }
 
         public static Sprite Rounded => Load(RoundedPath);
         public static Sprite Circle => Load(CirclePath);
         public static Sprite Background => Load(BackgroundPath);
+        public static Sprite BackgroundDark => Load(BackgroundDarkPath);
         public static Sprite Icon(IconKind kind) => Load(IconPath(kind));
 
         private static Sprite Load(string path)
@@ -132,20 +137,31 @@ namespace EnglishApp.EditorTools
             return tex;
         }
 
-        /// <summary>글래스 뒤에 깔 배경: 크림색 바탕에 앱 색(오렌지·블루·그린·노랑) 블롭을 부드럽게.</summary>
-        private static Texture2D DrawBackground()
+        // 블롭: (중심 x, y (0~1, 위가 1), 반경 (폭 기준), 색, 세기)
+        private static readonly (Vector2, float, Color, float)[] LightBlobs =
         {
-            var blobs = new[]
-            {
-                // (중심 x, y (0~1, 위가 1), 반경 (폭 기준), 색, 세기)
-                (new Vector2(0.10f, 0.92f), 0.70f, Theme.Hex("#FFB37A"), 0.85f),
-                (new Vector2(0.95f, 0.78f), 0.62f, Theme.Hex("#8EC2FF"), 0.75f),
-                (new Vector2(0.20f, 0.45f), 0.58f, Theme.Hex("#8FE3C4"), 0.65f),
-                (new Vector2(0.90f, 0.30f), 0.66f, Theme.Hex("#FFD27A"), 0.70f),
-                (new Vector2(0.45f, 0.05f), 0.70f, Theme.Hex("#FF9C7A"), 0.60f),
-                (new Vector2(0.55f, 0.62f), 0.40f, Theme.Hex("#FFFFFF"), 0.50f),
-            };
-            var baseColor = Theme.Bg;
+            (new Vector2(0.10f, 0.92f), 0.70f, Theme.Hex("#FFB37A"), 0.85f),
+            (new Vector2(0.95f, 0.78f), 0.62f, Theme.Hex("#8EC2FF"), 0.75f),
+            (new Vector2(0.20f, 0.45f), 0.58f, Theme.Hex("#8FE3C4"), 0.65f),
+            (new Vector2(0.90f, 0.30f), 0.66f, Theme.Hex("#FFD27A"), 0.70f),
+            (new Vector2(0.45f, 0.05f), 0.70f, Theme.Hex("#FF9C7A"), 0.60f),
+            (new Vector2(0.55f, 0.62f), 0.40f, Theme.Hex("#FFFFFF"), 0.50f),
+        };
+
+        // 어두운 모드: 같은 자리·같은 색 계열을 깊고 진하게
+        private static readonly (Vector2, float, Color, float)[] DarkBlobs =
+        {
+            (new Vector2(0.10f, 0.92f), 0.70f, Theme.Hex("#8A3A1E"), 0.80f),
+            (new Vector2(0.95f, 0.78f), 0.62f, Theme.Hex("#1F4E9C"), 0.80f),
+            (new Vector2(0.20f, 0.45f), 0.58f, Theme.Hex("#17675A"), 0.70f),
+            (new Vector2(0.90f, 0.30f), 0.66f, Theme.Hex("#6E4C14"), 0.65f),
+            (new Vector2(0.45f, 0.05f), 0.70f, Theme.Hex("#7A2C3C"), 0.60f),
+            (new Vector2(0.55f, 0.62f), 0.40f, Theme.Hex("#3A3358"), 0.50f),
+        };
+
+        /// <summary>글래스 뒤에 깔 배경: 바탕색에 앱 색(오렌지·블루·그린·노랑) 블롭을 부드럽게.</summary>
+        private static Texture2D DrawBackground(Color baseColor, (Vector2, float, Color, float)[] blobs)
+        {
             var tex = new Texture2D(BgWidth, BgHeight, TextureFormat.RGBA32, false);
             var pixels = new Color32[BgWidth * BgHeight];
             for (int y = 0; y < BgHeight; y++)
@@ -212,6 +228,21 @@ namespace EnglishApp.EditorTools
                 case IconKind.Close:
                     return p => Mathf.Min(Segment(p, new Vector2(-0.48f, -0.48f), new Vector2(0.48f, 0.48f)),
                         Segment(p, new Vector2(-0.48f, 0.48f), new Vector2(0.48f, -0.48f))) - stroke;
+                case IconKind.Sun:
+                    return p =>
+                    {
+                        float d = SdCircle(p, Vector2.zero, 0.3f);
+                        for (int i = 0; i < 8; i++)
+                        {
+                            float a = i * Mathf.PI / 4f;
+                            var dir = new Vector2(Mathf.Cos(a), Mathf.Sin(a));
+                            d = Mathf.Min(d, Segment(p, dir * 0.5f, dir * 0.7f) - 0.075f);
+                        }
+                        return d;
+                    };
+                case IconKind.Moon:
+                    // 큰 원에서 오른쪽 위로 비킨 원을 빼서 초승달
+                    return p => Mathf.Max(SdCircle(p, new Vector2(-0.04f, -0.02f), 0.62f), -SdCircle(p, new Vector2(0.3f, 0.28f), 0.5f));
                 case IconKind.Repeat:
                     return p =>
                     {

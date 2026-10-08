@@ -17,9 +17,8 @@ namespace EnglishApp.UI
         [Tooltip("이 목록을 담은 페이지 스크롤 (끌어서 끝에 닿으면 스크롤)")]
         [SerializeField] internal ScrollRect scroll;
         [SerializeField] internal SequenceNodeRow rowPrefab;
-        [Tooltip("끄는 동안 들어갈 자리 표시 (둥근 사각형)")]
+        [Tooltip("끄는 동안 들어갈 자리 표시 (둥근 사각형, 색은 Theme.Line)")]
         [SerializeField] internal Sprite placeholderSprite;
-        [SerializeField] internal Color placeholderColor;
 
         private AppSettings settings;
         private RectTransform content;
@@ -89,7 +88,7 @@ namespace EnglishApp.UI
             placeholder = UIKit.Rect("Placeholder", content);
             var ph = placeholder.gameObject.AddComponent<Image>();
             UIKit.SetRadius(ph, placeholderSprite, 28);
-            ph.color = placeholderColor;
+            ph.color = Theme.Line;
             ph.raycastTarget = false;
             UIKit.Layout(placeholder, preferredHeight: rt.rect.height, minHeight: rt.rect.height);
             placeholder.SetSiblingIndex(index);

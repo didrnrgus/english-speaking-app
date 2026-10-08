@@ -130,7 +130,8 @@ namespace EnglishApp.UI
 
         private void UpdateBackground()
         {
-            background.color = draggingNow ? Theme.SurfaceAlt : playing ? Theme.Highlight : baseColor;
+            // 끄는 중엔 크기만 키운다 (글래스 색은 배경에 곱해져서 다른 색으로 구분하기 어려움)
+            background.color = playing && !draggingNow ? Theme.GlassHighlight : baseColor;
         }
     }
 }

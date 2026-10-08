@@ -21,6 +21,7 @@ namespace EnglishApp.EditorTools
     ///   Assets/UI/Sprites/*.png          둥근 사각형·원·아이콘·배경 (이미 있으면 그대로 둠)
     ///   Assets/UI/Materials/Glass.mat    글래스 머티리얼 (Paraform 데모 Light 복사, 이미 있으면 그대로 둠)
     ///   Assets/UI/GlassBlur.asset        배경 블러 설정 (이미 있으면 그대로 둠)
+    ///   Assets/UI/Themes/Light|Dark.asset 밝은 / 어두운 모드 팔레트 (이미 있으면 그대로 둠)
     ///   Assets/UI/Prefabs/*.prefab       화면·팝업·반복 항목
     ///   Assets/Resources/UI/UIPrefabs.asset   앱이 쓰는 프리팹 목록
     ///
@@ -32,6 +33,8 @@ namespace EnglishApp.EditorTools
         public const string PrefabFolder = Root + "/Prefabs";
         public const string GlassMaterialPath = Root + "/Materials/Glass.mat";
         public const string BlurConfigPath = Root + "/GlassBlur.asset";
+        public const string LightPalettePath = Root + "/Themes/Light.asset";
+        public const string DarkPalettePath = Root + "/Themes/Dark.asset";
         public const string RegistryPath = "Assets/Resources/" + UIPrefabs.ResourcePath + ".asset";
 
         private const string DemoGlassMaterial = "Assets/Le Tai's Asset/TranslucentImageParaform/Demo/Materials/Paraform_Demo_Light.mat";
@@ -58,6 +61,8 @@ namespace EnglishApp.EditorTools
         {
             Directory.CreateDirectory(PrefabFolder);
             Directory.CreateDirectory(Root + "/Materials");
+            Directory.CreateDirectory(Root + "/Themes");
+            Theme.Init(null, null); // 프리팹은 밝은 모드 색으로 만든다
             Directory.CreateDirectory(Path.GetDirectoryName(RegistryPath));
 
             SpriteBaker.BakeAll();
@@ -65,6 +70,8 @@ namespace EnglishApp.EditorTools
             UIBuild.Font = AssetDatabase.LoadAssetAtPath<TMP_FontAsset>(ProjectSetup.FontAssetPath);
             Require(UIBuild.Font, "폰트 템플릿 " + ProjectSetup.FontAssetPath + " (Tools > English App > Run Project Setup)");
             var blur = EnsureBlurConfig();
+            var lightPalette = EnsurePalette(LightPalettePath, false);
+            var darkPalette = EnsurePalette(DarkPalettePath, true);
 
             stage = EditorSceneManager.NewPreviewScene();
             try
@@ -98,6 +105,8 @@ namespace EnglishApp.EditorTools
                 registry.screens = new BaseScreen[] { mainScreen, levelScreen, unitScreen };
                 registry.settingsPopup = settings;
                 registry.blurConfig = blur;
+                registry.lightPalette = lightPalette;
+                registry.darkPalette = darkPalette;
                 EditorUtility.SetDirty(registry);
                 AssetDatabase.SaveAssets();
                 Debug.Log("[UI] UI 프리팹을 만들었습니다 → " + PrefabFolder + " (목록: " + RegistryPath + ")");
@@ -135,6 +144,35 @@ namespace EnglishApp.EditorTools
             AssetDatabase.CreateAsset(config, BlurConfigPath);
             return config;
         }
+
+        /// <summary>화면 모드 팔레트. 밝은 모드의 글래스 톤은 GlassStyle 프리셋과 같게 둔다.</summary>
+        private static ThemePalette EnsurePalette(string path, bool dark)
+        {
+            var palette = AssetDatabase.LoadAssetAtPath<ThemePalette>(path);
+            if (palette != null) return palette;
+            palette = ScriptableObject.CreateInstance<ThemePalette>();
+            if (dark)
+            {
+                palette.colors = ThemePalette.DarkColors();
+                palette.background = SpriteBaker.BackgroundDark;
+                // 글래스 색은 배경에 곱해진다 → 어두운 유리는 틴트를 밝게 두고 밝기(음수)로 어둡게
+                palette.glassCard = new GlassTone(Theme.Hex("#D6CFEA"), 0.8f, -0.45f);
+                palette.glassClear = new GlassTone(Theme.Hex("#E2DCF2"), 0.7f, -0.35f);
+                palette.glassPanel = new GlassTone(Theme.Hex("#CFC8E4"), 0.88f, -0.62f);
+            }
+            else
+            {
+                palette.colors = ThemePalette.LightColors();
+                palette.background = SpriteBaker.Background;
+                palette.glassCard = Tone(palette.colors.surface, GlassStyle.Card);
+                palette.glassClear = Tone(Color.white, GlassStyle.Clear);
+                palette.glassPanel = Tone(palette.colors.bg, GlassStyle.Panel);
+            }
+            AssetDatabase.CreateAsset(palette, path);
+            return palette;
+        }
+
+        private static GlassTone Tone(Color color, GlassStyle style) => new GlassTone(color, style.opacity, style.brightness);
 
         /// <summary>임시 씬에 프리팹 루트를 만든다.</summary>
         private static RectTransform NewRoot(string name)
@@ -317,6 +355,8 @@ namespace EnglishApp.EditorTools
 
             view.settingsButton = IconButton(root, "Settings", IconKind.Gear, Theme.Text, Color.white, 112, 64, GlassStyle.Clear, out _);
             ((RectTransform)view.settingsButton.transform).Place(new Vector2(1, 1), new Vector2(1, 1), new Vector2(-20, -20), new Vector2(112, 112));
+            view.sunSprite = SpriteBaker.Icon(IconKind.Sun);
+            view.moonSprite = SpriteBaker.Icon(IconKind.Moon);
 
             // 2열 블록: 화면 높이의 66% 지점부터 아래로
             var columnsArea = Rect("Columns", root);
@@ -343,6 +383,10 @@ namespace EnglishApp.EditorTools
 
             view.speakingColumn = BuildColumn(row, "문장", "한 문장씩 말하기", Theme.Speaking);
             view.dialogueColumn = BuildColumn(row, "대화", "A · B 대화하기", Theme.Dialogue);
+
+            // 오른쪽 아래 해/달 버튼 (밝은 / 어두운 모드). 목록 위에 떠 있도록 마지막에 만든다
+            view.themeButton = IconButton(root, "ThemeToggle", IconKind.Moon, Theme.Text, Color.white, 120, 60, GlassStyle.Clear, out view.themeIcon);
+            ((RectTransform)view.themeButton.transform).Place(new Vector2(1, 0), new Vector2(1, 0), new Vector2(-36, 40), new Vector2(120, 120));
             return view;
         }
 
@@ -423,7 +467,8 @@ namespace EnglishApp.EditorTools
         private static void LineButtons(Transform parent, SentenceLine line, float height, float width, TextAnchor align)
         {
             var row = Rect("Buttons", parent);
-            Layout(row, preferredHeight: height, minHeight: height);
+            // flexibleHeight 0: 가로 레이아웃은 자기를 늘어나는 요소로 알리므로, 빈 세로 공간을 가져가지 않게 막는다
+            Layout(row, preferredHeight: height, minHeight: height, flexibleHeight: 0);
             HLayout(row, 20, null, align, expandHeight: true);
             float font = height * 0.4f;
             line.playEn = TextButton(row, "PlayEn", "▶ 영어", font, Theme.En, Theme.TextOnColor, height * 0.5f, GlassStyle.Tinted, out _);
@@ -432,7 +477,30 @@ namespace EnglishApp.EditorTools
             Layout(line.playKo, preferredWidth: width);
         }
 
-        /// <summary>문장(말하기) 페이지: 카드 가운데 문장 하나 + ▶ 영어 / ▶ 한국어.</summary>
+        /// <summary>문장 페이지의 정사각형 [▶ 영어] [▶ 한국어] 타일 (큰 ▶ 아이콘 + 라벨).</summary>
+        private static void SquareButtons(Transform parent, SentenceLine line, float size)
+        {
+            var row = Rect("Buttons", parent);
+            Layout(row, preferredHeight: size, minHeight: size, flexibleHeight: 0);
+            HLayout(row, 48, null, TextAnchor.MiddleCenter, expandHeight: false);
+            line.playEn = SquareButton(row, "PlayEn", "영어", Theme.En, size);
+            line.playKo = SquareButton(row, "PlayKo", "한국어", Theme.Ko, size);
+        }
+
+        private static Button SquareButton(Transform parent, string name, string label, Color color, float size)
+        {
+            var b = GlassButton(parent, name, color, size * 0.2f, GlassStyle.Tinted);
+            Layout(b, preferredHeight: size, preferredWidth: size, minHeight: size, minWidth: size);
+            VLayout(b, 10, Pad(16, 16, 0, 0), TextAnchor.MiddleCenter, expandWidth: false);
+            var icon = Image(b.transform, "Icon", Theme.TextOnColor, SpriteBaker.Icon(IconKind.Play));
+            icon.preserveAspect = true;
+            Layout(icon, preferredHeight: size * 0.36f, preferredWidth: size * 0.36f);
+            var text = Text(b.transform, "Label", label, 42, Theme.TextOnColor).SingleLine().AutoSize(28, 42);
+            Layout(text, preferredHeight: 56, preferredWidth: size - 32);
+            return b;
+        }
+
+        /// <summary>문장(말하기) 페이지: 카드 가운데 문장 하나 + 정사각형 ▶ 영어 / ▶ 한국어.</summary>
         private static SpeakingPage BuildSpeakingPage()
         {
             var page = NewRoot("SpeakingPage");
@@ -441,7 +509,7 @@ namespace EnglishApp.EditorTools
             var card = Glass(page, "Card", Theme.Surface, 48, GlassStyle.Card);
             card.rectTransform.Fill(Gutter, 24, Gutter, 24);
 
-            var scroll = VScroll(card.transform, "Scroll", out var content, 24, Pad(36, 36, 40, 40), directional: true);
+            var scroll = VScroll(card.transform, "Scroll", out var content, 64, Pad(40, 40, 56, 56), directional: true);
             ((RectTransform)scroll.transform).Fill();
             content.GetComponent<VerticalLayoutGroup>().childAlignment = TextAnchor.MiddleCenter;
             content.gameObject.AddComponent<FillViewportHeight>().viewport = (RectTransform)scroll.transform;
@@ -449,7 +517,7 @@ namespace EnglishApp.EditorTools
 
             // 재생 중이면 강조 색으로 바뀌는 배경 (평소엔 투명)
             var lineBg = Rounded(content, "Line", new Color(1, 1, 1, 0), 36);
-            VLayout(lineBg, 18, Pad(24, 24, 28, 28));
+            VLayout(lineBg, 24, Pad(28, 28, 36, 36));
             var line = lineBg.gameObject.AddComponent<SentenceLine>();
             line.background = lineBg;
             line.followTarget = lineBg.rectTransform;
@@ -459,7 +527,7 @@ namespace EnglishApp.EditorTools
             line.ko = TappableText(lineBg.transform, "오늘 기분 어때요?", 46, Theme.TextSub, TextAlignmentOptions.Center, out line.koTap);
             view.line = line;
 
-            LineButtons(content, line, 96, 260, TextAnchor.MiddleCenter);
+            SquareButtons(content, line, 240);
             return view;
         }
 
@@ -744,7 +812,6 @@ namespace EnglishApp.EditorTools
                 view.sequenceList.scroll = scroll;
                 view.sequenceList.rowPrefab = nodeRow;
                 view.sequenceList.placeholderSprite = SpriteBaker.Rounded;
-                view.sequenceList.placeholderColor = Theme.Line;
 
                 var addRow = Rect("AddRow", content);
                 Layout(addRow, preferredHeight: 100);
@@ -825,6 +892,7 @@ namespace EnglishApp.EditorTools
             bgScaler.referenceResolution = new Vector2(1080, 1920);
             var bgImage = Image(bgGo.transform, "Background", Color.white, SpriteBaker.Background);
             bgImage.rectTransform.Fill();
+            Themed(bgImage, ColorRole.Background); // 모드에 따라 팔레트의 배경 그림으로
             view.backgroundCanvas = bgCanvas;
 
             // UI 캔버스

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4363696757223633587}
   - component: {fileID: 4706352969023118933}
   - component: {fileID: 4739825653757530096}
+  - component: {fileID: 829687404948926883}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -137,6 +138,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &829687404948926883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269786203098924108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d62bb226a2e42ae818fae03d42f41d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnglishApp.UI.ThemeColor
+  role: 3
 --- !u!1 &3041673050244137826
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,6 +162,7 @@ GameObject:
   - component: {fileID: 6333103562394950636}
   - component: {fileID: 6444220205206574398}
   - component: {fileID: 8337135496205390254}
+  - component: {fileID: 5156329825398949178}
   m_Layer: 5
   m_Name: Icon_Back
   m_TagString: Untagged
@@ -212,6 +227,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5156329825398949178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3041673050244137826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d62bb226a2e42ae818fae03d42f41d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnglishApp.UI.ThemeColor
+  role: 3
 --- !u!1 &5473583209707113545
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,6 +305,7 @@ GameObject:
   - component: {fileID: 7499337194032976380}
   - component: {fileID: 7811105952266179717}
   - component: {fileID: 8959167070216179388}
+  - component: {fileID: 2663974024258152989}
   - component: {fileID: 6330105572274445560}
   - component: {fileID: 2087284037582803401}
   m_Layer: 5
@@ -356,7 +385,7 @@ MonoBehaviour:
     ringThickness: 0
     elevation: 100
     effects:
-    - rid: 8946105089296957792
+    - rid: 8946105093564661761
   _imageMode: 0
   _rawTexture: {fileID: 0}
   _uvRect:
@@ -374,7 +403,7 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 8946105089296957792
+    - rid: 8946105093564661761
       type: {class: Shadow, ns: LeTai.Paraform.Scaffold, asm: LeTai.Paraform.Scaffold}
       data:
         name: Shadow
@@ -387,6 +416,19 @@ MonoBehaviour:
         spread: 0
         quality: 1
         softness: 20
+--- !u!114 &2663974024258152989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7285292676187809007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d62bb226a2e42ae818fae03d42f41d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnglishApp.UI.ThemeColor
+  role: 9
 --- !u!114 &6330105572274445560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -455,6 +497,7 @@ GameObject:
   - component: {fileID: 2067669887731836296}
   - component: {fileID: 7557113878815466230}
   - component: {fileID: 283112842778677041}
+  - component: {fileID: 1066773514124506605}
   m_Layer: 5
   m_Name: Icon_Gear
   m_TagString: Untagged
@@ -519,6 +562,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1066773514124506605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7663473728089011503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d62bb226a2e42ae818fae03d42f41d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnglishApp.UI.ThemeColor
+  role: 3
 --- !u!1 &8282949259885963665
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,6 +586,7 @@ GameObject:
   - component: {fileID: 6484610358265225957}
   - component: {fileID: 7652627587399826952}
   - component: {fileID: 7435303414814029701}
+  - component: {fileID: 4330043974623853660}
   - component: {fileID: 2574290374677462901}
   - component: {fileID: 8712140809448336494}
   m_Layer: 5
@@ -609,7 +666,7 @@ MonoBehaviour:
     ringThickness: 0
     elevation: 100
     effects:
-    - rid: 8946105089296957791
+    - rid: 8946105093564661760
   _imageMode: 0
   _rawTexture: {fileID: 0}
   _uvRect:
@@ -627,7 +684,7 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 8946105089296957791
+    - rid: 8946105093564661760
       type: {class: Shadow, ns: LeTai.Paraform.Scaffold, asm: LeTai.Paraform.Scaffold}
       data:
         name: Shadow
@@ -640,6 +697,19 @@ MonoBehaviour:
         spread: 0
         quality: 1
         softness: 20
+--- !u!114 &4330043974623853660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8282949259885963665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d62bb226a2e42ae818fae03d42f41d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnglishApp.UI.ThemeColor
+  role: 9
 --- !u!114 &2574290374677462901
 MonoBehaviour:
   m_ObjectHideFlags: 0

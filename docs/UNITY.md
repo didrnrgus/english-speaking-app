@@ -23,6 +23,11 @@
 > UI 는 Le Tai 의 Translucent Image + Paraform(리퀴드 글래스) 기반. 카메라는 배경 캔버스(`Assets/UI/Sprites/Background.png`)만 그리고
 > `TranslucentImageSource` 가 흐리게 만든 화면을 글래스(`TranslucentImage`, 머티리얼 `Assets/UI/Materials/Glass.mat`)가 비춰 보인다.
 > 블러 세기는 `Assets/UI/GlassBlur.asset`.
+>
+> 밝은 / 어두운 모드: 메인 화면 오른쪽 아래 해/달 버튼 (선택은 PlayerPrefs `ui_theme_mode` 에 저장).
+> 색은 팔레트 `Assets/UI/Themes/Light.asset`, `Dark.asset` 에서 고친다 (글자·선·트랙·배경 그림·글래스 톤).
+> 프리팹의 그림·글자에 붙은 `ThemeColor`(역할)가 지금 팔레트의 색으로 칠한다 — 프리팹에 보이는 색은 밝은 모드 색.
+> 글래스 색은 배경에 곱해지므로 어두운 유리는 틴트를 밝게 두고 Brightness 를 낮춘다 (`ThemePalette.cs` 주석).
 
 ## 2. 화면
 
@@ -112,14 +117,14 @@ unity/Assets/
 ├─ Scripts/Core/      AppRoot(시작점·캔버스·뒤로가기), ContentService, AudioCache, AppSettings, ContentModels, DeviceScreen
 ├─ Scripts/Ads/       (어셈블리 EnglishApp.Ads) AdConfig, LevelPlayBanner — 배너 광고 SDK 래퍼
 ├─ Scripts/Audio/     AudioPlayer(재생 제어), AndroidAudioBackend, EditorAudioBackend, PlaybackModels
-├─ Scripts/UI/        Theme, Fonts, UIKit, UIPrefabs(프리팹 목록), AppCanvas, Navigator, BaseScreen
+├─ Scripts/UI/        Theme(모드·색), ThemePalette, Fonts, UIKit, UIPrefabs(프리팹 목록), AppCanvas, Navigator, BaseScreen
 │   ├─ Screens/       MainScreen, LevelScreen, UnitScreen, SettingsPopup
-│   └─ Widgets/       TopBar, LevelButton, UnitCard, UnitPage/SpeakingPage/DialoguePage, SentenceLine, SequenceChip,
+│   └─ Widgets/       ThemeColor, TopBar, LevelButton, UnitCard, UnitPage/SpeakingPage/DialoguePage, SentenceLine, SequenceChip,
 │                     NowPlayingCard, PagerView, DirectionalScrollRect, LabeledSlider, SequenceListView, SequenceNodeRow,
 │                     SequenceDragHandle, MiniPlayerBar, SafeAreaFitter, Toast, PressScale, FillViewportHeight, BannerAdSlot
 ├─ Editor/            ProjectSetup, ContentSync, AndroidGradlePostProcess
 │   └─ UI/            UIPrefabBuilder(프리팹 생성기), UIBuild(글래스 프리셋·생성 도우미), SpriteBaker(아이콘·배경 PNG)
-├─ UI/                Prefabs/, Sprites/, Materials/Glass.mat, GlassBlur.asset  (생성기가 만들고 이후엔 직접 수정)
+├─ UI/                Prefabs/, Sprites/, Themes/(Light·Dark 팔레트), Materials/Glass.mat, GlassBlur.asset  (생성기가 만들고 이후엔 직접 수정)
 ├─ Plugins/Android/EnglishAudio.androidlib/   AudioBridge, PlaybackService, SequenceEngine (Java)
 └─ Resources/Fonts/   JalnanGothicTTF.ttf (+ 셋업이 만드는 JalnanGothic SDF.asset)
 ```

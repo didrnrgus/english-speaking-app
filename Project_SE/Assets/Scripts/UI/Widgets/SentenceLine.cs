@@ -47,9 +47,10 @@ namespace EnglishApp.UI
         /// <summary>playing: 이 줄을 재생 중인지, lang: 재생 중인 언어.</summary>
         public void SetPlaying(bool playing, Lang lang)
         {
-            background.color = playing ? Theme.Highlight : baseColor;
-            en.color = playing && lang == Lang.En ? Theme.PrimaryDark : enColor;
-            ko.color = playing && lang == Lang.Ko ? Theme.PrimaryDark : koColor;
+            var highlight = background is LeTai.Asset.TranslucentImage.TranslucentImage ? Theme.GlassHighlight : Theme.Highlight;
+            background.color = playing ? highlight : baseColor;
+            en.color = playing && lang == Lang.En ? Theme.HighlightText : enColor;
+            ko.color = playing && lang == Lang.Ko ? Theme.HighlightText : koColor;
         }
     }
 }

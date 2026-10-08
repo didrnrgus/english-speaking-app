@@ -19,10 +19,11 @@ namespace EnglishApp.EditorTools
         public float shadowAlpha;
         public float shadowOffset;
         public float shadowSoftness;
+        public ColorRole? themeRole; // 흰(중립) 유리일 때 밝은 / 어두운 모드에 따라 톤을 바꾸는 역할
 
         /// <summary>흰 카드 (유닛 카드, 예문 카드, 말풍선, 설정 카드).</summary>
         public static readonly GlassStyle Card = new GlassStyle
-            { opacity = 0.72f, brightness = 0.6f, bevel = 40, elevation = 120, shadowAlpha = 0.18f, shadowOffset = 8, shadowSoftness = 28 };
+            { opacity = 0.72f, brightness = 0.6f, bevel = 40, elevation = 120, shadowAlpha = 0.18f, shadowOffset = 8, shadowSoftness = 28, themeRole = ColorRole.GlassCard };
 
         /// <summary>색 버튼 (레벨 버튼, 전체 듣기, ▶ 영어 / 한국어).</summary>
         public static readonly GlassStyle Tinted = new GlassStyle
@@ -30,7 +31,7 @@ namespace EnglishApp.EditorTools
 
         /// <summary>배경 위 동그란 아이콘 버튼 (뒤로, 설정, 이전/다음, 정지, 반복).</summary>
         public static readonly GlassStyle Clear = new GlassStyle
-            { opacity = 0.45f, brightness = 0.7f, bevel = 28, elevation = 100, shadowAlpha = 0.15f, shadowOffset = 5, shadowSoftness = 20 };
+            { opacity = 0.45f, brightness = 0.7f, bevel = 28, elevation = 100, shadowAlpha = 0.15f, shadowOffset = 5, shadowSoftness = 20, themeRole = ColorRole.GlassClear };
 
         /// <summary>어두운 유리 (미니 플레이어, 지금 재생 중, 토스트).</summary>
         public static readonly GlassStyle Dark = new GlassStyle
@@ -38,7 +39,7 @@ namespace EnglishApp.EditorTools
 
         /// <summary>설정 팝업 패널.</summary>
         public static readonly GlassStyle Panel = new GlassStyle
-            { opacity = 0.9f, brightness = 0.6f, bevel = 48, elevation = 150, shadowAlpha = 0.3f, shadowOffset = 10, shadowSoftness = 40 };
+            { opacity = 0.9f, brightness = 0.6f, bevel = 48, elevation = 150, shadowAlpha = 0.3f, shadowOffset = 10, shadowSoftness = 40, themeRole = ColorRole.GlassPanel };
     }
 
     /// <summary>프리팹 생성기(UIPrefabBuilder)가 쓰는 UGUI 생성 도우미.</summary>
@@ -58,7 +59,40 @@ namespace EnglishApp.EditorTools
             img.color = color;
             img.sprite = sprite;
             img.raycastTarget = false;
+            AutoTheme(img);
             return img;
+        }
+
+        // ---- 화면 모드 ----------------------------------------------------------------------
+
+        /// <summary>색 역할을 붙인다 (밝은 / 어두운 모드에 따라 ThemeColor 가 다시 칠함).</summary>
+        public static ThemeColor Themed(Graphic g, ColorRole role)
+        {
+            var t = g.GetComponent<ThemeColor>();
+            if (t == null) t = g.gameObject.AddComponent<ThemeColor>();
+            t.role = role;
+            return t;
+        }
+
+        /// <summary>
+        /// 밝은 모드 팔레트 색으로 만든 그림·글자에 같은 역할을 붙인다.
+        /// 흰색은 붙이지 않는다 (색 버튼 위 흰 글자·아이콘, 손잡이 점 등은 두 모드 공통).
+        /// </summary>
+        private static void AutoTheme(Graphic g)
+        {
+            var c = g.color;
+            if (g is TMP_Text)
+            {
+                if (c == Theme.Text) Themed(g, ColorRole.Text);
+                else if (c == Theme.TextSub) Themed(g, ColorRole.TextSub);
+                return;
+            }
+            if (c == Theme.Text) Themed(g, ColorRole.Text);
+            else if (c == Theme.TextSub) Themed(g, ColorRole.TextSub);
+            else if (c == Theme.Line) Themed(g, ColorRole.Line);
+            else if (c == Theme.Track) Themed(g, ColorRole.Track);
+            else if (c == Theme.AdSlotBg) Themed(g, ColorRole.AdSlotBg);
+            else if (c == Theme.Bg) Themed(g, ColorRole.Bg);
         }
 
         /// <summary>둥근 사각형 (radius: 캔버스 단위). 글래스가 아닌 작은 장식용 (배지, 슬라이더, 강조 배경).</summary>
@@ -105,6 +139,10 @@ namespace EnglishApp.EditorTools
             img.vibrancy = 1f;
             img.flatten = 0f;
 
+            // 흰(중립) 유리만 모드에 따라 톤을 바꾼다. 색 버튼·어두운 유리는 두 모드 공통
+            bool neutral = color == Color.white || color == Theme.Surface || color == Theme.Bg;
+            if (style.themeRole.HasValue && neutral) Themed(img, style.themeRole.Value);
+
             img.paraformConfig.CornerRadii = new Vector4(radius, radius, radius, radius);
             img.paraformConfig.BevelWidth = Mathf.Min(style.bevel, radius * 0.8f);
             img.paraformConfig.Elevation = style.elevation;
@@ -144,6 +182,7 @@ namespace EnglishApp.EditorTools
             t.raycastTarget = false;
             t.richText = true;
             t.text = text;
+            AutoTheme(t);
             return t;
         }
 

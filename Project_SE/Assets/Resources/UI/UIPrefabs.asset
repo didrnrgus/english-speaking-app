@@ -19,3 +19,5 @@ MonoBehaviour:
   - {fileID: 4114100253314177333, guid: 60077171c5e9245429522e315020d58f, type: 3}
   settingsPopup: {fileID: 3893194265789534487, guid: 1ab7ae0d0372a25468603305ed4087fb, type: 3}
   blurConfig: {fileID: 11400000, guid: 05b7bf3eee1df014eadfbad1ba4c2de9, type: 2}
+  lightPalette: {fileID: 11400000, guid: f9159d43e6e3404439b890fc05f6b5ef, type: 2}
+  darkPalette: {fileID: 11400000, guid: 79f95e900de86c743a76fdcaa4ca873a, type: 2}

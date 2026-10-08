@@ -24,6 +24,11 @@ namespace EnglishApp.UI
         [Tooltip("글래스 뒤 배경 블러 (카메라의 TranslucentImageSource)")]
         public BlurConfig blurConfig;
 
+        [Tooltip("밝은 모드 팔레트")]
+        public ThemePalette lightPalette;
+        [Tooltip("어두운 모드 팔레트")]
+        public ThemePalette darkPalette;
+
         private static UIPrefabs instance;
 
         public static UIPrefabs I

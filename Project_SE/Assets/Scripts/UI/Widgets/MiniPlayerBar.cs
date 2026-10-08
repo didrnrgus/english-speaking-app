@@ -26,6 +26,9 @@ namespace EnglishApp.UI
 
         private static AppRoot App => AppRoot.I;
 
+        /// <summary>지금 떠 있는지 (메인 화면의 해/달 버튼이 이 위로 비켜 올라간다).</summary>
+        public bool IsVisible => visible;
+
         private void Awake()
         {
             SetVisible(false, true);

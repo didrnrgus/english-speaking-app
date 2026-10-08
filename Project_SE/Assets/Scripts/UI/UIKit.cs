@@ -16,12 +16,13 @@ namespace EnglishApp.UI
 
         // ---- 프리팹 -----------------------------------------------------------------------
 
-        /// <summary>프리팹을 만들고 글자 폰트를 런타임 폰트로 바꾼다 (Fonts.ApplyTo).</summary>
+        /// <summary>프리팹을 만들고 글자 폰트를 런타임 폰트로, 색을 지금 화면 모드로 바꾼다.</summary>
         public static T Spawn<T>(T prefab, Transform parent) where T : Component
         {
             var obj = Object.Instantiate(prefab, parent, false);
             obj.name = prefab.name;
             Fonts.ApplyTo(obj.gameObject);
+            ThemeColor.ApplyAll(obj.gameObject);
             return obj;
         }
 

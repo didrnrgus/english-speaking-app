@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e225b799d19241f7968bf0dfabeb22f9, type: 3}
+  m_Name: Light
+  m_EditorClassIdentifier: Assembly-CSharp::EnglishApp.UI.ThemePalette
+  colors:
+    bg: {r: 1, g: 0.95686275, b: 0.8901961, a: 1}
+    surface: {r: 1, g: 1, b: 1, a: 1}
+    line: {r: 0.9372549, g: 0.89411765, b: 0.827451, a: 1}
+    text: {r: 0.18431373, g: 0.16470589, b: 0.23921569, a: 1}
+    textSub: {r: 0.5411765, g: 0.5137255, b: 0.6, a: 1}
+    track: {r: 0.92941177, g: 0.8980392, b: 0.85490197, a: 1}
+    highlight: {r: 1, g: 0.90588236, b: 0.68235296, a: 1}
+    glassHighlight: {r: 1, g: 0.90588236, b: 0.68235296, a: 1}
+    highlightText: {r: 0.9098039, g: 0.38039216, b: 0.17254902, a: 1}
+    adSlotBg: {r: 0.9607843, g: 0.92156863, b: 0.8627451, a: 1}
+  background: {fileID: 21300000, guid: 6b614acd90adc8940983227326cee66a, type: 3}
+  glassCard:
+    color: {r: 1, g: 1, b: 1, a: 1}
+    opacity: 0.72
+    brightness: 0.6
+  glassClear:
+    color: {r: 1, g: 1, b: 1, a: 1}
+    opacity: 0.45
+    brightness: 0.7
+  glassPanel:
+    color: {r: 1, g: 0.95686275, b: 0.8901961, a: 1}
+    opacity: 0.9
+    brightness: 0.6

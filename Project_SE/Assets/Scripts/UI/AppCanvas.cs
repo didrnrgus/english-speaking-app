@@ -38,6 +38,7 @@ namespace EnglishApp.UI
         public RectTransform Overlay => overlay;
         public RectTransform ToastArea => toastArea;
         public BannerAdSlot Ads => ads;
+        public MiniPlayerBar MiniPlayer => miniPlayer;
         public Toast Toast => toast;
     }
 }

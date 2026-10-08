@@ -523,7 +523,7 @@ MonoBehaviour:
     ringThickness: 0
     elevation: 100
     effects:
-    - rid: 8946105089296957795
+    - rid: 8946105093564661764
   _imageMode: 0
   _rawTexture: {fileID: 0}
   _uvRect:
@@ -541,7 +541,7 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 8946105089296957795
+    - rid: 8946105093564661764
       type: {class: Shadow, ns: LeTai.Paraform.Scaffold, asm: LeTai.Paraform.Scaffold}
       data:
         name: Shadow

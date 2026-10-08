@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 2582826094500015096}
   - component: {fileID: 3117206109484656255}
   - component: {fileID: 4353866020646003149}
+  - component: {fileID: 9034355387162696005}
   - component: {fileID: 5157085226029695587}
   m_Layer: 5
   m_Name: Desc
@@ -260,6 +261,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &9034355387162696005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6277867413528370666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d62bb226a2e42ae818fae03d42f41d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnglishApp.UI.ThemeColor
+  role: 4
 --- !u!114 &5157085226029695587
 MonoBehaviour:
   m_ObjectHideFlags: 0

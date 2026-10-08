@@ -429,6 +429,7 @@ GameObject:
   - component: {fileID: 1392653130184526556}
   - component: {fileID: 1593776969104544478}
   - component: {fileID: 28313789401253639}
+  - component: {fileID: 4941288966375940267}
   m_Layer: 5
   m_Name: Track
   m_TagString: Untagged
@@ -493,6 +494,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 6.2
+--- !u!114 &4941288966375940267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4350678902518422009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d62bb226a2e42ae818fae03d42f41d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnglishApp.UI.ThemeColor
+  role: 5
 --- !u!1 &5267291259132585627
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,6 +518,7 @@ GameObject:
   - component: {fileID: 7109218975407929318}
   - component: {fileID: 7734164014915361854}
   - component: {fileID: 2091896580470416474}
+  - component: {fileID: 3360066482778077633}
   - component: {fileID: 609847006866678723}
   m_Layer: 5
   m_Name: Value
@@ -631,6 +646,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &3360066482778077633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5267291259132585627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d62bb226a2e42ae818fae03d42f41d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnglishApp.UI.ThemeColor
+  role: 3
 --- !u!114 &609847006866678723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -773,6 +801,7 @@ GameObject:
   - component: {fileID: 8682270897419774591}
   - component: {fileID: 7986238567507538464}
   - component: {fileID: 2260141461123074601}
+  - component: {fileID: 2091602255555104844}
   - component: {fileID: 7804270351133095826}
   m_Layer: 5
   m_Name: Label
@@ -900,6 +929,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &2091602255555104844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8569956818547638480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d62bb226a2e42ae818fae03d42f41d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnglishApp.UI.ThemeColor
+  role: 3
 --- !u!114 &7804270351133095826
 MonoBehaviour:
   m_ObjectHideFlags: 0

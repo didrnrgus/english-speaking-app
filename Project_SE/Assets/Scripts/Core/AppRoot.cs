@@ -25,6 +25,7 @@ namespace EnglishApp
         public AudioPlayer Player { get; private set; }
         public Navigator Nav { get; private set; }
         public BannerAdSlot Ads { get; private set; }
+        public MiniPlayerBar MiniPlayer { get; private set; }
 
         private UIPrefabs prefabs;
         private CanvasScaler scaler;
@@ -74,7 +75,9 @@ namespace EnglishApp
                 enabled = false; // 프리팹을 아직 안 만들었음 (UIPrefabs.I 가 안내 로그를 남긴다)
                 return;
             }
+            Theme.Init(prefabs.lightPalette, prefabs.darkPalette);
             var cam = EnsureCamera();
+            Theme.Changed += () => cam.backgroundColor = Theme.Bg;
             EnsureEventSystem();
             var screensLayer = SpawnCanvas(cam);
 
@@ -168,6 +171,7 @@ namespace EnglishApp
             scaler = app.Scaler;
             UpdateScalerMatch();
 
+            MiniPlayer = app.MiniPlayer;
             Ads = app.Ads;
             Ads.Init();
             Ads.AddInsetTarget(app.Content);
