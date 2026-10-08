@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: ee18fa135a854de49d15d8f48bd85909
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 330742
+  packageName: Paraform - Procedural Liquid Glass UI for Translucent Image
+  packageVersion: 1.5.0.1
+  assetPath: Assets/Le Tai's Asset/TranslucentImageParaform/Runtime/ParaformUtils.cs
+  uploadId: 1010312

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0bf267058ec514797a232ecf4ec8aedc
+ShaderIncludeImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 330742
+  packageName: Paraform - Procedural Liquid Glass UI for Translucent Image
+  packageVersion: 1.5.0.1
+  assetPath: Assets/Le Tai's Asset/TranslucentImageParaform/Shaders/formSprite.hlsl
+  uploadId: 1010312

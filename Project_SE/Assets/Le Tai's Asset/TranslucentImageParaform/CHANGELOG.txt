@@ -1,0 +1,41 @@
+Changelog:
+
+v1.5.0:
+Requires Translucent Image 7.0.3+
+This update alters the package structure. Don't update inplace. Remove the package first and reimport it.
+ - Shadow and Outline/Glow effects stack
+ - State-based animation
+ - Reduce tie between Translucent Image and Paraform to avoid needing to update both at once in the future
+
+v1.4.0:
+Requires Translucent Image 7.0.2+
+ - New Form Mode: Asset. Use Create > Paraform > Form Asset to convert any Sprite into smooth, scalable shape.
+   The Demo Paraform scene is updated to showcase this sophisticated converter. Check it out!
+
+v1.3.0:
+Requires Translucent Image 7.0.0+
+ - Inherits Translucent Image 7 Raw Image mode, which is especially useful for Paraform as it provides the shape. Check out the new Procedural Texture Paraform demo scene
+ - Fix clicks on children outside the shape being incorrectly blocked
+ - Fix culling being ineffective when using the base Translucent Image shader when Paraform is installed
+ - Fix editor multi-selection of Paraform and Translucent Image material
+ - Fix Get/SetEdgeGlintWrap api
+
+v1.2.0:
+ - Edge Glint is now specified with colors instead of strength. Migrate old materials using The menu: Tools/Translucent Image/Migrate Paraform Materials
+ Note: Requires Translucent Image 6.6.1+
+
+v1.1.2:
+ - Adjust demo to compensate for Translucent Image brightness change
+
+v1.1.1:
+ - Fix corner size jump around at small sizes
+
+v1.1.0:
+ - Ring Thickness feature lets you create ring-shaped UIs.
+ Note: Requires updating Translucent Image
+
+v1.0.1:
+ - Improve demo
+
+v1.0.0:
+ - Initial release
