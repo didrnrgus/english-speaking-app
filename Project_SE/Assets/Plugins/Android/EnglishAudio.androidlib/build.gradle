@@ -33,5 +33,7 @@ android {
 dependencies {
     implementation 'androidx.media3:media3-exoplayer:1.4.1'
     implementation 'androidx.media3:media3-session:1.4.1'
+    // media3 는 annotation 을 runtime 스코프로만 노출하므로 @Nullable 컴파일용으로 직접 추가
+    implementation 'androidx.annotation:annotation:1.8.1'
     implementation 'androidx.annotation:annotation-experimental:1.4.1'
 }

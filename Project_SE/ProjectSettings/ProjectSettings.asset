@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: JethroGameCompany
-  productName: "\uC81C\uC4F0\uB85C\uC758 \uC601\uC5B4 \uB9D0\uD558\uAE30"
+  productName: Project Speaking English
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.12156863, g: 0.12156863, b: 0.1254902, a: 1}

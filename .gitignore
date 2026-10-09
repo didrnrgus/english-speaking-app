@@ -12,6 +12,9 @@ __pycache__/
 /Project_SE/[Uu]ser[Ss]ettings/
 /Project_SE/[Bb]uild/
 /Project_SE/[Bb]uilds/
+
+# 루트에 떨어지는 빌드 산출물 (.aab, Burst 디버그 정보)
+/Builds/
 /Project_SE/[Mm]emoryCaptures/
 /Project_SE/[Rr]ecordings/
 /Project_SE/ExportedObj/
