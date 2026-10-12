@@ -168,6 +168,7 @@ PlayerSettings:
   androidMinAspectRatio: 1
   applicationIdentifier:
     Android: com.yang.projectse
+    iPhone: com.yang.projectse
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -236,7 +237,7 @@ PlayerSettings:
   iOSDeviceRequirements: []
   iOSURLSchemes: []
   macOSURLSchemes: []
-  iOSBackgroundModes: 0
+  iOSBackgroundModes: 1
   iOSMetalForceHardShadows: 0
   metalEditorSupport: 1
   metalAPIValidation: 1
@@ -250,7 +251,7 @@ PlayerSettings:
   iOSManualSigningProvisioningProfileType: 0
   tvOSManualSigningProvisioningProfileType: 0
   VisionOSManualSigningProvisioningProfileType: 0
-  appleEnableAutomaticSigning: 0
+  appleEnableAutomaticSigning: 1
   iOSRequireARKit: 0
   iOSAutomaticallyDetectAndAddCapabilities: 1
   appleEnableProMotion: 0
@@ -690,6 +691,7 @@ PlayerSettings:
   scriptingDefineSymbols:
     Android: LEVELPLAY_DEPENDENCIES_INSTALLED;LETAI_PARAFORM
     Standalone: LEVELPLAY_DEPENDENCIES_INSTALLED;LETAI_PARAFORM
+    iPhone: LEVELPLAY_DEPENDENCIES_INSTALLED;LETAI_PARAFORM
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:

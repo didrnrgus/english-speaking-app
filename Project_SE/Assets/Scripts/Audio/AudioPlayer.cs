@@ -65,6 +65,8 @@ namespace EnglishApp.Audio
             cache = audioCache;
 #if UNITY_ANDROID && !UNITY_EDITOR
             backend = new AndroidAudioBackend();
+#elif UNITY_IOS && !UNITY_EDITOR
+            backend = new IosAudioBackend();
 #else
             backend = new EditorAudioBackend(this);
 #endif

@@ -12,6 +12,7 @@
 | 원격 배포 | ✅ GitHub Pages `https://didrnrgus.github.io/project_speaking_english/` — 3,801개 파일 전수 확인 |
 | 도구 | ✅ `validate_content.py`(구조·오디오 검사), `generate_tts.py`(바뀐 문장만 mp3 재생성) |
 | 앱 (Unity) | 🟡 코드 작성 완료, **에디터·기기 확인 전** — `unity/` 프로젝트, 화면 3종 + 설정 팝업, 네이티브 재생 플러그인 ([UNITY.md](UNITY.md)) |
+| iOS | 🟡 기기 설치 테스트용 대응 (2026-10-12) — 네이티브 재생 플러그인·빌드 설정, **Xcode 빌드·기기 확인 전** ([IOS.md](IOS.md)) |
 | 결정 필요 | S5/D5 '1분' 레벨 실제 길이 약 34초 → 분량 늘리기 / 이름 바꾸기 (7장) |
 
 ## 2. 진행 순서와 결정 이유
@@ -110,6 +111,7 @@ P=../didrnrgus.github.io/project_speaking_english
 | M3 | 수면 타이머, 진행률·오늘의 유닛, 텍스트 크기 |
 | M4 | 최근 앱 목록에서 지워도 재생 유지(서비스 별도 프로세스), 배터리 최적화 안내, 제조사별 테스트 |
 | 출시 전 | AI 음성 고지 문구, Supertonic-3 라이선스 전문 재확인, 예문 원어민 감수 권장 |
+| iOS | Mac 에서 Xcode 빌드 → iPhone 설치 → [IOS.md](IOS.md) 6장 체크리스트. 배포하려면 유료 개발자 계정·아이콘·광고(iOS 키) 추가 |
 | 광고 | LevelPlay 계정·App Key·배너 Ad Unit ID 를 `AdConfig.cs` 에 넣기, Test devices 등록, app-ads.txt, Play 광고·데이터 보안 신고 ([ADS.md](ADS.md) 2·3·6장) |
 
 ## 8. 앱 구현 (M1 ~ M3 일부)
@@ -147,6 +149,22 @@ P=../didrnrgus.github.io/project_speaking_english
 | 컴파일 안전 | 광고 코드는 별도 asmdef + version define → 패키지가 없어도 프로젝트가 컴파일, 키가 없으면 광고 자리도 안 만듦 |
 
 검증: Unity 2021.3 참조 DLL + TMP·LevelPlay 스텁으로 Roslyn 컴파일 (기기+SDK / SDK 없음 / 에디터, 오류·경고 0). 실제 패키지·기기 확인은 아직.
+
+## 8-2. iOS 대응 (기기 설치 테스트용, 2026-10-12)
+
+요청: 배포는 아니고 iPhone 에 설치해 보기.
+
+| 결정 | 내용 / 이유 |
+|---|---|
+| 재생 | Android 와 같은 구조 — Unity 는 UI·지시만, 재생은 네이티브(`EsaAudio.mm`). Unity 오디오는 iOS 도 백그라운드에서 멈추기 때문 |
+| 플레이어 | AVAudioPlayer (클립마다 하나, `enableRate` 로 음높이 유지 빠르기 x0.5~x2.0 — 앱 설정 범위와 같음). AVAudioEngine 보다 끊김·세션 처리 코드가 적다 |
+| 텀 | Android 처럼 무음 WAV 를 반복 재생하며 타이머로 끊음 → 소리를 멈추면 iOS 가 백그라운드 앱을 정지시키므로 |
+| 세션 | Playback / SpokenAudio. Unity 가 포커스 변경 때 Ambient 로 되돌릴 수 있어 재생 중이면 백그라운드 진입·복귀 때 다시 설정 |
+| 잠금화면 | MPRemoteCommandCenter: 재생/일시정지, 이전/다음 = 예문 단위 (Android 와 같게) |
+| 광고 | iOS 는 광고 끔 (코드가 Android 에서만 켜짐). LevelPlay iOS SDK 는 pod 로 링크만 됨 → CocoaPods 필요 |
+| 빌드 설정 | `IosBuildSettings` 가 번들 ID(Android 와 같게)·Background Modes Audio·자동 서명·심볼을 맞추고, Xcode 프로젝트 생성 뒤 Info.plist·프레임워크 확인 |
+
+검증: Mac·Xcode 가 없는 Windows 에서 작성 — Objective-C++·Xcode 빌드와 기기 동작은 아직 확인 전. 이 PC 에는 iOS Build Support 모듈도 아직 없음.
 
 ## 9. 커밋 이력
 

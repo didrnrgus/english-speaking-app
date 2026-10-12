@@ -63,7 +63,8 @@ namespace EnglishApp
                 Debug.LogWarning("[DeviceScreen] 화면 정보 읽기 실패: " + e.Message);
             }
 #else
-            // 에디터: 폭 411dp 폰으로 가정 (Device Simulator 에서 실제 기기 비율과 비슷하게 보이도록)
+            // 에디터·iOS: 폭 411dp 폰으로 가정 (Device Simulator 에서 실제 기기 비율과 비슷하게 보이도록)
+            // iOS 는 내비게이션 바가 없고 홈 인디케이터는 Screen.safeArea 에 들어 있다
             density = Screen.width > 0 ? Screen.width / 411f : 2.625f;
             pxScale = 1f;
             guard = 0f;

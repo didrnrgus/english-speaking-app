@@ -1,7 +1,7 @@
 # Unity 앱 구현 기록
 
-> 2026-10-07 · Unity 6000.3.17f1 · Android 전용 · UGUI + TextMeshPro
-> 기획: [PLAN.md](PLAN.md) · 작업 기록: [WORKLOG.md](WORKLOG.md) · 배너 광고: [ADS.md](ADS.md)
+> 2026-10-07 · Unity 6000.3.17f1 · Android (+ iOS 기기 설치 테스트, 2026-10-12) · UGUI + TextMeshPro
+> 기획: [PLAN.md](PLAN.md) · 작업 기록: [WORKLOG.md](WORKLOG.md) · 배너 광고: [ADS.md](ADS.md) · iOS: [IOS.md](IOS.md)
 
 ## 1. 처음 열기
 
@@ -107,6 +107,12 @@ C# AudioPlayer ──(JNI: play / pause / resume / stop / seekStep / setRepeat /
   MediaController 커스텀 명령으로 통신해야 한다 → M4 에서 검토
 - 빌드 시 `AndroidGradlePostProcess` 가 플러그인 compileSdk 를 unityLibrary 와 맞추고 `android.useAndroidX=true` 를 보장
 
+### iOS (`Assets/Plugins/iOS/EnglishAudio/EsaAudio.mm`)
+
+같은 `IAudioBackend` 를 `IosAudioBackend` 가 `DllImport("__Internal")` 로 구현한다. 규칙(step = [클립 → 무음 텀], 노드 값 즉시 반영,
+예문 단위 이전/다음, 0.1초 `GetState` 폴링 JSON)은 Android 와 같고, 재생은 AVAudioPlayer + 백그라운드 오디오 모드 + 잠금화면 컨트롤.
+빌드 설정은 `Editor/IosBuildSettings.cs` 가 맞춘다. 자세한 구조·설치 방법·체크리스트는 [IOS.md](IOS.md).
+
 ## 5. 콘텐츠·음성
 
 - 예문 JSON: 원격(GitHub Pages) → 캐시(`persistentDataPath/content`) → 번들(`StreamingAssets/content`) 순서
@@ -119,16 +125,17 @@ C# AudioPlayer ──(JNI: play / pause / resume / stop / seekStep / setRepeat /
 unity/Assets/
 ├─ Scripts/Core/      AppRoot(시작점·캔버스·뒤로가기), ContentService, AudioCache, AppSettings, ContentModels, DeviceScreen
 ├─ Scripts/Ads/       (어셈블리 EnglishApp.Ads) AdConfig, LevelPlayBanner — 배너 광고 SDK 래퍼
-├─ Scripts/Audio/     AudioPlayer(재생 제어), AndroidAudioBackend, EditorAudioBackend, PlaybackModels
+├─ Scripts/Audio/     AudioPlayer(재생 제어), AndroidAudioBackend, IosAudioBackend, EditorAudioBackend, PlaybackModels
 ├─ Scripts/UI/        Theme(모드·색), ThemePalette, Fonts, UIKit, UIPrefabs(프리팹 목록), AppCanvas, Navigator, BaseScreen
 │   ├─ Screens/       MainScreen, LevelScreen, UnitScreen, SettingsPopup
 │   └─ Widgets/       ThemeColor, TopBar, LevelButton, UnitCard, UnitPage/SpeakingPage/DialoguePage, SentenceLine, SequenceChip,
 │                     NowPlayingCard, PagerView, DirectionalScrollRect, LabeledSlider, SequenceListView, SequenceNodeRow,
 │                     SequenceDragHandle, MiniPlayerBar, SafeAreaFitter, Toast, PressScale, FillViewportHeight, BannerAdSlot
-├─ Editor/            ProjectSetup, ContentSync, AndroidGradlePostProcess
+├─ Editor/            ProjectSetup, ContentSync, AndroidGradlePostProcess, IosBuildSettings(iOS 설정·Info.plist)
 │   └─ UI/            UIPrefabBuilder(프리팹 생성기), UIBuild(글래스 프리셋·생성 도우미), SpriteBaker(아이콘·배경 PNG)
 ├─ UI/                Prefabs/, Sprites/, Themes/(Light·Dark 팔레트), Materials/Glass.mat, GlassBlur.asset  (생성기가 만들고 이후엔 직접 수정)
 ├─ Plugins/Android/EnglishAudio.androidlib/   AudioBridge, PlaybackService, SequenceEngine (Java)
+├─ Plugins/iOS/EnglishAudio/                  EsaAudio.mm (AVAudioPlayer·잠금화면, Objective-C++)
 └─ Resources/Fonts/   JalnanGothicTTF.ttf (+ 셋업이 만드는 JalnanGothic SDF.asset)
 ```
 
@@ -153,3 +160,4 @@ unity/Assets/
 - [ ] 화면을 다시 켜면 현재 예문·줄 표시가 맞음, 홈 버튼으로 나가도 재생 계속
 - [ ] 전화 수신·이어폰 분리 시 일시정지
 - [ ] 삼성/샤오미 등 절전 정책에서 장시간 재생 (M4)
+- [ ] iOS: [IOS.md](IOS.md) 6장 체크리스트

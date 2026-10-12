@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace EnglishApp.Audio
 {
-    // 네이티브 플러그인(SequenceEngine.load)으로 보내는 JSON 과 같은 모양.
+    // 네이티브 플러그인(Android SequenceEngine.load / iOS EsaAudio.mm load)으로 보내는 JSON 과 같은 모양.
 
     [Serializable]
     public class PlaybackNode
@@ -53,7 +53,7 @@ namespace EnglishApp.Audio
         }
     }
 
-    /// <summary>재생 백엔드: Android 는 네이티브 서비스, 에디터/PC 는 AudioSource.</summary>
+    /// <summary>재생 백엔드: Android 는 네이티브 서비스, iOS 는 네이티브 AVAudioPlayer, 에디터/PC 는 AudioSource.</summary>
     public interface IAudioBackend
     {
         void Play(PlaybackRequest request);

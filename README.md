@@ -1,17 +1,18 @@
 # English Speaking App
 
-**"듣고, 따라 말하고, 화면을 꺼놓고도 계속 들을 수 있는"** 레벨별 영어 말하기·대화 학습 앱 (Android 전용, **Unity** 로 개발).
+**"듣고, 따라 말하고, 화면을 꺼놓고도 계속 들을 수 있는"** 레벨별 영어 말하기·대화 학습 앱 (Android 출시 대상 · iOS 는 기기 설치 테스트용, **Unity** 로 개발).
 
 - 난이도 5단계 × 2트랙(말하기 / 대화하기) = **10개 레벨**, 레벨당 주제별 **유닛 10개**, 유닛당 예문 5개
   → **100유닛, 예문 500개** (하루 1유닛 ≈ 3개월). 유닛 목록: [docs/CURRICULUM.md](docs/CURRICULUM.md)
 - 예문마다 영어 문장 / 한국어 해석 / 영어 음성 / 한국어 음성 (TTS: Supertonic-3, 로컬 생성)
 - 예문 JSON과 mp3는 **GitHub Pages에서 원격으로 받아** 앱 업데이트 없이 수정 가능 (아래 '예문 수정')
 - 플레이리스트식 **연속 재생**, **화면 꺼짐 재생**
-  - Unity는 화면이 꺼지면 오디오가 멈추므로, 재생은 **Android 네이티브 플러그인**(Media3 `MediaSessionService` + ExoPlayer)이 담당하고 Unity(C#)는 UI와 재생 지시만 맡는다
+  - Unity는 화면이 꺼지면 오디오가 멈추므로, 재생은 **네이티브 플러그인**이 담당하고 Unity(C#)는 UI와 재생 지시만 맡는다
+    (Android: Media3 `MediaSessionService` + ExoPlayer / iOS: AVAudioPlayer + 백그라운드 오디오 모드)
 
 처음 보는 분은 → **[프로젝트 소개서 docs/OVERVIEW.md](docs/OVERVIEW.md)**
 
-기획서 전문: [docs/PLAN.md](docs/PLAN.md) · 앱 구현: [docs/UNITY.md](docs/UNITY.md) · 배너 광고: [docs/ADS.md](docs/ADS.md) · 작업 기록: [docs/WORKLOG.md](docs/WORKLOG.md) · 음성 생성 기록: [docs/AUDIO.md](docs/AUDIO.md)
+기획서 전문: [docs/PLAN.md](docs/PLAN.md) · 앱 구현: [docs/UNITY.md](docs/UNITY.md) · 배너 광고: [docs/ADS.md](docs/ADS.md) · iOS 기기 설치: [docs/IOS.md](docs/IOS.md) · 작업 기록: [docs/WORKLOG.md](docs/WORKLOG.md) · 음성 생성 기록: [docs/AUDIO.md](docs/AUDIO.md)
 
 ## 구조
 
@@ -20,6 +21,7 @@ unity/                    # Unity 프로젝트 (아래 '시작하기', 구현 �
   Assets/Scripts/          #   C# — Core(콘텐츠·캐시·설정), Audio(재생 제어), UI(화면·위젯, 코드로 생성)
   Assets/Editor/           #   자동 셋업, 번들 예문 복사, Gradle 보정
   Assets/Plugins/Android/  #   네이티브 오디오 플러그인 EnglishAudio.androidlib (Media3 서비스, Java)
+  Assets/Plugins/iOS/      #   네이티브 오디오 플러그인 EnglishAudio/EsaAudio.mm (AVAudioPlayer, Objective-C++)
   Assets/Resources/Fonts/  #   잘난체 고딕 TTF (TMP 동적 아틀라스, 외곽선 0.15)
   Assets/StreamingAssets/  #   content/ 복사본 (빌드 때 자동 복사, git 제외)
 content/                  # 번들용 예문 (원격 원본의 복사본, 오프라인 첫 실행용)
@@ -33,6 +35,7 @@ docs/OVERVIEW.md          # 프로젝트 소개서 — 처음 보는 사람용 �
 docs/PLAN.md              # 기획서 v0.4
 docs/CURRICULUM.md        # 유닛 목록 (100유닛)
 docs/UNITY.md             # 앱 구현 — 화면, 듣기 시퀀스, 화면 꺼짐 재생 구조, 테스트 체크리스트
+docs/IOS.md               # iOS 기기 설치 (테스트용) — 준비물, Windows/Mac 빌드, Xcode 서명, 재생 구조, 체크리스트
 docs/ADS.md               # 배너 광고 (Unity LevelPlay) — 키 넣는 법, 배치·수익 설계, 무효 트래픽 방지, 출시 전 체크
 docs/WORKLOG.md           # 작업 기록 — 진행 순서·결정 이유·운영 방법·한도·남은 일
 docs/AUDIO.md             # 음성(mp3) 생성 기록 — 현황, 엔진 선택 이유, 생성 절차
@@ -57,6 +60,7 @@ docs/AUDIO.md             # 음성(mp3) 생성 기록 — 현황, 엔진 선택 
    (다시 하려면 `Tools > English App > Run Project Setup`)
 3. 셋업이 만든 `ProjectSettings/`, `.meta`, 폰트 에셋, 씬을 커밋 / 푸시 (`unity/Library`, `Temp` 등은 `.gitignore` 로 제외됨)
 4. File → Build Profiles → **Android** 로 전환 → Play(에디터 확인) / Build(기기 확인)
+   - iPhone 에 설치해 보려면 → [docs/IOS.md](docs/IOS.md) (iOS Build Support 모듈, Mac + Xcode 필요)
 
 자세한 내용은 [docs/UNITY.md](docs/UNITY.md).
 
