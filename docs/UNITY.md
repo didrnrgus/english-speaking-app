@@ -99,8 +99,11 @@ C# AudioPlayer ──(JNI: play / pause / resume / stop / seekStep / setRepeat /
 - 오디오 포커스(전화 등), 이어폰 분리 시 일시정지는 ExoPlayer 기본 처리
 - Unity 는 0.1초마다 `getState()` 를 읽는다 → 화면이 꺼졌다 켜지면 바로 현재 위치로 동기화
 - 에디터·PC 에서는 같은 규칙의 `EditorAudioBackend` (AudioSource) 로 동작. 빠르기는 pitch 라 음높이가 바뀐다 — 실제 품질은 기기에서
-- **한계(기기 확인 필요):** 앱을 최근 앱 목록에서 밀어서 지우면 Unity 는 액티비티가 끝날 때 프로세스를 종료하므로 재생도 멈출 수 있다
-  (화면 끄기·홈 버튼·뒤로 가기는 계속 재생). 이것까지 막으려면 서비스를 별도 프로세스(`android:process`)로 옮기고
+- **한계:** 앱을 최근 앱 목록에서 밀어서 지우면 Unity 는 액티비티 onDestroy 에서 `Process.killProcess` 로 프로세스를 끝내므로 재생도 멈춘다
+  (화면 끄기·홈 버튼·뒤로 가기는 계속 재생). 정리 코드가 돌 틈이 없어 일시정지 알림·미디어 카드가 재부팅 전까지 남던 문제가 있었다 →
+  `AudioBridge` 가 `onActivityPreDestroyed`(Android 10+, 9 이하는 `onTaskRemoved`)에서 세션 해제·알림 제거를 동기로 하고,
+  시스템 '재생 재개' 카드가 생기지 않게 매니페스트에서 `MediaBrowserService` intent-filter 를 뺐다.
+  앱 시작 시 이전 실행이 남긴 알림도 지운다. 재생 자체를 유지하려면 서비스를 별도 프로세스(`android:process`)로 옮기고
   MediaController 커스텀 명령으로 통신해야 한다 → M4 에서 검토
 - 빌드 시 `AndroidGradlePostProcess` 가 플러그인 compileSdk 를 unityLibrary 와 맞추고 `android.useAndroidX=true` 를 보장
 

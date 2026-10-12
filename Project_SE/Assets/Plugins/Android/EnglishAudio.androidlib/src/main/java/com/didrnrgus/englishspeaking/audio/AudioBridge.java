@@ -1,11 +1,17 @@
 package com.didrnrgus.englishspeaking.audio;
 
+import android.app.Activity;
+import android.app.Application;
 import android.content.ComponentName;
 import android.content.Context;
+import android.os.Build;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.media3.session.MediaController;
 import androidx.media3.session.SessionToken;
 
@@ -35,6 +41,8 @@ public final class AudioBridge {
     private static final ArrayList<ServiceAction> PENDING = new ArrayList<>();
     private static Context appContext;
     private static ListenableFuture<MediaController> controllerFuture;
+    @Nullable
+    private static Activity watchedActivity;
 
     /** 엔진이 바뀔 때마다 갱신하는 상태 JSON (Unity 스레드에서 읽음). */
     static volatile String stateJson = "{\"id\":0,\"active\":false,\"playing\":false,\"ended\":false,\"step\":-1,\"gap\":false}";
@@ -42,11 +50,62 @@ public final class AudioBridge {
     private AudioBridge() {
     }
 
-    /** Unity 시작 시 1회 (다시 불러도 무해). */
+    /** Unity 시작 시 1회 (다시 불러도 무해). context 는 Unity 액티비티. */
     public static void init(final Context context) {
         if (context == null) return;
         appContext = context.getApplicationContext();
-        MAIN.post(AudioBridge::connect);
+        MAIN.post(() -> {
+            // 새 프로세스인데 알림이 있다면 이전 실행이 정리 없이 죽으면서 남긴 것
+            if (PlaybackService.instance == null) PlaybackService.cancelNotification(appContext);
+            if (context instanceof Activity) watchActivity((Activity) context);
+            connect();
+        });
+    }
+
+    /**
+     * Unity 는 액티비티 onDestroy 에서 프로세스를 죽인다 (최근 앱에서 지우기 등).
+     * 그 직전(onActivityPreDestroyed)에 재생 서비스를 정리해 알림·미디어 카드가 남지 않게 한다.
+     * Android 9 이하는 이 콜백이 없어 {@link PlaybackService#onTaskRemoved} 에 맡긴다.
+     */
+    private static void watchActivity(Activity activity) {
+        if (Build.VERSION.SDK_INT < 29 || activity == watchedActivity) return;
+        watchedActivity = activity;
+        activity.registerActivityLifecycleCallbacks(new Application.ActivityLifecycleCallbacks() {
+            @Override
+            public void onActivityPreDestroyed(@NonNull Activity a) {
+                PlaybackService service = PlaybackService.instance;
+                if (service != null) service.shutdownNow();
+                PENDING.clear();
+            }
+
+            @Override
+            public void onActivityCreated(@NonNull Activity a, @Nullable Bundle state) {
+            }
+
+            @Override
+            public void onActivityStarted(@NonNull Activity a) {
+            }
+
+            @Override
+            public void onActivityResumed(@NonNull Activity a) {
+            }
+
+            @Override
+            public void onActivityPaused(@NonNull Activity a) {
+            }
+
+            @Override
+            public void onActivityStopped(@NonNull Activity a) {
+            }
+
+            @Override
+            public void onActivitySaveInstanceState(@NonNull Activity a, @NonNull Bundle state) {
+            }
+
+            @Override
+            public void onActivityDestroyed(@NonNull Activity a) {
+            }
+        });
     }
 
     /** 시퀀스 재생. JSON 형식은 SequenceEngine#load 참고. */
@@ -113,8 +172,8 @@ public final class AudioBridge {
         for (ServiceAction action : actions) safeRun(action, service);
     }
 
-    /** 메인 스레드. 서비스가 종료되면 다음 명령 때 다시 연결한다. */
-    static void onServiceDestroyed() {
+    /** 메인 스레드. 서비스 바인딩을 끊는다 (서비스 종료 시). 다음 명령 때 다시 연결한다. */
+    static void releaseController() {
         if (controllerFuture != null) {
             MediaController.releaseFuture(controllerFuture);
             controllerFuture = null;

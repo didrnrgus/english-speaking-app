@@ -8,14 +8,15 @@
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application>
-        <!-- 화면이 꺼져도 재생을 이어가는 포그라운드 미디어 서비스 -->
+        <!-- 화면이 꺼져도 재생을 이어가는 포그라운드 미디어 서비스.
+             android.media.browse.MediaBrowserService 는 넣지 않는다: 넣으면 시스템이 '재생 재개' 지원 앱으로 보고
+             앱이 닫힌 뒤에도 미디어 카드를 남긴다 (재부팅 전까지 안 사라짐). -->
         <service
             android:name="com.didrnrgus.englishspeaking.audio.PlaybackService"
             android:exported="true"
             android:foregroundServiceType="mediaPlayback">
             <intent-filter>
                 <action android:name="androidx.media3.session.MediaSessionService" />
-                <action android:name="android.media.browse.MediaBrowserService" />
             </intent-filter>
         </service>
     </application>
