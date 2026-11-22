@@ -1,0 +1,157 @@
+name: Build iOS (unsigned ipa)
+
+# 스토어 배포용 아님. 서명 없는 .ipa 를 Release 에 올리고, Windows PC 에서 Sideloadly 로 내 iPhone 에 설치한다 (docs/IOS.md 3-C).
+on:
+  push:
+    branches: [main]
+    # 앱에 들어가는 것이 바뀔 때만 빌드한다 (macOS 러너 분량 절약)
+    paths:
+      - 'Project_SE/Assets/**'
+      - 'Project_SE/Packages/**'
+      - 'Project_SE/ProjectSettings/**'
+      - 'content/**'
+      - '.github/workflows/build-ios.yml'
+  workflow_dispatch:
+
+# 한 번에 하나씩 (진행 중인 실행은 끝까지 돈다)
+concurrency:
+  group: build-ios-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  # 1) Linux 에서 Unity 로 Xcode 프로젝트를 만든다
+  unity-export:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.v.outputs.version }}
+    steps:
+      - name: Check Unity secrets
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        run: |
+          MISSING=""
+          for n in UNITY_LICENSE UNITY_EMAIL UNITY_PASSWORD; do [ -n "${!n}" ] || MISSING="$MISSING $n"; done
+          if [ -n "$MISSING" ]; then
+            echo "::error title=Unity 시크릿 없음::레포 Settings → Secrets and variables → Actions 에 등록하세요:$MISSING (docs/IOS.md 3-C)"
+            exit 1
+          fi
+      # iOS 모듈이 든 Unity 도커 이미지 + Library 로 디스크·메모리가 빠듯하다 (Unity exit 137 방지)
+      - name: Free disk space
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL /usr/local/share/boost || true
+          sudo docker image prune --all --force > /dev/null || true
+          df -h /
+      - name: Add swap
+        run: |
+          sudo swapoff -a || true
+          sudo fallocate -l 16G /mnt/ci-swapfile
+          sudo chmod 600 /mnt/ci-swapfile
+          sudo mkswap /mnt/ci-swapfile > /dev/null
+          sudo swapon /mnt/ci-swapfile
+          free -h
+      - uses: actions/checkout@v4
+      - id: v
+        run: |
+          V=$(grep -m1 'bundleVersion:' Project_SE/ProjectSettings/ProjectSettings.asset | awk '{print $2}')
+          echo "version=$V" >> "$GITHUB_OUTPUT"
+          echo "app version $V, build ${{ github.run_number }}"
+      - uses: actions/cache@v4
+        with:
+          path: Project_SE/Library
+          key: Library-iOS-${{ hashFiles('Project_SE/Packages/manifest.json', 'Project_SE/Packages/packages-lock.json', 'Project_SE/ProjectSettings/ProjectVersion.txt') }}
+          restore-keys: Library-iOS-
+      - uses: game-ci/unity-builder@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          projectPath: Project_SE
+          targetPlatform: iOS
+          buildMethod: EnglishApp.EditorTools.CiBuild.BuildIOS
+          versioning: None   # 버전은 ProjectSettings 의 bundleVersion 그대로
+          customParameters: -appBuild ${{ github.run_number }}
+      # 셸 스크립트 실행 권한을 지키려고 tar 로 묶어 올린다 (upload-artifact 는 권한을 잃는다)
+      - name: Pack Xcode project
+        run: |
+          PROJ=$(find build -maxdepth 4 -name Unity-iPhone.xcodeproj | head -1)
+          test -n "$PROJ" || { echo "Unity-iPhone.xcodeproj not found under build/"; find build -maxdepth 3; exit 1; }
+          sudo tar -czf xcode-project.tgz -C "$(dirname "$PROJ")" .
+      - uses: actions/upload-artifact@v4
+        with:
+          name: xcode-project
+          path: xcode-project.tgz
+          retention-days: 1
+
+  # 2) macOS 에서 서명 없이 빌드해 .ipa 로 묶는다 (서명은 설치할 때 Sideloadly 가 내 Apple ID 로)
+  xcode-build:
+    needs: unity-export
+    runs-on: macos-15
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: xcode-project
+      - name: Unpack
+        run: mkdir xcode-project && tar -xzf xcode-project.tgz -C xcode-project
+      # LevelPlay(광고) iOS SDK 는 CocoaPods 로 받는다. Linux 에서는 pod install 을 못 하므로 여기서 한다.
+      # (iOS 에서 광고는 안 띄우지만 패키지가 빌드에 들어가 있어서 링크는 필요하다)
+      - name: Pod install
+        run: |
+          cd xcode-project
+          if [ -f Podfile ]; then pod install --repo-update; else echo "Podfile 없음 — 건너뜀"; fi
+      - name: Archive without signing
+        run: |
+          cd xcode-project
+          if [ -d Unity-iPhone.xcworkspace ]; then SRC="-workspace Unity-iPhone.xcworkspace"; else SRC="-project Unity-iPhone.xcodeproj"; fi
+          xcodebuild $SRC -scheme Unity-iPhone -configuration Release -sdk iphoneos \
+            -archivePath ../build/app.xcarchive archive \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" ENABLE_BITCODE=NO
+      - name: Package ipa
+        run: |
+          mkdir -p Payload
+          cp -R build/app.xcarchive/Products/Applications/*.app Payload/
+          # 미리 서명된 프레임워크(UnityFramework, 광고 SDK 등)의 옛 서명이 남아 있으면
+          # Sideloadly 로 재서명해도 설치 때 ApplicationVerificationFailed (0xe8008001) 가 난다 → 모두 지운다
+          find Payload -type d -name _CodeSignature -prune -exec rm -rf {} +
+          find Payload -type f -name embedded.mobileprovision -delete
+          find Payload/*.app/Frameworks -type f 2>/dev/null | while read -r bin; do
+            file "$bin" | grep -q Mach-O && codesign --remove-signature "$bin" || true
+          done
+          codesign --remove-signature Payload/*.app/"$(/usr/libexec/PlistBuddy -c 'Print :CFBundleExecutable' Payload/*.app/Info.plist)" || true
+          zip -qry app.ipa Payload
+      - uses: actions/upload-artifact@v4
+        with:
+          name: unsigned-ipa
+          path: app.ipa
+          retention-days: 3   # 오래 둘 것은 Release 에 있다
+
+  # 3) main 에서만 Release 에 ipa 를 올린다 (태그 ios-v<버전>-b<빌드번호>)
+  release:
+    needs: [unity-export, xcode-build]
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      VERSION: ${{ needs.unity-export.outputs.version }}
+      BUILD: ${{ github.run_number }}
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: unsigned-ipa
+      - run: mv app.ipa "EnglishSpeaking-iOS-v$VERSION-b$BUILD.ipa"
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ios-v${{ env.VERSION }}-b${{ env.BUILD }}
+          target_commitish: ${{ github.sha }}
+          name: iOS v${{ env.VERSION }} (build ${{ env.BUILD }})
+          prerelease: true   # 개인 기기 설치용 (스토어 배포 아님)
+          body: |
+            서명 없는 iOS 빌드 (개인 기기 설치용). Windows PC 에서 Sideloadly 로 설치 → docs/IOS.md 3-C
+            커밋: ${{ github.sha }}
+          files: EnglishSpeaking-iOS-v${{ env.VERSION }}-b${{ env.BUILD }}.ipa

@@ -26,7 +26,7 @@
 
 | 무엇 | 비고 |
 |---|---|
-| **Mac + Xcode** | iOS 앱은 Xcode 로만 서명·설치할 수 있다. Windows 에서는 Xcode 프로젝트까지만 만들 수 있다 |
+| **Mac + Xcode** | 3장 A·B 경로. **Mac 이 없으면 3장 C** (GitHub Actions 로 빌드 → Windows 에서 Sideloadly 로 설치) |
 | Unity **iOS Build Support** 모듈 | Unity Hub → Installs → 6000.3.17f1 → ⚙ → Add modules → iOS Build Support (빌드하는 PC 에) |
 | CocoaPods | Mac 에서 `brew install cocoapods` (또는 `sudo gem install cocoapods`). LevelPlay 의 iOS SDK 를 받는 데 필요 |
 | Apple ID | 무료 계정으로 충분 (Xcode → Settings → Accounts 에 추가). 유료(연 $99) 개발자 계정이면 1년 유지 |
@@ -58,6 +58,31 @@
 4. 4장으로
 
 > 반드시 **`.xcworkspace`** 를 연다 (`.xcodeproj` 로 열면 LevelPlay pod 가 링크되지 않아 빌드가 실패한다).
+
+### C. Mac 없이: GitHub Actions + Sideloadly (Windows PC 에서 설치)
+
+워크플로 `.github/workflows/build-ios.yml` 이 Linux 에서 Unity 로 Xcode 프로젝트를 만들고(`Editor/CiBuild.cs`),
+macOS 러너에서 `pod install` → **서명 없이** 빌드해 `.ipa` 를 Release 에 올린다. 서명은 설치할 때 Sideloadly 가 내 Apple ID 로 한다.
+
+1. **시크릿 등록** (처음 한 번) — 레포 Settings → Secrets and variables → Actions → New repository secret.
+   Unity 는 라이선스 없이는 실행되지 않아서 개인 Unity 계정의 Personal 라이선스가 필요하다.
+   1. Unity Hub 에 개인 Unity ID 로 로그인 → Settings → Licenses → Add → **Get a free personal license**
+   2. 라이선스 파일을 메모장으로 연다: `C:\ProgramData\Unity\Unity_lic.ulf`
+   3. 시크릿 3개: `UNITY_LICENSE` = 파일 내용 전체, `UNITY_EMAIL` / `UNITY_PASSWORD` = Unity ID 로그인 정보
+   - Personal 라이선스는 주기적으로 만료된다. 빌드가 라이선스 오류로 실패하면 2~3 을 다시.
+2. **빌드** — main 에 `Project_SE/` 나 `content/` 변경을 푸시하면 자동으로 돈다. 바로 돌리려면 Actions → **Build iOS (unsigned ipa)** → Run workflow.
+   Unity 내보내기 + Xcode 빌드로 30분~1시간 걸린다.
+3. **받기** — 레포 **Releases** 에서 `EnglishSpeaking-iOS-v0.1.2-b<빌드번호>.ipa` 다운로드 (태그 `ios-v…`, Pre-release 로 표시됨).
+   버전은 ProjectSettings 의 `bundleVersion`, 빌드 번호는 워크플로 실행 번호.
+4. **Windows 준비** (처음 한 번)
+   - **iTunes**, **iCloud** 를 Apple 사이트에서 받은 버전으로 설치 (MS Store 버전은 Sideloadly 가 기기를 못 찾는 경우가 있다)
+   - [Sideloadly](https://sideloadly.io) 설치
+   - iPhone 을 USB 로 연결 → iPhone 에서 "이 컴퓨터를 신뢰" → 설정 → 개인정보 보호 및 보안 → **개발자 모드** 켜기 (재부팅)
+5. **설치** — Sideloadly 에 `.ipa` 를 끌어다 놓고, Apple ID 입력 → Start
+   - 설치 후 처음 실행 때 "신뢰하지 않는 개발자" → 설정 → 일반 → **VPN 및 기기 관리** → 내 Apple ID → 신뢰
+6. **7일마다 만료** (무료 Apple ID) — 같은 Apple ID 로 다시 설치하면 데이터는 유지된 채 7일 연장된다.
+
+> GitHub 무료 분량: 공개 레포는 무제한, 비공개 레포는 월 2,000분이고 macOS 는 10배로 계산된다 (Xcode 빌드 한 번 ≈ 15~25분 → 150~250분 소진).
 
 ## 4. Xcode 에서 기기에 설치
 
