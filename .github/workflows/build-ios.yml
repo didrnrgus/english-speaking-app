@@ -55,7 +55,16 @@ jobs:
           sudo mkswap /mnt/ci-swapfile > /dev/null
           sudo swapon /mnt/ci-swapfile
           free -h
+      # 폰트(잘난체)·이미지 등은 Git LFS 에 있다. lfs 를 안 받으면 132바이트 포인터 파일이 빌드에 들어가 한글이 깨진다.
       - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - name: Check LFS files
+        run: |
+          if grep -rlI --include='*.ttf' --include='*.otf' --include='*.png' '^version https://git-lfs' Project_SE/Assets | head -5 | grep .; then
+            echo "::error::LFS 파일이 포인터로 남아 있습니다"; exit 1
+          fi
+          ls -l Project_SE/Assets/Resources/Fonts/
       - id: v
         run: |
           V=$(grep -m1 'bundleVersion:' Project_SE/ProjectSettings/ProjectSettings.asset | awk '{print $2}')
