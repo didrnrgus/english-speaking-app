@@ -116,8 +116,13 @@ jobs:
   # 2) macOS 에서 서명 없이 빌드해 .ipa 로 묶는다 (서명은 설치할 때 Sideloadly 가 내 Apple ID 로)
   xcode-build:
     needs: unity-export
-    runs-on: macos-15
+    # LevelPlay(IronSource) 9.6 은 Xcode 26 (Swift 6.2) 로 빌드된 바이너리라 Xcode 16 으로는 링크가 안 된다
+    runs-on: macos-26
     steps:
+      - uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest-stable
+      - run: xcodebuild -version
       - uses: actions/download-artifact@v4
         with:
           name: xcode-project
