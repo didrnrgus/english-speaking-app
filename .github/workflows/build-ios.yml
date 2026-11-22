@@ -134,6 +134,24 @@ jobs:
         run: |
           cd xcode-project
           if [ -f Podfile ]; then pod install --repo-update; else echo "Podfile 없음 — 건너뜀"; fi
+      # Xcode 26 에서는 $(TOOLCHAIN_DIR) 이 따로 받은 Metal 툴체인을 가리켜 Swift 런타임 경로가 빠진다
+      # → 광고 SDK(Swift)의 swiftCompatibility* 심볼을 못 찾는다. 기본 툴체인의 Swift 라이브러리 경로를 직접 넣는다.
+      - name: Add Swift library search paths
+        run: |
+          cd xcode-project
+          ruby -rxcodeproj -e '
+            proj = Xcodeproj::Project.open("Unity-iPhone.xcodeproj")
+            paths = ["$(DEVELOPER_DIR)/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/$(PLATFORM_NAME)", "$(SDKROOT)/usr/lib/swift"]
+            proj.targets.select { |t| t.name == "UnityFramework" }.each do |t|
+              t.build_configurations.each do |c|
+                cur = c.build_settings["LIBRARY_SEARCH_PATHS"] || ["$(inherited)"]
+                cur = [cur] if cur.is_a?(String)
+                c.build_settings["LIBRARY_SEARCH_PATHS"] = cur + (paths - cur)
+                puts "#{t.name}/#{c.name}: #{c.build_settings["LIBRARY_SEARCH_PATHS"].inspect}"
+              end
+            end
+            proj.save'
+          ls "$(xcode-select -p)/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos" | grep -i compat || true
       - name: Archive without signing
         run: |
           cd xcode-project
