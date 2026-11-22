@@ -48,9 +48,9 @@ namespace EnglishApp.EditorTools
             }
 
             // 화면이 꺼져도 재생 (Info.plist UIBackgroundModes=audio)
-            if ((PlayerSettings.iOS.backgroundModes & iOSBackgroundMode.Audio) == 0)
+            if ((PlayerSettings.iOS.backgroundModes & iOSBackgroundMode.AudioAirplayPiP) == 0)
             {
-                PlayerSettings.iOS.backgroundModes |= iOSBackgroundMode.Audio;
+                PlayerSettings.iOS.backgroundModes |= iOSBackgroundMode.AudioAirplayPiP;
                 changed = true;
             }
 
