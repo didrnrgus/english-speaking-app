@@ -1,6 +1,7 @@
 name: Build iOS (unsigned ipa)
 
 # 스토어 배포용 아님. 서명 없는 .ipa 를 Release 에 올리고, Windows PC 에서 Sideloadly 로 내 iPhone 에 설치한다 (docs/IOS.md 3-C).
+# 필요한 시크릿: UNITY_LICENSE (Unity_lic.ulf 내용), UNITY_EMAIL, UNITY_PASSWORD
 on:
   push:
     branches: [main]
