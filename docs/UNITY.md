@@ -29,6 +29,24 @@
 > 프리팹의 그림·글자에 붙은 `ThemeColor`(역할)가 지금 팔레트의 색으로 칠한다 — 프리팹에 보이는 색은 밝은 모드 색.
 > 글래스 색은 배경에 곱해지므로 어두운 유리는 틴트를 밝게 두고 Brightness 를 낮춘다 (`ThemePalette.cs` 주석).
 
+### GitHub Actions 로 apk 빌드
+
+워크플로 `.github/workflows/build-android.yml` 이 Linux 러너에서 Unity 로 서명된 `.apk` 를 만들어 Release 에 올린다 (`Editor/CiBuild.cs` 의 `BuildAndroid`).
+PC 빌드와 같은 키스토어(`Keystore/kkuk7364.keystore`, 별칭 `yangkey`)로 서명하므로 폰에 설치된 앱을 지우지 않고 덮어 설치된다.
+키스토어는 레포에 올리지 않는다 (`.gitignore` 의 `*.keystore`). CI 에서는 시크릿에서 같은 경로로 복원한다.
+
+1. **시크릿 등록** (처음 한 번): 레포 Settings → Secrets and variables → Actions → New repository secret
+   - `UNITY_LICENSE`, `UNITY_EMAIL`, `UNITY_PASSWORD`: iOS 와 같다 ([IOS.md](IOS.md) 3-C)
+   - `ANDROID_KEYSTORE_BASE64`: 키스토어 파일을 base64 로 바꾼 값. PowerShell 에서 아래처럼 클립보드에 복사한다
+     `[Convert]::ToBase64String([IO.File]::ReadAllBytes("Project_SE\Keystore\kkuk7364.keystore")) | Set-Clipboard`
+   - `ANDROID_KEYSTORE_PASS`: 키스토어 비밀번호
+   - `ANDROID_KEYALIAS_PASS`: 별칭 `yangkey` 의 비밀번호 (보통 키스토어 비밀번호와 같다)
+2. **빌드**: main 에 `Project_SE/` 나 `content/` 변경을 푸시하면 자동으로 돈다. 바로 돌리려면 Actions → **Build Android (apk)** → Run workflow.
+   첫 빌드는 Library 캐시가 없어 30~40분쯤 걸린다.
+3. **받기**: 레포 **Releases** 에서 `EnglishSpeaking-Android-v<버전>-b<빌드번호>.apk` (태그 `android-v…`, Pre-release)
+   - versionCode 는 워크플로 실행 번호. 단 ProjectSettings 값보다 작아지지 않는다 (PC 빌드 위에 덮어 설치할 때 다운그레이드 거부를 막는다)
+   - 설치: 폰에서 받아 열거나 `adb install -r <파일>.apk`
+
 ## 2. 화면
 
 ```
