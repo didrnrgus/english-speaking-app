@@ -157,7 +157,7 @@ P=../didrnrgus.github.io/project_speaking_english
 | 결정 | 내용 / 이유 |
 |---|---|
 | 재생 | Android 와 같은 구조 — Unity 는 UI·지시만, 재생은 네이티브(`EsaAudio.mm`). Unity 오디오는 iOS 도 백그라운드에서 멈추기 때문 |
-| 플레이어 | AVAudioPlayer (클립마다 하나, `enableRate` 로 음높이 유지 빠르기 x0.5~x2.0 — 앱 설정 범위와 같음). AVAudioEngine 보다 끊김·세션 처리 코드가 적다 |
+| 플레이어 | AVAudioPlayer (클립마다 하나, `enableRate` 로 음높이 유지 빠르기 x0.5~x2.0 — 앱 설정 범위와 같음). AVAudioEngine 보다 끊김·세션 처리 코드가 적다 → **2026-11-23 AVAudioEngine 으로 교체** (음량 x2 때문, 8-4) |
 | 텀 | Android 처럼 무음 WAV 를 반복 재생하며 타이머로 끊음 → 소리를 멈추면 iOS 가 백그라운드 앱을 정지시키므로 |
 | 세션 | Playback / SpokenAudio. Unity 가 포커스 변경 때 Ambient 로 되돌릴 수 있어 재생 중이면 백그라운드 진입·복귀 때 다시 설정 |
 | 잠금화면 | MPRemoteCommandCenter: 재생/일시정지, 이전/다음 = 예문 단위 (Android 와 같게) |
@@ -182,6 +182,21 @@ P=../didrnrgus.github.io/project_speaking_english
 주의: 처음 한 번은 받는 양이 많다 (D5 레벨 ≈ mp3 1,200개). UI 는 `Tools > English App > Build UI Prefabs` 로 프리팹을 다시 구워야 나온다.
 검증: dotnet 으로 런타임·에디터 어셈블리 컴파일 (오류 0). 기기 동작은 아직.
 
+## 8-4. 전체 듣기 '한번에 설정' · 음량 2배 (2026-11-23)
+
+요청: 듣기 시퀀스의 영어 노드 전부 / 한국어 노드 전부를 한 번에 조절, 그리고 소리가 너무 작음.
+
+| 결정 | 내용 / 이유 |
+|---|---|
+| 한번에 설정 | 설정 > 전체 듣기에 언어별 카드 (영어 / 한국어). 음량·빠르기·텀을 바꾸면 그 언어 노드 전부에 적용. 노드마다 값이 다르면 그 항목은 "-", 그 언어 노드가 없으면 잠금 |
+| 음량 x2 | 설정 100% = 원본 200%. 원본 mp3 를 다시 만들지 않고 재생 단계에서 키움, 넘치는 부분은 소프트 클립/리미터로 눌러 깨짐 방지 |
+| Android | ExoPlayer 오디오 싱크에 `GainAudioProcessor` (PCM x2 + 소프트 클립) |
+| iOS | AVAudioPlayer → **AVAudioEngine** (PlayerNode → TimePitch → PeakLimiter PreGain +6dB). `AVAudioPlayer.volume` 은 1.0 이 최대라 키울 수 없음 |
+| 에디터 | `AudioGainFilter` (`OnAudioFilterRead` x2 + 소프트 클립) |
+| 프리팹 | `UIPrefabBuilder` 에 카드 추가 → `Tools > English App > Build UI Prefabs` 로 다시 구워 커밋 (스프라이트 meta·폰트 에셋도 함께 갱신됨) |
+
+검증: 에디터에서 프리팹 재생성. Android·iOS 기기에서 음량·깨짐 확인은 아직 ([IOS.md](IOS.md) 확인 목록).
+
 ## 9. 커밋 이력
 
 ### 이 레포 (`english-speaking-app`, `main`)
@@ -202,7 +217,15 @@ P=../didrnrgus.github.io/project_speaking_english
 | `45a9a5b` (PR #1) | Unity 앱 구현: 메인/레벨/유닛 화면, 설정(듣기 시퀀스), 화면 꺼짐 재생 플러그인 |
 | `b88e18b` (PR #2) | 프로젝트 소개서 `docs/OVERVIEW.md` |
 | `7a8fb77` (PR #3) | 하단 배너 광고 (Unity LevelPlay), 내비게이션 바 자리 피하기 |
-| (이번) | 문서 정리: 속도 사양(슬라이더)·앱 구현 상태를 WORKLOG·AUDIO·README 에 반영, 커밋 이력 갱신 |
+| `ae7ae47` | 문서 정리: 속도 사양(슬라이더)·앱 구현 상태를 WORKLOG·AUDIO·README 에 반영, 커밋 이력 갱신 |
+| `5f026b2` … `6f7867f` | Unity 프로젝트 `Project_SE/` 로 이동, 리퀴드 글래스 UI·프리팹 분리, 밝은/어두운 모드, Android 빌드 설정·오류 수정 |
+| `5aee898` | 앱 종료 후 미디어 카드가 남는 문제 수정, 0.1.2 |
+| `0e2605d` | iOS 대응: 화면 꺼짐 재생 네이티브 플러그인, 빌드 설정 (8-2) |
+| `e545bae` … `9586ed5` | iOS: GitHub Actions 로 서명 없는 ipa 빌드 → Release 업로드, 빌드 오류 수정 (Swift·Podfile·LFS) |
+| `64e2ea2` | 레벨 전체 듣기, 0.1.3 (8-3) |
+| `108a588` · `0c9bb10` | Unity 에디터 6000.3.29f1 고정, LevelPlay 네이티브 SDK 9.8.0 |
+| `4979c64` | 전체 듣기 '한번에 설정', 모든 소리 2배 (8-4) |
+| (이번) | UI 프리팹 재생성 반영, WORKLOG 8-4·커밋 이력 갱신 |
 
 ### Pages 레포 (`didrnrgus.github.io`, `main`)
 
