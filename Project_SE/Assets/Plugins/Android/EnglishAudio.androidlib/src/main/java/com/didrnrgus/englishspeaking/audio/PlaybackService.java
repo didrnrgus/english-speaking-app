@@ -10,8 +10,12 @@ import androidx.annotation.Nullable;
 import androidx.annotation.OptIn;
 import androidx.media3.common.AudioAttributes;
 import androidx.media3.common.C;
+import androidx.media3.common.audio.AudioProcessor;
 import androidx.media3.common.util.UnstableApi;
+import androidx.media3.exoplayer.DefaultRenderersFactory;
 import androidx.media3.exoplayer.ExoPlayer;
+import androidx.media3.exoplayer.audio.AudioSink;
+import androidx.media3.exoplayer.audio.DefaultAudioSink;
 import androidx.media3.session.DefaultMediaNotificationProvider;
 import androidx.media3.session.MediaSession;
 import androidx.media3.session.MediaSessionService;
@@ -39,7 +43,7 @@ public class PlaybackService extends MediaSessionService {
                 .setUsage(C.USAGE_MEDIA)
                 .setContentType(C.AUDIO_CONTENT_TYPE_SPEECH)
                 .build();
-        player = new ExoPlayer.Builder(this)
+        player = new ExoPlayer.Builder(this, new GainRenderersFactory(this))
                 .setAudioAttributes(attributes, /* handleAudioFocus= */ true)
                 .setHandleAudioBecomingNoisy(true) // 이어폰 분리 시 일시정지
                 .setWakeMode(C.WAKE_MODE_LOCAL) // 재생(무음 텀 포함) 중 CPU 유지
@@ -53,6 +57,23 @@ public class PlaybackService extends MediaSessionService {
 
         instance = this;
         AudioBridge.onServiceReady(this);
+    }
+
+    /** 오디오 출력에 GainAudioProcessor(모든 소리 x2)를 끼운 렌더러 팩토리. */
+    private static final class GainRenderersFactory extends DefaultRenderersFactory {
+        GainRenderersFactory(Context context) {
+            super(context);
+        }
+
+        @Nullable
+        @Override
+        protected AudioSink buildAudioSink(Context context, boolean enableFloatOutput, boolean enableAudioTrackPlaybackParams) {
+            return new DefaultAudioSink.Builder(context)
+                    .setEnableFloatOutput(enableFloatOutput)
+                    .setEnableAudioTrackPlaybackParams(enableAudioTrackPlaybackParams)
+                    .setAudioProcessors(new AudioProcessor[] {new GainAudioProcessor()})
+                    .build();
+        }
     }
 
     SequenceEngine engine() {

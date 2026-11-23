@@ -8,7 +8,7 @@
 | 항목 | iOS 에서 |
 |---|---|
 | 화면·콘텐츠·설정 | Android 와 같은 코드 (Unity UI, 원격 예문·mp3 캐시) |
-| **화면 꺼짐 재생** | 네이티브 플러그인 `Assets/Plugins/iOS/EnglishAudio/EsaAudio.mm` (AVAudioPlayer + 백그라운드 오디오 모드) |
+| **화면 꺼짐 재생** | 네이티브 플러그인 `Assets/Plugins/iOS/EnglishAudio/EsaAudio.mm` (AVAudioEngine + 백그라운드 오디오 모드) |
 | 잠금화면·제어 센터·이어폰 버튼 | 재생/일시정지, 이전/다음 = 예문 단위 이동 (Android 알림 컨트롤과 같은 동작) |
 | 전화·알람 / 이어폰 분리 | 일시정지 (통화가 끝나고 iOS 가 허락하면 이어서 재생) |
 | 노치·홈 인디케이터 | `Screen.safeArea` 로 피함 (Android 의 내비게이션 바 계산은 iOS 에선 0) |
@@ -102,14 +102,17 @@ C# AudioPlayer ──(DllImport "__Internal": EsaAudio_Play / Pause / Resume / S
                       │  Scripts/Audio/IosAudioBackend.cs
                       ▼
 EsaEngine (EsaAudio.mm, 메인 스레드)
-  ├─ step 마다: 음성 클립(AVAudioPlayer, enableRate) → 텀(무음 WAV 반복 재생 + 타이머) → 다음 step
+  ├─ step 마다: 음성 클립(AVAudioEngine: PlayerNode → TimePitch → PeakLimiter) → 텀(무음 WAV 반복 재생 + 타이머) → 다음 step
   ├─ AVAudioSession: Playback / SpokenAudio  ← 무음 스위치를 켜도 들리고, 화면이 꺼져도 계속
   └─ MPRemoteCommandCenter / MPNowPlayingInfoCenter  ← 잠금화면·제어 센터 (제목 = 영어, 아티스트 = 유닛, 앨범 = 해석)
 ```
 
 - Android `SequenceEngine` 과 같은 규칙: 음량·빠르기는 노드 값, 재생 중 바꾸면 즉시 반영, 텀 변경은 진행 중 텀의 남은 시간도 다시 계산
 - 텀 동안에도 무음을 재생한다 — 소리를 멈추면 iOS 가 몇 초 뒤 백그라운드 앱을 정지시키기 때문
-- 빠르기는 `AVAudioPlayer.rate` (음높이 유지), 범위 x0.5~x2.0 — 앱 설정 범위와 같다
+- 빠르기는 `AVAudioUnitTimePitch.rate` (음높이 유지), 범위 x0.5~x2.0 — 앱 설정 범위와 같다
+- 음량: 노드 값(0~1)은 `AVAudioPlayerNode.volume`, 그 뒤 피크 리미터 PreGain +6dB 로 모든 소리 x2 (설정 100% = 원본 200%).
+  `AVAudioPlayer.volume` 은 1.0 이 최대라 엔진으로 바꿨다. 리미터가 넘치는 부분을 눌러 깨지지 않게 한다
+- 출력 장치가 바뀌거나(엔진 설정 변경) 전화 등으로 끊기면 시스템이 엔진을 멈춘다 → 이어서 재생할 때 지금 문장을 처음부터
 - 깨진 mp3 는 건너뛰고, 전부 깨졌으면 끝낸다
 - Unity 는 0.1초마다 `EsaAudio_GetState()` 를 읽는다 (Android 와 같은 JSON)
 - Unity 가 포커스가 바뀔 때 오디오 세션을 자기 값(Ambient)으로 되돌릴 수 있어, 재생 중이면 백그라운드 진입·복귀 때 Playback 으로 다시 맞춘다
@@ -124,6 +127,8 @@ EsaEngine (EsaAudio.mm, 메인 스레드)
 - [ ] 설치·실행, 폰트·글래스 UI 표시, 노치·홈 인디케이터에 UI 가 가리지 않음
 - [ ] 개별 듣기 (무음 스위치 켠 상태에서도 소리 남), 재생 중 음량·빠르기 변경 즉시 반영
 - [ ] 전체 듣기: 시퀀스 순서·노드별 음량·빠르기·텀
+- [ ] 음량이 이전 버전(AVAudioPlayer)보다 확실히 큼 (x2), 큰 소리에서 깨짐 없음, 빠르기 바꿔도 음높이 유지
+- [ ] 재생 중 이어폰 연결/분리, 블루투스 전환 후 다시 재생
 - [ ] **화면을 잠그고 유닛 끝까지 재생** (텀 포함, 특히 텀 5초에서 끊기지 않는지)
 - [ ] 잠금화면·제어 센터: 제목·유닛 표시, 재생/일시정지/이전/다음
 - [ ] 홈으로 나갔다 돌아오면 현재 예문·줄 표시가 맞음, 돌아온 뒤 다시 잠가도 계속 재생 (세션 재설정 확인)

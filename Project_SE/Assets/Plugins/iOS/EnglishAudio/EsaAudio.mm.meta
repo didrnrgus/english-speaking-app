@@ -30,7 +30,7 @@ PluginImporter:
         AddToEmbeddedBinaries: false
         CPU: AnyCPU
         CompileFlags: -fobjc-arc
-        FrameworkDependencies: AVFoundation;MediaPlayer;
+        FrameworkDependencies: AVFoundation;AudioToolbox;MediaPlayer;
   userData: 
   assetBundleName: 
   assetBundleVariant: 

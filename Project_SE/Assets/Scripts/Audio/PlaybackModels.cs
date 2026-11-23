@@ -8,6 +8,7 @@ namespace EnglishApp.Audio
     [Serializable]
     public class PlaybackNode
     {
+        /// <summary>설정 화면 값 (0~1). 실제 출력은 백엔드가 AudioOutput.Gain(x2) 를 곱한다.</summary>
         public float volume = 1f;
         public float speed = 1f;
         public float gap;
@@ -53,7 +54,7 @@ namespace EnglishApp.Audio
         }
     }
 
-    /// <summary>재생 백엔드: Android 는 네이티브 서비스, iOS 는 네이티브 AVAudioPlayer, 에디터/PC 는 AudioSource.</summary>
+    /// <summary>재생 백엔드: Android 는 네이티브 서비스, iOS 는 네이티브 AVAudioEngine, 에디터/PC 는 AudioSource.</summary>
     public interface IAudioBackend
     {
         void Play(PlaybackRequest request);

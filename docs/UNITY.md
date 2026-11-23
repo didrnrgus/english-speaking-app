@@ -44,7 +44,7 @@
                      └─ [■ 정지] [▶ 전체 듣기 / 일시정지 / 이어 듣기] [반복]
 설정 팝업 (어느 화면에서든 ⚙)
 ├─ 개별 듣기: 음량, 빠르기 슬라이더 + 마지막 문장 다시 듣기
-└─ 전체 듣기: 듣기 시퀀스 (끌어서 순서 변경, + 영어 / + 한국어, 노드마다 음량·빠르기·텀), 반복, 기본값
+└─ 전체 듣기: 한번에 설정 (영어 / 한국어 노드 전부의 음량·빠르기·텀, 노드마다 다르면 "-"), 듣기 시퀀스 (끌어서 순서 변경, + 영어 / + 한국어, 노드마다 음량·빠르기·텀), 반복, 기본값
 미니 플레이어: 전체 듣기 중 다른 화면으로 나가면 아래에 표시 (누르면 지금 재생 중인 유닛으로)
                [S1 전체 듣기 · U03 가족] 유닛 3/10 · 예문 2/5 · 영어   /   [S1-U03 가족] 유닛 전체 듣기 · 예문 2/5 · 영어
 배너 광고: 모든 화면 맨 아래 전용 띠 (화면은 그 위까지만) → ADS.md
@@ -113,11 +113,11 @@ C# AudioPlayer ──(JNI: play / pause / resume / stop / seekStep / setRepeat /
 - step(= 예문·줄·노드 하나)마다 **[음성 클립, 무음 텀]** 두 항목. 텀은 20초짜리 무음 WAV 를 재생하면서 타이머로 끊는다
   - 텀 동안에도 플레이어가 '재생 중' → 포그라운드 서비스와 wake lock 이 유지되어 화면이 꺼져도 끊기지 않는다
   - 텀 값을 바꾸면 진행 중인 텀의 남은 시간도 바로 다시 계산
-- 음량 `player.setVolume`, 빠르기 `setPlaybackParameters` (음높이 유지). 다음 클립의 빠르기는 텀이 시작될 때 미리 바꿔 둔다
+- 음량 `player.setVolume`(0~1) + `GainAudioProcessor` 로 모든 소리 x2 (설정 100% = 원본 200%, 넘치는 부분은 부드럽게 눌러 깨짐 방지), 빠르기 `setPlaybackParameters` (음높이 유지). 다음 클립의 빠르기는 텀이 시작될 때 미리 바꿔 둔다
 - 알림·잠금화면·블루투스: 재생/일시정지, 이전/다음 = **예문 단위** 이동
 - 오디오 포커스(전화 등), 이어폰 분리 시 일시정지는 ExoPlayer 기본 처리
 - Unity 는 0.1초마다 `getState()` 를 읽는다 → 화면이 꺼졌다 켜지면 바로 현재 위치로 동기화
-- 에디터·PC 에서는 같은 규칙의 `EditorAudioBackend` (AudioSource) 로 동작. 빠르기는 pitch 라 음높이가 바뀐다 — 실제 품질은 기기에서
+- 에디터·PC 에서는 같은 규칙의 `EditorAudioBackend` (AudioSource + `AudioGainFilter` x2) 로 동작. 빠르기는 pitch 라 음높이가 바뀐다 — 실제 품질은 기기에서
 - **한계:** 앱을 최근 앱 목록에서 밀어서 지우면 Unity 는 액티비티 onDestroy 에서 `Process.killProcess` 로 프로세스를 끝내므로 재생도 멈춘다
   (화면 끄기·홈 버튼·뒤로 가기는 계속 재생). 정리 코드가 돌 틈이 없어 일시정지 알림·미디어 카드가 재부팅 전까지 남던 문제가 있었다 →
   `AudioBridge` 가 `onActivityPreDestroyed`(Android 10+, 9 이하는 `onTaskRemoved`)에서 세션 해제·알림 제거를 동기로 하고,
@@ -129,7 +129,7 @@ C# AudioPlayer ──(JNI: play / pause / resume / stop / seekStep / setRepeat /
 ### iOS (`Assets/Plugins/iOS/EnglishAudio/EsaAudio.mm`)
 
 같은 `IAudioBackend` 를 `IosAudioBackend` 가 `DllImport("__Internal")` 로 구현한다. 규칙(step = [클립 → 무음 텀], 노드 값 즉시 반영,
-예문 단위 이전/다음, 0.1초 `GetState` 폴링 JSON)은 Android 와 같고, 재생은 AVAudioPlayer + 백그라운드 오디오 모드 + 잠금화면 컨트롤.
+예문 단위 이전/다음, 0.1초 `GetState` 폴링 JSON)은 Android 와 같고, 재생은 AVAudioEngine(플레이어 노드 → TimePitch 빠르기 → 피크 리미터 PreGain +6dB = x2) + 백그라운드 오디오 모드 + 잠금화면 컨트롤.
 빌드 설정은 `Editor/IosBuildSettings.cs` 가 맞춘다. 자세한 구조·설치 방법·체크리스트는 [IOS.md](IOS.md).
 
 ## 5. 콘텐츠·음성
@@ -154,7 +154,7 @@ unity/Assets/
 │   └─ UI/            UIPrefabBuilder(프리팹 생성기), UIBuild(글래스 프리셋·생성 도우미), SpriteBaker(아이콘·배경 PNG)
 ├─ UI/                Prefabs/, Sprites/, Themes/(Light·Dark 팔레트), Materials/Glass.mat, GlassBlur.asset  (생성기가 만들고 이후엔 직접 수정)
 ├─ Plugins/Android/EnglishAudio.androidlib/   AudioBridge, PlaybackService, SequenceEngine (Java)
-├─ Plugins/iOS/EnglishAudio/                  EsaAudio.mm (AVAudioPlayer·잠금화면, Objective-C++)
+├─ Plugins/iOS/EnglishAudio/                  EsaAudio.mm (AVAudioEngine·잠금화면, Objective-C++)
 └─ Resources/Fonts/   JalnanGothicTTF.ttf (+ 셋업이 만드는 JalnanGothic SDF.asset)
 ```
 

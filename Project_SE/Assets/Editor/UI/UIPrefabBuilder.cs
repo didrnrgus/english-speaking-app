@@ -830,6 +830,17 @@ namespace EnglishApp.EditorTools
                 view.tabPages[1] = scroll.gameObject;
                 view.nowCards[1] = Nest(nowPlaying, content);
 
+                // 언어별 한번에 설정
+                {
+                    var bulk = Card(content);
+                    bulk.name = "BulkCard";
+                    CardTitle(bulk, "한번에 설정");
+                    CardDesc(bulk, "아래 시퀀스의 영어 / 한국어 노드 전부에 같은 값을 한 번에 적용해요.\n" +
+                                   "노드마다 값이 다르면 \"-\" 로 보여요.");
+                    view.bulkEn = BulkSliders(bulk, slider, "En", "영어", Theme.En);
+                    view.bulkKo = BulkSliders(bulk, slider, "Ko", "한국어", Theme.Ko);
+                }
+
                 var card = Card(content);
                 CardTitle(card, "듣기 시퀀스");
                 CardDesc(card, "전체 듣기는 예문마다(대화는 대사마다) 아래 순서대로 재생해요.\n" +
@@ -875,6 +886,23 @@ namespace EnglishApp.EditorTools
                 scroll.gameObject.SetActive(false); // 처음엔 개별 듣기 탭
             }
             return view;
+        }
+
+        /// <summary>한번에 설정의 언어 하나: 소제목 + 음량 / 빠르기 / 텀 슬라이더.</summary>
+        private static LabeledSlider[] BulkSliders(Transform card, LabeledSlider slider, string id, string langName, Color color)
+        {
+            var head = Text(card, id + "Title", langName, 36, color, TextAlignmentOptions.BottomLeft).SingleLine();
+            Layout(head, preferredHeight: 72);
+            string[] labels = { "음량", "빠르기", "텀" };
+            var sliders = new LabeledSlider[labels.Length];
+            for (int i = 0; i < labels.Length; i++)
+            {
+                sliders[i] = Nest(slider, card);
+                SetLabel(sliders[i], labels[i]);
+                sliders[i].name = id + "_" + labels[i];
+                RecordOverride(sliders[i].gameObject);
+            }
+            return sliders;
         }
 
         private static ScrollRect PageScroll(Transform panel, string name, out RectTransform content)

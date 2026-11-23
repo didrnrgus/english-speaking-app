@@ -9,6 +9,7 @@ namespace EnglishApp.UI
     /// <summary>
     /// 설정 팝업 (SettingsPopup 프리팹, 오른쪽 위 톱니바퀴).
     /// - 개별 듣기: 음량, 빠르기
+    /// - 전체 듣기: 언어별 한번에 설정 (영어 노드 전부 / 한국어 노드 전부의 음량·빠르기·텀, 노드마다 다르면 "-")
     /// - 전체 듣기: 듣기 시퀀스 (끌어서 순서 변경, 노드 추가/삭제, 노드마다 음량·빠르기·텀), 반복
     /// 슬라이더는 바꾸는 즉시 재생 중인 소리에 적용된다.
     /// </summary>
@@ -29,6 +30,10 @@ namespace EnglishApp.UI
         [SerializeField] internal LabeledSlider singleVolume;
         [SerializeField] internal LabeledSlider singleSpeed;
         [SerializeField] internal Button previewButton;
+
+        [Header("전체 듣기: 언어별 한번에 설정 (0 = 음량, 1 = 빠르기, 2 = 텀)")]
+        [SerializeField] internal LabeledSlider[] bulkEn = new LabeledSlider[3];
+        [SerializeField] internal LabeledSlider[] bulkKo = new LabeledSlider[3];
 
         [Header("전체 듣기")]
         [SerializeField] internal SequenceListView sequenceList;
@@ -74,6 +79,8 @@ namespace EnglishApp.UI
             previewButton.onClick.AddListener(() => App.Player.ReplayLastSingle());
 
             // 전체 듣기
+            SetupBulk(bulkEn, Lang.En);
+            SetupBulk(bulkKo, Lang.Ko);
             sequenceList.Init(App.Settings);
             addEn.onClick.AddListener(() => App.Settings.AddNode(Lang.En));
             addKo.onClick.AddListener(() => App.Settings.AddNode(Lang.Ko));
@@ -84,6 +91,7 @@ namespace EnglishApp.UI
             App.Player.Changed += RefreshDynamic;
             App.Settings.RepeatChanged += RefreshDynamic;
             App.Settings.SequenceStructureChanged += OnStructureChanged;
+            App.Settings.SequenceNodeChanged += OnNodeChanged;
             RefreshDynamic();
         }
 
@@ -93,6 +101,7 @@ namespace EnglishApp.UI
             AppRoot.I.Player.Changed -= RefreshDynamic;
             AppRoot.I.Settings.RepeatChanged -= RefreshDynamic;
             AppRoot.I.Settings.SequenceStructureChanged -= OnStructureChanged;
+            AppRoot.I.Settings.SequenceNodeChanged -= OnNodeChanged;
         }
 
         public void SelectTab(int tab)
@@ -130,7 +139,69 @@ namespace EnglishApp.UI
         private void OnStructureChanged()
         {
             sequenceList.Rebuild();
+            RefreshBulk();
             RefreshDynamic();
+        }
+
+        private void OnNodeChanged(int index)
+        {
+            sequenceList.RefreshRow(index); // 한번에 설정으로 바뀐 줄도 표시 갱신
+            RefreshBulk();
+        }
+
+        // ---- 언어별 한번에 설정 -----------------------------------------------------------
+
+        private static readonly NodeParam[] BulkParams = { NodeParam.Volume, NodeParam.Speed, NodeParam.Gap };
+
+        private void SetupBulk(LabeledSlider[] sliders, Lang lang)
+        {
+            if (sliders == null) return;
+            var accent = Theme.LangColor(lang);
+            for (int i = 0; i < sliders.Length && i < BulkParams.Length; i++)
+            {
+                if (sliders[i] == null) continue;
+                var p = BulkParams[i];
+                GetBulkRange(p, out float min, out float max, out float step, out System.Func<float, string> format);
+                App.Settings.TryGetLangParam(lang, p, out float value, out _);
+                sliders[i].Setup(min, max, step, value, format, accent, v => App.Settings.SetLangParam(lang, p, v));
+            }
+            RefreshBulk(sliders, lang);
+        }
+
+        private static void GetBulkRange(NodeParam p, out float min, out float max, out float step, out System.Func<float, string> format)
+        {
+            switch (p)
+            {
+                case NodeParam.Volume:
+                    min = AppSettings.VolumeMin; max = AppSettings.VolumeMax; step = AppSettings.VolumeStep; format = LabeledSlider.FormatVolume;
+                    break;
+                case NodeParam.Speed:
+                    min = AppSettings.SpeedMin; max = AppSettings.SpeedMax; step = AppSettings.SpeedStep; format = LabeledSlider.FormatSpeed;
+                    break;
+                default:
+                    min = AppSettings.GapMin; max = AppSettings.GapMax; step = AppSettings.GapStep; format = LabeledSlider.FormatGap;
+                    break;
+            }
+        }
+
+        private void RefreshBulk()
+        {
+            RefreshBulk(bulkEn, Lang.En);
+            RefreshBulk(bulkKo, Lang.Ko);
+        }
+
+        /// <summary>노드 값이 모두 같으면 그 값, 다르면 "-", 그 언어 노드가 없으면 잠금.</summary>
+        private void RefreshBulk(LabeledSlider[] sliders, Lang lang)
+        {
+            if (sliders == null) return;
+            for (int i = 0; i < sliders.Length && i < BulkParams.Length; i++)
+            {
+                var slider = sliders[i];
+                if (slider == null) continue;
+                bool any = App.Settings.TryGetLangParam(lang, BulkParams[i], out float value, out bool mixed);
+                if (any) slider.SetValue(value, mixed);
+                slider.SetInteractable(any);
+            }
         }
 
         private void TogglePlayback()

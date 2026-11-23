@@ -33,6 +33,9 @@ namespace EnglishApp
         public bool repeat;
     }
 
+    /// <summary>노드 값 종류 (전체 듣기 '한번에 설정' 에서 언어별로 한꺼번에 바꿀 때).</summary>
+    public enum NodeParam { Volume, Speed, Gap }
+
     /// <summary>레벨 전체 듣기를 이어서 시작할 유닛 (레벨마다 마지막으로 듣던 유닛).</summary>
     [Serializable]
     public class LevelResume
@@ -162,6 +165,70 @@ namespace EnglishApp
             n.gap = gap;
             dirty = true;
             SequenceNodeChanged?.Invoke(index);
+        }
+
+        public static float GetParam(SequenceNode n, NodeParam p)
+        {
+            switch (p)
+            {
+                case NodeParam.Volume: return n.volume;
+                case NodeParam.Speed: return n.speed;
+                default: return n.gap;
+            }
+        }
+
+        public static float ClampParam(NodeParam p, float v)
+        {
+            switch (p)
+            {
+                case NodeParam.Volume: return ClampVolume(v);
+                case NodeParam.Speed: return ClampSpeed(v);
+                default: return ClampGap(v);
+            }
+        }
+
+        /// <summary>
+        /// 이 언어 노드들의 값. 노드가 없으면 false.
+        /// 값이 노드마다 다르면 mixed = true 이고 value 는 평균 (슬라이더 위치용).
+        /// </summary>
+        public bool TryGetLangParam(Lang lang, NodeParam p, out float value, out bool mixed)
+        {
+            value = 0f;
+            mixed = false;
+            int count = 0;
+            float first = 0f, sum = 0f;
+            foreach (var n in data.sequence.nodes)
+            {
+                if (n.lang != lang) continue;
+                float v = GetParam(n, p);
+                if (count == 0) first = v;
+                else if (!Mathf.Approximately(v, first)) mixed = true;
+                sum += v;
+                count++;
+            }
+            if (count == 0) return false;
+            value = mixed ? ClampParam(p, sum / count) : first;
+            return true;
+        }
+
+        /// <summary>이 언어의 모든 노드에 한 값을 적용한다 (바뀐 노드마다 SequenceNodeChanged).</summary>
+        public void SetLangParam(Lang lang, NodeParam p, float value)
+        {
+            value = ClampParam(p, value);
+            var nodes = data.sequence.nodes;
+            for (int i = 0; i < nodes.Count; i++)
+            {
+                var n = nodes[i];
+                if (n.lang != lang || Mathf.Approximately(GetParam(n, p), value)) continue;
+                switch (p)
+                {
+                    case NodeParam.Volume: n.volume = value; break;
+                    case NodeParam.Speed: n.speed = value; break;
+                    default: n.gap = value; break;
+                }
+                dirty = true;
+                SequenceNodeChanged?.Invoke(i);
+            }
         }
 
         public void SetNodeLang(int index, Lang lang)

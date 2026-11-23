@@ -1,7 +1,11 @@
 // 듣기 시퀀스 재생기 (iOS). Android 의 SequenceEngine 과 같은 규칙으로 동작한다.
 //
-// - Unity 가 펼쳐서 보낸 step 목록(파일 + 노드 번호)을 차례로 AVAudioPlayer 로 재생한다.
+// - Unity 가 펼쳐서 보낸 step 목록(파일 + 노드 번호)을 차례로 AVAudioEngine 으로 재생한다.
 //   step 마다 [음성 클립 → 텀(무음)] 순서. 음량·빠르기는 노드 단위 값이고, 클립이 시작될 때 / 값이 바뀌는 즉시 적용한다.
+// - 클립 경로: AVAudioPlayerNode(노드 음량 0~1) → AVAudioUnitTimePitch(빠르기, 음높이 유지)
+//   → 피크 리미터(PreGain +6dB = 모든 소리 x2, 넘치는 부분은 리미터가 눌러 깨지지 않게) → 출력.
+//   설정 화면의 음량 100% 가 실제로는 원본의 200% 로 나온다 (AVAudioPlayer.volume 은 1.0 이 최대라 엔진으로 바꿈).
+//   같은 배율을 Unity(Scripts/Audio/AudioGainFilter.cs AudioOutput) 와 Android(GainAudioProcessor) 에서도 쓴다.
 // - 텀은 무음 파일을 반복 재생하면서 타이머로 끊는다 → 텀을 바꾸면 진행 중인 텀에도 바로 반영되고,
 //   그동안에도 오디오가 '재생 중' 이라 화면이 꺼진 백그라운드에서 앱이 멈추지 않는다 (UIBackgroundModes: audio).
 // - 잠금화면·제어 센터·이어폰 버튼: 재생/일시정지, 이전/다음 = 예문(페이지) 단위 이동.
@@ -11,6 +15,7 @@
 // 재생 상태는 EsaAudio_GetState() 로 조회한다 (Unity 가 0.1초마다 폴링).
 
 #import <AVFoundation/AVFoundation.h>
+#import <AudioToolbox/AudioToolbox.h>
 #import <MediaPlayer/MediaPlayer.h>
 #import <QuartzCore/QuartzCore.h>
 #import <UIKit/UIKit.h>
@@ -18,6 +23,7 @@
 
 static const int kSilenceSeconds = 2;  // 반복 재생하므로 짧아도 된다
 static const int kSilenceSampleRate = 8000;
+static const float kOutputGain = 2.f; // 모든 소리 x2
 
 @interface EsaNode : NSObject
 @property (nonatomic) float volume;
@@ -52,7 +58,7 @@ static float EsaFloat(NSDictionary* o, NSString* key, float fallback)
     return [v isKindOfClass:[NSNumber class]] ? [v floatValue] : fallback;
 }
 
-@interface EsaEngine : NSObject <AVAudioPlayerDelegate>
+@interface EsaEngine : NSObject
 @end
 
 @implementation EsaEngine
@@ -68,7 +74,16 @@ static float EsaFloat(NSDictionary* o, NSString* key, float fallback)
     BOOL _ended;
     int _step;
 
-    AVAudioPlayer* _clip;
+    // 클립 재생 (AVAudioEngine)
+    AVAudioEngine* _engine;
+    AVAudioPlayerNode* _playerNode;
+    AVAudioUnitTimePitch* _timePitch;
+    AVAudioUnitEffect* _limiter;
+    AVAudioFormat* _chainFormat;   // 지금 연결된 형식 (파일 형식이 다르면 다시 연결)
+    AVAudioFile* _clip;            // 지금 step 의 파일 (텀이면 nil)
+    int _clipToken;                // 완료 콜백이 지난 클립 것인지 구분
+    BOOL _enginePausedByUs;        // 일시정지로 엔진을 멈췄음 (NO 인데 엔진이 멈춰 있으면 시스템이 멈춘 것 → step 다시 시작)
+
     AVAudioPlayer* _silence;
     int _failures; // 연속으로 열지 못한 파일 수 (전부 깨졌으면 멈춘다)
 
@@ -108,6 +123,74 @@ static float EsaFloat(NSDictionary* o, NSString* key, float fallback)
         [nc addObserver:self selector:@selector(onAppStateChanged:) name:UIApplicationDidBecomeActiveNotification object:nil];
     }
     return self;
+}
+
+// ---------------------------------------------------------------------------------------------
+// 오디오 엔진 (클립 재생)
+
+- (void)buildEngineIfNeeded
+{
+    if (_engine) return;
+    _engine = [[AVAudioEngine alloc] init];
+    _playerNode = [[AVAudioPlayerNode alloc] init];
+    _timePitch = [[AVAudioUnitTimePitch alloc] init]; // pitch 0 = 음높이 유지
+    AudioComponentDescription desc = {};
+    desc.componentType = kAudioUnitType_Effect;
+    desc.componentSubType = kAudioUnitSubType_PeakLimiter;
+    desc.componentManufacturer = kAudioUnitManufacturer_Apple;
+    _limiter = [[AVAudioUnitEffect alloc] initWithAudioComponentDescription:desc];
+    [_engine attachNode:_playerNode];
+    [_engine attachNode:_timePitch];
+    [_engine attachNode:_limiter];
+    [self applyOutputGain];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onEngineConfigurationChange:)
+                                                 name:AVAudioEngineConfigurationChangeNotification object:_engine];
+}
+
+- (void)applyOutputGain
+{
+    float db = 20.f * log10f(kOutputGain); // x2 = +6.02dB
+    OSStatus st = AudioUnitSetParameter(_limiter.audioUnit, kLimiterParam_PreGain, kAudioUnitScope_Global, 0, db, 0);
+    if (st != noErr) NSLog(@"[EsaAudio] limiter pre-gain failed: %d", (int)st);
+}
+
+/// 파일 형식에 맞게 연결한다 (형식이 바뀌었을 때만 엔진을 멈추고 다시 연결).
+- (void)connectChainForFormat:(AVAudioFormat*)format
+{
+    if (_chainFormat && [_chainFormat isEqual:format]) return;
+    if (_engine.isRunning) [_engine stop];
+    [_engine disconnectNodeOutput:_playerNode];
+    [_engine disconnectNodeOutput:_timePitch];
+    [_engine disconnectNodeOutput:_limiter];
+    [_engine connect:_playerNode to:_timePitch format:format];
+    [_engine connect:_timePitch to:_limiter format:format];
+    [_engine connect:_limiter to:_engine.mainMixerNode format:format];
+    _chainFormat = format;
+}
+
+- (BOOL)startEngine
+{
+    _enginePausedByUs = NO;
+    if (_engine.isRunning) return YES;
+    [self activateSession];
+    NSError* error = nil;
+    if (![_engine startAndReturnError:&error])
+    {
+        NSLog(@"[EsaAudio] engine start failed: %@", error);
+        return NO;
+    }
+    [self applyOutputGain];
+    return YES;
+}
+
+/// 출력 장치·샘플레이트가 바뀌면 시스템이 엔진을 멈춘다 → 재생 중인 클립이면 그 step 을 처음부터 다시.
+- (void)onEngineConfigurationChange:(NSNotification*)note
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self->_enginePausedByUs = NO;
+        self->_chainFormat = nil; // 다음 클립에서 다시 연결
+        if (self->_active && self->_playing && self->_clip && !self->_inGap) [self startStep:self->_step];
+    });
 }
 
 // ---------------------------------------------------------------------------------------------
@@ -170,7 +253,12 @@ static float EsaFloat(NSDictionary* o, NSString* key, float fallback)
 - (void)pause
 {
     _playing = NO;
-    [_clip pause];
+    if (_clip) [_playerNode pause];
+    if (_engine.isRunning) // 텀 중이어도 엔진은 쉬게 (다음 클립에서 다시 켬)
+    {
+        [_engine pause];
+        _enginePausedByUs = YES;
+    }
     [_silence pause];
     [self pauseGapTimer];
     [self updateNowPlaying];
@@ -191,13 +279,17 @@ static float EsaFloat(NSDictionary* o, NSString* key, float fallback)
         [self playSilence];
         [self resumeGapTimer];
     }
-    else if (_clip)
+    else if (_clip && _engine.isRunning)
     {
-        [_clip play];
+        [_playerNode play];
+    }
+    else if (_clip && _enginePausedByUs && [self startEngine])
+    {
+        [_playerNode play];
     }
     else
     {
-        [self startStep:_step]; // 끊긴 뒤 클립이 없어진 경우
+        [self startStep:_step]; // 끊긴 뒤 클립이 없어졌거나 시스템이 엔진을 멈춘 경우 (처음부터 다시)
     }
     [self updateNowPlaying];
 }
@@ -211,6 +303,8 @@ static float EsaFloat(NSDictionary* o, NSString* key, float fallback)
     _step = -1;
     _steps = @[]; // 멈춘 뒤 이어폰 버튼으로 이전 시퀀스가 다시 재생되지 않게
     [self releaseClip];
+    [_engine stop];
+    _enginePausedByUs = NO;
     [_silence stop];
     [MPNowPlayingInfoCenter defaultCenter].nowPlayingInfo = nil;
     [[AVAudioSession sharedInstance] setActive:NO
@@ -249,8 +343,8 @@ static float EsaFloat(NSDictionary* o, NSString* key, float fallback)
     }
     else if (_clip)
     {
-        _clip.volume = n.volume;
-        _clip.rate = n.speed;
+        _playerNode.volume = n.volume;
+        _timePitch.rate = n.speed;
     }
 }
 
@@ -305,21 +399,38 @@ static float EsaFloat(NSDictionary* o, NSString* key, float fallback)
     EsaStep* s = _steps[step];
     EsaNode* n = _nodes[s.node];
     NSError* error = nil;
-    AVAudioPlayer* player = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:s.path] error:&error];
-    if (!player)
+    AVAudioFile* file = [[AVAudioFile alloc] initForReading:[NSURL fileURLWithPath:s.path] error:&error];
+    if (!file || file.length <= 0)
     {
         NSLog(@"[EsaAudio] open failed: %@ %@", s.path, error);
         [self skipBrokenStep];
         return;
     }
-    player.delegate = self;
-    player.enableRate = YES; // prepareToPlay 전에 켜야 한다 (음높이는 유지)
-    player.rate = n.speed;
-    player.volume = n.volume;
-    [player prepareToPlay];
-    _clip = player;
-    _failures = 0;
-    if (_playing) [player play];
+    [self buildEngineIfNeeded];
+    [self connectChainForFormat:file.processingFormat];
+    _playerNode.volume = n.volume;
+    _timePitch.rate = n.speed;
+    _clip = file;
+
+    int token = ++_clipToken;
+    [_playerNode scheduleFile:file atTime:nil completionCallbackType:AVAudioPlayerNodeCompletionDataPlayedBack
+            completionHandler:^(AVAudioPlayerNodeCompletionCallbackType type) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (token != self->_clipToken || !self->_active || !self->_clip) return; // 멈추거나 다른 클립으로 넘어감
+            [self startGap];
+        });
+    }];
+    if (_playing)
+    {
+        if ([self startEngine]) [_playerNode play];
+        else
+        {
+            [self releaseClip];
+            [self skipBrokenStep];
+            return;
+        }
+    }
+    _failures = 0; // 엔진까지 성공했을 때만 (계속 실패하면 skipBrokenStep 이 끝낸다)
     [self updateNowPlaying];
 }
 
@@ -339,20 +450,6 @@ static float EsaFloat(NSDictionary* o, NSString* key, float fallback)
         if (requestId != self->_requestId || !self->_active) return;
         [self startStep:next];
     });
-}
-
-- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer*)player successfully:(BOOL)flag
-{
-    if (player != _clip || !_active) return;
-    [self startGap];
-}
-
-- (void)audioPlayerDecodeErrorDidOccur:(AVAudioPlayer*)player error:(NSError*)error
-{
-    if (player != _clip || !_active) return;
-    NSLog(@"[EsaAudio] decode error: %@", error);
-    [self releaseClip];
-    [self skipBrokenStep];
 }
 
 - (void)startGap
@@ -382,6 +479,8 @@ static float EsaFloat(NSDictionary* o, NSString* key, float fallback)
 {
     [self cancelGap];
     [self releaseClip];
+    [_engine stop];
+    _enginePausedByUs = NO;
     [_silence stop];
     _active = NO;
     _ended = YES;
@@ -406,10 +505,10 @@ static float EsaFloat(NSDictionary* o, NSString* key, float fallback)
 
 - (void)releaseClip
 {
+    _clipToken++; // stop 이 부르는 완료 콜백은 무시
     if (!_clip) return;
-    _clip.delegate = nil;
-    [_clip stop];
     _clip = nil;
+    [_playerNode stop];
 }
 
 // ---------------------------------------------------------------------------------------------
@@ -550,6 +649,7 @@ static float EsaFloat(NSDictionary* o, NSString* key, float fallback)
                 self->_resumeAfterInterruption = YES;
                 [self pause];
             }
+            self->_enginePausedByUs = NO; // 시스템이 엔진을 멈췄다 → 이어서 재생할 때 지금 문장을 처음부터
         }
         else if (type == AVAudioSessionInterruptionTypeEnded)
         {

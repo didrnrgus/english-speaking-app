@@ -8,6 +8,7 @@ namespace EnglishApp.Audio
 {
     /// <summary>
     /// 에디터·PC 확인용 대체 재생 (AudioSource). 네이티브 SequenceEngine 과 같은 규칙으로 동작한다.
+    /// 음량은 AudioSource.volume(0~1) 에 AudioGainFilter 로 x2 를 더한다.
     /// 빠르기는 pitch 로 바꾸므로 음높이도 같이 바뀐다 — 실제 품질은 기기에서 확인 (docs/PLAN.md 6-4).
     /// </summary>
     public class EditorAudioBackend : IAudioBackend
@@ -33,6 +34,7 @@ namespace EnglishApp.Audio
             source = host.gameObject.AddComponent<AudioSource>();
             source.playOnAwake = false;
             source.loop = false;
+            host.gameObject.AddComponent<AudioGainFilter>(); // 모든 소리 x2 (AudioOutput.Gain)
         }
 
         public void Play(PlaybackRequest req)
