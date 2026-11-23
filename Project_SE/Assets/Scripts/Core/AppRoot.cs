@@ -66,7 +66,7 @@ namespace EnglishApp
             Content = new ContentService();
             Cache = new AudioCache(this);
             Player = gameObject.AddComponent<AudioPlayer>();
-            Player.Init(Settings, Cache);
+            Player.Init(Settings, Cache, Content);
             Player.Failed += ShowToast;
 
             prefabs = UIPrefabs.I;
@@ -101,6 +101,33 @@ namespace EnglishApp
         {
             if (Nav.PopTo<UnitScreen>(s => s.UnitId == unit.unit)) return;
             Nav.Push<UnitScreen>(s => s.Info = unit);
+        }
+
+        /// <summary>레벨 전체 듣기가 다음 유닛으로 넘어갔을 때: 보고 있던 유닛 화면을 그 유닛 화면으로 바꾼다.</summary>
+        public void FollowUnit(string unitId)
+        {
+            var info = Content.FindUnit(unitId);
+            if (info == null) return;
+            if (Nav.PopTo<UnitScreen>(s => s.UnitId == unitId)) return;
+            if (Nav.Top is UnitScreen) Nav.Replace<UnitScreen>(s => s.Info = info);
+            else Nav.Push<UnitScreen>(s => s.Info = info);
+        }
+
+        /// <summary>
+        /// 레벨 전체 듣기 버튼 (메인 화면 레벨 카드의 ▶, 레벨 화면 위 버튼 공통).
+        /// 이 레벨을 듣는 중이면 일시정지 / 이어 듣기, 아니면 마지막으로 듣던 유닛부터 시작.
+        /// </summary>
+        public void ToggleLevelPlayback(LevelInfo level)
+        {
+            if (Player.IsLevelFull(level.level))
+            {
+                if (Player.IsPreparing) Player.Stop();
+                else if (Player.IsPlaying) Player.Pause();
+                else if (Player.State.active) Player.Resume();
+                else Player.PlayLevel(level, Player.ResumeUnitIndex(level));
+                return;
+            }
+            Player.PlayLevel(level, Player.ResumeUnitIndex(level));
         }
 
         /// <summary>설정 팝업. tab 0 = 개별 듣기, 1 = 전체 듣기.</summary>

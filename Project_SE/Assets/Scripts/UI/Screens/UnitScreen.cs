@@ -11,6 +11,9 @@ namespace EnglishApp.UI
     /// 유닛 화면 (UnitScreen 프리팹): 한 페이지에 예문 하나 (좌우로 넘김).
     /// - 문장/대사나 ▶ 버튼을 누르면 개별 듣기 (설정의 개별 듣기 음량·빠르기)
     /// - 아래 '전체 듣기' 는 유닛 전체를 듣기 시퀀스대로 이어서 재생 (화면이 꺼져도 계속)
+    /// - 레벨 전체 듣기(S1 전체 듣기)가 이 유닛을 재생 중이면 같은 버튼으로 일시정지 / 이어 듣기,
+    ///   재생이 다음 유닛으로 넘어가면 화면도 그 유닛으로 따라간다.
+    /// - 컨트롤 맨 위 줄(scopeText)에 지금 어떤 전체 듣기인지 표시 (S1 전체 듣기 중 · 유닛 3/10 / 유닛 전체 듣기 중)
     /// </summary>
     public class UnitScreen : BaseScreen
     {
@@ -28,6 +31,8 @@ namespace EnglishApp.UI
 
         [Header("아래 컨트롤")]
         [SerializeField] internal GameObject controls;
+        [Tooltip("지금 어떤 전체 듣기인지 (없으면 표시 안 함)")]
+        [SerializeField] internal TextMeshProUGUI scopeText;
         [SerializeField] internal Button prevButton;
         [SerializeField] internal Button nextButton;
         [SerializeField] internal TextMeshProUGUI pageText;
@@ -52,6 +57,7 @@ namespace EnglishApp.UI
         private Color repeatOffIcon;
         private int lastFollowedStep = -1;
         private bool subscribed;
+        private bool followingLevel; // 레벨 전체 듣기가 이 유닛을 재생하는 걸 보고 있었음 (다음 유닛으로 넘어가면 따라감)
 
         public override void Init()
         {
@@ -160,7 +166,8 @@ namespace EnglishApp.UI
         {
             if (unit == null) return;
             var player = App.Player;
-            bool mine = player.Mode != PlaybackMode.None && player.Unit != null && player.Unit.unit == unit.unit;
+            if (FollowLevelPlayback(player)) return;
+            bool mine = player.Mode != PlaybackMode.None && player.UnitId == unit.unit;
             bool mineFull = mine && player.Mode == PlaybackMode.Full;
 
             // 전체 듣기 버튼
@@ -189,6 +196,7 @@ namespace EnglishApp.UI
             playLabel.text = label;
             playIcon.sprite = icon;
             stopButton.interactable = mine && player.IsActive;
+            RefreshScope(player, mineFull);
 
             bool repeat = App.Settings.Sequence.repeat;
             repeatButton.targetGraphic.color = repeat ? Theme.Primary : repeatOffBg;
@@ -224,6 +232,45 @@ namespace EnglishApp.UI
             {
                 lastFollowedStep = -1;
             }
+        }
+
+        /// <summary>
+        /// 레벨 전체 듣기가 이 유닛을 재생하다 다음 유닛으로 넘어가면 화면도 그 유닛으로 바꾼다.
+        /// 다른 유닛을 직접 열어 둘러보는 중이면 따라가지 않는다 (이 유닛이 재생 중일 때 보고 있었던 경우만).
+        /// </summary>
+        private bool FollowLevelPlayback(AudioPlayer player)
+        {
+            bool levelHere = player.IsLevelMode && player.IsActive && player.Level.level == unit.level;
+            if (!levelHere)
+            {
+                followingLevel = false;
+                return false;
+            }
+            string playingId = player.UnitId;
+            if (playingId == unit.unit)
+            {
+                followingLevel = true;
+                return false;
+            }
+            if (!followingLevel || player.IsPreparing || App.Nav.Top != this) return false;
+            followingLevel = false;
+            App.FollowUnit(playingId);
+            return true;
+        }
+
+        /// <summary>컨트롤 맨 위 줄: 지금 어떤 전체 듣기인지.</summary>
+        private void RefreshScope(AudioPlayer player, bool mineFull)
+        {
+            if (scopeText == null) return;
+            string text = "";
+            if (mineFull && player.IsActive)
+            {
+                string state = player.IsPreparing ? " 준비 중" : player.IsPlaying ? " 중" : " 일시정지";
+                text = player.IsLevelMode
+                    ? PlaybackText.Join(PlaybackText.Color(PlaybackText.LevelName(player.Level) + state), PlaybackText.UnitProgress(player))
+                    : PlaybackText.Color(PlaybackText.UnitName + state);
+            }
+            scopeText.text = text;
         }
 
         private void OnPageChanged(int page, bool byUser)

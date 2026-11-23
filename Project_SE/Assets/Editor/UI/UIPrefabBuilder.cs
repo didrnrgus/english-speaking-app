@@ -42,7 +42,7 @@ namespace EnglishApp.EditorTools
 
         private const float TopBarHeight = Theme.TopBarHeight;
         private const float Gutter = Theme.Gutter;
-        private const float UnitControlsHeight = 440f;
+        private const float UnitControlsHeight = 490f;
 
         private static Scene stage;
 
@@ -316,7 +316,7 @@ namespace EnglishApp.EditorTools
 
         // ---- 메인 화면 ----------------------------------------------------------------------
 
-        /// <summary>레벨 버튼: [코드 배지] 제목 / 설명. 색은 LevelButton 의 문장·대화 색으로 칠한다.</summary>
+        /// <summary>레벨 버튼: [코드 배지] 제목 / 설명 [▶ 레벨 전체 듣기]. 색은 LevelButton 의 문장·대화 색으로 칠한다.</summary>
         private static LevelButton BuildLevelButton()
         {
             var bg = GlassRoot("LevelButton", Theme.Speaking, 40, GlassStyle.Tinted);
@@ -339,6 +339,13 @@ namespace EnglishApp.EditorTools
             view.title.rectTransform.Fill(0, 6, 0, 60);
             view.desc = Text(texts, "Desc", "레벨 설명", 28, new Color(1, 1, 1, 0.9f), TextAlignmentOptions.TopLeft).SingleLine().AutoSize(20, 28);
             view.desc.rectTransform.Fill(0, 66, 0, 4);
+
+            // 오른쪽 ▶ : 레벨 전체 듣기 (카드 본체를 누르면 레벨 화면)
+            view.playButton = IconButton(b.transform, "PlayLevel", IconKind.Play, Theme.TextOnColor, new Color(1, 1, 1, 0.28f), 96, 40, GlassStyle.Clear, out view.playIcon);
+            Layout(view.playButton, preferredHeight: 96, preferredWidth: 96);
+            view.playSprite = SpriteBaker.Icon(IconKind.Play);
+            view.pauseSprite = SpriteBaker.Icon(IconKind.Pause);
+            view.stopSprite = SpriteBaker.Icon(IconKind.Stop);
             return view;
         }
 
@@ -449,6 +456,25 @@ namespace EnglishApp.EditorTools
 
             view.descText = Text(content, "Desc", "레벨 설명 · 유닛을 골라 주세요", 32, Theme.TextSub, TextAlignmentOptions.MidlineLeft).SingleLine();
             Layout(view.descText, preferredHeight: 60);
+
+            // 레벨 전체 듣기: [▶] S1 전체 듣기 / U05 가족부터 이어서 · 유닛 10개
+            view.levelPlayButton = GlassButton(content, "PlayLevel", Theme.Primary, 40, GlassStyle.Tinted);
+            Layout(view.levelPlayButton, preferredHeight: 150, minHeight: 150);
+            HLayout(view.levelPlayButton, 24, Pad(30, 30, 0, 0), TextAnchor.MiddleLeft, expandHeight: false);
+            var iconBg = Circle(view.levelPlayButton.transform, "IconBg", new Color(1, 1, 1, 0.25f));
+            Layout(iconBg, preferredHeight: 92, preferredWidth: 92);
+            view.levelPlayIcon = Image(iconBg.transform, "Icon", Theme.TextOnColor, SpriteBaker.Icon(IconKind.Play));
+            view.levelPlayIcon.preserveAspect = true;
+            ((RectTransform)view.levelPlayIcon.transform).Place(new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(44, 44));
+            var texts = Rect("Texts", view.levelPlayButton.transform);
+            Layout(texts, preferredHeight: 120, flexibleWidth: 1);
+            view.levelPlayLabel = Text(texts, "Label", "S1 전체 듣기", 42, Theme.TextOnColor, TextAlignmentOptions.BottomLeft).SingleLine().AutoSize(28, 42);
+            view.levelPlayLabel.rectTransform.Fill(0, 4, 0, 56);
+            view.levelPlaySub = Text(texts, "Sub", "유닛 10개를 처음부터 이어서", 28, new Color(1, 1, 1, 0.9f), TextAlignmentOptions.TopLeft).SingleLine().AutoSize(20, 28);
+            view.levelPlaySub.rectTransform.Fill(0, 70, 0, 4);
+            view.playSprite = SpriteBaker.Icon(IconKind.Play);
+            view.pauseSprite = SpriteBaker.Icon(IconKind.Pause);
+            view.stopSprite = SpriteBaker.Icon(IconKind.Stop);
             return view;
         }
 
@@ -629,6 +655,10 @@ namespace EnglishApp.EditorTools
             var controls = Rect("Controls", root).BottomStrip(UnitControlsHeight);
             VLayout(controls, 18, Pad(40, 40, 6, 36));
             view.controls = controls.gameObject;
+
+            // 지금 어떤 전체 듣기인지 (S1 전체 듣기 중 · 유닛 3/10 / 유닛 전체 듣기 중). 비어 있어도 자리는 유지
+            view.scopeText = Text(controls, "Scope", "", 32, Theme.TextSub).SingleLine().AutoSize(22, 32);
+            Layout(view.scopeText, preferredHeight: 44);
 
             // 페이지 이동
             var nav = Rect("PageNav", controls);

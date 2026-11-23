@@ -49,6 +49,26 @@ namespace EnglishApp.UI
             return screen;
         }
 
+        /// <summary>맨 위 화면을 새 화면으로 바꾼다 (새 화면이 오른쪽에서 밀려 들어오고, 이전 화면은 닫힘).</summary>
+        public T Replace<T>(Action<T> setup = null) where T : BaseScreen
+        {
+            if (stack.Count <= 1) return Push(setup);
+            var old = Top;
+            stack.RemoveAt(stack.Count - 1);
+            var screen = UIKit.Spawn(prefabs.Screen<T>(), layer);
+            var rt = screen.Root.Fill();
+            setup?.Invoke(screen);
+            screen.Init();
+            stack.Add(screen);
+            Changed?.Invoke();
+            screen.OnShow();
+
+            float w = layer.rect.width;
+            runner.StartCoroutine(Slide(rt, w, 0f, null));
+            runner.StartCoroutine(Slide(old.Root, 0f, -w * 0.3f, () => UnityEngine.Object.Destroy(old.gameObject)));
+            return screen;
+        }
+
         public void Pop()
         {
             if (stack.Count <= 1 || animating) return;

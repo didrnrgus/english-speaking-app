@@ -10,6 +10,7 @@ namespace EnglishApp.UI
     /// - 가운데 위: 제목
     /// - 오른쪽 위: 설정
     /// - 가운데보다 조금 위에서 아래로 2열: 왼쪽 문장(말하기) S1~S5, 오른쪽 대화 D1~D5
+    ///   레벨 카드 오른쪽 ▶ = 레벨 전체 듣기 (마지막으로 듣던 유닛부터), 듣는 중이면 카드에 지금 위치 표시
     /// - 오른쪽 아래: 해/달 버튼 (밝은 / 어두운 모드 전환, 미니 플레이어가 뜨면 그 위로 비켜 올라감)
     /// </summary>
     public class MainScreen : BaseScreen
@@ -38,6 +39,7 @@ namespace EnglishApp.UI
 
         private RectTransform themeRect;
         private float themeBaseY;
+        private readonly List<KeyValuePair<LevelInfo, LevelButton>> levelButtons = new List<KeyValuePair<LevelInfo, LevelButton>>();
 
         public override void Init()
         {
@@ -58,7 +60,9 @@ namespace EnglishApp.UI
         private void OnDestroy()
         {
             Theme.Changed -= UpdateThemeIcon;
-            if (AppRoot.I != null) AppRoot.I.Content.IndexLoaded -= BuildColumns;
+            if (AppRoot.I == null) return;
+            AppRoot.I.Content.IndexLoaded -= BuildColumns;
+            AppRoot.I.Player.Changed -= RefreshPlayback;
         }
 
         private void UpdateThemeIcon()
@@ -93,6 +97,15 @@ namespace EnglishApp.UI
             columns.SetActive(true);
             AddLevels(speakingColumn, speaking, false);
             AddLevels(dialogueColumn, dialogue, true);
+
+            App.Player.Changed -= RefreshPlayback;
+            App.Player.Changed += RefreshPlayback;
+            RefreshPlayback();
+        }
+
+        public override void OnShow()
+        {
+            if (levelButtons.Count > 0) RefreshPlayback();
         }
 
         private void AddLevels(Transform column, List<LevelInfo> levels, bool dialogue)
@@ -100,7 +113,38 @@ namespace EnglishApp.UI
             foreach (var level in levels)
             {
                 var l = level;
-                UIKit.Spawn(levelButtonPrefab, column).Bind(l, dialogue, () => App.OpenLevel(l));
+                var button = UIKit.Spawn(levelButtonPrefab, column);
+                button.Bind(l, dialogue, () => App.OpenLevel(l), () => App.ToggleLevelPlayback(l));
+                levelButtons.Add(new KeyValuePair<LevelInfo, LevelButton>(l, button));
+            }
+        }
+
+        // ---- 레벨 전체 듣기 표시 ------------------------------------------------------------
+
+        private void RefreshPlayback()
+        {
+            var player = App.Player;
+            foreach (var pair in levelButtons)
+            {
+                var level = pair.Key;
+                if (!player.IsLevelFull(level.level) || !player.IsActive)
+                {
+                    pair.Value.SetPlayback(null, LevelButton.PlayIcon.Play);
+                    continue;
+                }
+                if (player.IsPreparing)
+                {
+                    pair.Value.SetPlayback(PlaybackText.Preparing(player), LevelButton.PlayIcon.Stop);
+                    continue;
+                }
+                // "▶ U03 가족 · 2/5" / "일시정지 · U03 가족 · 2/5"
+                var step = player.CurrentStep;
+                var unit = player.Unit;
+                string page = step != null && unit != null ? (step.page + 1) + "/" + unit.items.Count : null;
+                string where = PlaybackText.Join(PlaybackText.CurrentUnit(player), page);
+                bool playing = player.IsPlaying;
+                pair.Value.SetPlayback(playing ? "▶ " + where : "일시정지 · " + where,
+                    playing ? LevelButton.PlayIcon.Pause : LevelButton.PlayIcon.Play);
             }
         }
     }

@@ -514,7 +514,7 @@ MonoBehaviour:
     ringThickness: 0
     elevation: 120
     effects:
-    - rid: 8946105093564661798
+    - rid: 1468101434613432360
   _imageMode: 0
   _rawTexture: {fileID: 0}
   _uvRect:
@@ -532,7 +532,7 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 8946105093564661798
+    - rid: 1468101434613432360
       type: {class: Shadow, ns: LeTai.Paraform.Scaffold, asm: LeTai.Paraform.Scaffold}
       data:
         name: Shadow
@@ -635,7 +635,7 @@ MonoBehaviour:
     ringThickness: 0
     elevation: 100
     effects:
-    - rid: 8946105093564661796
+    - rid: 1468101434613432358
   _imageMode: 0
   _rawTexture: {fileID: 0}
   _uvRect:
@@ -653,7 +653,7 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 8946105093564661796
+    - rid: 1468101434613432358
       type: {class: Shadow, ns: LeTai.Paraform.Scaffold, asm: LeTai.Paraform.Scaffold}
       data:
         name: Shadow
@@ -1529,7 +1529,7 @@ MonoBehaviour:
     ringThickness: 0
     elevation: 120
     effects:
-    - rid: 8946105093564661795
+    - rid: 1468101434613432357
   _imageMode: 0
   _rawTexture: {fileID: 0}
   _uvRect:
@@ -1547,7 +1547,7 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 8946105093564661795
+    - rid: 1468101434613432357
       type: {class: Shadow, ns: LeTai.Paraform.Scaffold, asm: LeTai.Paraform.Scaffold}
       data:
         name: Shadow
@@ -1811,7 +1811,7 @@ MonoBehaviour:
     ringThickness: 0
     elevation: 100
     effects:
-    - rid: 8946105093564661797
+    - rid: 1468101434613432359
   _imageMode: 0
   _rawTexture: {fileID: 0}
   _uvRect:
@@ -1829,7 +1829,7 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 8946105093564661797
+    - rid: 1468101434613432359
       type: {class: Shadow, ns: LeTai.Paraform.Scaffold, asm: LeTai.Paraform.Scaffold}
       data:
         name: Shadow

@@ -50,18 +50,43 @@ namespace EnglishApp
         /// <summary>유닛의 mp3 를 모두 준비한다. progress(받은 개수, 전체 개수).</summary>
         public IEnumerator EnsureUnit(UnitData unit, Action<int, int> progress, Action<bool> done)
         {
-            var paths = unit.AllAudioPaths();
-            bool versionChanged = ReadMarker(unit.unit) != unit.version;
+            yield return EnsureUnits(new[] { unit }, progress, done);
+        }
+
+        /// <summary>
+        /// 여러 유닛(레벨 전체 듣기)의 mp3 를 한 번에 준비한다. progress 는 모든 유닛을 합친 개수.
+        /// 일부가 실패해도 다 받은 유닛은 완료로 기록한다 (다음에 그 유닛은 다시 받지 않음).
+        /// </summary>
+        public IEnumerator EnsureUnits(IList<UnitData> units, Action<int, int> progress, Action<bool> done)
+        {
             var need = new List<string>();
-            foreach (var p in paths)
-                if (versionChanged || !Has(p)) need.Add(p);
+            var needSet = new HashSet<string>();
+            var perUnit = new List<List<string>>();
+            foreach (var unit in units)
+            {
+                bool versionChanged = ReadMarker(unit.unit) != unit.version;
+                var mine = new List<string>();
+                foreach (var p in unit.AllAudioPaths())
+                {
+                    if (!versionChanged && Has(p)) continue;
+                    mine.Add(p);
+                    if (needSet.Add(p)) need.Add(p);
+                }
+                perUnit.Add(mine);
+            }
 
-            bool ok = true;
+            var failed = new HashSet<string>();
             if (need.Count > 0)
-                yield return DownloadAll(need, progress, r => ok = r);
+                yield return DownloadAll(need, progress, failed);
 
-            if (ok) WriteMarker(unit.unit, unit.version);
-            done(ok);
+            for (int i = 0; i < units.Count; i++)
+            {
+                bool unitOk = true;
+                foreach (var p in perUnit[i])
+                    if (failed.Contains(p)) { unitOk = false; break; }
+                if (unitOk) WriteMarker(units[i].unit, units[i].version);
+            }
+            done(failed.Count == 0);
         }
 
         /// <summary>파일 몇 개만 (개별 듣기). 이미 있으면 바로 끝난다.</summary>
@@ -70,17 +95,17 @@ namespace EnglishApp
             var need = new List<string>();
             foreach (var p in relatives)
                 if (!Has(p)) need.Add(p);
-            bool ok = true;
-            if (need.Count > 0) yield return DownloadAll(need, null, r => ok = r);
-            done(ok);
+            var failed = new HashSet<string>();
+            if (need.Count > 0) yield return DownloadAll(need, null, failed);
+            done(failed.Count == 0);
         }
 
-        private IEnumerator DownloadAll(List<string> relatives, Action<int, int> progress, Action<bool> done)
+        /// <summary>모두 받는다. 실패한 경로는 failed 에 담는다.</summary>
+        private IEnumerator DownloadAll(List<string> relatives, Action<int, int> progress, HashSet<string> failed)
         {
             int total = relatives.Count;
             int finished = 0;
             int running = 0;
-            bool allOk = true;
             int next = 0;
             progress?.Invoke(0, total);
 
@@ -94,13 +119,12 @@ namespace EnglishApp
                     {
                         running--;
                         finished++;
-                        if (!ok) allOk = false;
+                        if (!ok) failed.Add(rel);
                         progress?.Invoke(finished, total);
                     }));
                 }
                 yield return null;
             }
-            done(allOk);
         }
 
         private IEnumerator DownloadOne(string relative, Action<bool> done)

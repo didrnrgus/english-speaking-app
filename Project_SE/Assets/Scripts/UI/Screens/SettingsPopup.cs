@@ -147,21 +147,24 @@ namespace EnglishApp.UI
 
             // 재생 중 표시
             string info = null;
-            if (player.Mode != PlaybackMode.None && player.Unit != null && (player.IsActive))
+            if (player.Mode != PlaybackMode.None && player.UnitId != null && player.IsActive)
             {
                 var step = player.CurrentStep;
                 if (player.Mode == PlaybackMode.Full)
                 {
-                    info = "전체 듣기 · " + player.Unit.unit;
-                    if (step != null)
+                    // "S1 전체 듣기 · U03 · 2/5 · 3번 영어" / "유닛 전체 듣기 · S1-U03 · 2/5 · 3번 영어"
+                    info = player.IsLevelMode
+                        ? PlaybackText.LevelName(player.Level) + " · " + PlaybackText.ShortCode(player.UnitId)
+                        : PlaybackText.UnitName + " · " + player.UnitId;
+                    if (step != null && player.Unit != null)
                         info += " · " + (step.page + 1) + "/" + player.Unit.items.Count + " · " + (step.node + 1) + "번 " + Theme.LangName(step.lang);
                 }
                 else
                 {
-                    info = "개별 듣기 · " + player.Unit.unit;
+                    info = "개별 듣기 · " + player.UnitId;
                     if (step != null) info += " · " + Theme.LangName(step.lang);
                 }
-                if (player.IsPreparing) info = "음성 준비 중…";
+                if (player.IsPreparing) info = player.IsLevelMode ? PlaybackText.LevelName(player.Level) + " · " + PlaybackText.Preparing(player) : "음성 준비 중…";
             }
             foreach (var card in nowCards) card.Show(info, player.IsPlaying);
 

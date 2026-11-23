@@ -33,6 +33,14 @@ namespace EnglishApp
         public bool repeat;
     }
 
+    /// <summary>레벨 전체 듣기를 이어서 시작할 유닛 (레벨마다 마지막으로 듣던 유닛).</summary>
+    [Serializable]
+    public class LevelResume
+    {
+        public string level;
+        public string unit;
+    }
+
     /// <summary>설정 저장/변경 알림. PlayerPrefs 에 JSON 으로 저장한다.</summary>
     public class AppSettings
     {
@@ -49,6 +57,7 @@ namespace EnglishApp
             public int schema = 1;
             public SingleListenSettings single = new SingleListenSettings();
             public SequenceSettings sequence = new SequenceSettings();
+            public List<LevelResume> resume = new List<LevelResume>();
         }
 
         private Data data;
@@ -100,6 +109,7 @@ namespace EnglishApp
         {
             if (data.single == null) data.single = new SingleListenSettings();
             if (data.sequence == null) data.sequence = new SequenceSettings();
+            if (data.resume == null) data.resume = new List<LevelResume>();
             if (data.sequence.nodes == null || data.sequence.nodes.Count == 0) data.sequence.nodes = DefaultNodes();
             if (data.sequence.nodes.Count > MaxNodes) data.sequence.nodes.RemoveRange(MaxNodes, data.sequence.nodes.Count - MaxNodes);
 
@@ -217,6 +227,34 @@ namespace EnglishApp
         {
             dirty = true;
             SequenceStructureChanged?.Invoke();
+        }
+
+        // ---- 레벨 전체 듣기 이어서 시작할 유닛 ------------------------------------------
+
+        /// <summary>이 레벨에서 마지막으로 듣던 유닛 id (없으면 null).</summary>
+        public string GetResumeUnit(string level)
+        {
+            foreach (var r in data.resume)
+                if (r.level == level) return r.unit;
+            return null;
+        }
+
+        /// <summary>unit 이 null 이면 지운다 (다음에는 첫 유닛부터).</summary>
+        public void SetResumeUnit(string level, string unit)
+        {
+            if (string.IsNullOrEmpty(level)) return;
+            for (int i = 0; i < data.resume.Count; i++)
+            {
+                if (data.resume[i].level != level) continue;
+                if (data.resume[i].unit == unit) return;
+                if (unit == null) data.resume.RemoveAt(i);
+                else data.resume[i].unit = unit;
+                dirty = true;
+                return;
+            }
+            if (unit == null) return;
+            data.resume.Add(new LevelResume { level = level, unit = unit });
+            dirty = true;
         }
 
         // ---- 저장 ------------------------------------------------------------------------
