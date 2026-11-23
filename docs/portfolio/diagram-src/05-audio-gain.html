@@ -1,0 +1,41 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+body { --w: 1640px; }
+.main { margin-top: 30px; align-items: center; }
+.plats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; flex: 1; }
+.pipe { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+.pipe span { font-size: 14px; padding: 4px 9px; border-radius: 7px; background: #f1efea; }
+.pipe span.g { background: #d3efdf; color: #23704a; font-weight: 700; }
+.pipe i { font-style: normal; color: #a8a49b; }
+</style></head><body>
+<h1>하나의 재생 규칙, 플랫폼별 백엔드 — 예: 음량 2배 증폭</h1>
+<div class="sub">"소리가 너무 작다" → mp3 3,700개를 다시 만들지 않고 재생 단계에서 x2 · 넘치는 부분은 소프트 클립/리미터로 눌러 깨짐 방지</div>
+
+<div class="row main" style="gap:0">
+  <div class="group col" style="width:300px">
+    <div class="gtitle"><b>AudioPlayer (C#)</b><span>공통 로직</span></div>
+    <div class="box">시퀀스 펼치기 · 노드 값 전송<br>상태 폴링 · 화면 동기화</div>
+    <div class="down">↓</div>
+    <div class="box hl"><b>IAudioBackend</b>Play / SetNode / Seek / GetState</div>
+  </div>
+  <div class="arrow"><div class="line"></div></div>
+  <div class="plats">
+    <div class="group blue">
+      <div class="gtitle"><b>Android</b><span>Java · Media3 ExoPlayer</span></div>
+      <div class="box"><code>setVolume</code> 최대 1.0 → 오디오 싱크에 직접 처리기 삽입
+        <div class="pipe"><span>디코딩 PCM</span><i>→</i><span class="g">GainAudioProcessor x2 + 소프트 클립</span><i>→</i><span>AudioTrack</span></div></div>
+    </div>
+    <div class="group orange">
+      <div class="gtitle"><b>iOS</b><span>Objective-C++</span></div>
+      <div class="box"><code>AVAudioPlayer.volume</code> 최대 1.0 → AVAudioEngine 으로 교체
+        <div class="pipe"><span>PlayerNode</span><i>→</i><span>TimePitch (음높이 유지)</span><i>→</i><span class="g">PeakLimiter +6dB</span></div></div>
+    </div>
+    <div class="group">
+      <div class="gtitle"><b>Unity 에디터</b><span>개발용 대체 재생기</span></div>
+      <div class="box">같은 규칙으로 도는 C# 시뮬레이터
+        <div class="pipe"><span>AudioSource</span><i>→</i><span class="g">OnAudioFilterRead x2 + 소프트 클립</span></div></div>
+    </div>
+  </div>
+</div>
+<div class="note" style="margin-top:20px">배율 상수(2.0)는 세 곳에서 같은 값을 쓰고 서로를 주석으로 참조 · 사용자 설정 100% = 원본 200%</div>
+</body></html>

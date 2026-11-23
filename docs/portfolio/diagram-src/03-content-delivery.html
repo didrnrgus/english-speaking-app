@@ -1,0 +1,62 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+body { --w: 1760px; }
+.main { margin-top: 30px; gap: 26px; }
+.flow { display: flex; align-items: center; }
+.flow .arrow { min-width: 70px; }
+.dec { background: #fff8e8; border: 1.5px solid #e2b866; border-radius: 12px; padding: 12px 16px; font-size: 15.5px; text-align: center; }
+.dec b { display: block; font-size: 17px; }
+.yes { color: #23704a; font-weight: 700; } .no { color: #b04030; font-weight: 700; }
+.fallback { display: flex; gap: 0; align-items: center; margin-top: 4px; }
+.calc { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 14px; }
+.calc .box { text-align: center; }
+.calc .box .n { font-size: 30px; font-weight: 700; color: #23704a; display: block; margin: 4px 0; }
+</style></head><body>
+<h1>앱 업데이트 없는 콘텐츠 배포 — GitHub Pages + 유닛 단위 캐시</h1>
+<div class="sub">예문을 고치면 Pages 에 푸시만 한다. 앱은 실행할 때 최신 JSON 을 확인해 바뀐 유닛만 갱신하고, 오프라인이어도 동작한다.</div>
+
+<div class="col main">
+  <div class="group green">
+    <div class="gtitle"><b>예문 JSON — 3단 폴백</b><span>ContentService</span></div>
+    <div class="flow">
+      <div class="box" style="width:230px"><b>앱 실행</b>원격 <code>index.json</code> 요청</div>
+      <div class="arrow"><div class="line"></div></div>
+      <div class="box" style="width:280px"><b>유닛 JSON 받기</b>캐시의 <code>version</code> 과 비교<br>→ 바뀐 유닛은 mp3 도 다시 받음</div>
+      <div class="arrow"><div class="line"></div></div>
+      <div class="dec" style="width:230px"><b>검사 통과?</b>필드 · id · 개수</div>
+      <div class="arrow"><div class="yes">예</div><div class="line"></div></div>
+      <div class="box hl" style="width:260px"><b>캐시에 저장 후 사용</b>깨진 파일은 버리고<br>이전 내용 유지</div>
+    </div>
+    <div class="fallback" style="margin-top:18px">
+      <div class="note" style="width:230px; text-align:right; padding-right:14px"><span class="no">실패 · 오프라인</span> 이면 →</div>
+      <div class="box" style="width:280px"><b>① 기기 캐시</b>마지막으로 검사 통과한 내용</div>
+      <div class="arrow"><div>없으면</div><div class="line"></div></div>
+      <div class="box" style="width:300px"><b>② 번들 (StreamingAssets)</b>빌드 때 <code>content/</code> 를 자동 복사<br>→ 첫 실행이 오프라인이어도 OK</div>
+    </div>
+  </div>
+
+  <div class="row" style="gap:26px">
+    <div class="group blue" style="flex:1">
+      <div class="gtitle"><b>mp3 — 들을 유닛만</b><span>AudioCache</span></div>
+      <div class="flow">
+        <div class="box" style="flex:1"><b>유닛 화면 진입 / 전체 듣기</b>그 유닛 mp3 목록 계산</div>
+        <div class="arrow"><div class="line"></div></div>
+        <div class="box" style="flex:1"><b>동시 4개 다운로드</b>이미 받은 파일은 건너뜀<br>일부 실패해도 받은 유닛은 완료 기록</div>
+        <div class="arrow"><div class="line"></div></div>
+        <div class="box" style="flex:1"><b>앱 전용 폴더에 저장</b>네이티브 플레이어는<br>로컬 파일만 재생</div>
+      </div>
+      <div class="note" style="margin-top:12px">전체 3,700개 일괄 다운로드는 하지 않는다 — Pages 월 트래픽 한도 때문</div>
+    </div>
+  </div>
+
+  <div class="group">
+    <div class="gtitle"><b>트래픽 한도 계산 (GitHub Pages 소프트 한도 월 100GB)</b><span>대략치 · 캐시 전제</span></div>
+    <div class="calc">
+      <div class="box">유닛당 mp3 평균<span class="n">≈ 1.1 MB</span></div>
+      <div class="box">하루 1유닛 학습 시 사용자당<span class="n">≈ 33 MB/월</span></div>
+      <div class="box">수용 가능 월 활성 사용자<span class="n">≈ 3,000명</span></div>
+      <div class="box">넘으면<span class="n" style="font-size:22px; padding: 6px 0">mp3 만 R2 등으로</span>앱은 기준 URL 1곳만 변경</div>
+    </div>
+  </div>
+</div>
+</body></html>

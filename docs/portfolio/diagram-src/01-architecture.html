@@ -1,0 +1,78 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+body { --w: 1960px; }
+.main { margin-top: 32px; gap: 0; }
+.app { flex: 1; }
+.app .inner { display: flex; gap: 0; align-items: stretch; }
+.app .inner > .group { flex: 1; }
+.bridge { min-width: 150px; }
+.legend { margin-top: 22px; display: flex; gap: 26px; }
+</style></head><body>
+<h1>전체 구조 — 콘텐츠는 원격에서, 소리는 네이티브에서</h1>
+<div class="sub">콘텐츠 제작 파이프라인 · 정적 호스팅 · Unity 앱(UI·로직) · 네이티브 재생 플러그인(Android / iOS)</div>
+
+<div class="row main">
+  <!-- 제작 -->
+  <div class="group col" style="width:330px">
+    <div class="gtitle"><b>① 콘텐츠 제작</b><span>로컬 PC · Python</span></div>
+    <div class="box"><b>예문 JSON</b>10레벨 × 10유닛 × 5예문<br>= 예문 500개 (영·한)</div>
+    <div class="down">↓</div>
+    <div class="box"><b>validate_content.py</b>스키마 · id 규칙 · 레벨별<br>단어 수/턴 수 · mp3 누락 검사</div>
+    <div class="down">↓</div>
+    <div class="box"><b>generate_tts.py</b>Supertonic-3 로컬 TTS<br>manifest 비교 → <u>바뀐 문장만</u> 생성</div>
+  </div>
+
+  <div class="arrow"><div>git push</div><div class="line"></div><div>Pages 배포</div></div>
+
+  <!-- Pages -->
+  <div class="group green col" style="width:320px">
+    <div class="gtitle"><b>② GitHub Pages</b><span>원격 원본 · 0원</span></div>
+    <div class="box"><b>index.json</b>레벨·유닛 목록 (가장 먼저 읽음)</div>
+    <div class="vgap"></div>
+    <div class="box"><b>유닛 JSON × 100</b>유닛마다 <code>version</code> 번호</div>
+    <div class="vgap"></div>
+    <div class="box"><b>mp3 × 3,700</b>64kbps 모노 · 약 111MB<br>영어 107분 + 한국어 115분</div>
+  </div>
+
+  <div class="arrow"><div>HTTPS</div><div class="line"></div><div>들을 유닛만<br>받아 캐시</div></div>
+
+  <!-- App -->
+  <div class="group app">
+    <div class="gtitle"><b>③ 앱 (Android 출시 · iOS 테스트)</b><span>v0.1.3 · Unity 6000.3</span></div>
+    <div class="inner">
+      <div class="group col" style="background:#fff">
+        <div class="gtitle"><b>Unity (C#)</b><span>화면 꺼지면 멈춤</span></div>
+        <div class="box"><b>UI · UGUI 프리팹</b>메인 · 레벨 · 유닛 · 설정 팝업<br>미니 플레이어 · 밝은/어두운 테마</div>
+        <div class="vgap"></div>
+        <div class="box"><b>ContentService · AudioCache</b>원격 → 캐시 → 번들 폴백<br>mp3 동시 4개 다운로드</div>
+        <div class="vgap"></div>
+        <div class="box hl"><b>AudioPlayer</b>듣기 시퀀스를 step 목록으로 펼침<br>설정 변경 즉시 전달 · 0.1초 상태 폴링</div>
+        <div class="vgap"></div>
+        <div class="box"><b>LevelPlay 배너</b>Safe Area 하단 전용 띠 · 내비게이션 바 높이 항상 비움</div>
+        <div class="vgap"></div>
+        <div class="box"><b>IAudioBackend</b><span class="tag blue">Android</span><span class="tag blue">iOS</span><span class="tag">Editor</span></div>
+      </div>
+
+      <div class="arrow bridge">
+        <div>명령<br><span style="font-size:13px">play · setNode · seek</span></div>
+        <div class="line"></div>
+        <div class="line back"></div>
+        <div>상태<br><span style="font-size:13px">getState (0.1초)</span></div>
+      </div>
+
+      <div class="group blue col">
+        <div class="gtitle"><b>네이티브 재생 플러그인</b><span>화면 꺼져도 계속</span></div>
+        <div class="box"><b>Android · Java</b>Media3 <code>MediaSessionService</code><br>(포그라운드 서비스, 잠금화면·알림)<br>SequenceEngine + ExoPlayer<br>GainAudioProcessor (x2 + 소프트 클립)</div>
+        <div class="vgap"></div>
+        <div class="box"><b>iOS · Objective-C++</b>AVAudioEngine<br>PlayerNode → TimePitch → PeakLimiter<br>백그라운드 오디오 · MPRemoteCommand</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="legend note">
+  <span><span class="tag">회색</span> 화면이 켜져 있을 때만 동작</span>
+  <span><span class="tag blue">파랑</span> OS 미디어 서비스 위에서 화면이 꺼져도 동작</span>
+  <span><span class="tag green">초록</span> 앱 업데이트 없이 수정 가능한 콘텐츠</span>
+</div>
+</body></html>

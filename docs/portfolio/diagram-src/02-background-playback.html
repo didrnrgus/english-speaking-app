@@ -1,0 +1,88 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+body { --w: 1800px; }
+.sec { margin-top: 30px; }
+.sec h2 { font-size: 21px; margin-bottom: 14px; }
+.sec h2 em { font-style: normal; color: #2f7bd8; margin-right: 8px; }
+.chips { display: flex; gap: 8px; align-items: center; }
+.chip { width: 54px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 17px; }
+.ko { background: #fbe5c8; color: #94590f; }
+.en { background: #d4e5fa; color: #1d5ea8; }
+.gap { background: #ecebe7; color: #8a867d; font-weight: 400; font-size: 13px; }
+.flat { display: flex; gap: 3px; align-items: center; flex-wrap: nowrap; }
+.flat .c { height: 40px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 13.5px; font-weight: 700; }
+.flat .c.en { width: 62px; } .flat .c.ko { width: 66px; } .flat .c.gap { width: 26px; font-size: 11px; }
+.sep { width: 2px; height: 52px; background: #b9b5ab; margin: 0 6px; }
+.lane { display: flex; align-items: center; margin-top: 12px; }
+.lane .name { width: 210px; font-weight: 700; font-size: 17px; }
+.lane .name span { display: block; font-weight: 400; font-size: 13.5px; color: #6b6964; }
+.track { flex: 1; height: 50px; display: flex; border-radius: 10px; overflow: hidden; }
+.seg { display: flex; align-items: center; justify-content: center; font-size: 14.5px; color: #fff; }
+.on { background: #8a867d; } .off { background: repeating-linear-gradient(45deg, #ecebe7, #ecebe7 8px, #f6f5f2 8px, #f6f5f2 16px); color: #8a867d; }
+.play { background: #2f7bd8; }
+.screen { display: flex; margin-left: 210px; }
+.screen div { text-align: center; font-size: 14.5px; color: #44423e; padding: 8px 0; border-bottom: 3px solid; }
+.ticks { margin-left: 210px; display: flex; height: 22px; position: relative; }
+.cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.cards .box b { color: #1d5ea8; }
+</style></head><body>
+<h1>화면이 꺼져도 끊기지 않는 재생 — "한 번에 펼쳐서 넘기고, 네이티브가 끝까지 돈다"</h1>
+<div class="sub">Unity 는 앱이 백그라운드로 가면 멈춘다. 그래서 들을 순서 전체를 미리 펼쳐 네이티브 미디어 서비스에 넘긴다.</div>
+
+<div class="sec">
+  <h2><em>1</em>사용자가 짠 듣기 시퀀스 (노드마다 언어 · 음량 · 빠르기 · 텀)</h2>
+  <div class="row" style="align-items:center; gap: 26px">
+    <div class="chips">
+      <div class="chip ko">한</div><div class="chip en">영</div><div class="chip en">영</div><div class="chip ko">한</div><div class="chip en">영</div>
+    </div>
+    <div style="font-size:26px; color:#8a867d">×</div>
+    <div class="box" style="padding:10px 16px"><b>예문 5개</b>(대화는 대사마다)</div>
+    <div style="font-size:26px; color:#8a867d">=</div>
+    <div class="box hl" style="padding:10px 16px"><b>step 25개</b>레벨 전체 듣기면 유닛 10개 × 25 = 250</div>
+  </div>
+</div>
+
+<div class="sec">
+  <h2><em>2</em>ExoPlayer 플레이리스트 — step 마다 [음성 클립, 무음 텀] 두 항목</h2>
+  <div class="flat">
+    <div class="c ko">S1-01 한</div><div class="c gap">텀</div><div class="c en">S1-01 영</div><div class="c gap">텀</div><div class="c en">S1-01 영</div><div class="c gap">텀</div><div class="c ko">S1-01 한</div><div class="c gap">텀</div><div class="c en">S1-01 영</div><div class="c gap">텀</div>
+    <div class="sep"></div>
+    <div class="c ko">S1-02 한</div><div class="c gap">텀</div><div class="c en">S1-02 영</div><div class="c gap">텀</div><div class="c en">S1-02 영</div><div class="c gap">텀</div><div class="c ko">S1-02 한</div><div class="c gap">텀</div>
+    <div style="color:#8a867d; font-size:22px; margin-left:10px">…</div>
+  </div>
+  <div class="note" style="margin-top:10px">플레이리스트 index = step × 2 (+1) · 텀 = 20초짜리 무음 WAV 를 재생하다 타이머로 끊음 · 알림의 이전/다음 = 예문 단위 이동</div>
+</div>
+
+<div class="sec">
+  <h2><em>3</em>시간 흐름 — 화면이 꺼진 동안에도 재생은 서비스가 계속한다</h2>
+  <div class="screen">
+    <div style="width:28%; border-color:#8a867d">화면 켜짐</div>
+    <div style="width:44%; border-color:#c9c5bc">화면 꺼짐 · 홈 버튼 · 다른 앱</div>
+    <div style="width:28%; border-color:#8a867d">다시 켜짐</div>
+  </div>
+  <div class="lane">
+    <div class="name">Unity (C#)<span>UI · 학습 로직</span></div>
+    <div class="track">
+      <div class="seg on" style="width:28%">0.1초마다 getState() 폴링</div>
+      <div class="seg off" style="width:44%">멈춤 (아무것도 못 받음)</div>
+      <div class="seg on" style="width:28%">복귀 즉시 현재 예문·노드로 화면 동기화</div>
+    </div>
+  </div>
+  <div class="lane">
+    <div class="name">네이티브 서비스<span>Media3 / AVAudioEngine</span></div>
+    <div class="track">
+      <div class="seg play" style="width:100%">포그라운드 미디어 서비스가 step 1 → 25 를 끝까지 재생 · 잠금화면/알림 컨트롤 · 전화·이어폰 분리 시 일시정지</div>
+    </div>
+  </div>
+</div>
+
+<div class="sec">
+  <h2><em>4</em>설계 포인트</h2>
+  <div class="cards">
+    <div class="box"><b>텀도 "재생 중"</b>쉬는 시간에 소리를 멈추면 OS 가 서비스·CPU 를 재울 수 있다. 무음을 재생하며 끊어서 포그라운드·wake lock 을 유지.</div>
+    <div class="box"><b>콜백 대신 폴링</b>화면이 꺼진 동안 Unity 는 이벤트를 처리하지 못한다. 네이티브가 가진 상태를 0.1초마다 물어보면 복귀 즉시 최신 위치로 맞춰진다.</div>
+    <div class="box"><b>재생 중 설정 즉시 반영</b>슬라이더를 움직이면 그 노드 값만 전송. 음량·빠르기는 지금 소리에, 텀은 진행 중인 남은 시간까지 다시 계산.</div>
+    <div class="box"><b>버퍼 지연 숨기기</b>빠르기 변경은 다음 클립 값으로 텀이 시작될 때 미리 적용 — 오디오 버퍼 지연을 무음 구간이 흡수.</div>
+  </div>
+</div>
+</body></html>

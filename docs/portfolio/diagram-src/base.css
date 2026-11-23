@@ -1,0 +1,48 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #ffffff; }
+body {
+  font-family: "Malgun Gothic", "맑은 고딕", sans-serif;
+  color: #1f1e1c;
+  padding: 44px 52px 48px;
+  width: var(--w, 1600px);
+  word-break: keep-all;
+}
+h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.5px; }
+.sub { margin-top: 8px; font-size: 18px; color: #6b6964; }
+.row { display: flex; align-items: stretch; }
+.col { display: flex; flex-direction: column; }
+.group {
+  border: 2px solid #d6d3cc; border-radius: 18px; padding: 22px 22px 22px;
+  background: #fbfaf8;
+}
+.group.blue { border-color: #2f7bd8; background: #eef5fd; }
+.group.green { border-color: #3a9a6a; background: #eef8f2; }
+.group.orange { border-color: #d98a2b; background: #fdf5ea; }
+.group.purple { border-color: #7a5ad1; background: #f3f0fc; }
+.gtitle { display: flex; flex-direction: column; gap: 3px; margin-bottom: 16px; }
+.gtitle b { font-size: 21px; }
+.gtitle span { font-size: 15px; color: #6b6964; }
+.box {
+  background: #fff; border: 1.5px solid #d6d3cc; border-radius: 12px;
+  padding: 14px 18px; font-size: 15.5px; line-height: 1.55; color: #44423e;
+}
+.box b { display: block; font-size: 17.5px; color: #1f1e1c; margin-bottom: 3px; }
+.box.hl { border-color: #2f7bd8; box-shadow: 0 0 0 3px #d4e5fa; }
+.box code, code { font-family: Consolas, monospace; font-size: 14.5px; background: #f1efea; padding: 1px 5px; border-radius: 4px; color: #33312d; }
+.vgap { height: 12px; }
+.down { text-align: center; color: #a8a49b; font-size: 20px; line-height: 1; padding: 5px 0; }
+.arrow {
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  padding: 0 10px; min-width: 120px; color: #8a867d; font-size: 14.5px; text-align: center; line-height: 1.4;
+}
+.arrow .line { width: 100%; height: 2px; background: #b9b5ab; position: relative; margin: 8px 0; }
+.arrow .line::after {
+  content: ""; position: absolute; right: -2px; top: -6px;
+  border-left: 12px solid #b9b5ab; border-top: 7px solid transparent; border-bottom: 7px solid transparent;
+}
+.arrow .line.back::after { right: auto; left: -2px; border-left: none; border-right: 12px solid #b9b5ab; }
+.tag { display: inline-block; font-size: 13px; padding: 2px 9px; border-radius: 99px; background: #e9e6df; color: #55524c; margin-right: 4px; }
+.tag.blue { background: #d4e5fa; color: #1d5ea8; }
+.tag.green { background: #d3efdf; color: #23704a; }
+.tag.orange { background: #fbe5c8; color: #94590f; }
+.note { font-size: 14.5px; color: #6b6964; line-height: 1.5; }
