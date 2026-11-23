@@ -1,11 +1,11 @@
 # Unity 앱 구현 기록
 
-> 2026-10-07 · Unity 6000.3.17f1 · Android (+ iOS 기기 설치 테스트, 2026-10-12) · UGUI + TextMeshPro
+> 2026-10-07 · Unity 6000.3.29f1 · Android (+ iOS 기기 설치 테스트, 2026-10-12) · UGUI + TextMeshPro
 > 기획: [PLAN.md](PLAN.md) · 작업 기록: [WORKLOG.md](WORKLOG.md) · 배너 광고: [ADS.md](ADS.md) · iOS: [IOS.md](IOS.md)
 
 ## 1. 처음 열기
 
-1. Unity Hub → **Add → Add project from disk** → 이 레포의 `unity/` 폴더 선택 (에디터 6000.3.17f1)
+1. Unity Hub → **Add → Add project from disk** → 이 레포의 `unity/` 폴더 선택 (에디터 6000.3.29f1)
 2. 처음 열면 **자동 셋업**이 한 번 실행된다 (`Assets/Editor/ProjectSetup.cs`, 메뉴: `Tools > English App > Run Project Setup`)
    - TextMeshPro Essential Resources 가져오기
    - 잘난체 TMP 폰트 템플릿 생성 → `Assets/Resources/Fonts/JalnanGothic SDF.asset` (동적 아틀라스, 외곽선 0.15)

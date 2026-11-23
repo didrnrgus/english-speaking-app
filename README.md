@@ -55,7 +55,7 @@ docs/AUDIO.md             # 음성(mp3) 생성 기록 — 현황, 엔진 선택 
 
 ## 시작하기 (Unity 프로젝트 열기)
 
-1. Unity Hub → **Add → Add project from disk** → 이 레포의 `unity/` 폴더 (에디터 **6000.3.17f1**, Android Build Support 포함)
+1. Unity Hub → **Add → Add project from disk** → 이 레포의 `unity/` 폴더 (에디터 **6000.3.29f1**, Android Build Support 포함)
 2. 처음 열면 자동 셋업이 실행된다 — TMP 리소스, 폰트 에셋, 번들 예문 복사, 세로 고정·패키지명 등 Player Settings, `Main` 씬
    (다시 하려면 `Tools > English App > Run Project Setup`)
 3. 셋업이 만든 `ProjectSettings/`, `.meta`, 폰트 에셋, 씬을 커밋 / 푸시 (`unity/Library`, `Temp` 등은 `.gitignore` 로 제외됨)

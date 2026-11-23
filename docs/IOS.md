@@ -1,6 +1,6 @@
 # iOS 기기 설치 (테스트용)
 
-> 2026-10-12 · Unity 6000.3.17f1 · iOS 15.0 이상 · **스토어 배포 아님 — 내 iPhone 에 설치해서 확인하는 용도**
+> 2026-10-12 · Unity 6000.3.29f1 · iOS 15.0 이상 · **스토어 배포 아님 — 내 iPhone 에 설치해서 확인하는 용도**
 > 앱 구현: [UNITY.md](UNITY.md) · 작업 기록: [WORKLOG.md](WORKLOG.md)
 
 ## 1. 무엇이 되어 있나
@@ -27,7 +27,7 @@
 | 무엇 | 비고 |
 |---|---|
 | **Mac + Xcode** | 3장 A·B 경로. **Mac 이 없으면 3장 C** (GitHub Actions 로 빌드 → Windows 에서 Sideloadly 로 설치) |
-| Unity **iOS Build Support** 모듈 | Unity Hub → Installs → 6000.3.17f1 → ⚙ → Add modules → iOS Build Support (빌드하는 PC 에) |
+| Unity **iOS Build Support** 모듈 | Unity Hub → Installs → 6000.3.29f1 → ⚙ → Add modules → iOS Build Support (빌드하는 PC 에) |
 | CocoaPods | Mac 에서 `brew install cocoapods` (또는 `sudo gem install cocoapods`). LevelPlay 의 iOS SDK 를 받는 데 필요 |
 | Apple ID | 무료 계정으로 충분 (Xcode → Settings → Accounts 에 추가). 유료(연 $99) 개발자 계정이면 1년 유지 |
 | iPhone + 케이블 | iOS 16 이상은 **개발자 모드**를 켜야 설치된다 (4장) |
@@ -38,7 +38,7 @@
 
 ### A. Mac 에서 Unity 로 빌드 (가장 간단)
 
-1. Mac 에 Unity 6000.3.17f1 + iOS Build Support 설치, 레포 클론 → Unity Hub 에서 `Project_SE/` 열기
+1. Mac 에 Unity 6000.3.29f1 + iOS Build Support 설치, 레포 클론 → Unity Hub 에서 `Project_SE/` 열기
 2. File → Build Profiles → **iOS** → Switch Platform
    - 콘솔에 `[EnglishApp] iOS 설정: 번들 ID com.yang.projectse, 백그라운드 오디오, 자동 서명 …` 로그가 나오면 설정 완료
 3. **Build** → 출력 폴더 `Project_SE/Build/iOS` (git 에 안 올라감)

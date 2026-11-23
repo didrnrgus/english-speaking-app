@@ -133,7 +133,7 @@ Unity 는 0.1초마다 플러그인에 "지금 몇 번째를 재생 중인지" �
 
 | 영역 | 기술 |
 | --- | --- |
-| 엔진 | Unity 6000.3.17f1, C#, UGUI + TextMeshPro |
+| 엔진 | Unity 6000.3.29f1, C#, UGUI + TextMeshPro |
 | 재생 | Java, AndroidX Media3 1.4.1 (ExoPlayer + MediaSessionService) |
 | 최소 사양 | Android 8.0 (API 26) 이상, 64비트(ARM64) |
 | 저장 | 설정 = 기기 내 저장(PlayerPrefs), 예문·mp3 = 앱 전용 폴더 캐시 |
@@ -186,7 +186,7 @@ Unity 는 0.1초마다 플러그인에 "지금 몇 번째를 재생 중인지" �
 
 ### 처음 열기
 
-1. Unity Hub → Add → Add project from disk → `unity/` (에디터 6000.3.17f1, Android Build Support 포함)
+1. Unity Hub → Add → Add project from disk → `unity/` (에디터 6000.3.29f1, Android Build Support 포함)
 2. 자동 셋업이 한 번 실행된다: TextMeshPro 리소스, 폰트 에셋, 번들 예문 복사, 세로 고정·패키지명(`com.didrnrgus.englishspeaking`)·minSdk 26·IL2CPP/ARM64, `Main` 씬 (다시: `Tools > English App > Run Project Setup`)
 3. 셋업이 만든 `ProjectSettings/`, `.meta`, 폰트 에셋, 씬을 커밋
 4. Build Profiles → Android → Play(에디터) / Build(기기)

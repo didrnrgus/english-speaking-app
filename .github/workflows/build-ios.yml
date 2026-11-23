@@ -83,6 +83,8 @@ jobs:
         with:
           projectPath: Project_SE
           targetPlatform: iOS
+          # 에디터 버전 고정 (ProjectVersion.txt 와 같게). 6000.3.29f1 은 game-ci 이미지 v4 에만 있다 (기본값 v3 이미지는 없음)
+          customImage: unityci/editor:ubuntu-6000.3.29f1-ios-4.0.0
           buildMethod: EnglishApp.EditorTools.CiBuild.BuildIOS
           versioning: None   # 버전은 ProjectSettings 의 bundleVersion 그대로
           customParameters: -appBuild ${{ github.run_number }}
